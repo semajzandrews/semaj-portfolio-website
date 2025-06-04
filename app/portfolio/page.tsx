@@ -1,7 +1,8 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import ContactForm from "../components/contact-form"
 import TechStack from "../components/tech-stack"
 import ProjectGrid from "../components/project-grid"
@@ -9,8 +10,51 @@ import { projects } from "../data/projects"
 import ThemeToggle from "../components/theme-toggle"
 import SideTimeline from "../components/side-timeline"
 import MobileScrollProgress from "../components/mobile-scroll-progress"
+import { useEffect, useRef, useState } from "react"
+import { useTheme } from "next-themes"
 
 export default function Portfolio() {
+  const { theme, resolvedTheme } = useTheme()
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [mounted, setMounted] = useState(false)
+
+  // Ensure we're mounted to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    let direction = 1 // 1 for forward, -1 for backward
+
+    const handleTimeUpdate = () => {
+      if (direction === 1 && video.currentTime >= video.duration - 0.1) {
+        // Reached end, start going backward
+        direction = -1
+        video.playbackRate = -1
+      } else if (direction === -1 && video.currentTime <= 0.1) {
+        // Reached beginning, start going forward
+        direction = 1
+        video.playbackRate = 1
+      }
+    }
+
+    video.addEventListener('timeupdate', handleTimeUpdate)
+    
+    return () => {
+      video.removeEventListener('timeupdate', handleTimeUpdate)
+    }
+  }, [])
+
+  // Determine which video to use based on theme
+  const getVideoSrc = () => {
+    if (!mounted) return "/ascii-face-dark.webm" // default fallback
+    const isDark = resolvedTheme === 'dark'
+    return isDark ? "/ascii-face-dark.webm" : "/ascii-face-light.webm"
+  }
+
   return (
     <div className="min-h-screen bg-background relative">
       {/* Side Timeline Navigation */}
@@ -59,13 +103,20 @@ export default function Portfolio() {
             <div className="flex flex-col items-center justify-center space-y-10 text-center">
               <div className="relative">
                 <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <Image
-                    src="/placeholder-user.jpg"
-                    alt="Semaj Andrews - Software Engineer"
-                    width={192}
-                    height={192}
+                  <video
+                    ref={videoRef}
+                    key={getVideoSrc()} // Force re-render when video source changes
+                    src={getVideoSrc()}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover"
-                    priority
+                    style={{ 
+                      objectPosition: 'center 25%',
+                      transform: 'scale(1.15)'
+                    }}
+                    aria-label="Semaj Andrews - ASCII Art Animation"
                   />
                 </div>
                 <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
