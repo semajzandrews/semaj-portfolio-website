@@ -10,12 +10,11 @@ import { projects } from "../data/projects"
 import ThemeToggle from "../components/theme-toggle"
 import SideTimeline from "../components/side-timeline"
 import MobileScrollProgress from "../components/mobile-scroll-progress"
-import { useEffect, useRef, useState } from "react"
+import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 
 export default function Portfolio() {
   const { theme, resolvedTheme } = useTheme()
-  const videoRef = useRef<HTMLVideoElement>(null)
   const [mounted, setMounted] = useState(false)
 
   // Ensure we're mounted to avoid hydration mismatch
@@ -23,36 +22,33 @@ export default function Portfolio() {
     setMounted(true)
   }, [])
 
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    let direction = 1 // 1 for forward, -1 for backward
-
-    const handleTimeUpdate = () => {
-      if (direction === 1 && video.currentTime >= video.duration - 0.1) {
-        // Reached end, start going backward
-        direction = -1
-        video.playbackRate = -1
-      } else if (direction === -1 && video.currentTime <= 0.1) {
-        // Reached beginning, start going forward
-        direction = 1
-        video.playbackRate = 1
-      }
-    }
-
-    video.addEventListener('timeupdate', handleTimeUpdate)
-    
-    return () => {
-      video.removeEventListener('timeupdate', handleTimeUpdate)
-    }
-  }, [])
-
   // Determine which video to use based on theme
   const getVideoSrc = () => {
-    if (!mounted) return "/ascii-face-dark.webm" // default fallback
+    // Using the longer animation video (13MB) for better quality and duration
+    return "/ascii-face-dark.webm"
+  }
+
+  // Get theme-specific styling for video
+  const getVideoStyle = () => {
+    if (!mounted) return { objectPosition: 'center 25%', transform: 'scale(1.05)' }
+    
     const isDark = resolvedTheme === 'dark'
-    return isDark ? "/ascii-face-dark.webm" : "/ascii-face-light.webm"
+    
+    if (isDark) {
+      // Dark mode - keep original dark video look
+      return {
+        objectPosition: 'center 25%',
+        transform: 'scale(1.05)',
+        filter: 'none'
+      }
+    } else {
+      // Light mode - same as dark mode, no filters needed
+      return {
+        objectPosition: 'center 25%',
+        transform: 'scale(1.05)',
+        filter: 'none'
+      }
+    }
   }
 
   return (
@@ -64,35 +60,68 @@ export default function Portfolio() {
       <MobileScrollProgress />
       
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-14 items-center px-4 md:px-6">
-          <div className="mr-4 hidden md:flex">
-            <Link className="mr-6 flex items-center space-x-2" href="/portfolio">
-              <span className="hidden font-bold sm:inline-block">Semaj.dev</span>
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+          {/* Signature Name - Left */}
+          <div className="flex items-center py-1">
+            <Link href="/portfolio" className="group">
+              <span 
+                className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent hover:from-primary/80 hover:via-primary hover:to-primary transition-all duration-300 leading-relaxed py-1" 
+                style={{
+                  fontFamily: "'Brittany Signature', cursive",
+                  lineHeight: '1.6',
+                  paddingTop: '4px',
+                  paddingBottom: '4px'
+                }}
+              >
+                Semaj Andrews
+              </span>
             </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
-                About
-              </Link>
-              <Link href="#projects" className="transition-colors hover:text-foreground/80">
-                Projects
-              </Link>
-              <Link href="#tech-stack" className="transition-colors hover:text-foreground/80">
-                Tech Stack
-              </Link>
-              <Link href="#contact" className="transition-colors hover:text-foreground/80">
-                Contact
-              </Link>
-            </nav>
           </div>
-          <div className="ml-auto flex items-center gap-2">
+
+          {/* Centered Navigation - Desktop */}
+          <nav className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary hover:scale-105 transform duration-200">
+              About
+            </Link>
+            <Link href="#projects" className="text-sm font-medium transition-colors hover:text-primary hover:scale-105 transform duration-200">
+              Projects
+            </Link>
+            <Link href="#tech-stack" className="text-sm font-medium transition-colors hover:text-primary hover:scale-105 transform duration-200">
+              Tech Stack
+            </Link>
+            <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary hover:scale-105 transform duration-200">
+              Contact
+            </Link>
+          </nav>
+
+          {/* Action Buttons - Right */}
+          <div className="flex items-center gap-2">
             <Link href="/game-landing">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="hidden sm:flex">
                 🎮 Play Game
               </Button>
             </Link>
-            <Button variant="outline">Resume</Button>
+            <Button variant="outline" size="sm">Resume</Button>
             <ThemeToggle />
           </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden border-t bg-background/95 backdrop-blur">
+          <nav className="container mx-auto flex items-center justify-center space-x-6 py-3 px-4">
+            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
+              About
+            </Link>
+            <Link href="#projects" className="text-sm font-medium transition-colors hover:text-primary">
+              Projects
+            </Link>
+            <Link href="#tech-stack" className="text-sm font-medium transition-colors hover:text-primary">
+              Tech Stack
+            </Link>
+            <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
+              Contact
+            </Link>
+          </nav>
         </div>
       </header>
 
@@ -104,7 +133,6 @@ export default function Portfolio() {
               <div className="relative">
                 <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <video
-                    ref={videoRef}
                     key={getVideoSrc()} // Force re-render when video source changes
                     src={getVideoSrc()}
                     autoPlay
@@ -112,10 +140,7 @@ export default function Portfolio() {
                     muted
                     playsInline
                     className="w-full h-full object-cover"
-                    style={{ 
-                      objectPosition: 'center 25%',
-                      transform: 'scale(1.15)'
-                    }}
+                    style={getVideoStyle()}
                     aria-label="Semaj Andrews - ASCII Art Animation"
                   />
                 </div>

@@ -287,7 +287,7 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
       const calculatedSpaceBetweenLines = words[1] ? 5 * adjustedLargePixelSize : 0
       const totalTextHeight = largeTextHeight + calculatedSpaceBetweenLines + smallTextHeight
 
-      let startY = (canvas.height - totalTextHeight) / 2
+      let startY = (canvas.height - totalTextHeight) / 3
 
       words.forEach((word, wordIndex) => {
         const pixelSize = wordIndex === 0 ? adjustedLargePixelSize : adjustedSmallPixelSize
@@ -511,12 +511,12 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
         ctx.fillStyle = COLOR
         ctx.font = `${24 * scaleRef.current}px Arial`
         ctx.textAlign = 'center'
-        ctx.fillText('Press SPACE to start', canvas.width / 2, canvas.height - 100 * scaleRef.current)
+        ctx.fillText('Press SPACE to start', canvas.width / 2, canvas.height - 200 * scaleRef.current)
         
         // Add pulsing effect
         const alpha = 0.5 + 0.5 * Math.sin(Date.now() * 0.005)
         ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`
-        ctx.fillText('Press SPACE to start', canvas.width / 2, canvas.height - 100 * scaleRef.current)
+        ctx.fillText('Press SPACE to start', canvas.width / 2, canvas.height - 200 * scaleRef.current)
       }
     }
 

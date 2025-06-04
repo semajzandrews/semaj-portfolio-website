@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font - Brittany Signature */
+@font-face {
+  font-family: 'Brittany Signature';
+  src: url('/fonts/BrittanySignature-LjyZ.otf') format('opentype'),
+       url('/fonts/BrittanySignature-MaZx.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

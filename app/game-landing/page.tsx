@@ -30,7 +30,7 @@ export default function GameLanding() {
 
       {/* Instructions overlay for playing state */}
       {gameStatus === "playing" && (
-        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
           <div className="bg-black/80 text-white px-6 py-3 rounded-lg border border-white/20 backdrop-blur-sm">
             <p className="text-center text-sm md:text-base">
               🎮 Move your mouse to control the paddle • Break all blocks to enter the portfolio
@@ -41,7 +41,7 @@ export default function GameLanding() {
 
       {/* Skip button for playing state */}
       {gameStatus === "playing" && (
-        <div className="absolute top-8 right-8 z-10">
+        <div className="absolute top-4 right-8 z-10">
           <Link href="/portfolio">
             <Button 
               variant="outline" 
