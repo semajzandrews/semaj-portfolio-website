@@ -39,14 +39,14 @@ export default function Portfolio() {
       return {
         objectPosition: 'center 25%',
         transform: 'scale(1.05)',
-        filter: 'none'
+        filter: 'brightness(3.75)'
       }
     } else {
-      // Light mode - same as dark mode, no filters needed
+      // Light mode - make video slightly brighter for better contrast
       return {
         objectPosition: 'center 25%',
         transform: 'scale(1.05)',
-        filter: 'none'
+        filter: 'brightness(3.75)'
       }
     }
   }
@@ -152,8 +152,7 @@ export default function Portfolio() {
                   Software Engineer
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl lg:text-2xl">
-                  Building digital experiences with modern technologies. Focused on creating elegant solutions to
-                  complex problems.
+                I create software that’s fast to market, easy to scale, and hard to forget. I don’t just build features — I shape experiences.
                 </p>
               </div>
 

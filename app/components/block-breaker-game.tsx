@@ -233,6 +233,7 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
   const paddleRef = useRef<Paddle>({ x: 0, y: 0, width: 0, height: 0 })
   const scaleRef = useRef(1)
   const animationFrameId = useRef<number | null>(null)
+  const lastTimeRef = useRef<number>(0)
   const [gameState, setGameState] = useState<GameState>(GameState.WAITING)
   const gameInitializedRef = useRef(false)
 
@@ -255,7 +256,7 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
       const scale = scaleRef.current
       const LARGE_PIXEL_SIZE = 3 * scale
       const SMALL_PIXEL_SIZE = 2 * scale
-      const BALL_SPEED = 6 * scale
+      const BALL_SPEED = 300 * scale // pixels per second
 
       pixelsRef.current = []
       const words = ["SEMAJ'S", "PORTFOLIO"]
@@ -283,14 +284,14 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
       const adjustedSmallPixelSize = SMALL_PIXEL_SIZE * scaleFactor
 
       const largeTextHeight = 5 * adjustedLargePixelSize
-      const smallTextHeight = words[1] ? 5 * adjustedSmallPixelSize : 0
+      const smallTextHeight = words[1] ? 5 * adjustedLargePixelSize : 0
       const calculatedSpaceBetweenLines = words[1] ? 5 * adjustedLargePixelSize : 0
       const totalTextHeight = largeTextHeight + calculatedSpaceBetweenLines + smallTextHeight
 
       let startY = (canvas.height - totalTextHeight) / 3
 
       words.forEach((word, wordIndex) => {
-        const pixelSize = wordIndex === 0 ? adjustedLargePixelSize : adjustedSmallPixelSize
+        const pixelSize = wordIndex === 0 ? adjustedLargePixelSize : adjustedLargePixelSize
         let currentWordTotalWidth = 0
 
         if (wordIndex === 0) {
@@ -299,8 +300,8 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
           currentWordTotalWidth = words[1].split(" ").reduce((width, w, index) => {
             return (
               width +
-              calculateWordWidth(w, adjustedSmallPixelSize) +
-              (index > 0 ? WORD_SPACING * adjustedSmallPixelSize : 0)
+              calculateWordWidth(w, adjustedLargePixelSize) +
+              (index > 0 ? WORD_SPACING * adjustedLargePixelSize : 0)
             )
           }, 0)
         }
@@ -324,7 +325,7 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
               }
               startX += (pixelMap[0].length + LETTER_SPACING) * pixelSize
             })
-            startX += WORD_SPACING * adjustedSmallPixelSize
+            startX += WORD_SPACING * adjustedLargePixelSize
           })
         } else if (wordIndex === 0) {
           word.split("").forEach((letter) => {
@@ -418,14 +419,15 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
       }
     }
 
-    const updateGame = () => {
+    const updateGame = (deltaTime: number) => {
       if (gameState !== GameState.PLAYING) return
 
       const ball = ballRef.current
       const paddle = paddleRef.current
 
-      ball.x += ball.dx
-      ball.y += ball.dy
+      // Use delta time for consistent movement speed across different frame rates
+      ball.x += ball.dx * deltaTime
+      ball.y += ball.dy * deltaTime
 
       // Wall collision (top, left, right)
       if (ball.y - ball.radius < 0) {
@@ -451,7 +453,7 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
         ball.dy = -ball.dy
         ball.y = paddle.y - ball.radius
         const hitPoint = (ball.x - (paddle.x + paddle.width / 2)) / (paddle.width / 2)
-        ball.dx = hitPoint * ball.radius * 0.5
+        ball.dx = hitPoint * ball.radius * 0.5 * 60 // Adjust for time-based movement
       }
 
       // Game over condition
@@ -520,8 +522,20 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
       }
     }
 
-    const gameLoop = () => {
-      updateGame()
+    const gameLoop = (currentTime: number) => {
+      // Initialize lastTime on first frame
+      if (lastTimeRef.current === 0) {
+        lastTimeRef.current = currentTime
+      }
+      
+      // Calculate delta time in seconds
+      const deltaTime = (currentTime - lastTimeRef.current) / 1000
+      lastTimeRef.current = currentTime
+      
+      // Cap delta time to prevent large jumps (e.g., when tab is inactive)
+      const cappedDeltaTime = Math.min(deltaTime, 1/30) // Max 30 FPS equivalent
+      
+      updateGame(cappedDeltaTime)
       drawGame()
       animationFrameId.current = requestAnimationFrame(gameLoop)
     }
@@ -529,7 +543,9 @@ export function BlockBreakerGame({ onGameWon, onGameOver, resetTrigger }: BlockB
     window.addEventListener("mousemove", handleMouseMove)
     window.addEventListener("keydown", handleKeyPress)
     
-    gameLoop()
+    // Reset lastTime when starting the game loop
+    lastTimeRef.current = 0
+    gameLoop(0)
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
