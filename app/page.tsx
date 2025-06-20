@@ -16,7 +16,7 @@ export default function Page() {
 
   useEffect(() => {
     // Redirect to game landing page
-    router.push("/game-landing")
+    router.push("/game")
   }, [router])
 
   return (

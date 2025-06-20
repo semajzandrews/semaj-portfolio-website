@@ -96,7 +96,7 @@ export default function Portfolio() {
 
           {/* Action Buttons - Right */}
           <div className="flex items-center gap-2">
-            <Link href="/game-landing">
+            <Link href="/game">
               <Button variant="outline" size="sm" className="hidden sm:flex">
                 🎮 Play Game
               </Button>
