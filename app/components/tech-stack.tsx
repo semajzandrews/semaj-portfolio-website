@@ -11,7 +11,7 @@ import {
   SiMysql, SiMongodb, SiFirebase, SiSupabase, SiAmazon, SiDocker,
   SiGithubactions, SiVercel, SiNetlify, SiHeroku, SiLinux, SiSocketdotio,
   SiJsonwebtokens, SiSolidity, SiEthereum, SiUnity, SiWebgl, SiFramer,
-  SiWebflow, SiOpenai
+  SiWebflow, SiOpenai, SiMailchimp, SiSendgrid, SiHubspot
 } from "react-icons/si"
 import { 
   FaMobile, FaAndroid, FaApple, FaReact, FaGitlab, FaBitbucket,
@@ -24,6 +24,24 @@ import { VscCode } from "react-icons/vsc"
 // Icon mapping for skills
 const getSkillIcon = (skill: string): React.JSX.Element => {
   const iconMap: { [key: string]: React.JSX.Element } = {
+    // Email Development
+    "HTML Email Development": <SiHtml5 className="w-4 h-4" />,
+    "Klaviyo": <FaCode className="w-4 h-4" />,
+    "Salesforce Marketing Cloud": <FaCode className="w-4 h-4" />,
+    "Responsive Email Design": <SiCss3 className="w-4 h-4" />,
+    "Email Testing": <FaShieldAlt className="w-4 h-4" />,
+    "Mailchimp": <SiMailchimp className="w-4 h-4" />,
+    "SendGrid": <SiSendgrid className="w-4 h-4" />,
+    "HubSpot": <SiHubspot className="w-4 h-4" />,
+    "Email Automation": <FaCode className="w-4 h-4" />,
+    "A/B Testing": <FaCode className="w-4 h-4" />,
+    "Email Analytics": <FaDatabase className="w-4 h-4" />,
+    "Transactional Emails": <FaCode className="w-4 h-4" />,
+    "Email Deliverability": <FaShieldAlt className="w-4 h-4" />,
+    "MJML": <FaCode className="w-4 h-4" />,
+    "Litmus": <FaCode className="w-4 h-4" />,
+    "Email on Acid": <FaCode className="w-4 h-4" />,
+    
     // Mobile Development
     "Swift": <SiSwift className="w-4 h-4" />,
     "SwiftUI": <SiSwift className="w-4 h-4" />,
@@ -128,7 +146,170 @@ const getSkillIcon = (skill: string): React.JSX.Element => {
   return iconMap[skill] || <FaCode className="w-4 h-4" />
 }
 
+// Brand color mapping for each individual skill
+const getSkillBrandColor = (skill: string) => {
+  const brandColorMap: { [key: string]: string } = {
+    // Email Development
+    "HTML Email Development": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Klaviyo": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Salesforce Marketing Cloud": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Responsive Email Design": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Email Testing": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Mailchimp": "bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200",
+    "SendGrid": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "HubSpot": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Email Automation": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "A/B Testing": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    "Email Analytics": "bg-indigo-100 text-indigo-800 border-indigo-200 hover:bg-indigo-200",
+    "Transactional Emails": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Email Deliverability": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    "MJML": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Litmus": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Email on Acid": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    
+    // Mobile Development
+    "Swift": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "SwiftUI": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Objective-C": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "iOS Development": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Kotlin": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Jetpack Compose": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Java": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    "Android Development": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "React Native": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Ionic": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Mobile UI/UX": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    "Responsive Design": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    
+    // Frontend & Web Development
+    "HTML5": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "CSS3": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "JavaScript": "bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200",
+    "Bootstrap": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "React": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "TypeScript": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Next.js": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "SASS/SCSS": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    "TailwindCSS": "bg-cyan-100 text-cyan-800 border-cyan-200 hover:bg-cyan-200",
+    "Webpack": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Three.js": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Vite": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Progressive Web Apps (PWA)": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Framer": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    "Webflow": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    
+    // Design & UX Tools
+    "Figma": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Adobe XD": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    "Sketch": "bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200",
+    "WCAG Accessibility": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "User Interface Design": "bg-pink-100 text-pink-800 border-pink-200 hover:bg-pink-200",
+    "Prototyping": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    
+    // Programming Languages
+    "Python": "bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200",
+    "C#": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "C++": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "PHP": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Bash/Shell": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    
+    // Development Tools
+    "Git": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "GitHub": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "VS Code": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Xcode": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Android Studio": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Postman": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Jira": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Agile": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Scrum": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Kanban": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "GitLab": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Bitbucket": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Cursor": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Slack": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Notion": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    
+    // Data Science & AI
+    "OpenAI API": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Pandas": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    "NumPy": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Selenium": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Data Visualization": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "BeautifulSoup": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Matplotlib": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    
+    // Backend & Database
+    "Node.js": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Express": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "API Design": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "PostgreSQL": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "MySQL": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "MongoDB": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Firebase Firestore": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Supabase": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "SQL": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "ConvexDB": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    
+    // Security
+    "OAuth 2.0": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    "JWT": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "HTTPS/SSL/TLS": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Encryption": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Hashing": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Vulnerability Assessment": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    "API Security": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    "Two-Factor Authentication": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    
+    // DevOps & Cloud
+    "AWS": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Docker": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "GitHub Actions": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "S3": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Vercel": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Netlify": "bg-green-100 text-green-800 border-green-200 hover:bg-green-200",
+    "Heroku": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Linux Administration": "bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200",
+    
+    // Web Technologies
+    "WebSockets": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "RabbitMQ": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+    "Socket.io": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "OAuth": "bg-red-100 text-red-800 border-red-200 hover:bg-red-200",
+    
+    // Specialized Skills
+    "Web3.js": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "Solidity": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Ethereum": "bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200",
+    "Smart Contracts": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "Unity": "bg-gray-100 text-gray-800 border-gray-200 hover:bg-gray-200",
+    "3D Modeling": "bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200",
+    "WebGL": "bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200",
+  }
+  return brandColorMap[skill] || "bg-primary/10 text-primary border-primary/20 hover:bg-primary/20"
+}
+
 const technologies = [
+  {
+    category: "Email Development",
+    skills: [
+      "HTML Email Development",
+      "Responsive Email Design",
+      "Email Automation",
+      "Klaviyo",
+      "Mailchimp",
+      "Salesforce Marketing Cloud",
+      "A/B Testing",
+      "Email Analytics",
+      "Email Deliverability",
+      "SendGrid",
+      "HubSpot",
+      "MJML",
+      "Email Testing",
+      "Litmus",
+      "Email on Acid",
+    ],
+  },
   {
     category: "Mobile Development",
     skills: [
@@ -314,10 +495,10 @@ export default function TechStack() {
               tech.skills.map((skill) => (
                 <span
                   key={`${tech.category}-${skill}`}
-                  className="tech-icon-item inline-flex items-center gap-2 rounded-md bg-primary/10 px-3 py-1.5 text-sm font-medium ring-1 ring-inset ring-primary/20 hover:bg-primary/20 transition-colors"
+                  className={`tech-icon-item inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium ring-1 ring-inset transition-colors ${getSkillBrandColor(skill)}`}
                 >
                   {getSkillIcon(skill)}
-                  <span className="text-primary">{skill}</span>
+                  <span>{skill}</span>
                 </span>
               )),
             )}
@@ -328,13 +509,14 @@ export default function TechStack() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {technologies.map((tech) => (
               <Card key={tech.category} className="p-6">
-                <h3 className="font-semibold text-lg mb-4 text-primary">{tech.category}</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="font-semibold text-lg mb-4 text-primary text-center">{tech.category}</h3>
+                <div className="flex flex-wrap gap-2 justify-center">
                   {tech.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="inline-flex items-center rounded-md bg-muted px-2 py-1 text-xs font-medium ring-1 ring-inset ring-gray-500/10"
+                      className={`inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset transition-colors ${getSkillBrandColor(skill)}`}
                     >
+                      {getSkillIcon(skill)}
                       {skill}
                     </span>
                   ))}

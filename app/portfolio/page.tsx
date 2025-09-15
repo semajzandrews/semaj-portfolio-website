@@ -22,31 +22,32 @@ export default function Portfolio() {
     setMounted(true)
   }, [])
 
-  // Determine which video to use based on theme
-  const getVideoSrc = () => {
-    // Using the longer animation video (13MB) for better quality and duration
-    return "/ascii-face-dark.webm"
+  // Determine which image to use based on theme
+  const getImageSrc = () => {
+    // Using static ASCII art image
+    return "/ascii-face-static.png" // Your new avatar image
   }
 
-  // Get theme-specific styling for video
-  const getVideoStyle = () => {
-    if (!mounted) return { objectPosition: 'center 25%', transform: 'scale(1.05)' }
+  // Get theme-specific styling for image
+  const getImageStyle = () => {
+    if (!mounted) return { 
+      objectPosition: 'center center', 
+      transform: 'scale(1.02)'
+    }
     
     const isDark = resolvedTheme === 'dark'
     
     if (isDark) {
-      // Dark mode - keep original dark video look
+      // Dark mode - enhanced professional look with subtle glow
       return {
-        objectPosition: 'center 25%',
-        transform: 'scale(1.05)',
-        filter: 'brightness(3.75)'
+        objectPosition: 'center center',
+        transform: 'scale(1.02)'
       }
     } else {
-      // Light mode - make video slightly brighter for better contrast
+      // Light mode - softer, more professional appearance
       return {
-        objectPosition: 'center 25%',
-        transform: 'scale(1.05)',
-        filter: 'brightness(3.75)'
+        objectPosition: 'center center',
+        transform: 'scale(1.02)'
       }
     }
   }
@@ -127,24 +128,29 @@ export default function Portfolio() {
 
       <main className="w-full">
         {/* Hero/About Section - Full viewport height with proper spacing */}
-        <section id="about" className="min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24">
+        <section id="about" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24">
           <div className="w-full max-w-4xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-10 text-center">
-              <div className="relative">
-                <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <video
-                    key={getVideoSrc()} // Force re-render when video source changes
-                    src={getVideoSrc()}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                    style={getVideoStyle()}
-                    aria-label="Semaj Andrews - ASCII Art Animation"
+              <div className="relative group">
+                {/* Outer glow ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 opacity-60 blur-sm scale-110 group-hover:opacity-80 transition-opacity duration-500"></div>
+                
+                {/* Main image container */}
+                <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-2 border-primary/30 shadow-2xl hover:shadow-primary/20 transition-all duration-500 bg-gradient-to-br from-background/50 to-background/20 backdrop-blur-sm video-container">
+                  <img
+                    key={getImageSrc()} // Force re-render when image source changes
+                    src={getImageSrc()}
+                    alt="Semaj Andrews - ASCII Art Portrait"
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${mounted && resolvedTheme === 'dark' ? 'ascii-glow-dark' : 'ascii-glow'}`}
+                    style={getImageStyle()}
                   />
+                  
+                  {/* Subtle overlay for depth */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Animated accent ring */}
+                <div className="absolute inset-0 rounded-full border border-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               </div>
 
               <div className="space-y-4 -mt-4">
@@ -187,7 +193,7 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section - Full viewport height with proper spacing */}
-        <section id="projects" className="min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24 bg-muted/30">
+        <section id="projects" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24 bg-muted/30">
           <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Projects</h2>
@@ -202,7 +208,7 @@ export default function Portfolio() {
         </section>
 
         {/* Tech Stack Section - Full viewport height with proper spacing */}
-        <section id="tech-stack" className="min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24">
+        <section id="tech-stack" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24">
           <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Tech Stack</h2>
@@ -218,7 +224,7 @@ export default function Portfolio() {
         </section>
 
         {/* Contact Section - Full viewport height with proper spacing */}
-        <section id="contact" className="min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24 bg-muted/30">
+        <section id="contact" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24 bg-muted/30">
           <div className="w-full max-w-4xl mx-auto flex-1 flex flex-col justify-center">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">
