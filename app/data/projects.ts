@@ -5,7 +5,7 @@ export type Project = {
   image: string
   link: string
   tags: string[]
-  category: string
+  categories: string[]
   subcategory?: string
   detailedDescription?: string
   features?: string[]
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     image: "/projects/igris/hero.png",
     link: "https://github.com/semajzandrews",
     tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent"],
-    category: "AI / Automation",
+    categories: ["AI Development"],
     subcategory: "Production Agent",
     detailedDescription:
       "IGRIS started as a Solo Leveling-inspired shadow agent and evolved into the working pipeline I use to ship production websites end-to-end. Every site is gated by a fingerprint registry — palette family, type stack, motion vocabulary, and layout grammar are extracted and compared against the last several builds, refusing any spec that would repeat aesthetics. The pipeline produces Next.js 16 / React 19 / Tailwind v4 / Framer Motion deliverables with a documented quality bar. Mobile-first execution is mandatory because demos happen on the salesperson's phone. Next milestone: extending IGRIS from websites into native mobile applications.",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     link: "https://github.com/semajzandrews/AISoftwareFactoryTemplate",
     repoUrl: "https://github.com/semajzandrews/AISoftwareFactoryTemplate",
     tags: ["Python", "Anthropic API", "Multi-Agent", "Batch"],
-    category: "AI / Automation",
+    categories: ["AI Development"],
     subcategory: "Multi-Agent Orchestration",
     detailedDescription:
       "Sister system to IGRIS — similar in goal, different in shape. Where IGRIS is a single-build production agent, AI Software Factory is the batch orchestrator: it reads a CSV of businesses, researches design trends per industry vertical, and dispatches unique production-quality builds in parallel. The orchestrator processes 30–38+ rows in a single overnight run. A research engine pulls trends from Awwwards, Dribbble, Framer, and CSS Design Awards; a design strategy module translates research into a per-site brief; a generation engine produces full frontend output. A TTS reporter narrates progress aloud so the operator can walk away and wake to finished work.",
@@ -123,11 +123,12 @@ export const projects: Project[] = [
     image: "/projects/buildwhatyouwant/hero.png",
     link: "https://github.com/semajzandrews/buildwhatyouwant",
     repoUrl: "https://github.com/semajzandrews/buildwhatyouwant",
+    liveUrl: "https://buildwhatyouwant.com",
     tags: ["Next.js 16", "Stripe", "Framer Motion", "Sales Platform"],
-    category: "Platforms",
+    categories: ["Web Development", "AI Development"],
     subcategory: "Sales Conversion",
     detailedDescription:
-      "BuildWhatYouWant is the sales surface that wraps the IGRIS pipeline. Walk a neighborhood, study storefronts, build sites in advance. Each business receives a unique 6-digit PIN (last six of phone number) printed on a card or QR code. The owner enters the PIN at bywhatyouwant.com, sees their finished work, and checks out at a flat rate ($149) plus optional industry-specific add-ons. Seven-day preview window — love it or owe nothing. Built on Next.js 16 with Stripe Checkout, Framer Motion scroll choreography, and a Fraunces / Inter / JetBrains Mono typographic stack. FireCrawl + Brave APIs feed ongoing design intelligence into the pipeline.",
+      "BuildWhatYouWant is the sales surface that wraps the IGRIS pipeline. Walk a neighborhood, study storefronts, build sites in advance. Each business receives a unique 6-digit PIN (last six of phone number) printed on a card or QR code. The owner enters the PIN at buildwhatyouwant.com, sees their finished work, and checks out at a flat rate ($149) plus optional industry-specific add-ons. Seven-day preview window — love it or owe nothing. Built on Next.js 16 with Stripe Checkout, Framer Motion scroll choreography, and a Fraunces / Inter / JetBrains Mono typographic stack. FireCrawl + Brave APIs feed ongoing design intelligence into the pipeline.",
     features: [
       "6-digit PIN unlock per business — pre-built preview before any contact",
       "Flat-rate checkout ($149) with industry-specific add-ons",
@@ -168,7 +169,7 @@ export const projects: Project[] = [
     image: "/projects/macswift-hub/hero.png",
     link: "https://github.com/semajzandrews",
     tags: ["Python", "Flask", "eBay API", "Multi-Domain"],
-    category: "Platforms",
+    categories: ["Web Development"],
     subcategory: "Operations & Commerce",
     detailedDescription:
       "MacSwift Hub is the platform layer behind a multi-domain business operation — starting with eBay (Apple hardware resale) and expanding to additional revenue domains over time. The hub centralizes inventory state, listing health, market-pricing intelligence, daily API rate-limit awareness, and a sourcing pipeline that tracks deal candidates from upstream feeders like Mac Mini Watch. Built with a Python/Flask web layer over a typed domain core, the hub exposes a real-time dashboard, automated draft-listing workflows (so iteration never touches live commerce), and a registry of rate budgets per upstream API. The architecture is designed to absorb new domains as folders, not as rewrites.",
@@ -212,8 +213,9 @@ export const projects: Project[] = [
     image: "/projects/systemomtics/hero.png",
     link: "https://github.com/semajzandrews/systemomtics-site",
     repoUrl: "https://github.com/semajzandrews/systemomtics-site",
+    liveUrl: "https://systemomtics-site.vercel.app",
     tags: ["Next.js 16", "Tailwind v4", "Framer Motion", "Editorial"],
-    category: "Websites",
+    categories: ["Web Development", "AI Development"],
     subcategory: "Botanical / Wellness",
     detailedDescription:
       "Systemomtics is a botanical wellness brand — small-batch, handcrafted, earth-derived. The site sells balms (earth-derived butters, Rosminté & Lavilla Root, botanical ingredients), customizable art pieces ('Wear the Intention'), and free educational PDFs from The L.A.B. The visual language pairs a warm cream palette with editorial serif typography and intentional scroll motion; sections numbered 01–04 carry the reader through Collection → Balms → Art → Free PDFs. Built with Next.js 16, React 19, Tailwind v4, and Framer Motion v12 — the first production deployment of the IGRIS pipeline.",
@@ -253,8 +255,9 @@ export const projects: Project[] = [
     image: "/projects/nails-fever-spa/hero.png",
     link: "https://github.com/semajzandrews/nails-fever-spa",
     repoUrl: "https://github.com/semajzandrews/nails-fever-spa",
+    liveUrl: "https://nails-fever-spa.vercel.app",
     tags: ["Next.js", "Three.js", "Framer Motion", "Tailwind"],
-    category: "Websites",
+    categories: ["Web Development", "AI Development"],
     subcategory: "Beauty / Luxury",
     detailedDescription:
       "Nails Fever Spa is a luxury dark-theme site for a boutique nail and spa business. The build leans editorial — large-format imagery, intentional negative space, and a Three.js hero scene that gives the homepage a tactile depth typical of high-end fashion sites rather than service businesses. Built via the IGRIS pipeline with strict differentiation against prior beauty-vertical work.",
@@ -292,8 +295,9 @@ export const projects: Project[] = [
     image: "/projects/southern-komfort/hero.png",
     link: "https://github.com/semajzandrews/southern-komfort-site",
     repoUrl: "https://github.com/semajzandrews/southern-komfort-site",
+    liveUrl: "https://southern-komfort-site.vercel.app",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
-    category: "Websites",
+    categories: ["Web Development", "AI Development"],
     subcategory: "Hospitality",
     detailedDescription:
       "Southern Komfort Bar & Grill is a hospitality brand site with a warm smokehouse aesthetic — earthy palette, friendly editorial typography, and scroll motion tuned to feel grounded rather than glossy. Built via the IGRIS pipeline with strict differentiation against the luxury beauty work of Nails Fever Spa.",
@@ -329,8 +333,9 @@ export const projects: Project[] = [
     image: "/projects/hong-am/hero.png",
     link: "https://github.com/semajzandrews/hong-am-site",
     repoUrl: "https://github.com/semajzandrews/hong-am-site",
+    liveUrl: "https://hong-am-site.vercel.app",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
-    category: "Websites",
+    categories: ["Web Development", "AI Development"],
     subcategory: "Brand",
     detailedDescription:
       "Hong Am is a brand site shipped via the IGRIS pipeline. Like every IGRIS build, its aesthetic was gated by the Differentiation Engine — palette, type stack, motion vocabulary, and layout grammar all had to clear the registry threshold against prior builds before generation was permitted.",
@@ -367,7 +372,7 @@ export const projects: Project[] = [
     link: "https://github.com/semajzandrews/BeatMyTravel",
     repoUrl: "https://github.com/semajzandrews/BeatMyTravel",
     tags: ["Swift", "SwiftUI", "MapKit", "iOS"],
-    category: "Mobile App Development",
+    categories: ["Mobile App Development"],
     subcategory: "Native iOS",
     detailedDescription:
       "BeatMyTravel is a multi-modal travel deal finder built natively in SwiftUI. Where most booking sites search direct routes only, BeatMyTravel combines cheap flights with rail and bus connectors — a graph-search across Amtrak, Frontier, Spirit, Megabus, FlixBus and others — to surface hidden-leg routes that beat direct prices. Designed, engineered, and shipped solo.",
@@ -407,7 +412,7 @@ export const projects: Project[] = [
     link: "https://github.com/semajzandrews/StationMD-iOS",
     repoUrl: "https://github.com/semajzandrews/StationMD-iOS",
     tags: ["Swift", "UIKit", "Telehealth", "HIPAA"],
-    category: "Mobile App Development",
+    categories: ["Mobile App Development"],
     subcategory: "Enterprise iOS",
     detailedDescription:
       "StationMD is a behavioral health telehealth network. I contribute as an iOS engineer on production mobile work — patient and clinician workflows, secure video consultations, and HIPAA-aligned data handling. This is enterprise-grade iOS in a regulated environment.",
@@ -446,8 +451,8 @@ export const projects: Project[] = [
     image: "/projects/scan-to-qr/hero.png",
     link: "https://chromewebstore.google.com/",
     tags: ["Chrome Extension", "JavaScript", "QR", "Web"],
-    category: "Browser Extension",
-    subcategory: "Productivity",
+    categories: ["Web Development"],
+    subcategory: "Browser Extensions",
     detailedDescription:
       "Scan to QR is a published Chrome extension that scans page content (URLs, selected text, images) and instantly generates QR codes for sharing or device handoff. Designed and engineered solo; currently live on the Chrome Web Store. The extension uses Chrome's modern Manifest V3 service-worker architecture and a minimal popup UI tuned for one-click flow.",
     features: [
@@ -473,5 +478,79 @@ export const projects: Project[] = [
     ],
     outcome:
       "Live on the Chrome Web Store — installable product, not a demo.",
+  },,
+// ─────────── Email Development ───────────
+  {
+    id: 12,
+    title: "Email Development Portfolio",
+    year: "2022 – 2024",
+    role: "Designer & Engineer (Solo)",
+    description:
+      "Six production-quality email templates across four major retail and travel brands — Michael Kors, Spirit Airlines, Pizza Hut, Janie & Jack, New Era, PrettyLittleThing.",
+    image: "/projects/email-portfolio/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio",
+    tags: ["HTML", "CSS", "Email Compatibility", "Litmus"],
+    categories: ["Email Development"],
+    subcategory: "Welcome Emails",
+    detailedDescription:
+      "A curated portfolio of six production-grade email templates spanning the full customer lifecycle: welcome (Janie & Jack, New Era, PrettyLittleThing), onboarding (Pizza Hut Hut Rewards), order confirmation (Spirit Airlines itinerary), and account confirmation (Michael Kors). Each template is hand-coded for maximum compatibility across Outlook, Gmail, Apple Mail, and mobile clients. The portfolio site itself is a carousel viewer that renders each template in an iframe so reviewers can scroll through the body of work without leaving the page.",
+    features: [
+      "Six production-quality email templates across four major brands",
+      "Full lifecycle coverage — welcome, onboarding, transactional",
+      "Hand-coded for cross-client compatibility (Outlook to mobile)",
+      "Responsive layouts with mobile-first fallbacks",
+      "Carousel viewer for in-browser review",
+    ],
+    technologies: [
+      "HTML / CSS for email-safe markup",
+      "Table-based layouts with progressive enhancement",
+      "Litmus / Email on Acid for cross-client testing",
+      "MJML where templated, hand-tuned for production",
+    ],
+    challenges: [
+      "Outlook's quirks (mso conditionals, VML for backgrounds)",
+      "Dark-mode forced color inversion on iOS / Outlook",
+      "Holding pixel-perfect rendering across 30+ email clients",
+    ],
+    solutions: [
+      "Hybrid-coded templates with conditional Outlook fallbacks",
+      "Hard-coded color values and SVG fallbacks to neutralize dark-mode aggression",
+      "Systematic Litmus / Email on Acid test pass before any send",
+    ],
+    outcome:
+      "Body of email work shipped for retail and travel brands; portfolio site renders all six in a single carousel for reviewer access.",
+  },
+
+  // ─────────── Game Development ───────────
+  {
+    id: 13,
+    title: "Disaster — Global Game Jam",
+    year: "TBD",
+    role: "Engineer (Team)",
+    description:
+      "A game built during Global Game Jam — placeholder card awaiting your details (year, team size, tech stack, URL, description). Tell me and I'll fill it in.",
+    image: "/projects/disaster/hero.png",
+    link: "https://github.com/semajzandrews",
+    tags: ["Game Jam", "Indie"],
+    categories: ["Game Development"],
+    subcategory: "2D Game Development",
+    detailedDescription:
+      "Disaster was built during a Global Game Jam event. Placeholder description — full write-up pending from the Monarch. Once details are confirmed (game engine, team role split, mechanics, screenshots, jam year and theme), this card gets filled in.",
+    features: [
+      "Built within Global Game Jam's 48-hour window",
+      "Team collaboration under jam constraints",
+    ],
+    technologies: [
+      "TBD — engine and stack pending",
+    ],
+    challenges: [
+      "Shipping a playable game within a 48-hour jam constraint",
+    ],
+    solutions: [
+      "Scope-locked early; iterated playtest-first",
+    ],
+    outcome:
+      "Completed and submitted to Global Game Jam — placeholder, awaiting Monarch's details.",
   },
 ]

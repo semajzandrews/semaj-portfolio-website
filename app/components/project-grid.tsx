@@ -6,34 +6,27 @@ import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { Project } from "../data/projects"
 
-// Define the props for the ProjectGrid component
 interface ProjectGridProps {
   projects: Project[]
 }
 
 const ITEMS_PER_PAGE = 6
 
-// Define hierarchical category structure
-const categoryHierarchy = {
-  "Email Development": {
-    "Welcome Emails": [],
-    "Transactional Emails": [],
-    "Win-Back Emails": [],
-    "Newsletter Emails": [],
-    "Promotional Emails": []
-  },
-  "Web Development": {
-    "Front-End Development": [],
-    "Full-Stack Development": []
-  },
-  "Mobile App Development": {
-    "Native iOS": [],
-    "Native Android": []
-  },
-  "Game Development": {
-    "2D Game Development": [],
-    "3D Game Development": []
-  }
+const categoryHierarchy: Record<string, string[]> = {
+  "AI Development": ["Production Agent", "Multi-Agent Orchestration", "Sales Conversion"],
+  "Web Development": [
+    "Front-End Development",
+    "Full-Stack Development",
+    "Botanical / Wellness",
+    "Beauty / Luxury",
+    "Hospitality",
+    "Brand",
+    "Operations & Commerce",
+    "Browser Extensions",
+  ],
+  "Mobile App Development": ["Native iOS", "Native Android", "Enterprise iOS"],
+  "Email Development": ["Welcome Emails", "Transactional Emails", "Onboarding Emails"],
+  "Game Development": ["2D Game Development", "3D Game Development"],
 }
 
 export default function ProjectGrid({ projects }: ProjectGridProps) {
@@ -41,44 +34,45 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedSubcategory, setSelectedSubcategory] = useState("All")
 
-  // Get unique categories from projects
-  const categories = ["All", ...Array.from(new Set(projects.map((project) => project.category)))]
+  // All categories present in data, surfaced as filter options. Hierarchy order first, then anything else.
+  const allFromData = Array.from(new Set(projects.flatMap((p) => p.categories ?? [])))
+  const ordered = [
+    ...Object.keys(categoryHierarchy).filter((c) => allFromData.includes(c)),
+    ...allFromData.filter((c) => !(c in categoryHierarchy)),
+  ]
+  const categories = ["All", ...ordered]
 
-  // Get subcategories for the selected category
   const getSubcategories = (category: string) => {
-    if (category === "All" || !categoryHierarchy[category as keyof typeof categoryHierarchy]) {
-      return ["All"]
-    }
-    return ["All", ...Object.keys(categoryHierarchy[category as keyof typeof categoryHierarchy])]
+    if (category === "All") return ["All"]
+    const subs = categoryHierarchy[category] ?? []
+    // Only include subcategories that have at least one project under this category
+    const present = new Set(
+      projects
+        .filter((p) => (p.categories ?? []).includes(category) && p.subcategory)
+        .map((p) => p.subcategory as string),
+    )
+    return ["All", ...subs.filter((s) => present.has(s))]
   }
 
-  // Filter projects based on selected category and subcategory
   const filteredProjects = projects.filter((project) => {
-    if (selectedCategory === "All") return true
-    if (project.category !== selectedCategory) return false
-    
-    if (selectedSubcategory === "All") return true
-    
-    // Check if project subcategory matches the selected subcategory
-    return project.subcategory === selectedSubcategory
+    const cats = project.categories ?? []
+    if (selectedCategory !== "All" && !cats.includes(selectedCategory)) return false
+    if (selectedSubcategory !== "All" && project.subcategory !== selectedSubcategory) return false
+    return true
   })
 
-  // Calculate total pages
   const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE)
-
-  // Get current page projects
   const currentProjects = filteredProjects.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
 
   return (
     <div className="w-full">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
         <div className="flex flex-col sm:flex-row gap-4">
-          {/* Main Category Dropdown */}
           <Select
             value={selectedCategory}
             onValueChange={(value) => {
               setSelectedCategory(value)
-              setSelectedSubcategory("All") // Reset subcategory when main category changes
+              setSelectedSubcategory("All")
               setCurrentPage(1)
             }}
           >
@@ -94,8 +88,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             </SelectContent>
           </Select>
 
-          {/* Subcategory Dropdown - Only show if a specific category is selected */}
-          {selectedCategory !== "All" && (
+          {selectedCategory !== "All" && getSubcategories(selectedCategory).length > 1 && (
             <Select
               value={selectedSubcategory}
               onValueChange={(value) => {
@@ -116,7 +109,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             </Select>
           )}
         </div>
-        
+
         <div className="flex justify-center sm:justify-end space-x-2">
           <Button
             variant="outline"
@@ -128,34 +121,45 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
           <Button
             variant="outline"
             onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-            disabled={currentPage === totalPages}
+            disabled={currentPage === totalPages || totalPages === 0}
           >
             Next
           </Button>
         </div>
       </div>
-      
-      {/* Filter Status */}
+
       {(selectedCategory !== "All" || selectedSubcategory !== "All") && (
         <div className="mb-6 p-3 bg-muted/50 rounded-lg">
           <p className="text-sm text-muted-foreground">
-            Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? 's' : ''}
+            Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? "s" : ""}
             {selectedCategory !== "All" && (
-              <span> in <span className="font-medium">{selectedCategory}</span></span>
+              <span>
+                {" "}
+                in <span className="font-medium">{selectedCategory}</span>
+              </span>
             )}
             {selectedSubcategory !== "All" && (
-              <span> - <span className="font-medium">{selectedSubcategory}</span></span>
+              <span>
+                {" "}
+                — <span className="font-medium">{selectedSubcategory}</span>
+              </span>
             )}
           </p>
         </div>
       )}
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-        {currentProjects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
-      </div>
-      
+
+      {filteredProjects.length === 0 ? (
+        <div className="py-12 text-center text-sm text-muted-foreground border border-dashed rounded-lg">
+          No projects yet in this category — more on the way.
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          {currentProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </div>
+      )}
+
       {totalPages > 1 && (
         <div className="mt-8 text-center text-sm text-muted-foreground">
           Page {currentPage} of {totalPages}
@@ -164,4 +168,3 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
     </div>
   )
 }
-

@@ -65,13 +65,13 @@ export default function Portfolio() {
           {/* Signature Name - Left */}
           <div className="flex items-center py-1">
             <Link href="/portfolio" className="group">
-              <span 
-                className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent hover:from-primary/80 hover:via-primary hover:to-primary transition-all duration-300 leading-relaxed py-1" 
+              <span
+                className="text-2xl md:text-3xl font-normal bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent hover:from-primary/80 hover:via-primary hover:to-primary transition-all duration-300 whitespace-nowrap"
                 style={{
-                  fontFamily: "'Brittany Signature', cursive",
-                  lineHeight: '1.6',
-                  paddingTop: '4px',
-                  paddingBottom: '4px'
+                  fontFamily: "var(--font-signature), 'Sacramento', 'Allura', cursive",
+                  lineHeight: '1.2',
+                  paddingTop: '2px',
+                  paddingBottom: '2px',
                 }}
               >
                 Semaj Andrews
@@ -80,7 +80,7 @@ export default function Portfolio() {
           </div>
 
           {/* Centered Navigation - Desktop */}
-          <nav className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary hover:scale-105 transform duration-200">
               About
             </Link>
@@ -109,8 +109,8 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden border-t bg-background/95 backdrop-blur">
+        {/* Mobile / Tablet Navigation (below lg) */}
+        <div className="lg:hidden border-t bg-background/95 backdrop-blur">
           <nav className="container mx-auto flex items-center justify-center space-x-6 py-3 px-4">
             <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
               About

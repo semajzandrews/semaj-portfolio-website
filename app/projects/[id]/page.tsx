@@ -36,9 +36,18 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
           <div className="space-y-2">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tight">{project.title}</h1>
-              <span className="rounded-md bg-primary/10 px-3 py-1 text-xs font-medium text-primary self-start">
-                {project.category}
-              </span>
+              <div className="flex flex-wrap gap-2">
+                {project.categories.map((c) => (
+                  <span key={c} className="rounded-md bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                    {c}
+                  </span>
+                ))}
+                {project.subcategory && (
+                  <span className="rounded-md bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                    {project.subcategory}
+                  </span>
+                )}
+              </div>
               <p className="text-lg text-muted-foreground">{project.description}</p>
             </div>
 
@@ -75,19 +84,23 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               ))}
             </div>
 
-            <div className="flex gap-4">
-              <Link href={project.link} target="_blank">
-                <Button className="flex items-center gap-2">
-                  <Github className="h-4 w-4" />
-                  View on GitHub
-                </Button>
-              </Link>
-              <Link href={project.link} target="_blank">
-                <Button variant="outline" className="flex items-center gap-2">
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
-                </Button>
-              </Link>
+            <div className="flex flex-wrap gap-3">
+              {project.liveUrl && (
+                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Button className="flex items-center gap-2">
+                    <ExternalLink className="h-4 w-4" />
+                    View Live
+                  </Button>
+                </Link>
+              )}
+              {(project.repoUrl || project.link) && (
+                <Link href={project.repoUrl || project.link} target="_blank" rel="noopener noreferrer">
+                  <Button variant={project.liveUrl ? "outline" : "default"} className="flex items-center gap-2">
+                    <Github className="h-4 w-4" />
+                    View on GitHub
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
 
