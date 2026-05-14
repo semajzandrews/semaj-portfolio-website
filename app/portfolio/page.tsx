@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import ContactForm from "../components/contact-form"
 import TechStack from "../components/tech-stack"
@@ -102,7 +102,9 @@ export default function Portfolio() {
                 🎮 Play Game
               </Button>
             </Link>
-            <Button variant="outline" size="sm">Resume</Button>
+            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm">Resume</Button>
+            </Link>
             <ThemeToggle />
           </div>
         </div>
@@ -163,25 +165,19 @@ export default function Portfolio() {
               </div>
 
               <div className="flex items-center gap-4 mt-4">
-                <Link href="https://github.com" target="_blank">
+                <Link href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="h-12 w-12">
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
-                <Link href="https://linkedin.com" target="_blank">
+                <Link href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="h-12 w-12">
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
-                <Link href="https://twitter.com" target="_blank">
-                  <Button variant="outline" size="lg" className="h-12 w-12">
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
-                  </Button>
-                </Link>
-                <Link href="mailto:hello@example.com">
+                <Link href="mailto:semajzandrews@gmail.com">
                   <Button variant="outline" size="lg" className="h-12 w-12">
                     <Mail className="h-5 w-5" />
                     <span className="sr-only">Email</span>
@@ -245,13 +241,16 @@ export default function Portfolio() {
 
       <footer className="border-t bg-background">
         <div className="w-full max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 shrink-0 items-center px-4 md:px-6">
-          <p className="text-xs text-muted-foreground">© 2024 Semaj.dev. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2026 Semaj Andrews. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="#">
-              Terms of Service
+            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
+              GitHub
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="#">
-              Privacy
+            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </Link>
+            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="mailto:semajzandrews@gmail.com">
+              Email
             </Link>
           </nav>
         </div>

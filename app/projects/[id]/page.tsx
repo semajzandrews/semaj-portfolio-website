@@ -152,13 +152,16 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
 
       <footer className="border-t mt-6">
         <div className="container flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center px-4 md:px-6">
-          <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Semaj.dev. All rights reserved.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">© 2026 Semaj Andrews. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link className="text-xs hover:underline underline-offset-4" href="#">
-              Terms of Service
+            <Link className="text-xs hover:underline underline-offset-4" href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
+              GitHub
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4" href="#">
-              Privacy
+            <Link className="text-xs hover:underline underline-offset-4" href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </Link>
+            <Link className="text-xs hover:underline underline-offset-4" href="mailto:semajzandrews@gmail.com">
+              Email
             </Link>
           </nav>
         </div>
