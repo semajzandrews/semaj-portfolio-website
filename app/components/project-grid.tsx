@@ -13,19 +13,17 @@ interface ProjectGridProps {
 const ITEMS_PER_PAGE = 6
 
 const categoryHierarchy: Record<string, string[]> = {
-  "AI Development": ["Production Agent", "Multi-Agent Orchestration", "Sales Conversion"],
-  "Web Development": [
-    "Front-End Development",
-    "Full-Stack Development",
-    "Botanical / Wellness",
-    "Beauty / Luxury",
-    "Hospitality",
-    "Brand",
-    "Operations & Commerce",
-    "Browser Extensions",
+  "AI Development": ["AI Agents", "AI Pipelines & Orchestration"],
+  "Web Development": ["Front-End Development", "Full-Stack Development", "Browser Extensions"],
+  "Mobile App Development": ["Native iOS", "Native Android"],
+  "Email Development": [
+    "Welcome Emails",
+    "Transactional Emails",
+    "Onboarding Emails",
+    "Win-Back Emails",
+    "Newsletter Emails",
+    "Promotional Emails",
   ],
-  "Mobile App Development": ["Native iOS", "Native Android", "Enterprise iOS"],
-  "Email Development": ["Welcome Emails", "Transactional Emails", "Onboarding Emails"],
   "Game Development": ["2D Game Development", "3D Game Development"],
 }
 

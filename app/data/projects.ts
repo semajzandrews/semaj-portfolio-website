@@ -33,7 +33,7 @@ export const projects: Project[] = [
     link: "https://github.com/semajzandrews",
     tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent"],
     categories: ["AI Development"],
-    subcategory: "Production Agent",
+    subcategory: "AI Agents",
     detailedDescription:
       "IGRIS started as a Solo Leveling-inspired shadow agent and evolved into the working pipeline I use to ship production websites end-to-end. Every site is gated by a fingerprint registry — palette family, type stack, motion vocabulary, and layout grammar are extracted and compared against the last several builds, refusing any spec that would repeat aesthetics. The pipeline produces Next.js 16 / React 19 / Tailwind v4 / Framer Motion deliverables with a documented quality bar. Mobile-first execution is mandatory because demos happen on the salesperson's phone. Next milestone: extending IGRIS from websites into native mobile applications.",
     features: [
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/semajzandrews/AISoftwareFactoryTemplate",
     tags: ["Python", "Anthropic API", "Multi-Agent", "Batch"],
     categories: ["AI Development"],
-    subcategory: "Multi-Agent Orchestration",
+    subcategory: "AI Pipelines & Orchestration",
     detailedDescription:
       "Sister system to IGRIS — similar in goal, different in shape. Where IGRIS is a single-build production agent, AI Software Factory is the batch orchestrator: it reads a CSV of businesses, researches design trends per industry vertical, and dispatches unique production-quality builds in parallel. The orchestrator processes 30–38+ rows in a single overnight run. A research engine pulls trends from Awwwards, Dribbble, Framer, and CSS Design Awards; a design strategy module translates research into a per-site brief; a generation engine produces full frontend output. A TTS reporter narrates progress aloud so the operator can walk away and wake to finished work.",
     features: [
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     liveUrl: "https://buildwhatyouwant.com",
     tags: ["Next.js 16", "Stripe", "Framer Motion", "Sales Platform"],
     categories: ["Web Development", "AI Development"],
-    subcategory: "Sales Conversion",
+    subcategory: "Full-Stack Development",
     detailedDescription:
       "BuildWhatYouWant is the sales surface that wraps the IGRIS pipeline. Walk a neighborhood, study storefronts, build sites in advance. Each business receives a unique 6-digit PIN (last six of phone number) printed on a card or QR code. The owner enters the PIN at buildwhatyouwant.com, sees their finished work, and checks out at a flat rate ($149) plus optional industry-specific add-ons. Seven-day preview window — love it or owe nothing. Built on Next.js 16 with Stripe Checkout, Framer Motion scroll choreography, and a Fraunces / Inter / JetBrains Mono typographic stack. FireCrawl + Brave APIs feed ongoing design intelligence into the pipeline.",
     features: [
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     link: "https://github.com/semajzandrews",
     tags: ["Python", "Flask", "eBay API", "Multi-Domain"],
     categories: ["Web Development"],
-    subcategory: "Operations & Commerce",
+    subcategory: "Full-Stack Development",
     detailedDescription:
       "MacSwift Hub is the platform layer behind a multi-domain business operation — starting with eBay (Apple hardware resale) and expanding to additional revenue domains over time. The hub centralizes inventory state, listing health, market-pricing intelligence, daily API rate-limit awareness, and a sourcing pipeline that tracks deal candidates from upstream feeders like Mac Mini Watch. Built with a Python/Flask web layer over a typed domain core, the hub exposes a real-time dashboard, automated draft-listing workflows (so iteration never touches live commerce), and a registry of rate budgets per upstream API. The architecture is designed to absorb new domains as folders, not as rewrites.",
     features: [
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     liveUrl: "https://systemomtics-site.vercel.app",
     tags: ["Next.js 16", "Tailwind v4", "Framer Motion", "Editorial"],
     categories: ["Web Development", "AI Development"],
-    subcategory: "Botanical / Wellness",
+    subcategory: "Front-End Development",
     detailedDescription:
       "Systemomtics is a botanical wellness brand — small-batch, handcrafted, earth-derived. The site sells balms (earth-derived butters, Rosminté & Lavilla Root, botanical ingredients), customizable art pieces ('Wear the Intention'), and free educational PDFs from The L.A.B. The visual language pairs a warm cream palette with editorial serif typography and intentional scroll motion; sections numbered 01–04 carry the reader through Collection → Balms → Art → Free PDFs. Built with Next.js 16, React 19, Tailwind v4, and Framer Motion v12 — the first production deployment of the IGRIS pipeline.",
     features: [
@@ -258,7 +258,7 @@ export const projects: Project[] = [
     liveUrl: "https://nails-fever-spa.vercel.app",
     tags: ["Next.js", "Three.js", "Framer Motion", "Tailwind"],
     categories: ["Web Development", "AI Development"],
-    subcategory: "Beauty / Luxury",
+    subcategory: "Front-End Development",
     detailedDescription:
       "Nails Fever Spa is a luxury dark-theme site for a boutique nail and spa business. The build leans editorial — large-format imagery, intentional negative space, and a Three.js hero scene that gives the homepage a tactile depth typical of high-end fashion sites rather than service businesses. Built via the IGRIS pipeline with strict differentiation against prior beauty-vertical work.",
     features: [
@@ -298,7 +298,7 @@ export const projects: Project[] = [
     liveUrl: "https://southern-komfort-site.vercel.app",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
     categories: ["Web Development", "AI Development"],
-    subcategory: "Hospitality",
+    subcategory: "Front-End Development",
     detailedDescription:
       "Southern Komfort Bar & Grill is a hospitality brand site with a warm smokehouse aesthetic — earthy palette, friendly editorial typography, and scroll motion tuned to feel grounded rather than glossy. Built via the IGRIS pipeline with strict differentiation against the luxury beauty work of Nails Fever Spa.",
     features: [
@@ -336,7 +336,7 @@ export const projects: Project[] = [
     liveUrl: "https://hong-am-site.vercel.app",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
     categories: ["Web Development", "AI Development"],
-    subcategory: "Brand",
+    subcategory: "Front-End Development",
     detailedDescription:
       "Hong Am is a brand site shipped via the IGRIS pipeline. Like every IGRIS build, its aesthetic was gated by the Differentiation Engine — palette, type stack, motion vocabulary, and layout grammar all had to clear the registry threshold against prior builds before generation was permitted.",
     features: [
@@ -413,7 +413,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/semajzandrews/StationMD-iOS",
     tags: ["Swift", "UIKit", "Telehealth", "HIPAA"],
     categories: ["Mobile App Development"],
-    subcategory: "Enterprise iOS",
+    subcategory: "Native iOS",
     detailedDescription:
       "StationMD is a behavioral health telehealth network. I contribute as an iOS engineer on production mobile work — patient and clinician workflows, secure video consultations, and HIPAA-aligned data handling. This is enterprise-grade iOS in a regulated environment.",
     features: [
@@ -483,49 +483,230 @@ export const projects: Project[] = [
   // ─────────── Email Development ───────────
   {
     id: 12,
-    title: "Email Development Portfolio",
-    year: "2022 – 2024",
-    role: "Designer & Engineer (Solo)",
+    title: "Spirit Airlines — Itinerary",
+    year: "2024",
+    role: "Email Developer (Solo)",
     description:
-      "Six production-quality email templates across four major retail and travel brands — Michael Kors, Spirit Airlines, Pizza Hut, Janie & Jack, New Era, PrettyLittleThing.",
-    image: "/projects/email-portfolio/hero.png",
-    link: "https://github.com/semajzandrews/email-development-portfolio",
-    repoUrl: "https://github.com/semajzandrews/email-development-portfolio",
-    tags: ["HTML", "CSS", "Email Compatibility", "Litmus"],
+      "Production order-confirmation / itinerary email for Spirit Airlines. Flight details, fare breakdown, and check-in CTAs — hand-coded for cross-client rendering.",
+    image: "/projects/email-spirit-airlines/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio/tree/main/order-confirmation/spirit-airlines-itinerary",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio/tree/main/order-confirmation/spirit-airlines-itinerary",
+    tags: ["HTML", "CSS", "Transactional", "Cross-Client"],
     categories: ["Email Development"],
-    subcategory: "Welcome Emails",
+    subcategory: "Transactional Emails",
     detailedDescription:
-      "A curated portfolio of six production-grade email templates spanning the full customer lifecycle: welcome (Janie & Jack, New Era, PrettyLittleThing), onboarding (Pizza Hut Hut Rewards), order confirmation (Spirit Airlines itinerary), and account confirmation (Michael Kors). Each template is hand-coded for maximum compatibility across Outlook, Gmail, Apple Mail, and mobile clients. The portfolio site itself is a carousel viewer that renders each template in an iframe so reviewers can scroll through the body of work without leaving the page.",
+      "Spirit Airlines itinerary email — a production-grade transactional template covering booking confirmation, flight details, fare breakdown, and downstream CTAs (check-in, seat selection, baggage upgrades). Hand-coded with table-based layout and progressive enhancement for consistent rendering across Outlook, Gmail, Apple Mail, and major mobile clients. Tested through Litmus/Email on Acid before sign-off.",
     features: [
-      "Six production-quality email templates across four major brands",
-      "Full lifecycle coverage — welcome, onboarding, transactional",
-      "Hand-coded for cross-client compatibility (Outlook to mobile)",
-      "Responsive layouts with mobile-first fallbacks",
-      "Carousel viewer for in-browser review",
+      "Itinerary details with multi-leg flight support",
+      "Fare breakdown and ancillary product CTAs",
+      "Mobile-first layout with desktop fallbacks",
+      "Cross-client tested (Outlook 2007+, Gmail, Apple Mail, iOS/Android)",
     ],
     technologies: [
       "HTML / CSS for email-safe markup",
-      "Table-based layouts with progressive enhancement",
-      "Litmus / Email on Acid for cross-client testing",
-      "MJML where templated, hand-tuned for production",
+      "Table-based layout with hybrid coding",
+      "Conditional Outlook fallbacks (mso)",
+      "Litmus / Email on Acid for QA",
     ],
     challenges: [
-      "Outlook's quirks (mso conditionals, VML for backgrounds)",
-      "Dark-mode forced color inversion on iOS / Outlook",
-      "Holding pixel-perfect rendering across 30+ email clients",
+      "Multi-leg itinerary table that stays readable on narrow mobile widths",
+      "Brand-accurate yellow rendering across dark-mode forced inversion",
     ],
     solutions: [
-      "Hybrid-coded templates with conditional Outlook fallbacks",
-      "Hard-coded color values and SVG fallbacks to neutralize dark-mode aggression",
-      "Systematic Litmus / Email on Acid test pass before any send",
+      "Stacking responsive layout with media-query fallbacks",
+      "Hard-coded hex with dark-mode meta directives for color preservation",
     ],
-    outcome:
-      "Body of email work shipped for retail and travel brands; portfolio site renders all six in a single carousel for reviewer access.",
+    outcome: "Production-grade transactional email shipped for Spirit Airlines.",
+  },
+  {
+    id: 13,
+    title: "Michael Kors — Account Confirmation",
+    year: "2024",
+    role: "Email Developer (Solo)",
+    description:
+      "Luxury account-confirmation email for Michael Kors. Editorial typography, brand-precise rendering, and conversion-tuned CTAs.",
+    image: "/projects/email-michael-kors/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio/tree/main/account-confirmation/michaelkors-account-confirmation",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio/tree/main/account-confirmation/michaelkors-account-confirmation",
+    tags: ["HTML", "CSS", "Transactional", "Luxury"],
+    categories: ["Email Development"],
+    subcategory: "Transactional Emails",
+    detailedDescription:
+      "Michael Kors account-confirmation email — luxury-tier transactional template. Editorial typography, restrained color, brand-precise rendering across clients. Hand-coded to preserve the brand's high-end positioning even within email's restricted CSS surface. Cross-client tested before sign-off.",
+    features: [
+      "Editorial type stack tuned for luxury retail",
+      "Account-creation confirmation with conversion CTAs",
+      "Mobile-first with desktop refinement",
+      "Brand-accurate rendering across major clients",
+    ],
+    technologies: [
+      "HTML / CSS for email-safe markup",
+      "Hybrid table-based layout",
+      "Outlook-specific conditional fallbacks",
+      "Litmus / Email on Acid for QA",
+    ],
+    challenges: [
+      "Holding luxury brand typography on Outlook (which strips most font choices)",
+      "Conversion CTAs that feel intentional, not aggressive",
+    ],
+    solutions: [
+      "Webfont with system-font fallback chain optimized for Outlook",
+      "Editorial copy + restrained color carry the CTA's weight",
+    ],
+    outcome: "Production luxury-retail transactional email shipped for Michael Kors.",
+  },
+  {
+    id: 14,
+    title: "Pizza Hut — Hut Rewards Onboarding",
+    year: "2023",
+    role: "Email Developer (Solo)",
+    description:
+      "Onboarding email for Pizza Hut's Hut Rewards loyalty program. Lifecycle-thinking design with progressive engagement and clear next steps.",
+    image: "/projects/email-pizza-hut/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio/tree/main/onboarding/pizzahut-hut-rewards-onboarding",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio/tree/main/onboarding/pizzahut-hut-rewards-onboarding",
+    tags: ["HTML", "CSS", "Onboarding", "Lifecycle"],
+    categories: ["Email Development"],
+    subcategory: "Onboarding Emails",
+    detailedDescription:
+      "Hut Rewards onboarding email for Pizza Hut. Introduces the loyalty program to new members with a progressive engagement frame — earn / redeem / repeat — and clear next steps. Hand-coded with cross-client compatibility and lifecycle-aware copy structure.",
+    features: [
+      "Loyalty-program onboarding with progressive engagement frame",
+      "Earn / redeem / repeat narrative arc",
+      "Mobile-first layout with desktop polish",
+      "Cross-client tested",
+    ],
+    technologies: [
+      "HTML / CSS for email-safe markup",
+      "Table-based layout",
+      "Conditional Outlook fallbacks",
+      "Litmus / Email on Acid for QA",
+    ],
+    challenges: [
+      "Loyalty messaging that motivates without overwhelming first-time members",
+      "Brand-loud colors that survive client-side dark-mode inversion",
+    ],
+    solutions: [
+      "Stepped CTA hierarchy — one primary, two secondary",
+      "Color-locked palette with dark-mode preservation directives",
+    ],
+    outcome: "Production onboarding email shipped for the Pizza Hut Hut Rewards program.",
+  },
+  {
+    id: 15,
+    title: "PrettyLittleThing — Welcome",
+    year: "2023",
+    role: "Email Developer (Solo)",
+    description:
+      "Welcome email for PrettyLittleThing. Fast-fashion energy, conversion-tuned CTAs, mobile-first execution.",
+    image: "/projects/email-prettylittlething/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio/tree/main/welcome/prettylittlething-welcome-email",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio/tree/main/welcome/prettylittlething-welcome-email",
+    tags: ["HTML", "CSS", "Welcome", "Fashion"],
+    categories: ["Email Development"],
+    subcategory: "Welcome Emails",
+    detailedDescription:
+      "PrettyLittleThing welcome email — the first-touch retail introduction. Fast-fashion brand energy with conversion-tuned CTAs and a mobile-first execution. Hand-coded for cross-client rendering across Outlook, Gmail, Apple Mail, and mobile clients.",
+    features: [
+      "First-touch retail welcome with conversion CTAs",
+      "Mobile-first layout — primary surface for fashion shoppers",
+      "Brand-energetic palette and typography",
+      "Cross-client tested",
+    ],
+    technologies: [
+      "HTML / CSS for email-safe markup",
+      "Hybrid table-based layout",
+      "Outlook conditional fallbacks",
+      "Litmus / Email on Acid for QA",
+    ],
+    challenges: [
+      "Carrying fast-fashion energy through email's restricted CSS surface",
+      "Conversion CTAs that work at first-touch (low context)",
+    ],
+    solutions: [
+      "Bold imagery and color carry the brand where typography is constrained",
+      "Single primary CTA with discovery secondary — reduce decision load",
+    ],
+    outcome: "Production welcome email shipped for PrettyLittleThing.",
+  },
+  {
+    id: 16,
+    title: "New Era — Welcome",
+    year: "2023",
+    role: "Email Developer (Solo)",
+    description:
+      "Welcome email for New Era. Streetwear / sports cap brand identity, conversion-tuned introduction.",
+    image: "/projects/email-new-era/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio/tree/main/welcome/newera-welcome-email",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio/tree/main/welcome/newera-welcome-email",
+    tags: ["HTML", "CSS", "Welcome", "Streetwear"],
+    categories: ["Email Development"],
+    subcategory: "Welcome Emails",
+    detailedDescription:
+      "New Era welcome email — first-touch introduction for the streetwear and sports-cap brand. Hand-coded with brand-identity-preserving typography and cross-client tested layout.",
+    features: [
+      "First-touch welcome for a streetwear / sports brand",
+      "Brand-identity-preserving typography and color",
+      "Mobile-first execution",
+      "Cross-client tested",
+    ],
+    technologies: [
+      "HTML / CSS for email-safe markup",
+      "Table-based layout",
+      "Outlook conditional fallbacks",
+      "Litmus / Email on Acid for QA",
+    ],
+    challenges: [
+      "Preserving brand-identity typography where webfonts get stripped",
+      "Mobile parity with desktop without sacrificing visual weight",
+    ],
+    solutions: [
+      "System-font fallback chain matched to brand voice",
+      "Stacked mobile layout with media-query refinement",
+    ],
+    outcome: "Production welcome email shipped for New Era.",
+  },
+  {
+    id: 17,
+    title: "Janie & Jack — Welcome",
+    year: "2023",
+    role: "Email Developer (Solo)",
+    description:
+      "Welcome email for Janie & Jack. Premium kids' apparel brand voice, considered typography, conversion-tuned introduction.",
+    image: "/projects/email-janie-and-jack/hero.png",
+    link: "https://github.com/semajzandrews/email-development-portfolio/tree/main/welcome/janieandjack-welcome-email",
+    repoUrl: "https://github.com/semajzandrews/email-development-portfolio/tree/main/welcome/janieandjack-welcome-email",
+    tags: ["HTML", "CSS", "Welcome", "Apparel"],
+    categories: ["Email Development"],
+    subcategory: "Welcome Emails",
+    detailedDescription:
+      "Janie & Jack welcome email — first-touch introduction for the premium kids' apparel brand. Considered typography, restrained color, and cross-client tested. Hand-coded for rendering integrity across Outlook, Gmail, Apple Mail, and mobile.",
+    features: [
+      "First-touch welcome for premium kids' apparel",
+      "Considered typography, restrained color",
+      "Mobile-first layout",
+      "Cross-client tested",
+    ],
+    technologies: [
+      "HTML / CSS for email-safe markup",
+      "Table-based hybrid layout",
+      "Outlook conditional fallbacks",
+      "Litmus / Email on Acid for QA",
+    ],
+    challenges: [
+      "Premium brand voice within email's restricted CSS surface",
+      "Brand-precise color rendering across client-side dark-mode",
+    ],
+    solutions: [
+      "Editorial copy and restrained color carry the premium positioning",
+      "Color-locked palette with dark-mode preservation directives",
+    ],
+    outcome: "Production welcome email shipped for Janie & Jack.",
   },
 
   // ─────────── Game Development ───────────
   {
-    id: 13,
+    id: 18,
     title: "Disaster — Global Game Jam",
     year: "TBD",
     role: "Engineer (Team)",
