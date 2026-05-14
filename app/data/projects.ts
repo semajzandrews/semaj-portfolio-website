@@ -478,8 +478,9 @@ export const projects: Project[] = [
     ],
     outcome:
       "Live on the Chrome Web Store — installable product, not a demo.",
-  },,
-// ─────────── Email Development ───────────
+  },
+
+  // ─────────── Email Development ───────────
   {
     id: 12,
     title: "Email Development Portfolio",
