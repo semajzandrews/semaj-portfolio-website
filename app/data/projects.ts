@@ -376,7 +376,7 @@ export const projects: Project[] = [
     previewPoster: "/projects/pulsepoint/preview-poster.jpg",
     link: "https://github.com/semajzandrews/pulsepoint",
     repoUrl: "https://github.com/semajzandrews/pulsepoint",
-    liveUrl: "https://pulsepoint.vercel.app",
+    liveUrl: "https://pulsepoint-eta.vercel.app",
     tags: ["Next.js 16", "Motion", "Lenis", "Tailwind v4"],
     categories: ["Web Development", "AI Development"],
     subcategory: "Front-End Development",

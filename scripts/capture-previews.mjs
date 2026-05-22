@@ -19,7 +19,7 @@ const ROOT = path.resolve(__dirname, "..");
 const OUT_BASE = path.join(ROOT, "public", "projects");
 
 const TARGETS = [
-  { slug: "pulsepoint",              url: "https://pulsepoint.vercel.app" },
+  { slug: "pulsepoint",              url: "https://pulsepoint-eta.vercel.app" },
   { slug: "orange-central-supply",   url: "https://orange-central-supply.vercel.app" },
   { slug: "claudes-auto-repair",     url: "https://claudes-auto-repair.vercel.app" },
   { slug: "blessed-hope-daycare",    url: "https://blessed-hope-daycare.vercel.app" },
