@@ -30,9 +30,11 @@ const TARGETS = [
 ];
 
 const VIEWPORT = { width: 1440, height: 900 };
-const SCROLL_DURATION_MS = 9000;   // total scroll time
-const PRE_SCROLL_HOLD_MS = 1200;   // hold at top to let hero load + animate
-const POST_SCROLL_HOLD_MS = 800;   // hold at bottom
+const PRE_HOLD_MS  = 1200;   // hold at top to let hero load + animate
+const DOWN_MS      = 11000;  // scroll down (slower than v1)
+const BOTTOM_HOLD  = 1000;   // hold at the bottom
+const UP_MS        = 9000;   // scroll back up (slightly faster)
+const POST_HOLD_MS = 600;    // small tail before close
 
 const filter = process.argv[2];
 const queue = filter ? TARGETS.filter((t) => t.slug.includes(filter)) : TARGETS;
@@ -90,29 +92,38 @@ for (const t of queue) {
   const distance = Math.max(0, scrollHeight - viewportHeight);
 
   // Hold at top so the hero animations get to play
-  await page.waitForTimeout(PRE_SCROLL_HOLD_MS);
+  await page.waitForTimeout(PRE_HOLD_MS);
 
-  // Smooth scroll with requestAnimationFrame inside the page
-  await page.evaluate(
-    ({ distance, duration }) => {
-      return new Promise((resolve) => {
-        const start = performance.now();
-        const ease = (t) => 1 - Math.pow(1 - t, 3); // easeOutCubic
-        function step(now) {
-          const elapsed = now - start;
-          const progress = Math.min(1, elapsed / duration);
-          const y = ease(progress) * distance;
-          window.scrollTo(0, y);
-          if (progress < 1) requestAnimationFrame(step);
-          else resolve(undefined);
-        }
-        requestAnimationFrame(step);
-      });
-    },
-    { distance, duration: SCROLL_DURATION_MS }
-  );
+  // Smooth scroll with requestAnimationFrame inside the page.
+  // `direction: 'down'` goes 0 → distance, `'up'` goes distance → 0.
+  const smoothScroll = (distance, duration, direction) =>
+    page.evaluate(
+      ({ distance, duration, direction }) => {
+        return new Promise((resolve) => {
+          const start = performance.now();
+          // easeInOutCubic — slow at both ends, full speed in the middle
+          const ease = (t) =>
+            t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+          function step(now) {
+            const elapsed = now - start;
+            const progress = Math.min(1, elapsed / duration);
+            const e = ease(progress);
+            const y = direction === "down" ? e * distance : (1 - e) * distance;
+            window.scrollTo(0, y);
+            if (progress < 1) requestAnimationFrame(step);
+            else resolve(undefined);
+          }
+          requestAnimationFrame(step);
+        });
+      },
+      { distance, duration, direction }
+    );
 
-  await page.waitForTimeout(POST_SCROLL_HOLD_MS);
+  // Down → hold at bottom → back up → small tail
+  await smoothScroll(distance, DOWN_MS, "down");
+  await page.waitForTimeout(BOTTOM_HOLD);
+  await smoothScroll(distance, UP_MS, "up");
+  await page.waitForTimeout(POST_HOLD_MS);
 
   // Get the video file path Playwright is using
   const videoHandle = page.video();
