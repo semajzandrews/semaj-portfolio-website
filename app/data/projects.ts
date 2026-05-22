@@ -18,6 +18,11 @@ export type Project = {
   outcome?: string
   liveUrl?: string
   repoUrl?: string
+  /** Path to a scroll-through preview WebM. When set, the detail page
+   *  shows this autoplay-muted-loop video in place of the static hero. */
+  previewVideo?: string
+  /** Optional poster frame for the previewVideo. */
+  previewPoster?: string
 }
 
 export const projects: Project[] = [
@@ -367,6 +372,8 @@ export const projects: Project[] = [
     description:
       "Specialized medical, hazmat, reverse, and patient-transport logistics out of Jersey City. EKG-line hero, live vitals ticker, live dispatch console, custom cursor.",
     image: "/projects/pulsepoint/hero.png",
+    previewVideo: "/projects/pulsepoint/preview.webm",
+    previewPoster: "/projects/pulsepoint/preview-poster.jpg",
     link: "https://github.com/semajzandrews/pulsepoint",
     repoUrl: "https://github.com/semajzandrews/pulsepoint",
     liveUrl: "https://pulsepoint.vercel.app",
@@ -410,6 +417,8 @@ export const projects: Project[] = [
     description:
       "A 24/7 plumbing-supply storefront on Central Avenue, Orange NJ. Drafting-paper aesthetic, animated plumbing schematic, live always-open counter.",
     image: "/projects/orange-central-supply/hero.png",
+    previewVideo: "/projects/orange-central-supply/preview.webm",
+    previewPoster: "/projects/orange-central-supply/preview-poster.jpg",
     link: "https://github.com/semajzandrews/orange-central-supply",
     repoUrl: "https://github.com/semajzandrews/orange-central-supply",
     liveUrl: "https://orange-central-supply.vercel.app",
@@ -452,6 +461,8 @@ export const projects: Project[] = [
     description:
       "Honest neighborhood mechanic on Scotland Road, Orange NJ. Chrome-and-asphalt aesthetic, rotating wheel-hub signature, garage-door roll-up bay reveals.",
     image: "/projects/claudes-auto-repair/hero.png",
+    previewVideo: "/projects/claudes-auto-repair/preview.webm",
+    previewPoster: "/projects/claudes-auto-repair/preview-poster.jpg",
     link: "https://github.com/semajzandrews/claudes-auto-repair",
     repoUrl: "https://github.com/semajzandrews/claudes-auto-repair",
     liveUrl: "https://claudes-auto-repair.vercel.app",
@@ -495,6 +506,8 @@ export const projects: Project[] = [
     description:
       "Licensed home childcare on Joyce Street, Orange NJ. Warm picture-book palette, hand-drawn flower bloom signature, hand-illustrated house in the visit section.",
     image: "/projects/blessed-hope-daycare/hero.png",
+    previewVideo: "/projects/blessed-hope-daycare/preview.webm",
+    previewPoster: "/projects/blessed-hope-daycare/preview-poster.jpg",
     link: "https://github.com/semajzandrews/blessed-hope-daycare",
     repoUrl: "https://github.com/semajzandrews/blessed-hope-daycare",
     liveUrl: "https://blessed-hope-daycare.vercel.app",
@@ -538,6 +551,8 @@ export const projects: Project[] = [
     description:
       "Diagnostic-grade precision-service garage on S Jefferson Street, Orange NJ. Sapphire navy + brushed steel + amber. Live telemetry gauge + OBD scan readout signature.",
     image: "/projects/jefferson-auto-center/hero.png",
+    previewVideo: "/projects/jefferson-auto-center/preview.webm",
+    previewPoster: "/projects/jefferson-auto-center/preview-poster.jpg",
     link: "https://github.com/semajzandrews/jefferson-auto-center",
     repoUrl: "https://github.com/semajzandrews/jefferson-auto-center",
     liveUrl: "https://jefferson-auto-center.vercel.app",
@@ -573,6 +588,8 @@ export const projects: Project[] = [
     description:
       "Editorial residential + commercial painting practice on Freeman St, Orange NJ. Cinematic color-chip wall signature in the hero. Cormorant serif + considered palette doctrine.",
     image: "/projects/black-river-painting/hero.png",
+    previewVideo: "/projects/black-river-painting/preview.webm",
+    previewPoster: "/projects/black-river-painting/preview-poster.jpg",
     link: "https://github.com/semajzandrews/black-river-painting",
     repoUrl: "https://github.com/semajzandrews/black-river-painting",
     liveUrl: "https://black-river-painting.vercel.app",
@@ -601,6 +618,8 @@ export const projects: Project[] = [
     description:
       "Quiet, Muji-influenced neighborhood laundromat on Central Ave, Orange NJ. Linen + sage + clay palette. Slow tumble drum signature. Ritual not chore.",
     image: "/projects/laundry-care/hero.png",
+    previewVideo: "/projects/laundry-care/preview.webm",
+    previewPoster: "/projects/laundry-care/preview-poster.jpg",
     link: "https://github.com/semajzandrews/laundry-care",
     repoUrl: "https://github.com/semajzandrews/laundry-care",
     liveUrl: "https://laundry-care.vercel.app",
@@ -629,6 +648,8 @@ export const projects: Project[] = [
     description:
       "Late-night tacos and mezcal bar on Conover Terrace, Orange NJ. Midnight + neon magenta/marigold/papaya. Giant neon CANTINA 443 sign signature with marquee menu ticker.",
     image: "/projects/cantina-443/hero.png",
+    previewVideo: "/projects/cantina-443/preview.webm",
+    previewPoster: "/projects/cantina-443/preview-poster.jpg",
     link: "https://github.com/semajzandrews/cantina-443",
     repoUrl: "https://github.com/semajzandrews/cantina-443",
     liveUrl: "https://cantina-443.vercel.app",

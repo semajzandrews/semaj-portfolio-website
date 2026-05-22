@@ -51,10 +51,23 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               <p className="text-lg text-muted-foreground">{project.description}</p>
             </div>
 
-            {/* Image Gallery */}
+            {/* Image / video Gallery */}
             <div className="space-y-3">
-              <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-muted">
+                {project.previewVideo ? (
+                  <video
+                    src={project.previewVideo}
+                    poster={project.previewPoster || project.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                ) : (
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                )}
               </div>
               
               {project.screenshots && project.screenshots.length > 0 && (
@@ -170,7 +183,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <Link className="text-xs hover:underline underline-offset-4" href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
               GitHub
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4" href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
+            <Link className="text-xs hover:underline underline-offset-4" href="https://www.linkedin.com/in/semajzandrews2" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </Link>
             <Link className="text-xs hover:underline underline-offset-4" href="mailto:semajzandrews@gmail.com">
