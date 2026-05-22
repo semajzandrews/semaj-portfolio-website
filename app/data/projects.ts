@@ -359,6 +359,177 @@ export const projects: Project[] = [
     outcome:
       "Production brand site shipped via the pipeline — Differentiation Engine-verified.",
   },
+  {
+    id: 19,
+    title: "Pulse Point Logistics LLC",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description:
+      "Specialized medical, hazmat, reverse, and patient-transport logistics out of Jersey City. EKG-line hero, live vitals ticker, live dispatch console, custom cursor.",
+    image: "/projects/pulsepoint/hero.png",
+    link: "https://github.com/semajzandrews/pulsepoint",
+    repoUrl: "https://github.com/semajzandrews/pulsepoint",
+    liveUrl: "https://pulsepoint.vercel.app",
+    tags: ["Next.js 16", "Motion", "Lenis", "Tailwind v4"],
+    categories: ["Web Development", "AI Development"],
+    subcategory: "Front-End Development",
+    detailedDescription:
+      "Pulse Point Logistics is a specialized logistics carrier based in Jersey City — radiopharmaceuticals, hazmat, reverse logistics, and patient transport across the tri-state. The brand site reads like a medical operations console: an EKG line drawn live across the hero, a vitals ticker streaming diagnostic data under the nav, and a live dispatch console showing active shipments with running elapsed timers. Custom pulse-ring cursor. TWIC/TSA/HIPAA-tier positioning baked into the copy and the credentials grid. First IGRIS build greenlit by a real client.",
+    features: [
+      "EKG-line hero with kinetic per-character headline reveal",
+      "Continuous diagnostic vitals ticker beneath the nav",
+      "Live dispatch console with running elapsed timers and status pills",
+      "Network map with 15 real tri-state hubs and 20 animated lanes",
+      "Custom pulse-ring cursor (split detect + listener effects)",
+      "Mobile-first hamburger nav with staggered link entrance",
+    ],
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis (smooth scroll)",
+      "Lucide React",
+    ],
+    challenges: [
+      "Translating a clinical operations feel without leaning on hospital-website tropes",
+      "Keeping the EKG line and ticker animations performant on mid-tier mobile",
+    ],
+    solutions: [
+      "EKG line driven by a single SVG path with stroke-dashoffset; ticker uses CSS transform marquee",
+      "Network map rendered as SVG with declarative animations rather than canvas",
+    ],
+    outcome:
+      "Live and approved by the client. First IGRIS production deliverable that an external buyer signed off on.",
+  },
+  {
+    id: 20,
+    title: "Orange Central Supply",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description:
+      "A 24/7 plumbing-supply storefront on Central Avenue, Orange NJ. Drafting-paper aesthetic, animated plumbing schematic, live always-open counter.",
+    image: "/projects/orange-central-supply/hero.png",
+    link: "https://github.com/semajzandrews/orange-central-supply",
+    repoUrl: "https://github.com/semajzandrews/orange-central-supply",
+    liveUrl: "https://orange-central-supply.vercel.app",
+    tags: ["Next.js 16", "Motion", "SVG", "Tailwind v4"],
+    categories: ["Web Development", "AI Development"],
+    subcategory: "Front-End Development",
+    detailedDescription:
+      "Orange Central Supply is a 24/7 plumbing-supply storefront at 506 Central Ave, Orange NJ. The site is drawn like an engineering catalog: drafting-paper background, blueprint-blue grid, a hand-drafted plumbing schematic that strokes itself in across the hero, hand-drawn part icons throughout the SKU catalog, and a 'Counter' section with a live wall clock and a running 'minutes-open since 1998' meter. Safety orange is reserved exclusively for the OPEN-NOW indicator. Built via the IGRIS pipeline with a fingerprint deliberately opposed to every dark-tech logistics site in the registry.",
+    features: [
+      "Animated SVG plumbing schematic with stroked draw-in entrance",
+      "Live 24/7 counter with running clock + minutes-open meter",
+      "Six-aisle stocked-now grid + hand-drafted parts catalog SVGs",
+      "Hand-drawn neighborhood site plan in the location section",
+      "Khand condensed display + JetBrains Mono spec stamps",
+    ],
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Khand + Inter + JetBrains Mono (next/font)",
+    ],
+    challenges: [
+      "Making a 24/7 supply business feel premium without losing the working-shop honesty",
+      "Twelve commit-by-commit history showing real progress for an employer scroll",
+    ],
+    solutions: [
+      "Drafting-paper palette + hand-drawn SVG iconography pushes the site away from generic 'industrial' tropes",
+      "Sequential conventional commits (scaffold → tokens → layout → each section)",
+    ],
+    outcome:
+      "Live, indexed, and ready for door-to-door pickup as a Monday demo. Cost under two dollars in AI generation.",
+  },
+  {
+    id: 21,
+    title: "Claude's Auto Repair Shop",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description:
+      "Honest neighborhood mechanic on Scotland Road, Orange NJ. Chrome-and-asphalt aesthetic, rotating wheel-hub signature, garage-door roll-up bay reveals.",
+    image: "/projects/claudes-auto-repair/hero.png",
+    link: "https://github.com/semajzandrews/claudes-auto-repair",
+    repoUrl: "https://github.com/semajzandrews/claudes-auto-repair",
+    liveUrl: "https://claudes-auto-repair.vercel.app",
+    tags: ["Next.js 16", "Motion", "SVG", "Tailwind v4"],
+    categories: ["Web Development", "AI Development"],
+    subcategory: "Front-End Development",
+    detailedDescription:
+      "Claude's Auto Repair is a neighborhood auto repair shop at 253 Scotland Rd in Orange, NJ. The site's lineage is Hot Rod Magazine meets vintage Goodyear racing meets chrome-plated service bay — deep asphalt black surfaces, brushed chrome highlights, signal red used like a flag. The hero composition is a square wheel-hub illustration with chrome spokes rotating at 14 seconds, an outer tread ring rotating slower in the opposite direction, and a signal-red center cap. The Bays section uses a garage-door roll-up reveal that slides a brushed-metal panel up out of frame to expose each bay's contents. A neon flicker on the OPEN indicator and a yellow-and-asphalt warning stripe finish the atmosphere.",
+    features: [
+      "Rotating wheel-hub signature moment (two layers, opposite speeds)",
+      "Three service bays with brushed-metal garage-door roll-up reveal",
+      "Eight service-code cards (OIL, BRK, ALN, ELE, TRN, DIA, AC, TIR)",
+      "Seven-step process timeline (Drop off → Pick up)",
+      "NJ-time-aware live open/closed badge in the nav",
+      "Oswald condensed display + JetBrains Mono spec stamps",
+    ],
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Oswald + Inter + JetBrains Mono (next/font)",
+    ],
+    challenges: [
+      "Differentiating from sibling Jefferson Auto Center (same vertical) on every fingerprint axis",
+      "Selling 'honest mechanic' positioning without it reading as cheap",
+    ],
+    solutions: [
+      "Locked Claude's into a warm night-shop atmosphere — chrome, signal red, brushed metal — distinct from Jefferson's eventual industrial palette",
+      "Voice in the copy speaks directly to the customer ('Drop the keys. Pick it up fixed.') with no hedging",
+    ],
+    outcome:
+      "Live and queued for the Monday demo run on Scotland Road. Cost under two dollars in AI generation.",
+  },
+  {
+    id: 22,
+    title: "Blessed Hope Daycare Center",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description:
+      "Licensed home childcare on Joyce Street, Orange NJ. Warm picture-book palette, hand-drawn flower bloom signature, hand-illustrated house in the visit section.",
+    image: "/projects/blessed-hope-daycare/hero.png",
+    link: "https://github.com/semajzandrews/blessed-hope-daycare",
+    repoUrl: "https://github.com/semajzandrews/blessed-hope-daycare",
+    liveUrl: "https://blessed-hope-daycare.vercel.app",
+    tags: ["Next.js 16", "Motion", "SVG", "Tailwind v4"],
+    categories: ["Web Development", "AI Development"],
+    subcategory: "Front-End Development",
+    detailedDescription:
+      "Blessed Hope is a licensed home daycare on Joyce Street in Orange, NJ. The lineage is Eric Carle picture-book gouache meets Montessori classroom card meets nursery-rhyme palette — warm milk-cream, cocoa brown, peach hug, sage leaves, butter highlights. The signature moment is a hand-drawn flower bloom in the hero: eight back petals plus eight front petals plus a butter-yellow freckled center, all popping in on the bloom-pop keyframe. The leaves sway gently. Six golden sparkles float-soft around the composition. The Visit section ends in a hand-drawn front-of-house illustration with windows, a sage door, a heart on the door, a tree, and clouds. Handwritten Caveat-script accents throughout sell the human warmth.",
+    features: [
+      "Hand-drawn flower bloom signature moment (16 petals + sparkles)",
+      "Four age-group program cards (Infants, Toddlers, Preschool, Pre-K) with ratios",
+      "Ten-step daily-rhythm schedule",
+      "Six daily-promise trust cards (licensed, CPR, ratios, notes, food, outside)",
+      "Hand-drawn front-of-house SVG illustration in Visit section",
+      "Fraunces display + Nunito body + Caveat handwritten script",
+    ],
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Fraunces + Nunito + Caveat (next/font)",
+    ],
+    challenges: [
+      "Making a licensed-home-daycare site feel warm and trustworthy without crossing into kitschy",
+      "Differentiating from the harder industrial sites in the same batch (Orange Central Supply, Claude's Auto)",
+    ],
+    solutions: [
+      "Hand-illustrated SVG vocabulary in place of stock photography or AI imagery",
+      "Caveat handwritten accents on specific lines ('tours available most afternoons, just ask.') add human voice",
+    ],
+    outcome:
+      "Live and ready for tours-from-the-phone on Monday's walk. Cost under two dollars in AI generation.",
+  },
 
   // ─────────── Mobile / iOS ───────────
   {
