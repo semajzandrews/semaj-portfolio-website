@@ -35,6 +35,14 @@ const TARGETS = [
   { slug: "chubbies-deli",           url: "https://chubbies-deli.vercel.app" },
   { slug: "linden-pain-relief",      url: "https://linden-pain-relief.vercel.app" },
   { slug: "furniture-r-us",          url: "https://furniture-r-us.vercel.app" },
+  { slug: "castaway-restaurant",   url: "https://castaway-restaurant.vercel.app" },
+  { slug: "construction-dna",      url: "https://construction-dna.vercel.app" },
+  { slug: "dolphin-car-wash",      url: "https://dolphin-car-wash.vercel.app" },
+  { slug: "my-amor-coffee",         url: "https://my-amor-coffee.vercel.app" },
+  { slug: "mikauri-nail-salon",    url: "https://mikauri-nail-salon.vercel.app" },
+  { slug: "the-lounge-orange",     url: "https://the-lounge-orange.vercel.app" },
+  { slug: "the-unstoppers",        url: "https://the-unstoppers.vercel.app" },
+  { slug: "sa-stores",              url: "https://sa-stores-one.vercel.app" },
 ];
 
 const VIEWPORT = { width: 1440, height: 900 };
