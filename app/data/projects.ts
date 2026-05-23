@@ -34,8 +34,8 @@ export const projects: Project[] = [
     description:
       "My named AI agent for shipping production-ready websites. 72-hour build cycle, fingerprint registry that bans aesthetic repetition, and every client site below was built through it.",
     image: "/projects/igris/hero.png",
-    link: "https://github.com/semajzandrews",
-    tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent"],
+    link: "https://bysemaj.com/portfolio",
+    tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent", "Proprietary"],
     categories: ["AI Development"],
     subcategory: "AI Agents",
     detailedDescription:
@@ -68,8 +68,7 @@ export const projects: Project[] = [
       "An IGRIS quality bar gates every deploy — no skips for deadline pressure",
     ],
     outcome:
-      "Production agent shipping real client sites. Systemomtics, Nails Fever Spa, Southern Komfort, and Hong Am all came through IGRIS.",
-    repoUrl: "https://github.com/semajzandrews",
+      "Production agent shipping real client sites. Systemomtics, Nails Fever Spa, Southern Komfort, Hong Am, and 24 Orange-corridor builds all came through IGRIS. Source code is proprietary — happy to demo in a call.",
   },
 
   {
@@ -80,9 +79,8 @@ export const projects: Project[] = [
     description:
       "A multi-agent batch system that reads a CSV of businesses and produces unique, production-quality websites in parallel — running unattended with TTS-spoken progress reports.",
     image: "/projects/ai-software-factory/hero.png",
-    link: "https://github.com/semajzandrews/AISoftwareFactoryTemplate",
-    repoUrl: "https://github.com/semajzandrews/AISoftwareFactoryTemplate",
-    tags: ["Python", "Anthropic API", "Multi-Agent", "Batch"],
+    link: "https://bysemaj.com/portfolio",
+    tags: ["Python", "Anthropic API", "Multi-Agent", "Batch", "Proprietary"],
     categories: ["AI Development"],
     subcategory: "AI Pipelines & Orchestration",
     detailedDescription:
@@ -114,7 +112,7 @@ export const projects: Project[] = [
       "Each Factory build is gated by IGRIS's quality bar before deploy",
     ],
     outcome:
-      "Designed to produce agency-quality websites in hours instead of weeks across an entire batch — IGRIS's quality bar applied at scale.",
+      "Designed to produce agency-quality websites in hours instead of weeks across an entire batch — IGRIS's quality bar applied at scale. Source code is proprietary — happy to demo in a call.",
   },
 
   {
