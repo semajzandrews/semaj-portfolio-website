@@ -46,11 +46,11 @@ const TARGETS = [
 ];
 
 const VIEWPORT = { width: 1440, height: 900 };
-const PRE_HOLD_MS  = 1200;   // hold at top to let hero load + animate
-const DOWN_MS      = 11000;  // scroll down (slower than v1)
-const BOTTOM_HOLD  = 1000;   // hold at the bottom
-const UP_MS        = 9000;   // scroll back up (slightly faster)
-const POST_HOLD_MS = 600;    // small tail before close
+const PRE_HOLD_MS  = 1800;   // hold at top to let hero load + animate
+const DOWN_MS      = 22000;  // scroll down — cinematic, no rush
+const BOTTOM_HOLD  = 1800;   // hold at the bottom long enough to read
+const UP_MS        = 18000;  // scroll back up slightly faster than down
+const POST_HOLD_MS = 900;    // small tail before close
 
 const filter = process.argv[2];
 const queue = filter ? TARGETS.filter((t) => t.slug.includes(filter)) : TARGETS;
