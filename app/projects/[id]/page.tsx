@@ -97,24 +97,64 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              {project.liveUrl && (
-                <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                  <Button className="flex items-center gap-2">
-                    <ExternalLink className="h-4 w-4" />
-                    View Live
-                  </Button>
-                </Link>
-              )}
-              {(project.repoUrl || project.link) && (
-                <Link href={project.repoUrl || project.link} target="_blank" rel="noopener noreferrer">
-                  <Button variant={project.liveUrl ? "outline" : "default"} className="flex items-center gap-2">
-                    <Github className="h-4 w-4" />
-                    View on GitHub
-                  </Button>
-                </Link>
-              )}
-            </div>
+            {(() => {
+              // App Store / Play Store detection — relabels the live button
+              // for iOS/Android projects.
+              const live = project.liveUrl
+              const isAppStore = !!live && live.includes("apps.apple.com")
+              const isPlayStore = !!live && live.includes("play.google.com")
+              const liveLabel = isAppStore
+                ? "View on App Store"
+                : isPlayStore
+                ? "View on Play Store"
+                : "View Live"
+              const hasRepo = !!project.repoUrl
+
+              return (
+                <div className="flex flex-wrap gap-3">
+                  {/* Live button — always rendered. Dimmed if no liveUrl. */}
+                  {live ? (
+                    <Link href={live} target="_blank" rel="noopener noreferrer">
+                      <Button className="flex items-center gap-2">
+                        <ExternalLink className="h-4 w-4" />
+                        {liveLabel}
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button
+                      disabled
+                      aria-label="No public live URL — demo available on request"
+                      title="No public live URL — demo available on request"
+                      className="flex items-center gap-2 opacity-50 cursor-not-allowed"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Demo on Request
+                    </Button>
+                  )}
+
+                  {/* GitHub button — always rendered. Dimmed if no public repo. */}
+                  {hasRepo ? (
+                    <Link href={project.repoUrl!} target="_blank" rel="noopener noreferrer">
+                      <Button variant={live ? "outline" : "default"} className="flex items-center gap-2">
+                        <Github className="h-4 w-4" />
+                        View on GitHub
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button
+                      variant="outline"
+                      disabled
+                      aria-label="Source proprietary — happy to walk through in a call"
+                      title="Source proprietary — happy to walk through in a call"
+                      className="flex items-center gap-2 opacity-50 cursor-not-allowed"
+                    >
+                      <Github className="h-4 w-4" />
+                      Source Private
+                    </Button>
+                  )}
+                </div>
+              )
+            })()}
           </div>
 
           {/* Content Sections */}

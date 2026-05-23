@@ -3,7 +3,9 @@ export type Project = {
   title: string
   description: string
   image: string
-  link: string
+  /** Generic project URL. Optional — leave undefined for proprietary
+   *  projects so the detail page renders a disabled button. */
+  link?: string
   tags: string[]
   categories: string[]
   subcategory?: string
@@ -159,7 +161,6 @@ export const projects: Project[] = [
     description:
       "An AI agent I designed end-to-end that ships production websites in a 72-hour cycle. The 24 sites above were all built through it — each one cleared a fingerprint registry that refuses aesthetic repetition across builds. Source is proprietary; the proof is everything you can scroll.",
     image: "/projects/igris/hero.png",
-    link: "https://bysemaj.com",
     tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent", "Proprietary"],
     categories: ["AI Development"],
     subcategory: "AI Agents",
@@ -297,7 +298,6 @@ export const projects: Project[] = [
     description:
       "A multi-agent batch system that reads a CSV of businesses and produces unique, production-quality websites in parallel — running unattended with TTS-spoken progress reports.",
     image: "/projects/ai-software-factory/hero.png",
-    link: "https://bysemaj.com",
     tags: ["Python", "Anthropic API", "Multi-Agent", "Batch", "Proprietary"],
     categories: ["AI Development"],
     subcategory: "AI Pipelines & Orchestration",
@@ -1057,8 +1057,7 @@ export const projects: Project[] = [
     description:
       "Multi-modal travel deal finder. Combines cheap flights with rail and bus connectors to beat direct-route booking sites on price.",
     image: "/projects/beatmytravel/hero.png",
-    link: "https://github.com/semajzandrews/BeatMyTravel",
-    repoUrl: "https://github.com/semajzandrews/BeatMyTravel",
+    // repo private — internal portfolio code
     tags: ["Swift", "SwiftUI", "MapKit", "iOS"],
     categories: ["Mobile App Development"],
     subcategory: "Native iOS",
@@ -1098,8 +1097,7 @@ export const projects: Project[] = [
     description:
       "Production iOS app for a behavioral health telehealth network. Patient and clinician workflows, secure video, and HIPAA-aligned data handling.",
     image: "/projects/stationmd/hero.png",
-    link: "https://github.com/semajzandrews/StationMD-iOS",
-    repoUrl: "https://github.com/semajzandrews/StationMD-iOS",
+    // repo private — proprietary client code
     tags: ["Swift", "UIKit", "Telehealth", "HIPAA"],
     categories: ["Mobile App Development"],
     subcategory: "Native iOS",
