@@ -27,95 +27,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 1,
-    title: "IGRIS — Production Website Agent",
-    year: "2026",
-    role: "Architect & Engineer (Solo)",
-    description:
-      "My named AI agent for shipping production-ready websites. 72-hour build cycle, fingerprint registry that bans aesthetic repetition, and every client site below was built through it.",
-    image: "/projects/igris/hero.png",
-    link: "https://bysemaj.com/portfolio",
-    tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent", "Proprietary"],
-    categories: ["AI Development"],
-    subcategory: "AI Agents",
-    detailedDescription:
-      "IGRIS started as a Solo Leveling-inspired shadow agent and evolved into the working pipeline I use to ship production websites end-to-end. Every site is gated by a fingerprint registry — palette family, type stack, motion vocabulary, and layout grammar are extracted and compared against the last several builds, refusing any spec that would repeat aesthetics. The pipeline produces Next.js 16 / React 19 / Tailwind v4 / Framer Motion deliverables with a documented quality bar. Mobile-first execution is mandatory because demos happen on the salesperson's phone. Next milestone: extending IGRIS from websites into native mobile applications.",
-    features: [
-      "Named agent identity — IGRIS owns the build, the operator orchestrates",
-      "72-hour build ceiling per site, end-to-end",
-      "Differentiation Engine — fingerprint registry bars aesthetic repetition across builds",
-      "Mobile-first execution; demos run on phones",
-      "Documented quality bar gates every deploy",
-      "PIN-gated preview infrastructure for pre-sale showcase",
-      "Mobile application pipeline coming online next",
-    ],
-    technologies: [
-      "Next.js 16 (App Router, React 19, TypeScript strict)",
-      "Tailwind CSS v4 + custom design tokens per build",
-      "Framer Motion v12 for scroll-triggered motion",
-      "Three.js for select hero scenes",
-      "Anthropic Claude (Sonnet) as the build agent backbone",
-      "Custom fingerprint extractor — palette / typography / motion DNA",
-    ],
-    challenges: [
-      "Defining 'aesthetic distance' between two builds programmatically",
-      "Preventing the pipeline from sliding into a house style under output pressure",
-      "Holding a single quality bar across rapid output",
-    ],
-    solutions: [
-      "Fingerprint extractor hashes palette, typography, and motion grammar into a comparable vector",
-      "Differentiation check at build-start refuses any spec matching the last three fingerprints",
-      "An IGRIS quality bar gates every deploy — no skips for deadline pressure",
-    ],
-    outcome:
-      "Production agent shipping real client sites. Systemomtics, Nails Fever Spa, Southern Komfort, Hong Am, and 24 Orange-corridor builds all came through IGRIS. Source code is proprietary — happy to demo in a call.",
-  },
-
-  {
-    id: 2,
-    title: "AI Software Factory",
-    year: "2026",
-    role: "Architect & Engineer (Solo)",
-    description:
-      "A multi-agent batch system that reads a CSV of businesses and produces unique, production-quality websites in parallel — running unattended with TTS-spoken progress reports.",
-    image: "/projects/ai-software-factory/hero.png",
-    link: "https://bysemaj.com/portfolio",
-    tags: ["Python", "Anthropic API", "Multi-Agent", "Batch", "Proprietary"],
-    categories: ["AI Development"],
-    subcategory: "AI Pipelines & Orchestration",
-    detailedDescription:
-      "Sister system to IGRIS — similar in goal, different in shape. Where IGRIS is a single-build production agent, AI Software Factory is the batch orchestrator: it reads a CSV of businesses, researches design trends per industry vertical, and dispatches unique production-quality builds in parallel. The orchestrator processes 30–38+ rows in a single overnight run. A research engine pulls trends from Awwwards, Dribbble, Framer, and CSS Design Awards; a design strategy module translates research into a per-site brief; a generation engine produces full frontend output. A TTS reporter narrates progress aloud so the operator can walk away and wake to finished work.",
-    features: [
-      "CSV-driven batch ingestion for 30+ businesses per run",
-      "Per-industry design research from Awwwards / Dribbble / Framer / CSS Design Awards",
-      "Multi-agent pipeline: research → strategy → generation → verification",
-      "TTS progress reporting via Mistral / Piper for unattended operation",
-      "Autonomous overnight operation with morning summary report",
-      "Per-row error recovery and resume-from-failure",
-    ],
-    technologies: [
-      "Python orchestrator with async task queues",
-      "Anthropic Claude (Sonnet) for design strategy and generation",
-      "FireCrawl + Brave Search APIs for trend research",
-      "Next.js + Tailwind output target stack",
-      "Piper / Mistral TTS for progress narration",
-      "Local SQLite for batch state",
-    ],
-    challenges: [
-      "Coordinating many long-running LLM calls without blowing the token budget",
-      "Recovering gracefully from per-row failures without halting the entire batch",
-      "Holding output quality at parity with hand-shepherded IGRIS builds",
-    ],
-    solutions: [
-      "Token-aware budgeting with phase-level checkpointing and resumption",
-      "Idempotent per-row state machine — failures pause the row, not the batch",
-      "Each Factory build is gated by IGRIS's quality bar before deploy",
-    ],
-    outcome:
-      "Designed to produce agency-quality websites in hours instead of weeks across an entire batch — IGRIS's quality bar applied at scale. Source code is proprietary — happy to demo in a call.",
-  },
-
-  {
     id: 26,
     title: "Cantina 443",
     year: "2026",
@@ -218,6 +129,74 @@ export const projects: Project[] = [
   },
 
   {
+    id: 39,
+    title: "Mikauri Nail Salon & Spa",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description: "Nail salon on Park Ave, Orange NJ. Porcelain + dusty rose + champagne + charcoal. Diagonal-split editorial hero with painted-polish-stroke SVG.",
+    image: "/projects/mikauri-nail-salon/hero.png",
+    previewVideo: "/projects/mikauri-nail-salon/preview.webm",
+    previewPoster: "/projects/mikauri-nail-salon/preview-poster.jpg",
+    link: "https://github.com/semajzandrews/mikauri-nail-salon",
+    repoUrl: "https://github.com/semajzandrews/mikauri-nail-salon",
+    liveUrl: "https://mikauri-nail-salon.vercel.app",
+    tags: ["Next.js 16","Motion","SVG","Tailwind v4"],
+    categories: ["Web Development"],
+    subcategory: "Front-End Development",
+    detailedDescription: "Mikauri Nail Salon & Spa positions itself as a quiet luxury appointment-only nail house. The hero uses a diagonal-split background (blush left, porcelain right, polygon clip-path) overlaid with a 1200x200 hand-painted dusty-rose 'polish stroke' SVG curving across the middle of the screen. Playfair Display italic with a shimmer-gradient animation for the '& SPA.' subhead. Services rendered as an editorial 10-row pricing table with dotted leaders. Eight-swatch house-color lookbook (Porcelain → Onyx, hex codes labeled). Italianno cursive for the brand subtitle.",
+    features: ["Diagonal-split hero background with polygon clip-path","Hand-painted polish-stroke SVG across the hero","Shimmer-gradient text animation on the headline","10-row pricing table services menu","8-swatch house-color lookbook with hex labels"],
+    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","Playfair Display + Inter + Italianno"],
+    challenges: ["Beauty industry has heavy template fatigue — needed editorial restraint","Differentiating from Edgar Jewelry (also luxury/feminine)"],
+    solutions: ["Editorial pricing table grammar vs Edgar's overlap-card grammar — same vertical, different layouts","Italianno cursive instead of Edgar's Italiana — different script registers"],
+    outcome: "Live and ready for the booking calendar.",
+  },
+
+  {
+    id: 1,
+    title: "IGRIS — The Agent That Built Everything Above",
+    year: "2026",
+    role: "Architect & Engineer (Solo)",
+    description:
+      "An AI agent I designed end-to-end that ships production websites in a 72-hour cycle. The 24 sites above were all built through it — each one cleared a fingerprint registry that refuses aesthetic repetition across builds. Source is proprietary; the proof is everything you can scroll.",
+    image: "/projects/igris/hero.png",
+    link: "https://bysemaj.com",
+    tags: ["Next.js 16", "Anthropic", "Differentiation Engine", "Agent", "Proprietary"],
+    categories: ["AI Development"],
+    subcategory: "AI Agents",
+    detailedDescription:
+      "IGRIS started as a Solo Leveling-inspired shadow agent and evolved into the working pipeline I use to ship production websites end-to-end. Every site is gated by a fingerprint registry — palette family, type stack, motion vocabulary, and layout grammar are extracted and compared against the last several builds, refusing any spec that would repeat aesthetics. The pipeline produces Next.js 16 / React 19 / Tailwind v4 / Framer Motion deliverables with a documented quality bar. Mobile-first execution is mandatory because demos happen on the salesperson's phone. Next milestone: extending IGRIS from websites into native mobile applications.",
+    features: [
+      "Named agent identity — IGRIS owns the build, the operator orchestrates",
+      "72-hour build ceiling per site, end-to-end",
+      "Differentiation Engine — fingerprint registry bars aesthetic repetition across builds",
+      "Mobile-first execution; demos run on phones",
+      "Documented quality bar gates every deploy",
+      "PIN-gated preview infrastructure for pre-sale showcase",
+      "Mobile application pipeline coming online next",
+    ],
+    technologies: [
+      "Next.js 16 (App Router, React 19, TypeScript strict)",
+      "Tailwind CSS v4 + custom design tokens per build",
+      "Framer Motion v12 for scroll-triggered motion",
+      "Three.js for select hero scenes",
+      "Anthropic Claude (Sonnet) as the build agent backbone",
+      "Custom fingerprint extractor — palette / typography / motion DNA",
+    ],
+    challenges: [
+      "Defining 'aesthetic distance' between two builds programmatically",
+      "Preventing the pipeline from sliding into a house style under output pressure",
+      "Holding a single quality bar across rapid output",
+    ],
+    solutions: [
+      "Fingerprint extractor hashes palette, typography, and motion grammar into a comparable vector",
+      "Differentiation check at build-start refuses any spec matching the last three fingerprints",
+      "An IGRIS quality bar gates every deploy — no skips for deadline pressure",
+    ],
+    outcome:
+      "Production agent shipping real client sites. Systemomtics, Nails Fever Spa, Southern Komfort, Hong Am, and 24 Orange-corridor builds all came through IGRIS. Source code is proprietary — happy to demo in a call.",
+  },
+
+  {
     id: 3,
     title: "BuildWhatYouWant",
     year: "2026",
@@ -265,29 +244,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 39,
-    title: "Mikauri Nail Salon & Spa",
-    year: "2026",
-    role: "Designer & Engineer — built via IGRIS",
-    description: "Nail salon on Park Ave, Orange NJ. Porcelain + dusty rose + champagne + charcoal. Diagonal-split editorial hero with painted-polish-stroke SVG.",
-    image: "/projects/mikauri-nail-salon/hero.png",
-    previewVideo: "/projects/mikauri-nail-salon/preview.webm",
-    previewPoster: "/projects/mikauri-nail-salon/preview-poster.jpg",
-    link: "https://github.com/semajzandrews/mikauri-nail-salon",
-    repoUrl: "https://github.com/semajzandrews/mikauri-nail-salon",
-    liveUrl: "https://mikauri-nail-salon.vercel.app",
-    tags: ["Next.js 16","Motion","SVG","Tailwind v4"],
-    categories: ["Web Development"],
-    subcategory: "Front-End Development",
-    detailedDescription: "Mikauri Nail Salon & Spa positions itself as a quiet luxury appointment-only nail house. The hero uses a diagonal-split background (blush left, porcelain right, polygon clip-path) overlaid with a 1200x200 hand-painted dusty-rose 'polish stroke' SVG curving across the middle of the screen. Playfair Display italic with a shimmer-gradient animation for the '& SPA.' subhead. Services rendered as an editorial 10-row pricing table with dotted leaders. Eight-swatch house-color lookbook (Porcelain → Onyx, hex codes labeled). Italianno cursive for the brand subtitle.",
-    features: ["Diagonal-split hero background with polygon clip-path","Hand-painted polish-stroke SVG across the hero","Shimmer-gradient text animation on the headline","10-row pricing table services menu","8-swatch house-color lookbook with hex labels"],
-    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","Playfair Display + Inter + Italianno"],
-    challenges: ["Beauty industry has heavy template fatigue — needed editorial restraint","Differentiating from Edgar Jewelry (also luxury/feminine)"],
-    solutions: ["Editorial pricing table grammar vs Edgar's overlap-card grammar — same vertical, different layouts","Italianno cursive instead of Edgar's Italiana — different script registers"],
-    outcome: "Live and ready for the booking calendar.",
-  },
-
-  {
     id: 40,
     title: "The Lounge",
     year: "2026",
@@ -331,6 +287,50 @@ export const projects: Project[] = [
     challenges: ["Making a dentist feel welcoming without saccharine","Bento layout discipline — easy to bloat"],
     solutions: ["Used mint + coral instead of medical blue","Each bento tile holds exactly one idea, no more"],
     outcome: "Live and accepting new patients.",
+  },
+
+  {
+    id: 2,
+    title: "AI Software Factory",
+    year: "2026",
+    role: "Architect & Engineer (Solo)",
+    description:
+      "A multi-agent batch system that reads a CSV of businesses and produces unique, production-quality websites in parallel — running unattended with TTS-spoken progress reports.",
+    image: "/projects/ai-software-factory/hero.png",
+    link: "https://bysemaj.com",
+    tags: ["Python", "Anthropic API", "Multi-Agent", "Batch", "Proprietary"],
+    categories: ["AI Development"],
+    subcategory: "AI Pipelines & Orchestration",
+    detailedDescription:
+      "Sister system to IGRIS — similar in goal, different in shape. Where IGRIS is a single-build production agent, AI Software Factory is the batch orchestrator: it reads a CSV of businesses, researches design trends per industry vertical, and dispatches unique production-quality builds in parallel. The orchestrator processes 30–38+ rows in a single overnight run. A research engine pulls trends from Awwwards, Dribbble, Framer, and CSS Design Awards; a design strategy module translates research into a per-site brief; a generation engine produces full frontend output. A TTS reporter narrates progress aloud so the operator can walk away and wake to finished work.",
+    features: [
+      "CSV-driven batch ingestion for 30+ businesses per run",
+      "Per-industry design research from Awwwards / Dribbble / Framer / CSS Design Awards",
+      "Multi-agent pipeline: research → strategy → generation → verification",
+      "TTS progress reporting via Mistral / Piper for unattended operation",
+      "Autonomous overnight operation with morning summary report",
+      "Per-row error recovery and resume-from-failure",
+    ],
+    technologies: [
+      "Python orchestrator with async task queues",
+      "Anthropic Claude (Sonnet) for design strategy and generation",
+      "FireCrawl + Brave Search APIs for trend research",
+      "Next.js + Tailwind output target stack",
+      "Piper / Mistral TTS for progress narration",
+      "Local SQLite for batch state",
+    ],
+    challenges: [
+      "Coordinating many long-running LLM calls without blowing the token budget",
+      "Recovering gracefully from per-row failures without halting the entire batch",
+      "Holding output quality at parity with hand-shepherded IGRIS builds",
+    ],
+    solutions: [
+      "Token-aware budgeting with phase-level checkpointing and resumption",
+      "Idempotent per-row state machine — failures pause the row, not the batch",
+      "Each Factory build is gated by IGRIS's quality bar before deploy",
+    ],
+    outcome:
+      "Designed to produce agency-quality websites in hours instead of weeks across an entire batch — IGRIS's quality bar applied at scale. Source code is proprietary — happy to demo in a call.",
   },
 
   {
