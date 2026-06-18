@@ -6,6 +6,7 @@ import Link from "next/link"
 import ContactForm from "../components/contact-form"
 import TechStack from "../components/tech-stack"
 import ProjectGrid from "../components/project-grid"
+import GitHubStats from "../components/github-stats"
 import { projects } from "../data/projects"
 import ThemeToggle from "../components/theme-toggle"
 import SideTimeline from "../components/side-timeline"
@@ -171,7 +172,7 @@ export default function Portfolio() {
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
-                <Link href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/semajzandrews2" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="h-12 w-12">
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
@@ -197,6 +198,7 @@ export default function Portfolio() {
                 A showcase of my recent work and personal projects
               </p>
             </div>
+            <GitHubStats featured={projects.length} />
             <div className="flex-1 flex items-center">
               <ProjectGrid projects={projects} />
             </div>
@@ -246,7 +248,7 @@ export default function Portfolio() {
             <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
               GitHub
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
+            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://www.linkedin.com/in/semajzandrews2" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </Link>
             <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="mailto:semajzandrews@gmail.com">
