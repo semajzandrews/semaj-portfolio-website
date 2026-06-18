@@ -112,17 +112,17 @@ export default function Portfolio() {
 
         {/* Mobile / Tablet Navigation (below lg) */}
         <div className="lg:hidden border-t bg-background/95 backdrop-blur">
-          <nav className="container mx-auto flex items-center justify-center space-x-6 py-3 px-4">
-            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
+          <nav className="container mx-auto flex items-center justify-center space-x-3 sm:space-x-6 py-2 px-4">
+            <Link href="#about" className="text-xs sm:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap">
               About
             </Link>
-            <Link href="#projects" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#projects" className="text-xs sm:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap">
               Projects
             </Link>
-            <Link href="#tech-stack" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#tech-stack" className="text-xs sm:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap">
               Tech Stack
             </Link>
-            <Link href="#contact" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link href="#contact" className="text-xs sm:text-sm font-medium transition-colors hover:text-primary whitespace-nowrap">
               Contact
             </Link>
           </nav>
@@ -131,9 +131,9 @@ export default function Portfolio() {
 
       <main className="w-full">
         {/* Hero/About Section - Full viewport height with proper spacing */}
-        <section id="about" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24">
+        <section id="about" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-12 md:pb-24">
           <div className="w-full max-w-4xl mx-auto">
-            <div className="flex flex-col items-center justify-center space-y-10 text-center">
+            <div className="flex flex-col items-center justify-center space-y-6 md:space-y-10 text-center">
               <div className="relative group">
                 {/* Outer glow ring */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 opacity-60 blur-sm scale-110 group-hover:opacity-80 transition-opacity duration-500"></div>
@@ -156,11 +156,11 @@ export default function Portfolio() {
                 <div className="absolute inset-0 rounded-full border border-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
               </div>
 
-              <div className="space-y-4 -mt-4">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+              <div className="space-y-3 md:space-y-4">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                   Software Engineer
                 </h1>
-                <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl lg:text-2xl">
+                <p className="mx-auto max-w-[700px] text-muted-foreground text-base md:text-xl lg:text-2xl">
                 I create software that’s fast to market, easy to scale, and hard to forget. I don’t just build features — I shape experiences.
                 </p>
               </div>
@@ -190,10 +190,10 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section - Full viewport height with proper spacing */}
-        <section id="projects" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24 bg-muted/30">
+        <section id="projects" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-12 md:pb-24 bg-muted/30">
           <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Projects</h2>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Projects</h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl">
                 A showcase of my recent work and personal projects
               </p>
@@ -206,10 +206,10 @@ export default function Portfolio() {
         </section>
 
         {/* Tech Stack Section - Full viewport height with proper spacing */}
-        <section id="tech-stack" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24">
+        <section id="tech-stack" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-12 md:pb-24">
           <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col justify-center">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Tech Stack</h2>
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Tech Stack</h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl">
                 With expertise across multiple domains, I leverage a diverse set of technologies to build robust,
                 scalable, and innovative solutions.
@@ -222,10 +222,10 @@ export default function Portfolio() {
         </section>
 
         {/* Contact Section - Full viewport height with proper spacing */}
-        <section id="contact" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-24 bg-muted/30">
+        <section id="contact" className="portfolio-section min-h-screen flex items-center justify-center px-4 md:px-6 pt-8 pb-12 md:pb-24 bg-muted/30">
           <div className="w-full max-w-4xl mx-auto flex-1 flex flex-col justify-center">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl">

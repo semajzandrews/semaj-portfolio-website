@@ -68,7 +68,13 @@ body {
   /* Smooth scrolling for the entire page */
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 3.5rem; /* Account for sticky header */
+    scroll-padding-top: 7rem; /* Mobile: two-row header (~64px main + ~44px nav) */
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 4rem; /* Desktop: single-row header */
+    }
   }
   
   /* Ensure perfect layout balance */
@@ -87,14 +93,20 @@ body {
     box-sizing: inherit;
   }
   
-  /* Enhanced scroll snap to prevent section bleeding */
+  /* Scroll snap: disabled on mobile (tall sections trap users), enabled on desktop */
   main {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: none;
+  }
+
+  @media (min-width: 768px) {
+    main {
+      scroll-snap-type: y mandatory;
+    }
   }
   
   /* Ensure sections take proper viewport height and prevent bleeding */
   section {
-    scroll-margin-top: 3.5rem; /* Account for sticky header */
+    scroll-margin-top: 7rem; /* Mobile: two-row header */
     scroll-snap-align: start;
     scroll-snap-stop: always;
     /* min-height: 100vh; */ /* Removed - was causing huge gaps on project pages */
@@ -102,6 +114,12 @@ body {
     /* overflow: hidden; */ /* Remove to allow content to scroll if it exceeds 100vh */
   }
   
+  @media (min-width: 1024px) {
+    section {
+      scroll-margin-top: 4rem;
+    }
+  }
+
   /* Apply full viewport height only to portfolio page sections */
   .portfolio-section {
     min-height: 100vh;
