@@ -198,7 +198,19 @@ export default function Portfolio() {
                 A showcase of my recent work and personal projects
               </p>
             </div>
-            <GitHubStats featured={projects.length} />
+            <GitHubStats
+              total={projects.length}
+              categories={Object.entries(
+                projects.reduce((acc, p) => {
+                  ;(p.categories || []).forEach((c) => {
+                    acc[c] = (acc[c] || 0) + 1
+                  })
+                  return acc
+                }, {} as Record<string, number>)
+              )
+                .map(([name, count]) => ({ name, count }))
+                .sort((a, b) => b.count - a.count)}
+            />
             <div className="flex-1 flex items-center">
               <ProjectGrid projects={projects} />
             </div>
