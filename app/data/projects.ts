@@ -76,6 +76,190 @@ export const projects: Project[] = [
   },
 
   {
+    "id": 87,
+    "title": "Alpha Daycare Center",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Soft, reassuring childcare hero with a 'We hold the whole day' headline and a clean licensed-hours stat row.",
+    "image": "/projects/alpha-daycare-center/hero.png",
+    "link": "https://alpha-daycare-center.vercel.app",
+    "liveUrl": "https://alpha-daycare-center.vercel.app",
+    "tags": [
+      "Childcare",
+      "Warm",
+      "Trust"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Warm off-white space and a gentle italic 'whole' set a calm, trustworthy tone for parents working long shifts. A rounded photo of a sunlit playroom sits beside copy that speaks plainly to City of Orange families, while a tidy fact strip lays out licensing, hours, and the 6:30 to 6:30 window. Mustard pill buttons add friendly warmth without ever feeling juvenile.",
+    "features": [
+      "Reassuring headline with italic emphasis on 'whole'",
+      "Licensed-care fact strip with hours and credentials",
+      "Rounded, sunlit playroom hero image",
+      "Warm mustard pill CTAs for enroll and tour",
+      "Plain-spoken copy aimed at long-shift parents"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A small licensed daycare now communicates safety and long-day coverage at a glance."
+  },
+
+  {
+    "id": 54,
+    "title": "Kador Beauty Salon",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A glowing vanity-bulb mirror frames the portrait while a luminous italic serif spells out \"Sit down. Leave luminous.\" against deep espresso.",
+    "image": "/projects/kador-beauty-salon/hero.png",
+    "link": "https://kador-beauty-salon.vercel.app",
+    "liveUrl": "https://kador-beauty-salon.vercel.app",
+    "tags": [
+      "Luminous",
+      "Editorial Serif",
+      "Dark Mode"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero leans on a single theatrical device: a portrait boxed inside a Hollywood vanity-light frame, every bulb modeled to throw real warm glow across near-black walls. A mixed roman-and-italic serif headline does the talking in oversized type, and the muted gold accent threads from the button to the mirror so the whole frame reads as one lit object.",
+    "features": [
+      "Vanity-bulb mirror frame with modeled glow around the portrait",
+      "Oversized roman-plus-italic serif headline treatment",
+      "Espresso-and-gold palette pulled through nav, buttons, and frame",
+      "Pill CTA buttons paired with an inline review-star strip",
+      "Slim top navigation that stays out of the hero's way"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "Lenis"
+    ],
+    "outcome": "A salon homepage that sells atmosphere on sight, the lit-mirror hero doing the work of a full brand shoot."
+  },
+
+  {
+    "id": 67,
+    "title": "Brandy's Lounge & Liquors",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An atmospheric liquor-store site lit by amber light streaks, with a bottle hero and the line 'After the streetlights, the good stuff.'",
+    "image": "/projects/brandys-lounge-liquors/hero.png",
+    "link": "https://brandys-lounge-liquors.vercel.app",
+    "liveUrl": "https://brandys-lounge-liquors.vercel.app",
+    "tags": [
+      "Liquor Store",
+      "Atmospheric Glow",
+      "Nightlife"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Warm amber ribbons of light sweep across a deep plum background, lending a late-night lounge glow to a single backlit bottle hero. A tall serif headline with an italic 'good stuff' accent and a gold primary button capture the neighborhood bottle-shop voice, with hours and 'Cash & card' details kept close.",
+    "features": [
+      "Flowing amber light-streak hero backdrop",
+      "Backlit bottle product photography",
+      "Italic serif accent phrasing",
+      "'Call' and 'Get directions' action pair",
+      "Open-hours and payment info strip"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A corner bottle shop given a moody, after-hours identity that feels like the neighborhood's late-night destination."
+  },
+
+  {
+    "id": 85,
+    "title": "Saucy Bitez",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Dark, cinematic restaurant hero where dripping sauce and live flame frame an outline-stroke 'SAUCY BITEZ' logotype.",
+    "image": "/projects/saucy-bitez/hero.png",
+    "link": "https://saucy-bitez.vercel.app",
+    "liveUrl": "https://saucy-bitez.vercel.app",
+    "tags": [
+      "Cinematic",
+      "Dark Mode",
+      "Food Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A near-black canvas hands the whole stage to a single dramatic shot: jerk-glazed meat catching real flame with sauce pulling off the fork. The brand name sits in oversized hollow outline letters, letting the food burn through from behind. Orange spice swatches and a red 'call now' button echo the heat without crowding the photography.",
+    "features": [
+      "Full-bleed dark food hero with flame and sauce motion",
+      "Outline-stroke display logotype layered over imagery",
+      "Warm spice-tone swatch row as a visual menu cue",
+      "High-contrast red call-to-action against deep black",
+      "Minimal top nav that stays out of the photo's way"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A takeout spot now opens with the kind of moody food hero you'd expect from a flagship steakhouse."
+  },
+
+  {
+    "id": 95,
+    "title": "Mama Lola",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A dark, fire-lit Spanish-language hero ('De la dehesa al fuego') over close-up grilled meat, with a stat row selling provenance and craft.",
+    "image": "/projects/mama-lola/hero.png",
+    "link": "https://mama-lola.vercel.app",
+    "liveUrl": "https://mama-lola.vercel.app",
+    "tags": [
+      "Restaurant",
+      "Dark Mode",
+      "Spanish Language"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Mama Lola opens in Spanish on a near-black hero where flame-orange italics ('al fuego') cut through a tight shot of charcoal-grilled Iberian meat. A metrics strip across the bottom (4.5 stars, 100% wood-fired, one daily seating, Elx) reads like a steakhouse credential list. Reserve and menu CTAs sit in burnt-orange and outline pills, leaning into the asador's grill-house identity.",
+    "features": [
+      "Spanish-first copy for the local clientele",
+      "Flame-orange italic accent on a charcoal-dark hero",
+      "Close-up grilled-meat photography as the centerpiece",
+      "Credential stat row (rating, wood-fired %, seating, town)",
+      "Reservation and 'Ver la carta' CTA pair"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Gave a wood-fire asador a moody, reservation-driven landing page in its customers' language."
+  },
+
+  {
     "id": 77,
     "title": "Hundred Wellness",
     "year": "2026",
@@ -161,42 +345,6 @@ export const projects: Project[] = [
     ],
     outcome:
       "Live and shipping. 24 Orange Corridor sites built and deployed this batch. Pulse Point Logistics greenlit by a real client. Systemomtics, Nails Fever Spa, Southern Komfort, Hong Am all came through IGRIS earlier in the year. Source proprietary — happy to demo in a call.",
-  },
-
-  {
-    "id": 87,
-    "title": "Alpha Daycare Center",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "Soft, reassuring childcare hero with a 'We hold the whole day' headline and a clean licensed-hours stat row.",
-    "image": "/projects/alpha-daycare-center/hero.png",
-    "link": "https://alpha-daycare-center.vercel.app",
-    "liveUrl": "https://alpha-daycare-center.vercel.app",
-    "tags": [
-      "Childcare",
-      "Warm",
-      "Trust"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Warm off-white space and a gentle italic 'whole' set a calm, trustworthy tone for parents working long shifts. A rounded photo of a sunlit playroom sits beside copy that speaks plainly to City of Orange families, while a tidy fact strip lays out licensing, hours, and the 6:30 to 6:30 window. Mustard pill buttons add friendly warmth without ever feeling juvenile.",
-    "features": [
-      "Reassuring headline with italic emphasis on 'whole'",
-      "Licensed-care fact strip with hours and credentials",
-      "Rounded, sunlit playroom hero image",
-      "Warm mustard pill CTAs for enroll and tour",
-      "Plain-spoken copy aimed at long-shift parents"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "Lenis"
-    ],
-    "outcome": "A small licensed daycare now communicates safety and long-day coverage at a glance."
   },
 
   {
@@ -295,42 +443,6 @@ export const projects: Project[] = [
   },
 
   {
-    "id": 54,
-    "title": "Kador Beauty Salon",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A glowing vanity-bulb mirror frames the portrait while a luminous italic serif spells out \"Sit down. Leave luminous.\" against deep espresso.",
-    "image": "/projects/kador-beauty-salon/hero.png",
-    "link": "https://kador-beauty-salon.vercel.app",
-    "liveUrl": "https://kador-beauty-salon.vercel.app",
-    "tags": [
-      "Luminous",
-      "Editorial Serif",
-      "Dark Mode"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "The hero leans on a single theatrical device: a portrait boxed inside a Hollywood vanity-light frame, every bulb modeled to throw real warm glow across near-black walls. A mixed roman-and-italic serif headline does the talking in oversized type, and the muted gold accent threads from the button to the mirror so the whole frame reads as one lit object.",
-    "features": [
-      "Vanity-bulb mirror frame with modeled glow around the portrait",
-      "Oversized roman-plus-italic serif headline treatment",
-      "Espresso-and-gold palette pulled through nav, buttons, and frame",
-      "Pill CTA buttons paired with an inline review-star strip",
-      "Slim top navigation that stays out of the hero's way"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Framer Motion",
-      "Lenis"
-    ],
-    "outcome": "A salon homepage that sells atmosphere on sight, the lit-mirror hero doing the work of a full brand shoot."
-  },
-
-  {
     "id": 108,
     "title": "Eterna Primavera",
     "year": "2026",
@@ -366,44 +478,6 @@ export const projects: Project[] = [
       "Lucide React"
     ],
     "outcome": "Speaks directly to a Spanish-speaking clientele with an appetite-first hero and native-language calls to action."
-  },
-
-  {
-    "id": 67,
-    "title": "Brandy's Lounge & Liquors",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "An atmospheric liquor-store site lit by amber light streaks, with a bottle hero and the line 'After the streetlights, the good stuff.'",
-    "image": "/projects/brandys-lounge-liquors/hero.png",
-    "link": "https://brandys-lounge-liquors.vercel.app",
-    "liveUrl": "https://brandys-lounge-liquors.vercel.app",
-    "tags": [
-      "Liquor Store",
-      "Atmospheric Glow",
-      "Nightlife"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Warm amber ribbons of light sweep across a deep plum background, lending a late-night lounge glow to a single backlit bottle hero. A tall serif headline with an italic 'good stuff' accent and a gold primary button capture the neighborhood bottle-shop voice, with hours and 'Cash & card' details kept close.",
-    "features": [
-      "Flowing amber light-streak hero backdrop",
-      "Backlit bottle product photography",
-      "Italic serif accent phrasing",
-      "'Call' and 'Get directions' action pair",
-      "Open-hours and payment info strip"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A corner bottle shop given a moody, after-hours identity that feels like the neighborhood's late-night destination."
   },
 
   {
@@ -1364,42 +1438,6 @@ export const projects: Project[] = [
   },
 
   {
-    "id": 85,
-    "title": "Saucy Bitez",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "Dark, cinematic restaurant hero where dripping sauce and live flame frame an outline-stroke 'SAUCY BITEZ' logotype.",
-    "image": "/projects/saucy-bitez/hero.png",
-    "link": "https://saucy-bitez.vercel.app",
-    "liveUrl": "https://saucy-bitez.vercel.app",
-    "tags": [
-      "Cinematic",
-      "Dark Mode",
-      "Food Photography"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "A near-black canvas hands the whole stage to a single dramatic shot: jerk-glazed meat catching real flame with sauce pulling off the fork. The brand name sits in oversized hollow outline letters, letting the food burn through from behind. Orange spice swatches and a red 'call now' button echo the heat without crowding the photography.",
-    "features": [
-      "Full-bleed dark food hero with flame and sauce motion",
-      "Outline-stroke display logotype layered over imagery",
-      "Warm spice-tone swatch row as a visual menu cue",
-      "High-contrast red call-to-action against deep black",
-      "Minimal top nav that stays out of the photo's way"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "Lenis"
-    ],
-    "outcome": "A takeout spot now opens with the kind of moody food hero you'd expect from a flagship steakhouse."
-  },
-
-  {
     "id": 83,
     "title": "Ismael & Son Auto Repair",
     "year": "2026",
@@ -1433,44 +1471,6 @@ export const projects: Project[] = [
       "Lenis"
     ],
     "outcome": "An auto shop landing page that sells honesty and heritage with no polish it doesn't earn."
-  },
-
-  {
-    "id": 95,
-    "title": "Mama Lola",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A dark, fire-lit Spanish-language hero ('De la dehesa al fuego') over close-up grilled meat, with a stat row selling provenance and craft.",
-    "image": "/projects/mama-lola/hero.png",
-    "link": "https://mama-lola.vercel.app",
-    "liveUrl": "https://mama-lola.vercel.app",
-    "tags": [
-      "Restaurant",
-      "Dark Mode",
-      "Spanish Language"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Mama Lola opens in Spanish on a near-black hero where flame-orange italics ('al fuego') cut through a tight shot of charcoal-grilled Iberian meat. A metrics strip across the bottom (4.5 stars, 100% wood-fired, one daily seating, Elx) reads like a steakhouse credential list. Reserve and menu CTAs sit in burnt-orange and outline pills, leaning into the asador's grill-house identity.",
-    "features": [
-      "Spanish-first copy for the local clientele",
-      "Flame-orange italic accent on a charcoal-dark hero",
-      "Close-up grilled-meat photography as the centerpiece",
-      "Credential stat row (rating, wood-fired %, seating, town)",
-      "Reservation and 'Ver la carta' CTA pair"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "Gave a wood-fire asador a moody, reservation-driven landing page in its customers' language."
   },
 
   {
