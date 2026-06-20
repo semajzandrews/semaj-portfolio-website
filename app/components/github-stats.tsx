@@ -9,9 +9,6 @@ interface GitHubStatsProps {
   total: number
   /** Per-category counts, pre-sorted desc by the caller. */
   categories: Category[]
-  /** Fallback repo count if the GitHub API is unavailable. */
-  fallbackRepos?: number
-  username?: string
 }
 
 /** Three harmonious shades of the brand primary, biggest category first. */
@@ -21,32 +18,15 @@ const DOTS = ["bg-primary", "bg-primary/55", "bg-primary/30", "bg-primary/20"]
 /**
  * A "body of work" band: an animated total, a proportion bar segmented by
  * category so the shape of the work reads at a glance, a per-category legend,
- * and the live public-repo count + domains line as supporting context.
+ * and a domains line as supporting context.
  */
 export default function GitHubStats({
   total = 0,
   categories = [],
-  fallbackRepos = 157,
-  username = "semajzandrews",
 }: GitHubStatsProps) {
-  const [repos, setRepos] = useState<number | null>(null)
   const [count, setCount] = useState(0)
   const [grown, setGrown] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
-
-  // live public-repo count
-  useEffect(() => {
-    let active = true
-    fetch(`https://api.github.com/users/${username}`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-      .then((d) => {
-        if (active && typeof d?.public_repos === "number") setRepos(d.public_repos)
-      })
-      .catch(() => {})
-    return () => {
-      active = false
-    }
-  }, [username])
 
   // animate the total + grow the bar once the band scrolls into view
   useEffect(() => {
@@ -80,7 +60,6 @@ export default function GitHubStats({
     }
   }, [total])
 
-  const repoCount = repos ?? fallbackRepos
   const sum = categories.reduce((a, c) => a + c.count, 0) || 1
 
   return (
@@ -102,8 +81,8 @@ export default function GitHubStats({
         </div>
         <div className="text-left text-sm text-muted-foreground sm:text-right">
           <div>
-            <span className="font-semibold text-foreground tabular-nums">{repoCount}+</span>{" "}
-            public repositories
+            Designed, built &amp; shipped{" "}
+            <span className="font-semibold text-foreground">solo</span>
           </div>
           <div className="mt-0.5">
             Spanning <span className="text-foreground">Web</span>,{" "}
