@@ -29,26 +29,305 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 29,
-    title: "Dell'italia & Santola",
+    id: 3,
+    title: "BuildWhatYouWant",
     year: "2026",
-    role: "Designer & Engineer — built via IGRIS",
-    description: "A two-partner consultancy on Central Ave, Orange NJ. Aged paper + forest + brass + claret. Reads like a privately-printed monograph.",
-    image: "/projects/dellitalia-santola/hero.png",
-    previewVideo: "/projects/dellitalia-santola/preview.webm",
-    previewPoster: "/projects/dellitalia-santola/preview-poster.jpg",
-    link: "https://github.com/semajzandrews/dellitalia-santola",
-    repoUrl: "https://github.com/semajzandrews/dellitalia-santola",
-    liveUrl: "https://dellitalia-santola.vercel.app",
-    tags: ["Next.js 16","Motion","Tailwind v4"],
+    role: "Founder, Designer & Engineer",
+    description:
+      "A sales conversion platform: a custom website is hand-built for a local business before they've heard of me. The owner enters a 6-digit PIN, sees their finished site, and checks out.",
+    image: "/projects/buildwhatyouwant/hero.png",
+    link: "https://github.com/semajzandrews/buildwhatyouwant",
+    repoUrl: "https://github.com/semajzandrews/buildwhatyouwant",
+    liveUrl: "https://buildwhatyouwant.com",
+    tags: ["Next.js 16", "Stripe", "Framer Motion", "Sales Platform"],
     categories: ["Web Development"],
-    subcategory: "Front-End Development",
-    detailedDescription: "Dell'italia & Santola is a small two-partner consultancy. The layout grammar is unlike anything in Season 1: a narrow single-column manifesto, generous whitespace, content centered between 820px gutters. Cormorant Garamond throughout, set at 18px with 1.55 line-height like the first page of a privately-printed monograph. Four numbered Articles (Practice · Method · Partners · Engage) with brass-gold ornamental rules and centered ❧ flourishes. The first paragraph uses a CSS drop-cap in claret. Reads slow on purpose.",
-    features: ["Narrow single-column manifesto layout (820px max-width)","Four numbered Articles with ❧ flourish ornaments","Brass-gold ornamental hairline rules","Drop-cap first letter in claret","Roman numerals for practice-area listings"],
-    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","Cormorant Garamond + Inter"],
-    challenges: ["Conveying authority without legalese","Differentiating layout grammar from every other site in the registry"],
-    solutions: ["Single-column manifesto layout — first IGRIS site to use it","Voice in the copy stays plainspoken: 'patient, learned'"],
-    outcome: "Live and quietly excellent.",
+    subcategory: "Full-Stack Development",
+    detailedDescription:
+      "BuildWhatYouWant is the sales surface that wraps the IGRIS pipeline. Walk a neighborhood, study storefronts, build sites in advance. Each business receives a unique 6-digit PIN (last six of phone number) printed on a card or QR code. The owner enters the PIN at buildwhatyouwant.com, sees their finished work, and checks out at a flat rate ($149) plus optional industry-specific add-ons. Seven-day preview window — love it or owe nothing. Built on Next.js 16 with Stripe Checkout, Framer Motion scroll choreography, and a Fraunces / Inter / JetBrains Mono typographic stack. FireCrawl + Brave APIs feed ongoing design intelligence into the pipeline.",
+    features: [
+      "6-digit PIN unlock per business — pre-built preview before any contact",
+      "Flat-rate checkout ($149) with industry-specific add-ons",
+      "7-day preview window with auto-expire",
+      "QR-code-on-card field distribution",
+      "Owner self-serve customization (color, copy)",
+      "Stripe Checkout integration for one-shot payment",
+      "Remotion-generated reveal videos per business",
+    ],
+    technologies: [
+      "Next.js 16 (App Router, React 19, TypeScript)",
+      "Tailwind CSS v4",
+      "Framer Motion for scroll-triggered animation",
+      "Stripe Checkout",
+      "FireCrawl + Brave Search for design intelligence",
+      "Remotion video pipeline for reveal videos",
+    ],
+    challenges: [
+      "Removing every barrier to 'yes' in a sales motion built around a stranger's offer",
+      "Distributing PINs at scale without triggering spam filters",
+      "Making a flat-rate checkout feel premium, not cheap",
+    ],
+    solutions: [
+      "Pre-built preview replaces the pitch — the work IS the proposal",
+      "Physical-card distribution with QR fallback bypasses email gatekeepers entirely",
+      "Editorial typography and intentional motion let the platform read premium at the flat rate",
+    ],
+    outcome:
+      "Platform operational; pipeline of 1,081 local prospects identified across six industries.",
+  },
+
+  {
+    "id": 77,
+    "title": "Hundred Wellness",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm, inviting wellness hero pairing 'A hundred small ways to feel well' with a sunlit shelf of labeled botanical jars.",
+    "image": "/projects/hundred-wellness/hero.png",
+    "link": "https://hundred-wellness.vercel.app",
+    "liveUrl": "https://hundred-wellness.vercel.app",
+    "tags": [
+      "Wellness",
+      "Warm Palette",
+      "Product Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Soft sand backgrounds and oversized friendly type set a neighborhood-apothecary mood, with the word 'well' italicized for warmth. A glowing product photo of remedy jars anchors the right, joined by category chips, a star rating and an open-now badge that make the small Center Street shop feel approachable.",
+    "features": [
+      "Sand-toned palette with oversized humanist headline",
+      "Sunlit product shot of labeled botanical jars",
+      "Category chips for botanicals and supplements",
+      "Inline star rating and open-now status",
+      "Find-the-shop and directions calls to action"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A small wellness shop that feels welcoming and local without trying too hard."
+  },
+
+  {
+    id: 1,
+    title: "IGRIS · Production Website Agent + Quality Bar",
+    year: "2025 – present",
+    role: "Architect & Engineer (Solo)",
+    description:
+      "The named craft intelligence behind every site in this portfolio. 9-step pipeline, 4-question quality framework, full tool registry across every modern framework. Mission: beat Awwwards, not match them.",
+    image: "/projects/igris/hero.png",
+    tags: [
+      "Anthropic Claude",
+      "Next.js / Vite / Astro",
+      "Differentiation Engine",
+      "Award-grade",
+      "Proprietary",
+    ],
+    categories: ["AI Development"],
+    subcategory: "AI Agents",
+    detailedDescription:
+      "IGRIS is the craft-layer agent at the center of my build process. It's not a workflow doctrine — it's the named intelligence that picks the stack, defines the signature moment, enforces the quality bar, and ships. Every project starts with four mandatory questions: What's the ONE visual idea that makes this unforgettable? What would someone screenshot and post? What does the visitor feel in three seconds? What design decision here has never been done for this industry before? If I can't answer all four, the design isn't ready and we go back to research. The 9-step pipeline runs Brief → Research (Awwwards + Dribbble + competitor crawl) → Signature moment → Stack selection → Design system → Hero first → Full build → Preview audit → Deploy. The tool registry is deliberately broad — Next.js, Vite, Astro, SvelteKit, Remix on the framework side; GSAP, Framer Motion, Rive, Lottie, Anime.js, Three.js / R3F, Spline, Babylon, WebGPU on the motion + 3D side; Supabase, Neon, PlanetScale, Convex, Clerk, Sanity, Stripe, Mux, Cloudinary, Remotion, Mapbox, Expo on the platform side — because the stack must serve the design vision, not the other way around. Phase 1 (live now): world-class front-end across any stack. Phase 2 (in progress): full-stack autonomy — backend, database, auth, business logic, API layer all built and deployed automatically. Phase 3 (the goal): IGRIS spawns asynchronous autonomous sub-agents, each owning a domain (design, frontend, backend, database, auth, deployment), executing in parallel. A complete production-quality full-stack application in under five minutes. Source is proprietary — happy to walk through in a call.",
+    features: [
+      "9-step pipeline · Brief → Research → Signature moment → Stack → Design system → Hero → Build → Audit → Deploy",
+      "4-question Quality Framework — mandatory before any code is written",
+      "Differentiation Engine — fingerprint registry refuses aesthetic repetition across builds",
+      "Full tool registry — picks per project, not per template (Next/Vite/Astro/SvelteKit; GSAP/Framer/Rive/R3F; Supabase/Convex/Clerk/Stripe)",
+      "Award-tier quality bar — every output benchmarked against Awwwards winners + Dribbble top shots before ship",
+      "Phase 2 active: full-stack autonomy (DB, auth, API, business logic)",
+      "Phase 3 vision: parallel multi-agent swarm, complete app in under 5 minutes",
+    ],
+    technologies: [
+      "Anthropic Claude (Sonnet / Opus) — agent intelligence core",
+      "Claude Code SDK + custom orchestration shell",
+      "Stack picked per project: Next.js / Vite / Astro / SvelteKit / Remix",
+      "Motion arsenal: GSAP, Framer Motion, Rive, Lottie, Anime.js, Three.js / R3F",
+      "Backend arsenal: Supabase, Neon, PlanetScale, Convex, Drizzle, tRPC",
+      "Custom differentiation engine + build_registry.json fingerprint store",
+    ],
+    challenges: [
+      "Defining aesthetic distance between two builds in a way the agent can enforce",
+      "Preventing drift into a house style under sequential-output pressure",
+      "Holding one award-tier quality bar across rapid output, not just one hero build",
+    ],
+    solutions: [
+      "Fingerprint extractor hashes palette + typography + motion grammar into a comparable vector",
+      "Differentiation gate at build-start refuses any spec matching the last N fingerprints",
+      "4-question quality framework halts the build if any answer is unclear — back to research, never forward to code",
+    ],
+    outcome:
+      "Live and shipping. 24 Orange Corridor sites built and deployed this batch. Pulse Point Logistics greenlit by a real client. Systemomtics, Nails Fever Spa, Southern Komfort, Hong Am all came through IGRIS earlier in the year. Source proprietary — happy to demo in a call.",
+  },
+
+  {
+    "id": 87,
+    "title": "Alpha Daycare Center",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Soft, reassuring childcare hero with a 'We hold the whole day' headline and a clean licensed-hours stat row.",
+    "image": "/projects/alpha-daycare-center/hero.png",
+    "link": "https://alpha-daycare-center.vercel.app",
+    "liveUrl": "https://alpha-daycare-center.vercel.app",
+    "tags": [
+      "Childcare",
+      "Warm",
+      "Trust"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Warm off-white space and a gentle italic 'whole' set a calm, trustworthy tone for parents working long shifts. A rounded photo of a sunlit playroom sits beside copy that speaks plainly to City of Orange families, while a tidy fact strip lays out licensing, hours, and the 6:30 to 6:30 window. Mustard pill buttons add friendly warmth without ever feeling juvenile.",
+    "features": [
+      "Reassuring headline with italic emphasis on 'whole'",
+      "Licensed-care fact strip with hours and credentials",
+      "Rounded, sunlit playroom hero image",
+      "Warm mustard pill CTAs for enroll and tour",
+      "Plain-spoken copy aimed at long-shift parents"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A small licensed daycare now communicates safety and long-day coverage at a glance."
+  },
+
+  {
+    id: 2,
+    title: "AI Software Factory · One-Person Agency OS",
+    year: "2025 – present",
+    role: "Architect & Engineer (Solo)",
+    description:
+      "A one-person agency in a box. 4-phase deterministic workflow, 5-agent specialist swarm, multi-platform reach (Web + iOS + Android + PWA + Chrome Ext), Zero-Trust security, tiered business engine from $0 to $250K. The system around the craft.",
+    image: "/projects/ai-software-factory/hero.png",
+    tags: [
+      "Anthropic API + MCP",
+      "Multi-Agent Swarm",
+      "Zero-Trust",
+      "Web + iOS + Android + PWA + Chrome",
+      "Tiered SaaS",
+      "Proprietary",
+    ],
+    categories: ["AI Development"],
+    subcategory: "AI Pipelines & Orchestration",
+    detailedDescription:
+      "The AI Software Factory is the operating system I built around IGRIS — the business model, the multi-agent specialist swarm, the deterministic workflow, the security architecture, and the multi-platform reach that lets one person ship like a 30-person agency. Where IGRIS is the named craft intelligence, the Factory is the studio: the gated 4-phase pipeline (Brain → Design → Atomization → Execution) with a binding execution checklist that halts the build if any gate fails; the specialist agent crew (Spec Agent · Design Agent · Frontend Agent · Backend Agent · QA Agent · Task Planner Agent — each with their own identity, prompt, and mandate files); the multi-platform reach via native conversion mappings to SwiftUI and Jetpack Compose so a web product becomes an iOS + Android app without a rewrite; the Zero-Trust security model (mock data only in cloud, real API keys never leave the local Antigravity layer); the 120+ screen registry tagged by version tier; and the tiered business engine that converts technical capability into recurring revenue. Three Unbreakable Laws govern every build: Zero-Context Assumption (any agent receiving any file produces production output without prior context), True Atomization (1 task = 1 component / endpoint / test / migration = 1 commit), S-Rank or Nothing (every output, free tier or $250K tier, looks Awwwards-winning from the first commit). Pricing ladder: Free Tier ($0, ~15 min hook to sell with) → v1 MVP ($2.5K–5K, 2 weeks) → v2 True Desired App ($5K–15K, 4–8 weeks) → v3 Growth Product ($15K–50K, 8–24 weeks) → v4 Futurist / Category-Killer ($50K–250K, 24–52 weeks). Plus standalone add-on revenue layered on top: Autonomous AI Sales Agent ($1K–3K/mo), AI Operations Manager ($2K–5K/mo), AI Call Center ($3K–7K/mo), Dynamic Scheduling + CRM Bridge, Automated Reputation Engine, Real-Time KPI Command Center. Status: foundation in production use — the arsenal, registry, differentiation engine, locator, scrape-to-brief adapter, native-conversion mappings, and the full specialist agent identity files are all written and battle-tested through the Orange Corridor batch. The full multi-agent overnight orchestrator running unattended N-site batches and the v1–v4 paid-client business flow are the next active build. Source proprietary.",
+    features: [
+      "4-phase deterministic pipeline with binding gates · Brain (spec) → Design (Stitch Loop) → Atomization (1 task = 1 commit) → Execution (surgical rebuild)",
+      "5+ agent specialist swarm · Spec Agent / Design Agent / Frontend Agent / Backend Agent / QA Agent / Task Planner Agent — each with its own prompt + mandate",
+      "Multi-platform from day one · Web + iOS (SwiftUI) + Android (Jetpack Compose) + PWA + Chrome Extension",
+      "Native conversion mappings (web → SwiftUI / Compose) checked into the repo",
+      "Zero-Trust security · mock data in cloud AIs, real keys injected only in local Antigravity layer at Phase 4",
+      "120+ screen registry across v1–v4 version tiers",
+      "Three Unbreakable Laws · Zero-Context Assumption / True Atomization / S-Rank or Nothing",
+      "Tiered business engine · Free → $250K + recurring AI Operations Manager / Call Center / Reputation Engine",
+      "Designed daily output target · 5–15 S-Rank applications",
+    ],
+    technologies: [
+      "Anthropic Claude API + MCP integrations",
+      "Google Stitch + Google AI Studio for cloud screen generation",
+      "React 18+ / TypeScript strict / Tailwind v4 / Framer Motion / Shadcn-UI + Radix",
+      "Convex / Supabase for backend tier",
+      "SwiftUI + Jetpack Compose for native conversion",
+      "Custom 5-agent prompt + handoff layer with binding execution checklist",
+      "Local Antigravity layer for secure key injection (Zero-Trust enforcement point)",
+      "Stripe / Lemon Squeezy / Inngest / Upstash for the recurring-revenue tier",
+    ],
+    challenges: [
+      "Designing handoffs between 5 specialist agents so context never bottlenecks",
+      "Holding the quality bar consistent across many parallel builds, not just one",
+      "Building Zero-Trust into the architecture from day one without slowing iteration",
+      "Mapping web design language to native (SwiftUI / Compose) without losing the visual signature",
+    ],
+    solutions: [
+      "Every spec file is hermetically self-contained — any agent picks up any task with zero prior context",
+      "Binding execution checklist with hard gates — no phase advances until validated against approved specs",
+      "Real keys injected only in the local Phase 4 surgical-reconstruction step, after cloud-generated code is audited",
+      "Explicit native-conversion mapping documents for SwiftUI + Compose so visual signature survives the platform jump",
+    ],
+    outcome:
+      "Designed to ship agency-quality applications in hours not weeks, across an entire pricing ladder, by one person. Foundation in production: every Orange Corridor batch site used the Factory's arsenal + registry + differentiation engine + locator. Next milestone: full multi-agent specialist swarm running unattended overnight batches with TTS progress narration, then v1–v4 paid-client flow goes live. Source proprietary — happy to demo in a call.",
+  },
+
+  {
+    "id": 62,
+    "title": "Mo's Hot Chicken",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A clean split layout pairs \"Pick your heat\" in bold sans with a dark overhead shot of crispy Nashville chicken and a \"medium, the right call\" heat tag.",
+    "image": "/projects/mos-hot-chicken/hero.png",
+    "link": "https://mos-hot-chicken.vercel.app",
+    "liveUrl": "https://mos-hot-chicken.vercel.app",
+    "tags": [
+      "Split Layout",
+      "Food Photography",
+      "Appetite Appeal"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The page splits crisp white type on the left against a moody dark food plate on the right, where overhead-lit fried chicken, a yolk, and a gingham napkin do the selling. \"Heat\" gets a burnt-orange highlight, an inline heat-level label overlays the photo, and rounded CTAs keep the order path obvious without crowding the appetizing shot.",
+    "features": [
+      "Clean split hero: bold sans left, food photo right",
+      "Burnt-orange keyword highlight on \"heat\"",
+      "Overhead, moody Nashville-chicken plating shot",
+      "On-image heat-level tag overlay",
+      "Rounded order CTAs with an open-now status line"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A hot-chicken site that makes the heat the hook, the split layout keeping ordering one tap from a mouth-watering plate."
+  },
+
+  {
+    "id": 54,
+    "title": "Kador Beauty Salon",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A glowing vanity-bulb mirror frames the portrait while a luminous italic serif spells out \"Sit down. Leave luminous.\" against deep espresso.",
+    "image": "/projects/kador-beauty-salon/hero.png",
+    "link": "https://kador-beauty-salon.vercel.app",
+    "liveUrl": "https://kador-beauty-salon.vercel.app",
+    "tags": [
+      "Luminous",
+      "Editorial Serif",
+      "Dark Mode"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero leans on a single theatrical device: a portrait boxed inside a Hollywood vanity-light frame, every bulb modeled to throw real warm glow across near-black walls. A mixed roman-and-italic serif headline does the talking in oversized type, and the muted gold accent threads from the button to the mirror so the whole frame reads as one lit object.",
+    "features": [
+      "Vanity-bulb mirror frame with modeled glow around the portrait",
+      "Oversized roman-plus-italic serif headline treatment",
+      "Espresso-and-gold palette pulled through nav, buttons, and frame",
+      "Pill CTA buttons paired with an inline review-star strip",
+      "Slim top navigation that stays out of the hero's way"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "Lenis"
+    ],
+    "outcome": "A salon homepage that sells atmosphere on sight, the lit-mirror hero doing the work of a full brand shoot."
   },
 
   {
@@ -87,6 +366,423 @@ export const projects: Project[] = [
       "Lucide React"
     ],
     "outcome": "Speaks directly to a Spanish-speaking clientele with an appetite-first hero and native-language calls to action."
+  },
+
+  {
+    "id": 67,
+    "title": "Brandy's Lounge & Liquors",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An atmospheric liquor-store site lit by amber light streaks, with a bottle hero and the line 'After the streetlights, the good stuff.'",
+    "image": "/projects/brandys-lounge-liquors/hero.png",
+    "link": "https://brandys-lounge-liquors.vercel.app",
+    "liveUrl": "https://brandys-lounge-liquors.vercel.app",
+    "tags": [
+      "Liquor Store",
+      "Atmospheric Glow",
+      "Nightlife"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Warm amber ribbons of light sweep across a deep plum background, lending a late-night lounge glow to a single backlit bottle hero. A tall serif headline with an italic 'good stuff' accent and a gold primary button capture the neighborhood bottle-shop voice, with hours and 'Cash & card' details kept close.",
+    "features": [
+      "Flowing amber light-streak hero backdrop",
+      "Backlit bottle product photography",
+      "Italic serif accent phrasing",
+      "'Call' and 'Get directions' action pair",
+      "Open-hours and payment info strip"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A corner bottle shop given a moody, after-hours identity that feels like the neighborhood's late-night destination."
+  },
+
+  {
+    "id": 63,
+    "title": "Red Crab Fish Market",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm editorial serif reads \"The block runs on fresh fish\" beside real iced market cases, with a scrolling species ticker of snapper, perch, and crab.",
+    "image": "/projects/red-crab-fish/hero.png",
+    "link": "https://red-crab-fish.vercel.app",
+    "liveUrl": "https://red-crab-fish.vercel.app",
+    "tags": [
+      "Editorial Serif",
+      "Marquee",
+      "Market Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This leans warm and editorial: a cream backdrop, a serif headline that flips to red italic on \"fresh fish,\" and a genuine photo of iced fish cases that proves the market is the real thing. A full-width marquee of species (Croaker, Perch, Red Snapper, Tilapia, Blue Crab) runs the bottom, doing the menu work while keeping a neighborhood, old-school feel.",
+    "features": [
+      "Warm cream-and-red editorial serif headline",
+      "Red italic accent on the key phrase",
+      "Authentic iced fish-case market photography",
+      "Scrolling species ticker across the footer",
+      "Uppercase locator label and rating detail line"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis"
+    ],
+    "outcome": "A fish-market page that feels neighborhood-true, the real cases and species ticker selling freshness over slick stock imagery."
+  },
+
+  {
+    "id": 80,
+    "title": "South Valley",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A moody BBQ-lounge hero with condensed display type, a serif-italic 'Good music.' and dark imagery of a grilled cut and a glass of liquor.",
+    "image": "/projects/southvalley/hero.png",
+    "link": "https://southvalley.vercel.app",
+    "liveUrl": "https://southvalley.vercel.app",
+    "tags": [
+      "Moody",
+      "Supper Club",
+      "Condensed Type"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Stacked condensed 'SOUTH VALLEY BBQ LOUNGE' lettering rides over smoky, low-lit food and drink photography for a warm supper-club feel. The 'Good vibes. Good drinks. Good music.' line, reserve and book-the-blue-room buttons, and a row of footer links lean into atmosphere as much as the smoked menu.",
+    "features": [
+      "Condensed display wordmark over moody grill imagery",
+      "Serif-italic accent on the closing tagline",
+      "Reserve and private-room booking buttons",
+      "Dark supper-club color grading",
+      "Footer nav for menu, events and contact"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Three.js",
+      "Lucide React"
+    ],
+    "outcome": "A BBQ spot positioned as an evening experience, vibes and music alongside the brisket."
+  },
+
+  {
+    id: 38,
+    title: "My Amor Coffee Shop",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description: "Coffee shop on South Main, Orange NJ. Warm third-wave aesthetic — cream + terracotta + espresso + olive. Hand-drawn cup with steam, foam-heart latte art.",
+    image: "/projects/my-amor-coffee/hero.png",
+    previewVideo: "/projects/my-amor-coffee/preview.webm",
+    previewPoster: "/projects/my-amor-coffee/preview-poster.jpg",
+    link: "https://github.com/semajzandrews/my-amor-coffee",
+    repoUrl: "https://github.com/semajzandrews/my-amor-coffee",
+    liveUrl: "https://my-amor-coffee.vercel.app",
+    tags: ["Next.js 16","Motion","SVG","Tailwind v4"],
+    categories: ["Web Development"],
+    subcategory: "Front-End Development",
+    detailedDescription: "My Amor Coffee Shop opens at 5 AM. The site is warm and slow — cream base, terracotta accents, espresso ink, olive details. The signature is a hand-drawn coffee cup SVG with three rising steam wisps animating on staggered delays, a foam-heart latte art shape on the espresso surface. Caveat script subtitles ('— good morning —') anchor each section. Two-column menu (Coffee + Bites) with dotted leaders. The morning section calls out the 5 AM opening as a service to nurses off the overnight, parents, contractors. Terracotta-on-cream visit card.",
+    features: ["Hand-drawn coffee cup SVG with rising steam","Foam-heart latte art detail","Caveat script section subtitles","Two-column dotted-leader menu (Coffee + Bites)","Three-stat morning callout (5 AM doors · 2 PM close · 7 days)"],
+    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","DM Serif Display + Nunito + Caveat"],
+    challenges: ["Coffee shops are over-templated — needed warmth that felt real","Differentiating from Cantina 443 (also warm/late hours)"],
+    solutions: ["Hand-drawn illustrations instead of photography","Coffee shop is dawn-warm, Cantina is midnight-loud — opposite times of day"],
+    outcome: "Live and ready to feed the morning rush.",
+  },
+
+  {
+    "id": 60,
+    "title": "BakedSome",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A punchy black hero with \"Baked by hand, served by the dozen\" in orange-and-white block caps, a hands-on-dough photo, and a scrolling menu marquee of Mediterranean dishes.",
+    "image": "/projects/bakedsome/hero.png",
+    "link": "https://bakedsome.vercel.app",
+    "liveUrl": "https://bakedsome.vercel.app",
+    "tags": [
+      "Bold Type",
+      "Marquee",
+      "Food Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This one is loud in the right way: chunky condensed caps split between white and hot orange, set on near-black, with a rounded photo of hands shaping dough and a \"100% made fresh\" badge. A full-width marquee of menu items (Kafta, Chicken Shawarma, Falafel, Baba Ghanoush) scrolls across the bottom, turning the menu itself into motion.",
+    "features": [
+      "Two-tone orange-and-white condensed block caps",
+      "Hands-on-dough hero photo with a fresh-made badge",
+      "Scrolling menu-item marquee along the footer edge",
+      "Near-black backdrop for high food-color contrast",
+      "Floating round phone CTA and pill action buttons"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A Mediterranean bakery site with real appetite appeal, the scrolling menu and punchy type making the food the headline."
+  },
+
+  {
+    "id": 103,
+    "title": "Bobby's Discount Store",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A clean cream layout with a bold headline ('If you need cleaning supplies it's probably here.') beside a bright real photo of a shopper in the aisles.",
+    "image": "/projects/bobbys-discount-store/hero.png",
+    "link": "https://bobbys-discount-store.vercel.app",
+    "liveUrl": "https://bobbys-discount-store.vercel.app",
+    "tags": [
+      "Discount Store",
+      "Warm Neutrals",
+      "Retail"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Bobby's pairs confident dark type with a warm cream background and a genuine, well-lit photo of a smiling customer browsing the stocked shelves. 'Cleaning supplies' flips to orange to land the variety-store pitch (housewares, party goods, batteries), and a left rail organizes Directory, Why Bobby's, Inside, and Visit. Phone CTAs plus a rating-and-hours strip ('7 days', 'no membership') keep the everyday-essentials promise front and center.",
+    "features": [
+      "Bold dark headline with orange keyword emphasis",
+      "Bright real photo of a shopper in the stocked aisles",
+      "Left-rail nav (Directory, Why Bobby's, Inside, Visit)",
+      "Variety-store copy spanning housewares to party goods",
+      "Rating, '7 days', and 'no membership' trust strip"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Gave a neighborhood discount store an approachable, everyday-essentials brand."
+  },
+
+  {
+    id: 26,
+    title: "Cantina 443",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description:
+      "Late-night tacos and mezcal bar on Conover Terrace, Orange NJ. Midnight + neon magenta/marigold/papaya. Giant neon CANTINA 443 sign signature with marquee menu ticker.",
+    image: "/projects/cantina-443/hero.png",
+    previewVideo: "/projects/cantina-443/preview.webm",
+    previewPoster: "/projects/cantina-443/preview-poster.jpg",
+    link: "https://github.com/semajzandrews/cantina-443",
+    repoUrl: "https://github.com/semajzandrews/cantina-443",
+    liveUrl: "https://cantina-443.vercel.app",
+    tags: ["Next.js 16", "Motion", "Tailwind v4"],
+    categories: ["Web Development"],
+    subcategory: "Front-End Development",
+    detailedDescription:
+      "Cantina 443 is a late-night bar and kitchen on Conover Terrace, Orange NJ. The site is unashamedly loud — midnight maroon-black surfaces with electric magenta + marigold + papaya neon glows. The signature is the hero text itself: 'CANTINA' in Bebas Neue glowing magenta, '443' beneath it flickering marigold like a sputtering neon sign. Magenta-bordered menu marquee scrolls dish names horizontally below the headline. A rotating citrus + cocktail glass SVG floats on the right with a stir animation. Tonight's schedule is a six-night card grid where every card has a different neon color. The Visit CTA is a giant 'COME HUNGRY.' in neon magenta. Designed to feel like the bar is already half full.",
+    features: [
+      "Massive neon-glow CANTINA 443 hero with flicker on '443'",
+      "Horizontal menu marquee ticker (al pastor → birria → mezcal flight)",
+      "Animated citrus + cocktail SVG that stirs on a 18s loop",
+      "Two-column tacos + platillos menu (six each, dashed leader dots)",
+      "Six cocktail cards (paloma, negroni, margarita brava, mezcal sour, michelada, agua fresca)",
+      "Six nights of programming (Taco Tuesday → Familia Sunday)",
+      "Bebas Neue display + Caveat handwritten script",
+    ],
+    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","Lenis","Bebas Neue + Inter + Caveat"],
+    challenges: ["Going maximalist neon without losing the menu's legibility","Differentiating from every other site in the batch by being the only one that's loud"],
+    solutions: ["Neon glows isolated to display text only; body copy stays clean and bone-cream","Magenta + marigold restricted to one accent each per section so they feel like signs lighting up, not chaos"],
+    outcome: "Live and feeling like the bar already opened.",
+  },
+
+  {
+    "id": 107,
+    "title": "Clancy's Pub",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm editorial pub page that frames 'A proper local on Broughton Ave' in serif type beside a hand-drawn pint and a 'good things take time' line.",
+    "image": "/projects/clancys-pub/hero.png",
+    "link": "https://clancys-pub.vercel.app",
+    "liveUrl": "https://clancys-pub.vercel.app",
+    "tags": [
+      "Pub",
+      "Editorial",
+      "Local"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Cream paper tones, a red italic accent on 'Broughton Ave,' and a simple line-art pint give this neighborhood pub a cozy, classic feel. Beneath the headline, a copy block about the game on the screens and a proper pour sits above a star rating, a Call and Find us hours pair, and a row of warm interior photos showing the bar and taps.",
+    "features": [
+      "Warm cream palette with red italic serif accent",
+      "Line-art pint motif beside the headline",
+      "Trust row with star rating and '120 neighbors and counting'",
+      "Paired Call and Find us & hours CTAs",
+      "Interior photo strip of the bar, taps, and room"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Captures the comfortable, regulars-welcome feel of a true neighborhood local while keeping hours and contact one tap away."
+  },
+
+  {
+    "id": 55,
+    "title": "PL Home Improvement",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A full-bleed dusk shot of a glass-and-timber modern home anchors a headline that swaps roman for italic mid-sentence: \"the careful one you actually want in your house.\"",
+    "image": "/projects/plhomeimprovement/hero.png",
+    "link": "https://plhomeimprovement.vercel.app",
+    "liveUrl": "https://plhomeimprovement.vercel.app",
+    "tags": [
+      "Cinematic",
+      "Mixed Serif",
+      "Photographic Hero"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This one trades on a single cinematic photograph, a modern home glowing at blue hour with warm interior light spilling out, and lets the type ride right over it. The headline mixes a crisp white serif with a swooping gold italic so \"in your house\" lands soft, and a bottom stat row (4.9 stars, 22 reviews, Orange NJ) grounds the mood in proof.",
+    "features": [
+      "Full-bleed dusk architectural hero with warm interior glow",
+      "Roman-to-italic serif headline shift for emphasis",
+      "Gold italic accent against high-contrast white type",
+      "Bottom credibility row with rating, review count, and location",
+      "Floating phone CTA pinned to the corner"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A contractor site that feels like an architecture magazine cover, positioning careful craftsmanship as the selling point."
+  },
+
+  {
+    "id": 93,
+    "title": "Today's Kids",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Soft cream editorial for a kids' shop, pairing a 'Dressed for every little today' headline with a playful star-wand portrait.",
+    "image": "/projects/todays-kids/hero.png",
+    "link": "https://todays-kids.vercel.app",
+    "liveUrl": "https://todays-kids.vercel.app",
+    "tags": [
+      "Childrenswear",
+      "Editorial",
+      "Playful"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A gentle cream layout and a serif headline with italic 'every little' give this children's clothing store a storybook polish. A framed photo of a child in a leopard coat waving a gold star wand brings the play, while a drop-cap intro grounds it in the City of Orange. Gold accents and outlined collection buttons keep things refined yet clearly made for little ones.",
+    "features": [
+      "Editorial cream layout with serif and italic headline",
+      "Playful star-wand child portrait in a framed crop",
+      "Drop-cap intro tying the shop to its neighborhood",
+      "Gold accents with outlined collection CTAs",
+      "Tidy top nav for collections, store, and visit"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A children's boutique gets a storybook-elegant storefront that still feels joyful and kid-first."
+  },
+
+  {
+    "id": 75,
+    "title": "Babyland Family Services",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A heritage-green serif identity built around a sunlit photo of a child and the quiet line 'Held. Since 1969.'",
+    "image": "/projects/babyland-family-services/hero.png",
+    "link": "https://babyland-family-services.vercel.app",
+    "liveUrl": "https://babyland-family-services.vercel.app",
+    "tags": [
+      "Heritage",
+      "Nonprofit",
+      "Editorial Serif"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Cream paper tones, a deep forest serif headline and a polaroid-style photo dated to 1969 frame more than fifty years of family work. The mission paragraph sits calm and centered, with pill buttons and a row of footer stats marking the nonprofit's roots in the City of Orange.",
+    "features": [
+      "Heritage serif wordmark and headline pairing",
+      "Sunlit photo styled as a dated keepsake",
+      "Cream and forest-green editorial palette",
+      "Founding-year story woven through the hero",
+      "Footer credibility row with nonprofit stats"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A warm, trust-first presence that lets a 1969 legacy speak for itself."
+  },
+
+  {
+    id: 29,
+    title: "Dell'italia & Santola",
+    year: "2026",
+    role: "Designer & Engineer — built via IGRIS",
+    description: "A two-partner consultancy on Central Ave, Orange NJ. Aged paper + forest + brass + claret. Reads like a privately-printed monograph.",
+    image: "/projects/dellitalia-santola/hero.png",
+    previewVideo: "/projects/dellitalia-santola/preview.webm",
+    previewPoster: "/projects/dellitalia-santola/preview-poster.jpg",
+    link: "https://github.com/semajzandrews/dellitalia-santola",
+    repoUrl: "https://github.com/semajzandrews/dellitalia-santola",
+    liveUrl: "https://dellitalia-santola.vercel.app",
+    tags: ["Next.js 16","Motion","Tailwind v4"],
+    categories: ["Web Development"],
+    subcategory: "Front-End Development",
+    detailedDescription: "Dell'italia & Santola is a small two-partner consultancy. The layout grammar is unlike anything in Season 1: a narrow single-column manifesto, generous whitespace, content centered between 820px gutters. Cormorant Garamond throughout, set at 18px with 1.55 line-height like the first page of a privately-printed monograph. Four numbered Articles (Practice · Method · Partners · Engage) with brass-gold ornamental rules and centered ❧ flourishes. The first paragraph uses a CSS drop-cap in claret. Reads slow on purpose.",
+    features: ["Narrow single-column manifesto layout (820px max-width)","Four numbered Articles with ❧ flourish ornaments","Brass-gold ornamental hairline rules","Drop-cap first letter in claret","Roman numerals for practice-area listings"],
+    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","Cormorant Garamond + Inter"],
+    challenges: ["Conveying authority without legalese","Differentiating layout grammar from every other site in the registry"],
+    solutions: ["Single-column manifesto layout — first IGRIS site to use it","Voice in the copy stays plainspoken: 'patient, learned'"],
+    outcome: "Live and quietly excellent.",
   },
 
   {
@@ -202,29 +898,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 38,
-    title: "My Amor Coffee Shop",
-    year: "2026",
-    role: "Designer & Engineer — built via IGRIS",
-    description: "Coffee shop on South Main, Orange NJ. Warm third-wave aesthetic — cream + terracotta + espresso + olive. Hand-drawn cup with steam, foam-heart latte art.",
-    image: "/projects/my-amor-coffee/hero.png",
-    previewVideo: "/projects/my-amor-coffee/preview.webm",
-    previewPoster: "/projects/my-amor-coffee/preview-poster.jpg",
-    link: "https://github.com/semajzandrews/my-amor-coffee",
-    repoUrl: "https://github.com/semajzandrews/my-amor-coffee",
-    liveUrl: "https://my-amor-coffee.vercel.app",
-    tags: ["Next.js 16","Motion","SVG","Tailwind v4"],
-    categories: ["Web Development"],
-    subcategory: "Front-End Development",
-    detailedDescription: "My Amor Coffee Shop opens at 5 AM. The site is warm and slow — cream base, terracotta accents, espresso ink, olive details. The signature is a hand-drawn coffee cup SVG with three rising steam wisps animating on staggered delays, a foam-heart latte art shape on the espresso surface. Caveat script subtitles ('— good morning —') anchor each section. Two-column menu (Coffee + Bites) with dotted leaders. The morning section calls out the 5 AM opening as a service to nurses off the overnight, parents, contractors. Terracotta-on-cream visit card.",
-    features: ["Hand-drawn coffee cup SVG with rising steam","Foam-heart latte art detail","Caveat script section subtitles","Two-column dotted-leader menu (Coffee + Bites)","Three-stat morning callout (5 AM doors · 2 PM close · 7 days)"],
-    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","DM Serif Display + Nunito + Caveat"],
-    challenges: ["Coffee shops are over-templated — needed warmth that felt real","Differentiating from Cantina 443 (also warm/late hours)"],
-    solutions: ["Hand-drawn illustrations instead of photography","Coffee shop is dawn-warm, Cantina is midnight-loud — opposite times of day"],
-    outcome: "Live and ready to feed the morning rush.",
-  },
-
-  {
     id: 30,
     title: "Empire Dental",
     year: "2026",
@@ -286,44 +959,6 @@ export const projects: Project[] = [
   },
 
   {
-    "id": 62,
-    "title": "Mo's Hot Chicken",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A clean split layout pairs \"Pick your heat\" in bold sans with a dark overhead shot of crispy Nashville chicken and a \"medium, the right call\" heat tag.",
-    "image": "/projects/mos-hot-chicken/hero.png",
-    "link": "https://mos-hot-chicken.vercel.app",
-    "liveUrl": "https://mos-hot-chicken.vercel.app",
-    "tags": [
-      "Split Layout",
-      "Food Photography",
-      "Appetite Appeal"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "The page splits crisp white type on the left against a moody dark food plate on the right, where overhead-lit fried chicken, a yolk, and a gingham napkin do the selling. \"Heat\" gets a burnt-orange highlight, an inline heat-level label overlays the photo, and rounded CTAs keep the order path obvious without crowding the appetizing shot.",
-    "features": [
-      "Clean split hero: bold sans left, food photo right",
-      "Burnt-orange keyword highlight on \"heat\"",
-      "Overhead, moody Nashville-chicken plating shot",
-      "On-image heat-level tag overlay",
-      "Rounded order CTAs with an open-now status line"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A hot-chicken site that makes the heat the hook, the split layout keeping ordering one tap from a mouth-watering plate."
-  },
-
-  {
     "id": 97,
     "title": "Berkeley Liquors & Deli",
     "year": "2026",
@@ -356,42 +991,6 @@ export const projects: Project[] = [
       "Motion"
     ],
     "outcome": "Elevated a corner liquor-deli with a sparse, type-forward editorial look."
-  },
-
-  {
-    "id": 87,
-    "title": "Alpha Daycare Center",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "Soft, reassuring childcare hero with a 'We hold the whole day' headline and a clean licensed-hours stat row.",
-    "image": "/projects/alpha-daycare-center/hero.png",
-    "link": "https://alpha-daycare-center.vercel.app",
-    "liveUrl": "https://alpha-daycare-center.vercel.app",
-    "tags": [
-      "Childcare",
-      "Warm",
-      "Trust"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Warm off-white space and a gentle italic 'whole' set a calm, trustworthy tone for parents working long shifts. A rounded photo of a sunlit playroom sits beside copy that speaks plainly to City of Orange families, while a tidy fact strip lays out licensing, hours, and the 6:30 to 6:30 window. Mustard pill buttons add friendly warmth without ever feeling juvenile.",
-    "features": [
-      "Reassuring headline with italic emphasis on 'whole'",
-      "Licensed-care fact strip with hours and credentials",
-      "Rounded, sunlit playroom hero image",
-      "Warm mustard pill CTAs for enroll and tour",
-      "Plain-spoken copy aimed at long-shift parents"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "Lenis"
-    ],
-    "outcome": "A small licensed daycare now communicates safety and long-day coverage at a glance."
   },
 
   {
@@ -654,128 +1253,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 3,
-    title: "BuildWhatYouWant",
-    year: "2026",
-    role: "Founder, Designer & Engineer",
-    description:
-      "A sales conversion platform: a custom website is hand-built for a local business before they've heard of me. The owner enters a 6-digit PIN, sees their finished site, and checks out.",
-    image: "/projects/buildwhatyouwant/hero.png",
-    link: "https://github.com/semajzandrews/buildwhatyouwant",
-    repoUrl: "https://github.com/semajzandrews/buildwhatyouwant",
-    liveUrl: "https://buildwhatyouwant.com",
-    tags: ["Next.js 16", "Stripe", "Framer Motion", "Sales Platform"],
-    categories: ["Web Development"],
-    subcategory: "Full-Stack Development",
-    detailedDescription:
-      "BuildWhatYouWant is the sales surface that wraps the IGRIS pipeline. Walk a neighborhood, study storefronts, build sites in advance. Each business receives a unique 6-digit PIN (last six of phone number) printed on a card or QR code. The owner enters the PIN at buildwhatyouwant.com, sees their finished work, and checks out at a flat rate ($149) plus optional industry-specific add-ons. Seven-day preview window — love it or owe nothing. Built on Next.js 16 with Stripe Checkout, Framer Motion scroll choreography, and a Fraunces / Inter / JetBrains Mono typographic stack. FireCrawl + Brave APIs feed ongoing design intelligence into the pipeline.",
-    features: [
-      "6-digit PIN unlock per business — pre-built preview before any contact",
-      "Flat-rate checkout ($149) with industry-specific add-ons",
-      "7-day preview window with auto-expire",
-      "QR-code-on-card field distribution",
-      "Owner self-serve customization (color, copy)",
-      "Stripe Checkout integration for one-shot payment",
-      "Remotion-generated reveal videos per business",
-    ],
-    technologies: [
-      "Next.js 16 (App Router, React 19, TypeScript)",
-      "Tailwind CSS v4",
-      "Framer Motion for scroll-triggered animation",
-      "Stripe Checkout",
-      "FireCrawl + Brave Search for design intelligence",
-      "Remotion video pipeline for reveal videos",
-    ],
-    challenges: [
-      "Removing every barrier to 'yes' in a sales motion built around a stranger's offer",
-      "Distributing PINs at scale without triggering spam filters",
-      "Making a flat-rate checkout feel premium, not cheap",
-    ],
-    solutions: [
-      "Pre-built preview replaces the pitch — the work IS the proposal",
-      "Physical-card distribution with QR fallback bypasses email gatekeepers entirely",
-      "Editorial typography and intentional motion let the platform read premium at the flat rate",
-    ],
-    outcome:
-      "Platform operational; pipeline of 1,081 local prospects identified across six industries.",
-  },
-
-  {
-    "id": 103,
-    "title": "Bobby's Discount Store",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A clean cream layout with a bold headline ('If you need cleaning supplies it's probably here.') beside a bright real photo of a shopper in the aisles.",
-    "image": "/projects/bobbys-discount-store/hero.png",
-    "link": "https://bobbys-discount-store.vercel.app",
-    "liveUrl": "https://bobbys-discount-store.vercel.app",
-    "tags": [
-      "Discount Store",
-      "Warm Neutrals",
-      "Retail"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Bobby's pairs confident dark type with a warm cream background and a genuine, well-lit photo of a smiling customer browsing the stocked shelves. 'Cleaning supplies' flips to orange to land the variety-store pitch (housewares, party goods, batteries), and a left rail organizes Directory, Why Bobby's, Inside, and Visit. Phone CTAs plus a rating-and-hours strip ('7 days', 'no membership') keep the everyday-essentials promise front and center.",
-    "features": [
-      "Bold dark headline with orange keyword emphasis",
-      "Bright real photo of a shopper in the stocked aisles",
-      "Left-rail nav (Directory, Why Bobby's, Inside, Visit)",
-      "Variety-store copy spanning housewares to party goods",
-      "Rating, '7 days', and 'no membership' trust strip"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "Gave a neighborhood discount store an approachable, everyday-essentials brand."
-  },
-
-  {
-    "id": 80,
-    "title": "South Valley",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A moody BBQ-lounge hero with condensed display type, a serif-italic 'Good music.' and dark imagery of a grilled cut and a glass of liquor.",
-    "image": "/projects/southvalley/hero.png",
-    "link": "https://southvalley.vercel.app",
-    "liveUrl": "https://southvalley.vercel.app",
-    "tags": [
-      "Moody",
-      "Supper Club",
-      "Condensed Type"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Stacked condensed 'SOUTH VALLEY BBQ LOUNGE' lettering rides over smoky, low-lit food and drink photography for a warm supper-club feel. The 'Good vibes. Good drinks. Good music.' line, reserve and book-the-blue-room buttons, and a row of footer links lean into atmosphere as much as the smoked menu.",
-    "features": [
-      "Condensed display wordmark over moody grill imagery",
-      "Serif-italic accent on the closing tagline",
-      "Reserve and private-room booking buttons",
-      "Dark supper-club color grading",
-      "Footer nav for menu, events and contact"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "Three.js",
-      "Lucide React"
-    ],
-    "outcome": "A BBQ spot positioned as an evening experience, vibes and music alongside the brisket."
-  },
-
-  {
     "id": 56,
     "title": "A&A Perfume & Jewelry",
     "year": "2026",
@@ -1017,63 +1494,6 @@ export const projects: Project[] = [
     challenges: ["Distinguishing from L'Hirondelle (also restaurant) on every visual axis","Honoring 28 years of operation without nostalgia tropes"],
     solutions: ["Castaway is kraft-postcard nautical, L'Hirondelle is sun-ray travel-poster — completely different lineage","Used the review count (812) as headline stat instead of an established-since date"],
     outcome: "Live and ready to claim the Friday night reservations list.",
-  },
-
-  {
-    id: 2,
-    title: "AI Software Factory · One-Person Agency OS",
-    year: "2025 – present",
-    role: "Architect & Engineer (Solo)",
-    description:
-      "A one-person agency in a box. 4-phase deterministic workflow, 5-agent specialist swarm, multi-platform reach (Web + iOS + Android + PWA + Chrome Ext), Zero-Trust security, tiered business engine from $0 to $250K. The system around the craft.",
-    image: "/projects/ai-software-factory/hero.png",
-    tags: [
-      "Anthropic API + MCP",
-      "Multi-Agent Swarm",
-      "Zero-Trust",
-      "Web + iOS + Android + PWA + Chrome",
-      "Tiered SaaS",
-      "Proprietary",
-    ],
-    categories: ["AI Development"],
-    subcategory: "AI Pipelines & Orchestration",
-    detailedDescription:
-      "The AI Software Factory is the operating system I built around IGRIS — the business model, the multi-agent specialist swarm, the deterministic workflow, the security architecture, and the multi-platform reach that lets one person ship like a 30-person agency. Where IGRIS is the named craft intelligence, the Factory is the studio: the gated 4-phase pipeline (Brain → Design → Atomization → Execution) with a binding execution checklist that halts the build if any gate fails; the specialist agent crew (Spec Agent · Design Agent · Frontend Agent · Backend Agent · QA Agent · Task Planner Agent — each with their own identity, prompt, and mandate files); the multi-platform reach via native conversion mappings to SwiftUI and Jetpack Compose so a web product becomes an iOS + Android app without a rewrite; the Zero-Trust security model (mock data only in cloud, real API keys never leave the local Antigravity layer); the 120+ screen registry tagged by version tier; and the tiered business engine that converts technical capability into recurring revenue. Three Unbreakable Laws govern every build: Zero-Context Assumption (any agent receiving any file produces production output without prior context), True Atomization (1 task = 1 component / endpoint / test / migration = 1 commit), S-Rank or Nothing (every output, free tier or $250K tier, looks Awwwards-winning from the first commit). Pricing ladder: Free Tier ($0, ~15 min hook to sell with) → v1 MVP ($2.5K–5K, 2 weeks) → v2 True Desired App ($5K–15K, 4–8 weeks) → v3 Growth Product ($15K–50K, 8–24 weeks) → v4 Futurist / Category-Killer ($50K–250K, 24–52 weeks). Plus standalone add-on revenue layered on top: Autonomous AI Sales Agent ($1K–3K/mo), AI Operations Manager ($2K–5K/mo), AI Call Center ($3K–7K/mo), Dynamic Scheduling + CRM Bridge, Automated Reputation Engine, Real-Time KPI Command Center. Status: foundation in production use — the arsenal, registry, differentiation engine, locator, scrape-to-brief adapter, native-conversion mappings, and the full specialist agent identity files are all written and battle-tested through the Orange Corridor batch. The full multi-agent overnight orchestrator running unattended N-site batches and the v1–v4 paid-client business flow are the next active build. Source proprietary.",
-    features: [
-      "4-phase deterministic pipeline with binding gates · Brain (spec) → Design (Stitch Loop) → Atomization (1 task = 1 commit) → Execution (surgical rebuild)",
-      "5+ agent specialist swarm · Spec Agent / Design Agent / Frontend Agent / Backend Agent / QA Agent / Task Planner Agent — each with its own prompt + mandate",
-      "Multi-platform from day one · Web + iOS (SwiftUI) + Android (Jetpack Compose) + PWA + Chrome Extension",
-      "Native conversion mappings (web → SwiftUI / Compose) checked into the repo",
-      "Zero-Trust security · mock data in cloud AIs, real keys injected only in local Antigravity layer at Phase 4",
-      "120+ screen registry across v1–v4 version tiers",
-      "Three Unbreakable Laws · Zero-Context Assumption / True Atomization / S-Rank or Nothing",
-      "Tiered business engine · Free → $250K + recurring AI Operations Manager / Call Center / Reputation Engine",
-      "Designed daily output target · 5–15 S-Rank applications",
-    ],
-    technologies: [
-      "Anthropic Claude API + MCP integrations",
-      "Google Stitch + Google AI Studio for cloud screen generation",
-      "React 18+ / TypeScript strict / Tailwind v4 / Framer Motion / Shadcn-UI + Radix",
-      "Convex / Supabase for backend tier",
-      "SwiftUI + Jetpack Compose for native conversion",
-      "Custom 5-agent prompt + handoff layer with binding execution checklist",
-      "Local Antigravity layer for secure key injection (Zero-Trust enforcement point)",
-      "Stripe / Lemon Squeezy / Inngest / Upstash for the recurring-revenue tier",
-    ],
-    challenges: [
-      "Designing handoffs between 5 specialist agents so context never bottlenecks",
-      "Holding the quality bar consistent across many parallel builds, not just one",
-      "Building Zero-Trust into the architecture from day one without slowing iteration",
-      "Mapping web design language to native (SwiftUI / Compose) without losing the visual signature",
-    ],
-    solutions: [
-      "Every spec file is hermetically self-contained — any agent picks up any task with zero prior context",
-      "Binding execution checklist with hard gates — no phase advances until validated against approved specs",
-      "Real keys injected only in the local Phase 4 surgical-reconstruction step, after cloud-generated code is audited",
-      "Explicit native-conversion mapping documents for SwiftUI + Compose so visual signature survives the platform jump",
-    ],
-    outcome:
-      "Designed to ship agency-quality applications in hours not weeks, across an entire pricing ladder, by one person. Foundation in production: every Orange Corridor batch site used the Factory's arsenal + registry + differentiation engine + locator. Next milestone: full multi-agent specialist swarm running unattended overnight batches with TTS progress narration, then v1–v4 paid-client flow goes live. Source proprietary — happy to demo in a call.",
   },
 
   {
@@ -1352,168 +1772,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 1,
-    title: "IGRIS · Production Website Agent + Quality Bar",
-    year: "2025 – present",
-    role: "Architect & Engineer (Solo)",
-    description:
-      "The named craft intelligence behind every site in this portfolio. 9-step pipeline, 4-question quality framework, full tool registry across every modern framework. Mission: beat Awwwards, not match them.",
-    image: "/projects/igris/hero.png",
-    tags: [
-      "Anthropic Claude",
-      "Next.js / Vite / Astro",
-      "Differentiation Engine",
-      "Award-grade",
-      "Proprietary",
-    ],
-    categories: ["AI Development"],
-    subcategory: "AI Agents",
-    detailedDescription:
-      "IGRIS is the craft-layer agent at the center of my build process. It's not a workflow doctrine — it's the named intelligence that picks the stack, defines the signature moment, enforces the quality bar, and ships. Every project starts with four mandatory questions: What's the ONE visual idea that makes this unforgettable? What would someone screenshot and post? What does the visitor feel in three seconds? What design decision here has never been done for this industry before? If I can't answer all four, the design isn't ready and we go back to research. The 9-step pipeline runs Brief → Research (Awwwards + Dribbble + competitor crawl) → Signature moment → Stack selection → Design system → Hero first → Full build → Preview audit → Deploy. The tool registry is deliberately broad — Next.js, Vite, Astro, SvelteKit, Remix on the framework side; GSAP, Framer Motion, Rive, Lottie, Anime.js, Three.js / R3F, Spline, Babylon, WebGPU on the motion + 3D side; Supabase, Neon, PlanetScale, Convex, Clerk, Sanity, Stripe, Mux, Cloudinary, Remotion, Mapbox, Expo on the platform side — because the stack must serve the design vision, not the other way around. Phase 1 (live now): world-class front-end across any stack. Phase 2 (in progress): full-stack autonomy — backend, database, auth, business logic, API layer all built and deployed automatically. Phase 3 (the goal): IGRIS spawns asynchronous autonomous sub-agents, each owning a domain (design, frontend, backend, database, auth, deployment), executing in parallel. A complete production-quality full-stack application in under five minutes. Source is proprietary — happy to walk through in a call.",
-    features: [
-      "9-step pipeline · Brief → Research → Signature moment → Stack → Design system → Hero → Build → Audit → Deploy",
-      "4-question Quality Framework — mandatory before any code is written",
-      "Differentiation Engine — fingerprint registry refuses aesthetic repetition across builds",
-      "Full tool registry — picks per project, not per template (Next/Vite/Astro/SvelteKit; GSAP/Framer/Rive/R3F; Supabase/Convex/Clerk/Stripe)",
-      "Award-tier quality bar — every output benchmarked against Awwwards winners + Dribbble top shots before ship",
-      "Phase 2 active: full-stack autonomy (DB, auth, API, business logic)",
-      "Phase 3 vision: parallel multi-agent swarm, complete app in under 5 minutes",
-    ],
-    technologies: [
-      "Anthropic Claude (Sonnet / Opus) — agent intelligence core",
-      "Claude Code SDK + custom orchestration shell",
-      "Stack picked per project: Next.js / Vite / Astro / SvelteKit / Remix",
-      "Motion arsenal: GSAP, Framer Motion, Rive, Lottie, Anime.js, Three.js / R3F",
-      "Backend arsenal: Supabase, Neon, PlanetScale, Convex, Drizzle, tRPC",
-      "Custom differentiation engine + build_registry.json fingerprint store",
-    ],
-    challenges: [
-      "Defining aesthetic distance between two builds in a way the agent can enforce",
-      "Preventing drift into a house style under sequential-output pressure",
-      "Holding one award-tier quality bar across rapid output, not just one hero build",
-    ],
-    solutions: [
-      "Fingerprint extractor hashes palette + typography + motion grammar into a comparable vector",
-      "Differentiation gate at build-start refuses any spec matching the last N fingerprints",
-      "4-question quality framework halts the build if any answer is unclear — back to research, never forward to code",
-    ],
-    outcome:
-      "Live and shipping. 24 Orange Corridor sites built and deployed this batch. Pulse Point Logistics greenlit by a real client. Systemomtics, Nails Fever Spa, Southern Komfort, Hong Am all came through IGRIS earlier in the year. Source proprietary — happy to demo in a call.",
-  },
-
-  {
-    "id": 55,
-    "title": "PL Home Improvement",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A full-bleed dusk shot of a glass-and-timber modern home anchors a headline that swaps roman for italic mid-sentence: \"the careful one you actually want in your house.\"",
-    "image": "/projects/plhomeimprovement/hero.png",
-    "link": "https://plhomeimprovement.vercel.app",
-    "liveUrl": "https://plhomeimprovement.vercel.app",
-    "tags": [
-      "Cinematic",
-      "Mixed Serif",
-      "Photographic Hero"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "This one trades on a single cinematic photograph, a modern home glowing at blue hour with warm interior light spilling out, and lets the type ride right over it. The headline mixes a crisp white serif with a swooping gold italic so \"in your house\" lands soft, and a bottom stat row (4.9 stars, 22 reviews, Orange NJ) grounds the mood in proof.",
-    "features": [
-      "Full-bleed dusk architectural hero with warm interior glow",
-      "Roman-to-italic serif headline shift for emphasis",
-      "Gold italic accent against high-contrast white type",
-      "Bottom credibility row with rating, review count, and location",
-      "Floating phone CTA pinned to the corner"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A contractor site that feels like an architecture magazine cover, positioning careful craftsmanship as the selling point."
-  },
-
-  {
-    "id": 67,
-    "title": "Brandy's Lounge & Liquors",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "An atmospheric liquor-store site lit by amber light streaks, with a bottle hero and the line 'After the streetlights, the good stuff.'",
-    "image": "/projects/brandys-lounge-liquors/hero.png",
-    "link": "https://brandys-lounge-liquors.vercel.app",
-    "liveUrl": "https://brandys-lounge-liquors.vercel.app",
-    "tags": [
-      "Liquor Store",
-      "Atmospheric Glow",
-      "Nightlife"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Warm amber ribbons of light sweep across a deep plum background, lending a late-night lounge glow to a single backlit bottle hero. A tall serif headline with an italic 'good stuff' accent and a gold primary button capture the neighborhood bottle-shop voice, with hours and 'Cash & card' details kept close.",
-    "features": [
-      "Flowing amber light-streak hero backdrop",
-      "Backlit bottle product photography",
-      "Italic serif accent phrasing",
-      "'Call' and 'Get directions' action pair",
-      "Open-hours and payment info strip"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A corner bottle shop given a moody, after-hours identity that feels like the neighborhood's late-night destination."
-  },
-
-  {
-    "id": 107,
-    "title": "Clancy's Pub",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A warm editorial pub page that frames 'A proper local on Broughton Ave' in serif type beside a hand-drawn pint and a 'good things take time' line.",
-    "image": "/projects/clancys-pub/hero.png",
-    "link": "https://clancys-pub.vercel.app",
-    "liveUrl": "https://clancys-pub.vercel.app",
-    "tags": [
-      "Pub",
-      "Editorial",
-      "Local"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Cream paper tones, a red italic accent on 'Broughton Ave,' and a simple line-art pint give this neighborhood pub a cozy, classic feel. Beneath the headline, a copy block about the game on the screens and a proper pour sits above a star rating, a Call and Find us hours pair, and a row of warm interior photos showing the bar and taps.",
-    "features": [
-      "Warm cream palette with red italic serif accent",
-      "Line-art pint motif beside the headline",
-      "Trust row with star rating and '120 neighbors and counting'",
-      "Paired Call and Find us & hours CTAs",
-      "Interior photo strip of the bar, taps, and room"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "Lenis"
-    ],
-    "outcome": "Captures the comfortable, regulars-welcome feel of a true neighborhood local while keeping hours and contact one tap away."
-  },
-
-  {
     "id": 104,
     "title": "Dada Doll Beauty Spa",
     "year": "2026",
@@ -1667,44 +1925,6 @@ export const projects: Project[] = [
     ],
     outcome:
       "First IGRIS reference build — proves the pipeline produces shippable, brand-coherent work outside of fintech defaults.",
-  },
-
-  {
-    "id": 77,
-    "title": "Hundred Wellness",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A warm, inviting wellness hero pairing 'A hundred small ways to feel well' with a sunlit shelf of labeled botanical jars.",
-    "image": "/projects/hundred-wellness/hero.png",
-    "link": "https://hundred-wellness.vercel.app",
-    "liveUrl": "https://hundred-wellness.vercel.app",
-    "tags": [
-      "Wellness",
-      "Warm Palette",
-      "Product Photography"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Soft sand backgrounds and oversized friendly type set a neighborhood-apothecary mood, with the word 'well' italicized for warmth. A glowing product photo of remedy jars anchors the right, joined by category chips, a star rating and an open-now badge that make the small Center Street shop feel approachable.",
-    "features": [
-      "Sand-toned palette with oversized humanist headline",
-      "Sunlit product shot of labeled botanical jars",
-      "Category chips for botanicals and supplements",
-      "Inline star rating and open-now status",
-      "Find-the-shop and directions calls to action"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A small wellness shop that feels welcoming and local without trying too hard."
   },
 
   {
@@ -2205,39 +2425,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 26,
-    title: "Cantina 443",
-    year: "2026",
-    role: "Designer & Engineer — built via IGRIS",
-    description:
-      "Late-night tacos and mezcal bar on Conover Terrace, Orange NJ. Midnight + neon magenta/marigold/papaya. Giant neon CANTINA 443 sign signature with marquee menu ticker.",
-    image: "/projects/cantina-443/hero.png",
-    previewVideo: "/projects/cantina-443/preview.webm",
-    previewPoster: "/projects/cantina-443/preview-poster.jpg",
-    link: "https://github.com/semajzandrews/cantina-443",
-    repoUrl: "https://github.com/semajzandrews/cantina-443",
-    liveUrl: "https://cantina-443.vercel.app",
-    tags: ["Next.js 16", "Motion", "Tailwind v4"],
-    categories: ["Web Development"],
-    subcategory: "Front-End Development",
-    detailedDescription:
-      "Cantina 443 is a late-night bar and kitchen on Conover Terrace, Orange NJ. The site is unashamedly loud — midnight maroon-black surfaces with electric magenta + marigold + papaya neon glows. The signature is the hero text itself: 'CANTINA' in Bebas Neue glowing magenta, '443' beneath it flickering marigold like a sputtering neon sign. Magenta-bordered menu marquee scrolls dish names horizontally below the headline. A rotating citrus + cocktail glass SVG floats on the right with a stir animation. Tonight's schedule is a six-night card grid where every card has a different neon color. The Visit CTA is a giant 'COME HUNGRY.' in neon magenta. Designed to feel like the bar is already half full.",
-    features: [
-      "Massive neon-glow CANTINA 443 hero with flicker on '443'",
-      "Horizontal menu marquee ticker (al pastor → birria → mezcal flight)",
-      "Animated citrus + cocktail SVG that stirs on a 18s loop",
-      "Two-column tacos + platillos menu (six each, dashed leader dots)",
-      "Six cocktail cards (paloma, negroni, margarita brava, mezcal sour, michelada, agua fresca)",
-      "Six nights of programming (Taco Tuesday → Familia Sunday)",
-      "Bebas Neue display + Caveat handwritten script",
-    ],
-    technologies: ["Next.js 16","React 19","Tailwind CSS v4","Motion","Lenis","Bebas Neue + Inter + Caveat"],
-    challenges: ["Going maximalist neon without losing the menu's legibility","Differentiating from every other site in the batch by being the only one that's loud"],
-    solutions: ["Neon glows isolated to display text only; body copy stays clean and bone-cream","Magenta + marigold restricted to one accent each per section so they feel like signs lighting up, not chaos"],
-    outcome: "Live and feeling like the bar already opened.",
-  },
-
-  {
     id: 33,
     title: "Linden Pain Relief",
     year: "2026",
@@ -2321,44 +2508,6 @@ export const projects: Project[] = [
   },
 
   {
-    "id": 60,
-    "title": "BakedSome",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A punchy black hero with \"Baked by hand, served by the dozen\" in orange-and-white block caps, a hands-on-dough photo, and a scrolling menu marquee of Mediterranean dishes.",
-    "image": "/projects/bakedsome/hero.png",
-    "link": "https://bakedsome.vercel.app",
-    "liveUrl": "https://bakedsome.vercel.app",
-    "tags": [
-      "Bold Type",
-      "Marquee",
-      "Food Photography"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "This one is loud in the right way: chunky condensed caps split between white and hot orange, set on near-black, with a rounded photo of hands shaping dough and a \"100% made fresh\" badge. A full-width marquee of menu items (Kafta, Chicken Shawarma, Falafel, Baba Ghanoush) scrolls across the bottom, turning the menu itself into motion.",
-    "features": [
-      "Two-tone orange-and-white condensed block caps",
-      "Hands-on-dough hero photo with a fresh-made badge",
-      "Scrolling menu-item marquee along the footer edge",
-      "Near-black backdrop for high food-color contrast",
-      "Floating round phone CTA and pill action buttons"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A Mediterranean bakery site with real appetite appeal, the scrolling menu and punchy type making the food the headline."
-  },
-
-  {
     "id": 65,
     "title": "Soca Tattoo Studio",
     "year": "2026",
@@ -2396,44 +2545,6 @@ export const projects: Project[] = [
   },
 
   {
-    "id": 93,
-    "title": "Today's Kids",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "Soft cream editorial for a kids' shop, pairing a 'Dressed for every little today' headline with a playful star-wand portrait.",
-    "image": "/projects/todays-kids/hero.png",
-    "link": "https://todays-kids.vercel.app",
-    "liveUrl": "https://todays-kids.vercel.app",
-    "tags": [
-      "Childrenswear",
-      "Editorial",
-      "Playful"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "A gentle cream layout and a serif headline with italic 'every little' give this children's clothing store a storybook polish. A framed photo of a child in a leopard coat waving a gold star wand brings the play, while a drop-cap intro grounds it in the City of Orange. Gold accents and outlined collection buttons keep things refined yet clearly made for little ones.",
-    "features": [
-      "Editorial cream layout with serif and italic headline",
-      "Playful star-wand child portrait in a framed crop",
-      "Drop-cap intro tying the shop to its neighborhood",
-      "Gold accents with outlined collection CTAs",
-      "Tidy top nav for collections, store, and visit"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A children's boutique gets a storybook-elegant storefront that still feels joyful and kid-first."
-  },
-
-  {
     id: 34,
     title: "FURNITURE R US",
     year: "2026",
@@ -2454,44 +2565,6 @@ export const projects: Project[] = [
     challenges: ["Going maximalist without sacrificing legibility","Differentiating from neighboring Cantina 443 (also bold/loud)"],
     solutions: ["Heavy weight stays consistent — color does the variation","Geometric shapes instead of neon glow — different brand of loud"],
     outcome: "Live and shouting friendly.",
-  },
-
-  {
-    "id": 75,
-    "title": "Babyland Family Services",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A heritage-green serif identity built around a sunlit photo of a child and the quiet line 'Held. Since 1969.'",
-    "image": "/projects/babyland-family-services/hero.png",
-    "link": "https://babyland-family-services.vercel.app",
-    "liveUrl": "https://babyland-family-services.vercel.app",
-    "tags": [
-      "Heritage",
-      "Nonprofit",
-      "Editorial Serif"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "Cream paper tones, a deep forest serif headline and a polaroid-style photo dated to 1969 frame more than fifty years of family work. The mission paragraph sits calm and centered, with pill buttons and a row of footer stats marking the nonprofit's roots in the City of Orange.",
-    "features": [
-      "Heritage serif wordmark and headline pairing",
-      "Sunlit photo styled as a dated keepsake",
-      "Cream and forest-green editorial palette",
-      "Founding-year story woven through the hero",
-      "Footer credibility row with nonprofit stats"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis",
-      "Lucide React"
-    ],
-    "outcome": "A warm, trust-first presence that lets a 1969 legacy speak for itself."
   },
 
   {
@@ -2571,42 +2644,6 @@ export const projects: Project[] = [
   },
 
   {
-    "id": 54,
-    "title": "Kador Beauty Salon",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A glowing vanity-bulb mirror frames the portrait while a luminous italic serif spells out \"Sit down. Leave luminous.\" against deep espresso.",
-    "image": "/projects/kador-beauty-salon/hero.png",
-    "link": "https://kador-beauty-salon.vercel.app",
-    "liveUrl": "https://kador-beauty-salon.vercel.app",
-    "tags": [
-      "Luminous",
-      "Editorial Serif",
-      "Dark Mode"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "The hero leans on a single theatrical device: a portrait boxed inside a Hollywood vanity-light frame, every bulb modeled to throw real warm glow across near-black walls. A mixed roman-and-italic serif headline does the talking in oversized type, and the muted gold accent threads from the button to the mirror so the whole frame reads as one lit object.",
-    "features": [
-      "Vanity-bulb mirror frame with modeled glow around the portrait",
-      "Oversized roman-plus-italic serif headline treatment",
-      "Espresso-and-gold palette pulled through nav, buttons, and frame",
-      "Pill CTA buttons paired with an inline review-star strip",
-      "Slim top navigation that stays out of the hero's way"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Framer Motion",
-      "Lenis"
-    ],
-    "outcome": "A salon homepage that sells atmosphere on sight, the lit-mirror hero doing the work of a full brand shoot."
-  },
-
-  {
     id: 28,
     title: "L'Hirondelle Restaurant",
     year: "2026",
@@ -2627,42 +2664,5 @@ export const projects: Project[] = [
     challenges: ["Capturing Caribbean joy without lapsing into tourist clichés","Building a sideways-scroll layout that still works on mobile"],
     solutions: ["Drew from Haitian street-market signage rather than postcards","Snap-scroll with momentum + visible scrollbar so the affordance reads"],
     outcome: "Live and Sunday-lunch ready.",
-  },
-
-  {
-    "id": 63,
-    "title": "Red Crab Fish Market",
-    "year": "2026",
-    "role": "Designer & Engineer",
-    "description": "A warm editorial serif reads \"The block runs on fresh fish\" beside real iced market cases, with a scrolling species ticker of snapper, perch, and crab.",
-    "image": "/projects/red-crab-fish/hero.png",
-    "link": "https://red-crab-fish.vercel.app",
-    "liveUrl": "https://red-crab-fish.vercel.app",
-    "tags": [
-      "Editorial Serif",
-      "Marquee",
-      "Market Photography"
-    ],
-    "categories": [
-      "Web Development"
-    ],
-    "subcategory": "Front-End Development",
-    "detailedDescription": "This leans warm and editorial: a cream backdrop, a serif headline that flips to red italic on \"fresh fish,\" and a genuine photo of iced fish cases that proves the market is the real thing. A full-width marquee of species (Croaker, Perch, Red Snapper, Tilapia, Blue Crab) runs the bottom, doing the menu work while keeping a neighborhood, old-school feel.",
-    "features": [
-      "Warm cream-and-red editorial serif headline",
-      "Red italic accent on the key phrase",
-      "Authentic iced fish-case market photography",
-      "Scrolling species ticker across the footer",
-      "Uppercase locator label and rating detail line"
-    ],
-    "technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS v4",
-      "Motion",
-      "GSAP",
-      "Lenis"
-    ],
-    "outcome": "A fish-market page that feels neighborhood-true, the real cases and species ticker selling freshness over slick stock imagery."
   },
 ]
