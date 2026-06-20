@@ -1686,4 +1686,2048 @@ export const projects: Project[] = [
     ],
     outcome: "Internal automation project on GitHub.",
   },
+  {
+    "id": 54,
+    "title": "Kador Beauty Salon",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A glowing vanity-bulb mirror frames the portrait while a luminous italic serif spells out \"Sit down. Leave luminous.\" against deep espresso.",
+    "image": "/projects/kador-beauty-salon/hero.png",
+    "link": "https://kador-beauty-salon.vercel.app",
+    "liveUrl": "https://kador-beauty-salon.vercel.app",
+    "tags": [
+      "Luminous",
+      "Editorial Serif",
+      "Dark Mode"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero leans on a single theatrical device: a portrait boxed inside a Hollywood vanity-light frame, every bulb modeled to throw real warm glow across near-black walls. A mixed roman-and-italic serif headline does the talking in oversized type, and the muted gold accent threads from the button to the mirror so the whole frame reads as one lit object.",
+    "features": [
+      "Vanity-bulb mirror frame with modeled glow around the portrait",
+      "Oversized roman-plus-italic serif headline treatment",
+      "Espresso-and-gold palette pulled through nav, buttons, and frame",
+      "Pill CTA buttons paired with an inline review-star strip",
+      "Slim top navigation that stays out of the hero's way"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "Lenis"
+    ],
+    "outcome": "A salon homepage that sells atmosphere on sight, the lit-mirror hero doing the work of a full brand shoot."
+  },
+  {
+    "id": 55,
+    "title": "PL Home Improvement",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A full-bleed dusk shot of a glass-and-timber modern home anchors a headline that swaps roman for italic mid-sentence: \"the careful one you actually want in your house.\"",
+    "image": "/projects/plhomeimprovement/hero.png",
+    "link": "https://plhomeimprovement.vercel.app",
+    "liveUrl": "https://plhomeimprovement.vercel.app",
+    "tags": [
+      "Cinematic",
+      "Mixed Serif",
+      "Photographic Hero"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This one trades on a single cinematic photograph, a modern home glowing at blue hour with warm interior light spilling out, and lets the type ride right over it. The headline mixes a crisp white serif with a swooping gold italic so \"in your house\" lands soft, and a bottom stat row (4.9 stars, 22 reviews, Orange NJ) grounds the mood in proof.",
+    "features": [
+      "Full-bleed dusk architectural hero with warm interior glow",
+      "Roman-to-italic serif headline shift for emphasis",
+      "Gold italic accent against high-contrast white type",
+      "Bottom credibility row with rating, review count, and location",
+      "Floating phone CTA pinned to the corner"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A contractor site that feels like an architecture magazine cover, positioning careful craftsmanship as the selling point."
+  },
+  {
+    "id": 56,
+    "title": "A&A Perfume & Jewelry",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A soft cream layout with a tilted product card and the line \"A gift, composed by hand\" set in a delicate high-contrast serif.",
+    "image": "/projects/a-and-a-perfume-jewelry/hero.png",
+    "link": "https://a-and-a-perfume-jewelry.vercel.app",
+    "liveUrl": "https://a-and-a-perfume-jewelry.vercel.app",
+    "tags": [
+      "Editorial",
+      "Luxe Minimal",
+      "Warm Neutral"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Restraint is the whole move here: a warm ivory canvas, generous whitespace, and one perfume-and-roses still life tilted on a slight angle like a placed object. The serif headline runs in alternating roman and italic weights, and vertical side labels plus a thin \"scroll\" cue keep the composition feeling like an editorial spread rather than a storefront.",
+    "features": [
+      "Tilted, framed product still-life as the focal element",
+      "Alternating roman-italic high-contrast serif headline",
+      "Warm ivory palette with abundant negative space",
+      "Vertical side-set labels and scroll indicator",
+      "Minimal nav with a single rounded pill action"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A boutique page that reads as quiet luxury, framing perfume and jewelry as composed, gift-worthy objects."
+  },
+  {
+    "id": 57,
+    "title": "GQ Cutz Barber Boutique",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A tight close-up portrait fills the frame behind a magazine-style masthead, sold as \"The Grooming Issue\" with \"It is not just a haircut, it is a lifestyle.\"",
+    "image": "/projects/gq-cutz-barber-boutique/hero.png",
+    "link": "https://gq-cutz-barber-boutique.vercel.app",
+    "liveUrl": "https://gq-cutz-barber-boutique.vercel.app",
+    "tags": [
+      "Magazine",
+      "Portrait Hero",
+      "Editorial"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The entire page is built like a magazine cover: an intimate, shadowed portrait runs edge to edge while a bold condensed masthead and issue line (\"No. 01, Barber Boutique\") layer over it. Amber accents pick out the CTAs and the side callout column, and the small-caps subheads plus a barcode footer push the print-editorial illusion all the way through.",
+    "features": [
+      "Edge-to-edge portrait hero with cinematic shadow",
+      "Magazine masthead and issue-number framing",
+      "Amber accents on pill CTAs and side callouts",
+      "Italic serif pull-quote against condensed display type",
+      "Barcode and small-caps details in the footer"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A barbershop site styled as a grooming magazine, elevating a fresh cut into a lifestyle brand statement."
+  },
+  {
+    "id": 58,
+    "title": "Sebastian Auto Service",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A photoreal tachometer gauge glows beside the line \"We find what's actually wrong,\" giving the shop a premium diagnostic feel.",
+    "image": "/projects/sebastian-auto-service/hero.png",
+    "link": "https://sebastian-auto-service.vercel.app",
+    "liveUrl": "https://sebastian-auto-service.vercel.app",
+    "tags": [
+      "Dashboard Motif",
+      "Dark UI",
+      "Diagnostic"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A rendered analog gauge with a swept needle and lit numerals is the hero's centerpiece, reading like a real dashboard against deep charcoal. The headline highlights \"actually\" in amber for punch, and a tidy stat strip (jobs, rating, miles) sits under the gauge so the precision instrument and the proof numbers reinforce each other.",
+    "features": [
+      "Photoreal tachometer gauge with lit needle and dial",
+      "Amber keyword highlight inside a clean sans headline",
+      "Charcoal dark UI with metric stat strip",
+      "Pill CTAs for \"Call the shop\" and details",
+      "Pinned top phone-number action button"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "An auto shop homepage that signals precision diagnostics, the instrument-panel hero making the repair feel engineered, not guessed."
+  },
+  {
+    "id": 59,
+    "title": "Sisters In Motion",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A striking portrait amid green foliage sits beside \"Hands that keep beauty in motion,\" set in a confident serif with a wine-red italic close.",
+    "image": "/projects/sisters-in-motion/hero.png",
+    "link": "https://sisters-in-motion.vercel.app",
+    "liveUrl": "https://sisters-in-motion.vercel.app",
+    "tags": [
+      "Portrait Hero",
+      "Confident Serif",
+      "Botanical"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The build pairs a richly lit braiding portrait, framed by deep tropical greens, with a tall left-aligned serif headline that drops into a wine-red italic on \"in motion.\" The clean light background lets the photograph carry the color, and rounded burgundy CTAs plus a quiet rating line keep the layout elegant and on-brand for the atelier.",
+    "features": [
+      "Foliage-framed braiding portrait as hero imagery",
+      "Serif headline with wine-red italic accent line",
+      "Light, airy canvas that foregrounds the photo's color",
+      "Rounded burgundy CTA pair with review stars",
+      "Compact uppercase locator and category labels"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A braiding atelier page that centers real craft and clientele, the portrait and serif giving it a premium, personal feel."
+  },
+  {
+    "id": 60,
+    "title": "BakedSome",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A punchy black hero with \"Baked by hand, served by the dozen\" in orange-and-white block caps, a hands-on-dough photo, and a scrolling menu marquee of Mediterranean dishes.",
+    "image": "/projects/bakedsome/hero.png",
+    "link": "https://bakedsome.vercel.app",
+    "liveUrl": "https://bakedsome.vercel.app",
+    "tags": [
+      "Bold Type",
+      "Marquee",
+      "Food Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This one is loud in the right way: chunky condensed caps split between white and hot orange, set on near-black, with a rounded photo of hands shaping dough and a \"100% made fresh\" badge. A full-width marquee of menu items (Kafta, Chicken Shawarma, Falafel, Baba Ghanoush) scrolls across the bottom, turning the menu itself into motion.",
+    "features": [
+      "Two-tone orange-and-white condensed block caps",
+      "Hands-on-dough hero photo with a fresh-made badge",
+      "Scrolling menu-item marquee along the footer edge",
+      "Near-black backdrop for high food-color contrast",
+      "Floating round phone CTA and pill action buttons"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A Mediterranean bakery site with real appetite appeal, the scrolling menu and punchy type making the food the headline."
+  },
+  {
+    "id": 61,
+    "title": "Mercadito Chapin",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Vivid stacks of Guatemalan textiles run down the right while a Spanish-first serif headline reads \"La eterna primavera, a una cuadra.\"",
+    "image": "/projects/mercadito-chapin/hero.png",
+    "link": "https://mercadito-chapin.vercel.app",
+    "liveUrl": "https://mercadito-chapin.vercel.app",
+    "tags": [
+      "Cultural Color",
+      "Spanish-First",
+      "Textile Imagery"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Culture drives the color here: rolls of woven Guatemalan fabric in saturated reds, blues, and greens fill the right edge, set against a soft blush canvas. The headline is Spanish-first in a roman-and-italic serif for the Latino clientele, and a small \"El Mercadito\" badge plus a phone pill keep the warm, neighborhood-shop personality intact.",
+    "features": [
+      "Saturated Guatemalan textile photography as the color source",
+      "Spanish-first roman-and-italic serif headline",
+      "Blush canvas balancing the vivid woven hues",
+      "Circular brand badge and rounded phone CTA",
+      "Bilingual-aware locator and hours line"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis"
+    ],
+    "outcome": "A Guatemalan grocery page that wears its culture proudly, the textile color and Spanish copy speaking straight to the community it serves."
+  },
+  {
+    "id": 62,
+    "title": "Mo's Hot Chicken",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A clean split layout pairs \"Pick your heat\" in bold sans with a dark overhead shot of crispy Nashville chicken and a \"medium, the right call\" heat tag.",
+    "image": "/projects/mos-hot-chicken/hero.png",
+    "link": "https://mos-hot-chicken.vercel.app",
+    "liveUrl": "https://mos-hot-chicken.vercel.app",
+    "tags": [
+      "Split Layout",
+      "Food Photography",
+      "Appetite Appeal"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The page splits crisp white type on the left against a moody dark food plate on the right, where overhead-lit fried chicken, a yolk, and a gingham napkin do the selling. \"Heat\" gets a burnt-orange highlight, an inline heat-level label overlays the photo, and rounded CTAs keep the order path obvious without crowding the appetizing shot.",
+    "features": [
+      "Clean split hero: bold sans left, food photo right",
+      "Burnt-orange keyword highlight on \"heat\"",
+      "Overhead, moody Nashville-chicken plating shot",
+      "On-image heat-level tag overlay",
+      "Rounded order CTAs with an open-now status line"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A hot-chicken site that makes the heat the hook, the split layout keeping ordering one tap from a mouth-watering plate."
+  },
+  {
+    "id": 63,
+    "title": "Red Crab Fish Market",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm editorial serif reads \"The block runs on fresh fish\" beside real iced market cases, with a scrolling species ticker of snapper, perch, and crab.",
+    "image": "/projects/red-crab-fish/hero.png",
+    "link": "https://red-crab-fish.vercel.app",
+    "liveUrl": "https://red-crab-fish.vercel.app",
+    "tags": [
+      "Editorial Serif",
+      "Marquee",
+      "Market Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This leans warm and editorial: a cream backdrop, a serif headline that flips to red italic on \"fresh fish,\" and a genuine photo of iced fish cases that proves the market is the real thing. A full-width marquee of species (Croaker, Perch, Red Snapper, Tilapia, Blue Crab) runs the bottom, doing the menu work while keeping a neighborhood, old-school feel.",
+    "features": [
+      "Warm cream-and-red editorial serif headline",
+      "Red italic accent on the key phrase",
+      "Authentic iced fish-case market photography",
+      "Scrolling species ticker across the footer",
+      "Uppercase locator label and rating detail line"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis"
+    ],
+    "outcome": "A fish-market page that feels neighborhood-true, the real cases and species ticker selling freshness over slick stock imagery."
+  },
+  {
+    "id": 64,
+    "title": "Park Crescent Health Care",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm forest-green skilled-nursing site that leads with a genuine resident portrait and a serif headline promising the way back to yourself.",
+    "image": "/projects/park-crescent-health-care/hero.png",
+    "link": "https://park-crescent-health-care.vercel.app",
+    "liveUrl": "https://park-crescent-health-care.vercel.app",
+    "tags": [
+      "Healthcare",
+      "Serif Editorial",
+      "Warm Palette"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Built on a deep evergreen field with cream type, the design pairs a stately serif headline against a candid laughing-resident portrait framed in soft rounded corners. An italic accent on the word 'yourself' and a floating 'Admissions, seven days a week' card give the recovery-focused message real human dignity rather than clinical coldness.",
+    "features": [
+      "Pill-shaped click-to-call and 'Plan a visit' CTAs",
+      "Floating admissions availability card over the hero portrait",
+      "Serif headline with italic emphasis word",
+      "Slim top nav with Care, The Way Back, Our People, Visit"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A skilled-nursing brand that reads as dignified and human, turning recovery care into a warm, trustworthy first impression."
+  },
+  {
+    "id": 65,
+    "title": "Soca Tattoo Studio",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A near-black editorial tattoo site where an oversized serif 'We build the picture into the skin' frames a real elephant-tattoo close-up.",
+    "image": "/projects/soca-tattoo-studio/hero.png",
+    "link": "https://soca-tattoo-studio.vercel.app",
+    "liveUrl": "https://soca-tattoo-studio.vercel.app",
+    "tags": [
+      "Tattoo Studio",
+      "Dark Editorial",
+      "Bold Typography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The layout runs on a charcoal canvas with a tall serif statement headline and a single hero photo of a finished forearm tattoo, vivid against the dark. Orange italic emphasis and a brick-red 'Book a session' button add editorial heat, while a five-star rating strip and 'South Orange, NJ' anchor it as a collective studio.",
+    "features": [
+      "Full-bleed real tattoo hero photography",
+      "Italic accent words inside the serif headline",
+      "Five-star review and location credibility strip",
+      "'Book a session' and 'See the work' dual CTAs",
+      "Minimal Work / The Collective / Services nav"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A dark, gallery-grade studio site that makes the artwork the headline and earns the booking."
+  },
+  {
+    "id": 66,
+    "title": "AAA Able Plumbing & Heating",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A moody near-black plumbing and heating site with a glowing smart-thermostat reading 108 degrees and bold 'Water and heat, handled' type.",
+    "image": "/projects/aaa-able-plumbing-heating/hero.png",
+    "link": "https://aaa-able-plumbing-heating.vercel.app",
+    "liveUrl": "https://aaa-able-plumbing-heating.vercel.app",
+    "tags": [
+      "Home Services",
+      "Dark Cinematic",
+      "Trade Confidence"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "This trade site swaps the usual bright-blue cliche for a dark, cinematic treatment: a softly lit photo of hands at a radiator and a circular thermostat glowing 108 degrees. A heavy sans headline with an amber 'handled' accent and a single gold call button keep the tone confident and no-nonsense.",
+    "features": [
+      "Dramatic thermostat-glow hero photography",
+      "Amber accent word on a heavy sans headline",
+      "Prominent click-to-call as the primary action",
+      "Google star-rating trust line",
+      "Tight nav: Services, The System, Reviews, Visit"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A plumbing and heating brand that feels premium and dependable instead of generic, built to drive direct calls."
+  },
+  {
+    "id": 67,
+    "title": "Brandy's Lounge & Liquors",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An atmospheric liquor-store site lit by amber light streaks, with a bottle hero and the line 'After the streetlights, the good stuff.'",
+    "image": "/projects/brandys-lounge-liquors/hero.png",
+    "link": "https://brandys-lounge-liquors.vercel.app",
+    "liveUrl": "https://brandys-lounge-liquors.vercel.app",
+    "tags": [
+      "Liquor Store",
+      "Atmospheric Glow",
+      "Nightlife"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Warm amber ribbons of light sweep across a deep plum background, lending a late-night lounge glow to a single backlit bottle hero. A tall serif headline with an italic 'good stuff' accent and a gold primary button capture the neighborhood bottle-shop voice, with hours and 'Cash & card' details kept close.",
+    "features": [
+      "Flowing amber light-streak hero backdrop",
+      "Backlit bottle product photography",
+      "Italic serif accent phrasing",
+      "'Call' and 'Get directions' action pair",
+      "Open-hours and payment info strip"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A corner bottle shop given a moody, after-hours identity that feels like the neighborhood's late-night destination."
+  },
+  {
+    "id": 68,
+    "title": "Instant Printing",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A clean print-shop site with bold purple type and a slick angled paper-stack hero card reading 'Fresh off the press.'",
+    "image": "/projects/instant-printing/hero.png",
+    "link": "https://instant-printing.vercel.app",
+    "liveUrl": "https://instant-printing.vercel.app",
+    "tags": [
+      "Print Shop",
+      "Bold Color",
+      "Modern Clean"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Set on soft off-white with mint and lavender accent shapes, the design leans on a confident two-tone headline where 'print shop' drops into vivid purple. A tilted hero card layered over a printing-press image reads 'Fresh off the press,' giving the walk-in shop a slick, modern, design-studio feel.",
+    "features": [
+      "Two-tone headline with purple accent",
+      "Angled layered hero card over press imagery",
+      "Pastel mint and lavender accent shapes",
+      "'Plan a print run' and 'See what we print' CTAs",
+      "Capabilities strip: cards, banners, copies"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis"
+    ],
+    "outcome": "A neighborhood print shop repositioned as a sharp, contemporary studio that invites walk-ins and quote requests."
+  },
+  {
+    "id": 69,
+    "title": "Mary Finesse Beauty",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A rich chocolate-brown nail-salon site with an italic 'Done with finesse' headline and an elegant manicure close-up.",
+    "image": "/projects/mary-finesse-beauty/hero.png",
+    "link": "https://mary-finesse-beauty.vercel.app",
+    "liveUrl": "https://mary-finesse-beauty.vercel.app",
+    "tags": [
+      "Nail Salon",
+      "Warm Editorial",
+      "Bilingual"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Deep cocoa-brown tones wrap a refined serif headline where 'finesse' turns italic and warm-orange. A close-up of polished nails resting on a knit sweater anchors the hero, while orange pill buttons, a 5.0 rating, and an ES-EN toggle signal a bilingual, detail-obsessed esthetics studio.",
+    "features": [
+      "Manicure close-up hero photography",
+      "Italic orange accent in serif headline",
+      "Bilingual ES-EN language toggle",
+      "Rating and years-in-service stat row",
+      "'Call to book' and 'Pick a color' CTAs"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A nail and esthetics studio with a luxe, bilingual brand that turns its craft and reviews into bookings."
+  },
+  {
+    "id": 70,
+    "title": "More More Now Records",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A dramatic dark record-shop site built around a spotlit vinyl record and a refined serif line about two sides one basement keeps apart.",
+    "image": "/projects/more-more-now-records/hero.png",
+    "link": "https://more-more-now-records.vercel.app",
+    "liveUrl": "https://more-more-now-records.vercel.app",
+    "tags": [
+      "Record Shop",
+      "Dark Editorial",
+      "Music Culture"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "On a near-black stage, a single glossy vinyl record sits center under a soft top-light, its half-toned sheen doing the heavy lifting. A refined serif headline with a coral italic accent and tracked-out micro-labels give the shop a moody, crate-digger editorial mood that feels collectible and curated.",
+    "features": [
+      "Spotlit centered vinyl record hero",
+      "Refined serif headline with coral italic accent",
+      "Tracked-out genre micro-labels (house, techno)",
+      "Minimal Side A / Side B / Guest nav",
+      "High-contrast dark editorial layout"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "An independent record shop given a collectible, gallery-dark identity that speaks to serious crate diggers."
+  },
+  {
+    "id": 71,
+    "title": "R&S Jewelry & Electronics",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An elegant dark-chocolate jewelry site with gold serif type and the line 'Gold that keeps its warmth.'",
+    "image": "/projects/rns-jewelry-electronics/hero.png",
+    "link": "https://rns-jewelry-electronics.vercel.app",
+    "liveUrl": "https://rns-jewelry-electronics.vercel.app",
+    "tags": [
+      "Jewelry",
+      "Gold-on-Brown",
+      "Quiet Luxury"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A warm espresso-brown field carries a large cream serif headline accented by a gold italic 'keeps,' channeling a quiet luxury counter. Gold pill buttons for call and directions, plus a tidy services row for custom design, watch and screen repair, and gold buy and trade-in, balance the boutique tone with real shop utility.",
+    "features": [
+      "Gold italic accent on cream serif headline",
+      "Gold pill call and directions buttons",
+      "Services row: custom design, repairs, trade-in",
+      "Warm espresso-brown luxury palette",
+      "Slim The Counter / Pieces / Services nav"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A Main Street jewelry and repair counter elevated to a warm, boutique-grade brand that still surfaces every service."
+  },
+  {
+    "id": 72,
+    "title": "Orange Star Jewelry",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A dark luxe jewelry site where scattered diamonds glint across black under a centered serif 'Custom Jewelry, Crafted with Precision.'",
+    "image": "/projects/orange-star-jewelry/hero.png",
+    "link": "https://orange-star-jewelry.vercel.app",
+    "liveUrl": "https://orange-star-jewelry.vercel.app",
+    "tags": [
+      "Jewelry",
+      "Dark Luxe",
+      "Diamond Hero"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Loose diamonds catch light across a pure-black field, framing a centered serif headline and a delicate gold wordmark for true high-end gravity. A 'Live gold price' ticker and 'Request design' and 'Our workshop' links lend the luxury staging genuine craftsmanship credibility.",
+    "features": [
+      "Scattered diamond gemstone hero on black",
+      "Centered gold wordmark and serif headline",
+      "Live gold price ticker in the nav",
+      "'Request design' and 'Our workshop' CTAs",
+      "30-plus years craftsmanship messaging"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Lenis"
+    ],
+    "outcome": "A custom jeweler positioned at a true luxury tier, pairing diamond-grade staging with proof of craftsmanship."
+  },
+  {
+    "id": 73,
+    "title": "Shamar Hand Wash",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A moody sepia car-wash site with a colossal vintage 'SHAMAR'S' wordmark over a silhouetted car and family-run, open-daily framing.",
+    "image": "/projects/shamar-hand-wash/hero.png",
+    "link": "https://shamar-hand-wash.vercel.app",
+    "liveUrl": "https://shamar-hand-wash.vercel.app",
+    "tags": [
+      "Car Wash",
+      "Vintage Sepia",
+      "Oversized Type"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Toned in warm vintage sepia, the design hands the whole hero to an oversized condensed-serif 'SHAMAR'S' wordmark layered over a softly lit car silhouette. Issue-number tags, a 'Run your finger across the hood' prompt, and a tactile bordered 'Tap to call' button give it a printed-poster, old-school garage character.",
+    "features": [
+      "Oversized vintage condensed-serif wordmark",
+      "Sepia-toned car silhouette hero",
+      "Magazine-style issue number tags",
+      "Bordered tactile 'Tap to call' button",
+      "Family-run, open-daily detail strip"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A hand car wash given a bold, vintage-poster identity that feels like a neighborhood institution worth driving to."
+  },
+  {
+    "id": 74,
+    "title": "30 Minutes Repair",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A near-black repair hero where a live countdown widget ticks beside a giant 'IN AND OUT IN THIRTY' promise rendered in red and white.",
+    "image": "/projects/thirty-minutes-repair/hero.png",
+    "link": "https://thirty-minutes-repair.vercel.app",
+    "liveUrl": "https://thirty-minutes-repair.vercel.app",
+    "tags": [
+      "Dark UI",
+      "Live Widget",
+      "Urgency"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The layout splits a heavy uppercase headline against a charcoal status panel that runs a real clock through Diagnose, Open, Replace, Test and Done stages. The bilingual subcopy and twin red call buttons keep the urgency front and center, while a thin ticker of services scrolls along the base.",
+    "features": [
+      "Live countdown clock and staged repair status panel",
+      "Split dark hero with red accent typography",
+      "Bilingual English and Spanish subcopy",
+      "Dual call-to-action buttons for fast contact",
+      "Scrolling service ticker footer"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A repair shop hero that turns its core promise, speed, into a moving, on-screen guarantee."
+  },
+  {
+    "id": 75,
+    "title": "Babyland Family Services",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A heritage-green serif identity built around a sunlit photo of a child and the quiet line 'Held. Since 1969.'",
+    "image": "/projects/babyland-family-services/hero.png",
+    "link": "https://babyland-family-services.vercel.app",
+    "liveUrl": "https://babyland-family-services.vercel.app",
+    "tags": [
+      "Heritage",
+      "Nonprofit",
+      "Editorial Serif"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Cream paper tones, a deep forest serif headline and a polaroid-style photo dated to 1969 frame more than fifty years of family work. The mission paragraph sits calm and centered, with pill buttons and a row of footer stats marking the nonprofit's roots in the City of Orange.",
+    "features": [
+      "Heritage serif wordmark and headline pairing",
+      "Sunlit photo styled as a dated keepsake",
+      "Cream and forest-green editorial palette",
+      "Founding-year story woven through the hero",
+      "Footer credibility row with nonprofit stats"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A warm, trust-first presence that lets a 1969 legacy speak for itself."
+  },
+  {
+    "id": 76,
+    "title": "First Class Nails & Spa",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A deep-blue editorial hero where 'Look close. The detail is the whole point.' sits next to a circular macro inset of a finished manicure.",
+    "image": "/projects/first-class-nails-spa/hero.png",
+    "link": "https://first-class-nails-spa.vercel.app",
+    "liveUrl": "https://first-class-nails-spa.vercel.app",
+    "tags": [
+      "Editorial",
+      "Macro Photography",
+      "Luxury"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "An indigo wash and an elegant serif-italic headline give the salon a fashion-magazine air, with a round photo crop zooming into a single painted nail. The drag-to-look-closer cue and clean booking buttons turn precision itself into the selling point for this South Orange studio.",
+    "features": [
+      "Indigo editorial palette with serif-italic display type",
+      "Circular macro inset of a finished manicure",
+      "Drag-to-zoom interaction cue",
+      "Book and view-work call-to-action pair",
+      "Neighborhood and est.-year eyebrow detail"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Lenis"
+    ],
+    "outcome": "A nail studio framed like a beauty editorial, where craftsmanship reads as the brand."
+  },
+  {
+    "id": 77,
+    "title": "Hundred Wellness",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm, inviting wellness hero pairing 'A hundred small ways to feel well' with a sunlit shelf of labeled botanical jars.",
+    "image": "/projects/hundred-wellness/hero.png",
+    "link": "https://hundred-wellness.vercel.app",
+    "liveUrl": "https://hundred-wellness.vercel.app",
+    "tags": [
+      "Wellness",
+      "Warm Palette",
+      "Product Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Soft sand backgrounds and oversized friendly type set a neighborhood-apothecary mood, with the word 'well' italicized for warmth. A glowing product photo of remedy jars anchors the right, joined by category chips, a star rating and an open-now badge that make the small Center Street shop feel approachable.",
+    "features": [
+      "Sand-toned palette with oversized humanist headline",
+      "Sunlit product shot of labeled botanical jars",
+      "Category chips for botanicals and supplements",
+      "Inline star rating and open-now status",
+      "Find-the-shop and directions calls to action"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A small wellness shop that feels welcoming and local without trying too hard."
+  },
+  {
+    "id": 78,
+    "title": "Lincoln Unisex Barber",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An orange-on-black barbershop hero where 'A SHARP LINE. A CLEAN FADE.' sits beside an authentic shot of a barber mid-cut.",
+    "image": "/projects/lincoln-unisex-barber/hero.png",
+    "link": "https://lincoln-unisex-barber.vercel.app",
+    "liveUrl": "https://lincoln-unisex-barber.vercel.app",
+    "tags": [
+      "Bold Type",
+      "Barbershop",
+      "High Contrast"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Hard uppercase type splits white and burnt-orange across a black field, matching the energy of a real action photo of a fade in progress. Bold book and gallery buttons plus a star rating give the East Orange shop a confident, no-nonsense street presence.",
+    "features": [
+      "High-contrast orange-on-black type treatment",
+      "Authentic in-chair barber action photo",
+      "Stacked uppercase headline with color split",
+      "Book and view-the-cuts button pair",
+      "Inline rating and neighborhood tagline"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A barbershop landing page with the same precision and edge as the cuts it sells."
+  },
+  {
+    "id": 79,
+    "title": "Quick Stop",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A neon-purple corner-store hero with a glowing OPEN sign and 'THE CORNER THAT NEVER MISSES' over a dark night-shop backdrop.",
+    "image": "/projects/quick-stop/hero.png",
+    "link": "https://quick-stop.vercel.app",
+    "liveUrl": "https://quick-stop.vercel.app",
+    "tags": [
+      "Neon",
+      "Nightlife",
+      "Convenience"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Electric violet lighting and a pulsing neon OPEN graphic give a humble convenience store late-night personality. The hero pairs in-stock and directions buttons with an open-hours badge, and a glowing marquee of LOTTO, ATM, SNACKS, GAS and more scrolls across the footer like storefront signage.",
+    "features": [
+      "Neon-purple night palette with glowing OPEN sign",
+      "See-what's-in-stock and directions buttons",
+      "Always-open hours badge",
+      "Illuminated scrolling marquee of store offerings",
+      "Moody nighttime shop backdrop"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A corner store reimagined with neon swagger that makes round-the-clock feel like a destination."
+  },
+  {
+    "id": 80,
+    "title": "South Valley",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A moody BBQ-lounge hero with condensed display type, a serif-italic 'Good music.' and dark imagery of a grilled cut and a glass of liquor.",
+    "image": "/projects/southvalley/hero.png",
+    "link": "https://southvalley.vercel.app",
+    "liveUrl": "https://southvalley.vercel.app",
+    "tags": [
+      "Moody",
+      "Supper Club",
+      "Condensed Type"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Stacked condensed 'SOUTH VALLEY BBQ LOUNGE' lettering rides over smoky, low-lit food and drink photography for a warm supper-club feel. The 'Good vibes. Good drinks. Good music.' line, reserve and book-the-blue-room buttons, and a row of footer links lean into atmosphere as much as the smoked menu.",
+    "features": [
+      "Condensed display wordmark over moody grill imagery",
+      "Serif-italic accent on the closing tagline",
+      "Reserve and private-room booking buttons",
+      "Dark supper-club color grading",
+      "Footer nav for menu, events and contact"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Three.js",
+      "Lucide React"
+    ],
+    "outcome": "A BBQ spot positioned as an evening experience, vibes and music alongside the brisket."
+  },
+  {
+    "id": 81,
+    "title": "Able Bail Bonds",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm navy night hero with a tasteful serif 'Get them home by morning' beside a softly lit photo of a house with the porch light on.",
+    "image": "/projects/able-bail-bonds/hero.png",
+    "link": "https://able-bail-bonds.vercel.app",
+    "liveUrl": "https://able-bail-bonds.vercel.app",
+    "tags": [
+      "Empathetic",
+      "Twilight Palette",
+      "Trust"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Deep blue twilight tones and an empathetic serif headline reframe a stressful service with calm and care. A gentle image of a lit-up home captioned 'The lights stay on until everyone's home' sits next to a 24/7 call button and a how-it-works link, all anchored by an always-available footer note.",
+    "features": [
+      "Twilight navy palette with empathetic serif headline",
+      "Warm porch-light home photo with caption",
+      "24/7 call button and how-it-works link",
+      "County and city locating eyebrow",
+      "Always-available reassurance footer"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A bail bonds page that leads with compassion, treating a hard moment with dignity."
+  },
+  {
+    "id": 82,
+    "title": "G.R. Byron Plumbing & Heating",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An urgent dark hero with flowing teal water imagery and 'When water won't wait, we're still answering' in a bold orange-accented headline.",
+    "image": "/projects/gr-byron-plumbing-heating/hero.png",
+    "link": "https://gr-byron-plumbing-heating.vercel.app",
+    "liveUrl": "https://gr-byron-plumbing-heating.vercel.app",
+    "tags": [
+      "Emergency",
+      "Water Motif",
+      "Urgency"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Rippling backlit water fills the background while a confident headline splits white and burnt orange to convey round-the-clock readiness. Copy about burst pipes and cold houses outside business hours, paired with a prominent call button and a today's-hours link, makes the emergency-response promise unmistakable.",
+    "features": [
+      "Flowing illuminated water hero backdrop",
+      "Orange-accent emphasis on a two-tone headline",
+      "Emergency call button and today's-hours link",
+      "Dark high-contrast palette signaling urgency",
+      "Open-now status indicator in the footer"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A plumber's site that makes after-hours availability the headline, not the fine print."
+  },
+  {
+    "id": 83,
+    "title": "Ismael & Son Auto Repair",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A gritty garage hero where 'Honest work, handed down.' sits over a real shop interior, with bilingual trust stats along the base.",
+    "image": "/projects/ismael-and-son-auto-repair/hero.png",
+    "link": "https://ismael-and-son-auto-repair.vercel.app",
+    "liveUrl": "https://ismael-and-son-auto-repair.vercel.app",
+    "tags": [
+      "Gritty",
+      "Family Business",
+      "Bilingual"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A dim, authentic photo of the actual garage backs a heavy headline that nods to a father-and-son legacy, with 'down' picked out in red. Straight-talk copy about no surprises is reinforced by a stat row showing rating, years in service, ACDelco parts and a plain 'Si' for bilingual service.",
+    "features": [
+      "Real garage-interior hero photography",
+      "Father-and-son legacy headline with red accent",
+      "Bilingual trust stat row including 'Si'",
+      "Rating, years-in-service and parts-brand proof points",
+      "Call and what-it-needs call-to-action pair"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "An auto shop landing page that sells honesty and heritage with no polish it doesn't earn."
+  },
+  {
+    "id": 84,
+    "title": "NYC Style Deli",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Editorial deli site with a live ticking clock and a 'Breakfast at six, Shawarma at two' headline that swaps menus as the day turns.",
+    "image": "/projects/nyc-style-deli/hero.png",
+    "link": "https://nyc-style-deli.vercel.app",
+    "liveUrl": "https://nyc-style-deli.vercel.app",
+    "tags": [
+      "Editorial",
+      "Live Clock",
+      "Witty"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A Brooklyn deli reimagined as an editorial spread, anchored by a black-and-gold headline where 'two' leans into a hand-set italic. A live 3:10 PM clock widget and a horizontal day-slider turn the hero into a real-time menu, surfacing the chopped cheese as the moment-right pick. Mustard-yellow accents and a sticky 'Call to order' pill keep the witty, fast-counter energy front and center.",
+    "features": [
+      "Live ticking clock widget tied to time-of-day menu",
+      "Interactive day-slider that swaps morning and late-night picks",
+      "Editorial black-on-cream type with hand-set italic accents",
+      "Sticky call-to-order pill with phone number",
+      "Featured-item card spotlighting the chopped cheese"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A scrappy corner deli now reads like a magazine feature that literally keeps time with its kitchen."
+  },
+  {
+    "id": 85,
+    "title": "Saucy Bitez",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Dark, cinematic restaurant hero where dripping sauce and live flame frame an outline-stroke 'SAUCY BITEZ' logotype.",
+    "image": "/projects/saucy-bitez/hero.png",
+    "link": "https://saucy-bitez.vercel.app",
+    "liveUrl": "https://saucy-bitez.vercel.app",
+    "tags": [
+      "Cinematic",
+      "Dark Mode",
+      "Food Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A near-black canvas hands the whole stage to a single dramatic shot: jerk-glazed meat catching real flame with sauce pulling off the fork. The brand name sits in oversized hollow outline letters, letting the food burn through from behind. Orange spice swatches and a red 'call now' button echo the heat without crowding the photography.",
+    "features": [
+      "Full-bleed dark food hero with flame and sauce motion",
+      "Outline-stroke display logotype layered over imagery",
+      "Warm spice-tone swatch row as a visual menu cue",
+      "High-contrast red call-to-action against deep black",
+      "Minimal top nav that stays out of the photo's way"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A takeout spot now opens with the kind of moody food hero you'd expect from a flagship steakhouse."
+  },
+  {
+    "id": 86,
+    "title": "Sensational Beauty Supply",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Cream editorial layout pairing a mixed serif 'Sensational Beauty Supply' lockup with a glamorous pink-backdrop portrait.",
+    "image": "/projects/sensational-beauty-supply/hero.png",
+    "link": "https://sensational-beauty-supply.vercel.app",
+    "liveUrl": "https://sensational-beauty-supply.vercel.app",
+    "tags": [
+      "Editorial",
+      "Beauty",
+      "Portrait"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A warm cream page treats a neighborhood beauty supply like a fashion editorial, mixing weights and an italic 'Beauty' across the three-line headline. A drop-cap intro and a real Google rating of 4.1 ground the polish in trust, while a portrait against bubblegum pink supplies the color. Outlined buttons and a clean top index keep the aisle of wigs, braids, and skincare feeling curated.",
+    "features": [
+      "Mixed-weight serif headline with italic emphasis",
+      "Drop-cap editorial intro paragraph",
+      "Embedded Google rating with star display",
+      "Glamour portrait on a saturated pink backdrop",
+      "Outlined index and call buttons for a refined feel"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A Main Street supply counter presents with the confidence of a boutique beauty brand."
+  },
+  {
+    "id": 87,
+    "title": "Alpha Daycare Center",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Soft, reassuring childcare hero with a 'We hold the whole day' headline and a clean licensed-hours stat row.",
+    "image": "/projects/alpha-daycare-center/hero.png",
+    "link": "https://alpha-daycare-center.vercel.app",
+    "liveUrl": "https://alpha-daycare-center.vercel.app",
+    "tags": [
+      "Childcare",
+      "Warm",
+      "Trust"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Warm off-white space and a gentle italic 'whole' set a calm, trustworthy tone for parents working long shifts. A rounded photo of a sunlit playroom sits beside copy that speaks plainly to City of Orange families, while a tidy fact strip lays out licensing, hours, and the 6:30 to 6:30 window. Mustard pill buttons add friendly warmth without ever feeling juvenile.",
+    "features": [
+      "Reassuring headline with italic emphasis on 'whole'",
+      "Licensed-care fact strip with hours and credentials",
+      "Rounded, sunlit playroom hero image",
+      "Warm mustard pill CTAs for enroll and tour",
+      "Plain-spoken copy aimed at long-shift parents"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A small licensed daycare now communicates safety and long-day coverage at a glance."
+  },
+  {
+    "id": 88,
+    "title": "Globe Electronics",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Warm circuitry hero with a classic serif 'We open it up and bring it back' line over a moody close-up of stereo internals.",
+    "image": "/projects/globe-electronics/hero.png",
+    "link": "https://globe-electronics.vercel.app",
+    "liveUrl": "https://globe-electronics.vercel.app",
+    "tags": [
+      "Repair",
+      "Serif",
+      "Moody"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A repair shop earns gravitas through a refined serif headline glowing over an amber-lit shot of capacitors and circuit boards. The italic 'back' lands the promise: fifteen years of fixing what others write off. Burnt-orange CTAs and a thin credibility strip ('since 2009') keep the tone confident and trade-proud rather than flashy.",
+    "features": [
+      "Amber-lit macro photo of circuitry as hero",
+      "Elegant serif headline with italic closing word",
+      "Established-since credibility strip",
+      "Burnt-orange primary CTA paired with a call button",
+      "Quiet footer cues for warranty and bluetooth services"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "An electronics repair shop now reads as a trusted craftsman, not a strip-mall counter."
+  },
+  {
+    "id": 89,
+    "title": "Luna Llena Beauty Salon",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Spanish-first salon hero bathed in golden moonlight, with 'Te ves preciosa bajo esta luz' set in flowing serif italics.",
+    "image": "/projects/luna-llena-beauty-salon/hero.png",
+    "link": "https://luna-llena-beauty-salon.vercel.app",
+    "liveUrl": "https://luna-llena-beauty-salon.vercel.app",
+    "tags": [
+      "Bilingual",
+      "Luxury",
+      "Golden Hour"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A glowing full-moon backdrop in deep golds gives Luna Llena a literal namesake hero, with the headline leaning into warm italic serif. The copy leads in Spanish for the City of Orange clientele and offers an English toggle, honoring the neighborhood it serves. Gold-outlined reservation buttons and a floating call pill carry the moonlit luxury all the way down.",
+    "features": [
+      "Golden full-moon hero matching the 'Luna Llena' name",
+      "Spanish-first copy with English language toggle",
+      "Flowing italic serif headline on dark gold",
+      "Gold-outlined reserve and portfolio CTAs",
+      "Floating call pill for one-tap booking"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A bilingual salon greets its community in its own language under a hero as warm as its name."
+  },
+  {
+    "id": 90,
+    "title": "Michele's Family Bakery",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Soft-focus golden bread hero with an elegant serif 'Michele's Family Bakery' lockup and a teal call button for contrast.",
+    "image": "/projects/micheles-family-bakery/hero.png",
+    "link": "https://micheles-family-bakery.vercel.app",
+    "liveUrl": "https://micheles-family-bakery.vercel.app",
+    "tags": [
+      "Bakery",
+      "Serif",
+      "Artisan"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Rows of glossy, golden-crust loaves fill the frame in dreamy soft focus, with the bakery name set in a refined serif and italic 'Family' for warmth. The cream-to-amber gradient keeps everything tender and oven-fresh, while a deep teal phone button cuts through for an unmissable call to action. The understated top nav lets the bread do the selling.",
+    "features": [
+      "Soft-focus golden loaf hero photography",
+      "Elegant serif lockup with italic 'Family'",
+      "Cream-to-amber gradient for an oven-warm mood",
+      "Contrasting teal call button as the focal CTA",
+      "Minimal nav that foregrounds the product"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A family bakery's storefront finally looks as inviting as the smell of its morning loaves."
+  },
+  {
+    "id": 91,
+    "title": "Obal's Inn",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Cozy all-brown tavern hero with a centered serif 'The corner that knows your name' and a seventy-four-year heritage note.",
+    "image": "/projects/obals-inn/hero.png",
+    "link": "https://obals-inn.vercel.app",
+    "liveUrl": "https://obals-inn.vercel.app",
+    "tags": [
+      "Tavern",
+      "Cozy",
+      "Heritage"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Deep cocoa browns and a centered serif headline give this Broad Street bar a warm, lamplit den feeling. The copy frames seventy-four years on the same corner as a wall of regulars' reviews, leaning into belonging over flash. A gold-bordered 'Call the bar' button glows like a single bulb against the dark woodwork.",
+    "features": [
+      "Monochrome brown palette evoking a lamplit tavern",
+      "Centered serif headline on heritage and belonging",
+      "Seventy-four-year 'since 1951' credibility framing",
+      "Gold-outlined 'Call the bar' focal button",
+      "Quiet two-link nav for tonight's setup and visiting"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "A neighborhood bar's seventy-four years of regulars now come through the moment the page loads."
+  },
+  {
+    "id": 92,
+    "title": "Ramos Auto Repair",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Bold navy-and-red auto shop hero with a condensed 'Precise repair, rooted in Orange' headline beside a live 'Book your visit' form.",
+    "image": "/projects/ramos-auto-repair/hero.png",
+    "link": "https://ramos-auto-repair.vercel.app",
+    "liveUrl": "https://ramos-auto-repair.vercel.app",
+    "tags": [
+      "Automotive",
+      "Booking Form",
+      "High Contrast"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A deep navy stage and heavy condensed type drive home a two-tone headline, with 'rooted in Orange' punched out in signal red. A floating white booking card lets drivers enter their name, vehicle, and symptoms to get an estimate without ever leaving the hero. A 24/7 roadside banner, master-certified badge, and red action buttons make the whole page feel ready to dispatch.",
+    "features": [
+      "Two-tone condensed headline in red and white",
+      "Inline 'Book your visit' estimate form in the hero",
+      "Sticky 24/7 roadside assistance banner",
+      "Master-certified team trust badge",
+      "Dual schedule and call CTAs plus live chat bubble"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Three.js",
+      "Lucide React"
+    ],
+    "outcome": "An auto shop turns its homepage into a working intake desk that captures estimates on the first visit."
+  },
+  {
+    "id": 93,
+    "title": "Today's Kids",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "Soft cream editorial for a kids' shop, pairing a 'Dressed for every little today' headline with a playful star-wand portrait.",
+    "image": "/projects/todays-kids/hero.png",
+    "link": "https://todays-kids.vercel.app",
+    "liveUrl": "https://todays-kids.vercel.app",
+    "tags": [
+      "Childrenswear",
+      "Editorial",
+      "Playful"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A gentle cream layout and a serif headline with italic 'every little' give this children's clothing store a storybook polish. A framed photo of a child in a leopard coat waving a gold star wand brings the play, while a drop-cap intro grounds it in the City of Orange. Gold accents and outlined collection buttons keep things refined yet clearly made for little ones.",
+    "features": [
+      "Editorial cream layout with serif and italic headline",
+      "Playful star-wand child portrait in a framed crop",
+      "Drop-cap intro tying the shop to its neighborhood",
+      "Gold accents with outlined collection CTAs",
+      "Tidy top nav for collections, store, and visit"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "A children's boutique gets a storybook-elegant storefront that still feels joyful and kid-first."
+  },
+  {
+    "id": 94,
+    "title": "Dici Beauty Supply",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm taupe editorial layout that frames a hand-stocked beauty counter, pairing a serif-and-italic headline with a tactile product still life.",
+    "image": "/projects/dici-beauty-supply/hero.png",
+    "link": "https://dici-beauty-supply.vercel.app",
+    "liveUrl": "https://dici-beauty-supply.vercel.app",
+    "tags": [
+      "Editorial",
+      "Warm Neutrals",
+      "Product Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Dici trades the usual neon beauty-supply look for a muted taupe-and-cream palette and a 'stocked by hand' headline that mixes upright serif with italic. A full-bleed product photo of brushes, palettes, and a marble tray anchors the right side, giving the page a curated, almost apothecary feel. Pill buttons and a slim top nav (The Counter, Aisles, Shelves) keep the browsing logic calm and shoppable.",
+    "features": [
+      "Taupe and cream palette swapped in for typical beauty-supply neon",
+      "Serif plus italic headline lockup ('stocked by hand')",
+      "Full-bleed tactile product photo with marble-tray styling",
+      "Aisle-themed nav: The Counter, Aisles, Shelves",
+      "Address chip and click-to-call pill in the hero"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lucide React"
+    ],
+    "outcome": "Repositioned a beauty-supply shop as a curated counter rather than a discount aisle."
+  },
+  {
+    "id": 95,
+    "title": "Mama Lola",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A dark, fire-lit Spanish-language hero ('De la dehesa al fuego') over close-up grilled meat, with a stat row selling provenance and craft.",
+    "image": "/projects/mama-lola/hero.png",
+    "link": "https://mama-lola.vercel.app",
+    "liveUrl": "https://mama-lola.vercel.app",
+    "tags": [
+      "Restaurant",
+      "Dark Mode",
+      "Spanish Language"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Mama Lola opens in Spanish on a near-black hero where flame-orange italics ('al fuego') cut through a tight shot of charcoal-grilled Iberian meat. A metrics strip across the bottom (4.5 stars, 100% wood-fired, one daily seating, Elx) reads like a steakhouse credential list. Reserve and menu CTAs sit in burnt-orange and outline pills, leaning into the asador's grill-house identity.",
+    "features": [
+      "Spanish-first copy for the local clientele",
+      "Flame-orange italic accent on a charcoal-dark hero",
+      "Close-up grilled-meat photography as the centerpiece",
+      "Credential stat row (rating, wood-fired %, seating, town)",
+      "Reservation and 'Ver la carta' CTA pair"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Gave a wood-fire asador a moody, reservation-driven landing page in its customers' language."
+  },
+  {
+    "id": 96,
+    "title": "Nash Sales Depot",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A shouting yellow-and-white slogan ('IF NASH HAS IT, YOU NEED IT.') stacked over a real photo of the crammed variety-store shelves.",
+    "image": "/projects/nash-sales-depot/hero.png",
+    "link": "https://nash-sales-depot.vercel.app",
+    "liveUrl": "https://nash-sales-depot.vercel.app",
+    "tags": [
+      "Retail",
+      "Bold Typography",
+      "High Contrast"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Nash leads with attitude: an oversized condensed headline where 'YOU NEED IT' flips to bright yellow over a darkened, true-to-life shot of the store's packed aisles. The hero badges the address and a star rating like a marquee, and the copy frames Nash as the neighborhood catch-all for housewares, candy, and back-to-school. CTA pills ('See what we carry', 'Hours & directions') keep it practical under all the swagger.",
+    "features": [
+      "Oversized condensed slogan with yellow keyword emphasis",
+      "Real darkened storefront-aisle photo as the backdrop",
+      "Marquee-style address and star-rating badges",
+      "Variety-store positioning copy (housewares, candy, school)",
+      "Practical 'what we carry' and 'hours & directions' CTAs"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Turned a packed corner variety store into a confident, slogan-led brand."
+  },
+  {
+    "id": 97,
+    "title": "Berkeley Liquors & Deli",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A clean editorial bottle-shop page where multicolor type ('The corner pours & stacks.') sits beside a single, precise illustrated wine glass.",
+    "image": "/projects/berkeley-liquors-deli/hero.png",
+    "link": "https://berkeley-liquors-deli.vercel.app",
+    "liveUrl": "https://berkeley-liquors-deli.vercel.app",
+    "tags": [
+      "Liquor Store",
+      "Minimal",
+      "Editorial Type"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Berkeley keeps things spare and confident: a tri-color headline ('pours' in red, 'stacks' in teal) against lots of cream whitespace, balanced by one minimal line-drawn glass of red wine. A second 'The shelves' section begins below, and the nav splits the store into The Shelves and The Counter. The restraint reads upmarket, treating a liquor-and-deli as a quiet corner editorial rather than a cluttered shop.",
+    "features": [
+      "Tri-color headline emphasis on key verbs (pours, stacks)",
+      "Single minimal illustrated wine glass as the only image",
+      "Generous cream whitespace for an editorial feel",
+      "Split sectioning: The Shelves vs. The Counter",
+      "Sticky red 'Call' pill in the top-right"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion"
+    ],
+    "outcome": "Elevated a corner liquor-deli with a sparse, type-forward editorial look."
+  },
+  {
+    "id": 98,
+    "title": "Dragon Flame Smoke Shop",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A moody smoke-wreathed hero ('The flame the block runs on.') with a glowing hookah product card floating against deep black.",
+    "image": "/projects/dragon-flame-smoke-shop/hero.png",
+    "link": "https://dragon-flame-smoke-shop.vercel.app",
+    "liveUrl": "https://dragon-flame-smoke-shop.vercel.app",
+    "tags": [
+      "Smoke Shop",
+      "Dark Mode",
+      "Atmospheric"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Dragon Flame goes full atmosphere: drifting smoke and a red-flame accent word over a near-black background, with a spotlit hookah product card hovering on the right. The copy positions the shop as the Harrison Street counter that stays open late, and a small product chip with rating and price sits in the card's corner. Red and outline CTAs ('Get Directions', 'See the Counter') keep the late-night smoke-shop mood intact.",
+    "features": [
+      "Smoke-textured dark hero with red flame-word accent",
+      "Spotlit hookah product card with rating and price chip",
+      "'Open late' neighborhood positioning copy",
+      "Red and ghost-outline CTA pairing",
+      "Compact nav: The Counter, After Dark, Directions"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Built a moody, late-night brand presence for a neighborhood smoke shop."
+  },
+  {
+    "id": 99,
+    "title": "Hot Daily Deals",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An airy cream bin-store page where a huge serif headline ('The price drops every single day.') sells the descending-price gimmick in italics.",
+    "image": "/projects/hot-daily-deals/hero.png",
+    "link": "https://hot-daily-deals.vercel.app",
+    "liveUrl": "https://hot-daily-deals.vercel.app",
+    "tags": [
+      "Retail",
+      "Typography Led",
+      "Minimal"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Hot Daily Deals explains a bin store entirely through type: an oversized serif headline with a green italic 'every single day' floating in open cream space, no product clutter in sight. The copy spells out the mechanic (flat price that falls each day, come early for the pick, late for the steal) and a live 'It's Saturday. The bins are open.' line grounds it in real time. A green pill CTA and a 'How a bin store works' link teach newcomers the concept.",
+    "features": [
+      "Oversized serif headline with green italic emphasis line",
+      "Open cream layout with zero product imagery",
+      "Copy that explains the descending-price bin mechanic",
+      "Live day-aware status line ('The bins are open.')",
+      "Educational 'How a bin store works' secondary CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Explained an unfamiliar bin-store concept through clean, type-driven storytelling."
+  },
+  {
+    "id": 100,
+    "title": "Keeping It Handsome",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm editorial barbershop hero ('Walk in. Walk out handsome.') with a serif-italic flourish over a real grid of shop interior shots.",
+    "image": "/projects/keeping-it-handsome/hero.png",
+    "link": "https://keeping-it-handsome.vercel.app",
+    "liveUrl": "https://keeping-it-handsome.vercel.app",
+    "tags": [
+      "Barbershop",
+      "Editorial",
+      "Warm Luxury"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Keeping It Handsome reads like a modern grooming brand: a stacked serif headline where 'handsome' breaks into italic, set in a warm off-white frame with a gold accent. The hero subtitle leans on 'modern luxury barbershop' and a 5.0 rating, and a real photo grid of the chairs and mirror stations sits directly below. Gold 'Book a Chair' and outline 'View the Services' buttons keep the booking path obvious.",
+    "features": [
+      "Stacked serif headline with italic 'handsome' flourish",
+      "Warm off-white palette with gold accent details",
+      "Real interior photo grid of chairs and stations",
+      "5.0 rating and 'modern luxury' positioning line",
+      "Gold 'Book a Chair' primary CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Framed a neighborhood barbershop as a polished, bookable luxury grooming brand."
+  },
+  {
+    "id": 101,
+    "title": "More Than Perfect",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A dark blue barbershop hero where 'PERFECT.' explodes across the width in heavy condensed type over a shadowy portrait.",
+    "image": "/projects/more-than-perfect/hero.png",
+    "link": "https://more-than-perfect.vercel.app",
+    "liveUrl": "https://more-than-perfect.vercel.app",
+    "tags": [
+      "Barbershop",
+      "Dark Mode",
+      "Oversized Type"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "More Than Perfect builds its whole identity on one word: a giant blue 'PERFECT.' in heavy condensed caps stretching edge to edge over a dark, low-lit portrait. Smaller 'More than' sits above it, and the copy hammers the proof points (184 cuts, a 5.0 on Booksy, open from six in the morning). Bright blue and outline CTAs plus a stat-and-rating row keep the swagger backed by numbers.",
+    "features": [
+      "Edge-to-edge condensed 'PERFECT.' as the hero device",
+      "Dark blue palette over a low-lit barber portrait",
+      "Proof-point copy (184 cuts, 5.0 Booksy, 6am open)",
+      "Bright-blue primary plus outline CTA pairing",
+      "Record and rating stat row beneath the hero"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Gave a high-volume barber a bold, single-word brand built on its track record."
+  },
+  {
+    "id": 102,
+    "title": "Sudzy Laundromat",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A striking close-up of a spinning washer drum behind a clean white headline ('The cleanest corner on Main St.') punched up with a red accent.",
+    "image": "/projects/orange-sudzy-laundromat/hero.png",
+    "link": "https://orange-sudzy-laundromat.vercel.app",
+    "liveUrl": "https://orange-sudzy-laundromat.vercel.app",
+    "tags": [
+      "Laundromat",
+      "Dark Mode",
+      "Photography Hero"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Sudzy makes a laundromat genuinely cinematic: a tight, motion-blurred shot of laundry tumbling inside a front-loader fills the hero, dark vignette holding white type readable on top. 'Main St.' lights up in red, and the copy sells self-service plus wash-and-fold by the pound with late hours. A red 'Call' pill, a phone CTA, and a 'Where's it quiet?' link add practical, locals-first touches.",
+    "features": [
+      "Close-up spinning washer-drum hero with motion blur",
+      "White type over a dark vignette for legibility",
+      "Red accent on 'Main St.' and the Call pill",
+      "Self-service and wash-and-fold-by-the-pound copy",
+      "Locals-first 'Where's it quiet?' utility link"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "GSAP",
+      "Lenis"
+    ],
+    "outcome": "Turned an everyday laundromat into a striking, photo-led corner brand."
+  },
+  {
+    "id": 103,
+    "title": "Bobby's Discount Store",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A clean cream layout with a bold headline ('If you need cleaning supplies it's probably here.') beside a bright real photo of a shopper in the aisles.",
+    "image": "/projects/bobbys-discount-store/hero.png",
+    "link": "https://bobbys-discount-store.vercel.app",
+    "liveUrl": "https://bobbys-discount-store.vercel.app",
+    "tags": [
+      "Discount Store",
+      "Warm Neutrals",
+      "Retail"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Bobby's pairs confident dark type with a warm cream background and a genuine, well-lit photo of a smiling customer browsing the stocked shelves. 'Cleaning supplies' flips to orange to land the variety-store pitch (housewares, party goods, batteries), and a left rail organizes Directory, Why Bobby's, Inside, and Visit. Phone CTAs plus a rating-and-hours strip ('7 days', 'no membership') keep the everyday-essentials promise front and center.",
+    "features": [
+      "Bold dark headline with orange keyword emphasis",
+      "Bright real photo of a shopper in the stocked aisles",
+      "Left-rail nav (Directory, Why Bobby's, Inside, Visit)",
+      "Variety-store copy spanning housewares to party goods",
+      "Rating, '7 days', and 'no membership' trust strip"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Gave a neighborhood discount store an approachable, everyday-essentials brand."
+  },
+  {
+    "id": 104,
+    "title": "Dada Doll Beauty Spa",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A doll-luxe spa site where a magenta italic headline and faint topographic linework keep a body-sculpting studio feeling soft, airy, and one-of-one.",
+    "image": "/projects/dada-doll-beauty-spa/hero.png",
+    "link": "https://dada-doll-beauty-spa.vercel.app",
+    "liveUrl": "https://dada-doll-beauty-spa.vercel.app",
+    "tags": [
+      "Beauty Spa",
+      "Editorial",
+      "Magenta"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero pairs a tall serif lockup, 'Sculpted, soft, unmistakably you,' with a single italic accent line in deep magenta against generous off-white space and ghosted contour lines. A tidy row of pill-tabs (Body Contouring, Wood Therapy, Post-Op Care, Facials & Glow) turns the menu into a glanceable index, while a magenta 'Book by Phone' button anchors every decision.",
+    "features": [
+      "Serif hero with a single magenta italic emphasis line",
+      "Topographic contour linework as a subtle background texture",
+      "Pill-style treatment index for Body Contouring, Wood Therapy, Post-Op Care, and Facials",
+      "Dual primary CTAs: Book by Phone and View the treatments",
+      "Floating phone-call pill pinned to the corner"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis"
+    ],
+    "outcome": "Gives a Main Street body-sculpting studio a refined, doll-luxe identity that reads premium without feeling clinical."
+  },
+  {
+    "id": 105,
+    "title": "Garibaldi Restaurant & Grill",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A navy dashboard-style grill site that organizes hours, rating, cuisine, and location into cool, card-based tiles under a cooked-to-order headline.",
+    "image": "/projects/garibaldi-restaurant-grill/hero.png",
+    "link": "https://garibaldi-restaurant-grill.vercel.app",
+    "liveUrl": "https://garibaldi-restaurant-grill.vercel.app",
+    "tags": [
+      "Restaurant",
+      "Dark UI",
+      "Dashboard"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Against a deep navy field, a blue-accented headline ('Mexican grill, cooked to order on South Center') sits beside a 'Run your finger across the heat' panel that invites interaction. Below, a clean grid of stat cards surfaces hours, Google rating, cuisine type, and address, with an amber 'Call to order' button cutting warm contrast through the cool palette and a scrolling ribbon of dishes at the base.",
+    "features": [
+      "Navy palette with electric-blue and amber accent contrast",
+      "Card-grid surfacing hours, rating, cuisine, and address",
+      "Interactive 'run your finger across the heat' panel",
+      "Scrolling marquee of menu items (Burritos, Salsa verde, Barbacoa, more)",
+      "Pinned amber call-to-order action"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Lucide React"
+    ],
+    "outcome": "Packs a taqueria's essentials into a structured, scannable layout that feels modern and trustworthy at a glance."
+  },
+  {
+    "id": 106,
+    "title": "Desir Barber Shop",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "An editorial barbershop site that splits a bold 'Precision Is the Art' headline against a real in-chair photo, with crimson accents and a floating rating chip.",
+    "image": "/projects/desir-barber-shop/hero.png",
+    "link": "https://desir-barber-shop.vercel.app",
+    "liveUrl": "https://desir-barber-shop.vercel.app",
+    "tags": [
+      "Barbershop",
+      "Editorial",
+      "Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The split layout sets a heavy black serif statement and an East Orange address on the left against a documentary photo of an actual cut in progress on the right. Crimson labels, a red 'Call to Book' button, and a small 4.8-star chip overlapping the image keep the page confident and grounded in the shop's real craft rather than stock imagery.",
+    "features": [
+      "Split editorial layout: bold type left, real barber photo right",
+      "Genuine in-chair photography over stock imagery",
+      "Crimson eyebrow labels and red primary CTA",
+      "Floating 4.8 Google-rating chip overlapping the photo",
+      "Persistent Call to Book pill for fast conversion"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Framer Motion",
+      "Lenis"
+    ],
+    "outcome": "Positions a neighborhood barber as a precision craftsman through real imagery and a sharp, magazine-grade layout."
+  },
+  {
+    "id": 107,
+    "title": "Clancy's Pub",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A warm editorial pub page that frames 'A proper local on Broughton Ave' in serif type beside a hand-drawn pint and a 'good things take time' line.",
+    "image": "/projects/clancys-pub/hero.png",
+    "link": "https://clancys-pub.vercel.app",
+    "liveUrl": "https://clancys-pub.vercel.app",
+    "tags": [
+      "Pub",
+      "Editorial",
+      "Local"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Cream paper tones, a red italic accent on 'Broughton Ave,' and a simple line-art pint give this neighborhood pub a cozy, classic feel. Beneath the headline, a copy block about the game on the screens and a proper pour sits above a star rating, a Call and Find us hours pair, and a row of warm interior photos showing the bar and taps.",
+    "features": [
+      "Warm cream palette with red italic serif accent",
+      "Line-art pint motif beside the headline",
+      "Trust row with star rating and '120 neighbors and counting'",
+      "Paired Call and Find us & hours CTAs",
+      "Interior photo strip of the bar, taps, and room"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Captures the comfortable, regulars-welcome feel of a true neighborhood local while keeping hours and contact one tap away."
+  },
+  {
+    "id": 108,
+    "title": "Eterna Primavera",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A Spanish-first restaurant landing with a full-bleed taco hero, a tall gold-and-white serif lockup, and a warm crimson overlay washing the whole frame.",
+    "image": "/projects/eterna-primavera-restaurant/hero.png",
+    "link": "https://eterna-primavera-restaurant.vercel.app",
+    "liveUrl": "https://eterna-primavera-restaurant.vercel.app",
+    "tags": [
+      "Restaurant",
+      "Spanish First",
+      "Photography"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "An overhead shot of tacos fills the hero behind a stacked 'Eterna Primavera' title where the second word glows gold against white. Spanish body copy and 'Ver el menu' / 'Llamar - Pedir' buttons serve the core clientele, while a bottom bar of hours and address keeps the warm, saturated composition functional.",
+    "features": [
+      "Full-bleed overhead food photography hero",
+      "Two-tone serif lockup with gold accent word",
+      "Spanish-first copy and CTAs (Ver el menu, Llamar)",
+      "Warm crimson overlay unifying the frame",
+      "Bottom info bar with hours and Main Street address"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "GSAP",
+      "Lenis",
+      "Lucide React"
+    ],
+    "outcome": "Speaks directly to a Spanish-speaking clientele with an appetite-first hero and native-language calls to action."
+  },
+  {
+    "id": 109,
+    "title": "Dev's Jamaican Cuisine",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A smoky, near-black Jamaican grill site with a charred-grill hero and a giant fire-textured 'DEV'S' wordmark glowing over a dotted-ember divider.",
+    "image": "/projects/devs-jamaican-cuisine/hero.png",
+    "link": "https://devs-jamaican-cuisine.vercel.app",
+    "liveUrl": "https://devs-jamaican-cuisine.vercel.app",
+    "tags": [
+      "Restaurant",
+      "Jamaican",
+      "Fire Texture"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero opens on a dark, smoke-filled grill photo with a tight intro about a family kitchen cooking jerk for over a decade. Below, an oversized 'DEV'S / JAMAICAN CUISINE' wordmark rendered in flame texture sits above a row of glowing ember dots, and 'Coals - Low' / 'Taste the drum' labels carry the heat-and-rhythm theme through the layout.",
+    "features": [
+      "Smoky charred-grill photographic hero",
+      "Oversized flame-textured DEV'S wordmark",
+      "Glowing ember-dot divider row",
+      "Heat-and-rhythm motifs ('Coals - Low', 'Taste the drum')",
+      "Orange Call CTA against a near-black palette"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Translates a decade-old jerk kitchen's smoke and fire into a moody, high-heat brand that looks as bold as the food tastes."
+  },
+  {
+    "id": 110,
+    "title": "Fabco Shoes",
+    "year": "2026",
+    "role": "Designer & Engineer",
+    "description": "A bright, blue-accented footwear retail page headlined 'Every size for the whole family, under one roof,' with clean cards and a 'this week on the wall' shelf.",
+    "image": "/projects/fabco-shoes/hero.png",
+    "link": "https://fabco-shoes.vercel.app",
+    "liveUrl": "https://fabco-shoes.vercel.app",
+    "tags": [
+      "Footwear",
+      "Retail",
+      "Family"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "On crisp white, a bold black headline with a blue emphasis line frames Fabco as a try-before-you-buy family shoe store, backed by a soft product shot. Rounded blue 'Shop the floor' and 'Get directions' buttons lead the way, while a 'Find your fit' card with a large '13' count and a warm 'This week on the wall' tile add retail texture without clutter.",
+    "features": [
+      "Clean white layout with blue accent emphasis line",
+      "Family-first headline over a soft product shot",
+      "Rounded Shop the floor and Get directions CTAs",
+      "'Find your fit' card with a large live count stat",
+      "'This week on the wall' featured-product tile"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "Motion"
+    ],
+    "outcome": "Frames a walk-in family shoe store as the approachable, every-size local stop with directions and inventory front and center."
+  },
 ]
