@@ -81,6 +81,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Soft, reassuring childcare hero with a 'We hold the whole day' headline and a clean licensed-hours stat row.",
     "image": "/projects/alpha-daycare-center/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/alpha-daycare-center",
     "link": "https://alpha-daycare-center.vercel.app",
     "liveUrl": "https://alpha-daycare-center.vercel.app",
     "tags": [
@@ -117,6 +118,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A glowing vanity-bulb mirror frames the portrait while a luminous italic serif spells out \"Sit down. Leave luminous.\" against deep espresso.",
     "image": "/projects/kador-beauty-salon/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/kador-beauty-salon",
     "link": "https://kador-beauty-salon.vercel.app",
     "liveUrl": "https://kador-beauty-salon.vercel.app",
     "tags": [
@@ -153,6 +155,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "An atmospheric liquor-store site lit by amber light streaks, with a bottle hero and the line 'After the streetlights, the good stuff.'",
     "image": "/projects/brandys-lounge-liquors/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/brandys-lounge-liquors",
     "link": "https://brandys-lounge-liquors.vercel.app",
     "liveUrl": "https://brandys-lounge-liquors.vercel.app",
     "tags": [
@@ -191,6 +194,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Dark, cinematic restaurant hero where dripping sauce and live flame frame an outline-stroke 'SAUCY BITEZ' logotype.",
     "image": "/projects/saucy-bitez/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/saucy-bitez",
     "link": "https://saucy-bitez.vercel.app",
     "liveUrl": "https://saucy-bitez.vercel.app",
     "tags": [
@@ -227,6 +231,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A dark, fire-lit Spanish-language hero ('De la dehesa al fuego') over close-up grilled meat, with a stat row selling provenance and craft.",
     "image": "/projects/mama-lola/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/mama-lola",
     "link": "https://mama-lola.vercel.app",
     "liveUrl": "https://mama-lola.vercel.app",
     "tags": [
@@ -265,6 +270,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm, inviting wellness hero pairing 'A hundred small ways to feel well' with a sunlit shelf of labeled botanical jars.",
     "image": "/projects/hundred-wellness/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/hundred-wellness",
     "link": "https://hundred-wellness.vercel.app",
     "liveUrl": "https://hundred-wellness.vercel.app",
     "tags": [
@@ -410,6 +416,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A clean split layout pairs \"Pick your heat\" in bold sans with a dark overhead shot of crispy Nashville chicken and a \"medium, the right call\" heat tag.",
     "image": "/projects/mos-hot-chicken/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/mos-hot-chicken",
     "link": "https://mos-hot-chicken.vercel.app",
     "liveUrl": "https://mos-hot-chicken.vercel.app",
     "tags": [
@@ -448,6 +455,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A Spanish-first restaurant landing with a full-bleed taco hero, a tall gold-and-white serif lockup, and a warm crimson overlay washing the whole frame.",
     "image": "/projects/eterna-primavera-restaurant/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/eterna-primavera-restaurant",
     "link": "https://eterna-primavera-restaurant.vercel.app",
     "liveUrl": "https://eterna-primavera-restaurant.vercel.app",
     "tags": [
@@ -486,6 +494,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm editorial serif reads \"The block runs on fresh fish\" beside real iced market cases, with a scrolling species ticker of snapper, perch, and crab.",
     "image": "/projects/red-crab-fish/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/red-crab-fish",
     "link": "https://red-crab-fish.vercel.app",
     "liveUrl": "https://red-crab-fish.vercel.app",
     "tags": [
@@ -583,6 +592,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A punchy black hero with \"Baked by hand, served by the dozen\" in orange-and-white block caps, a hands-on-dough photo, and a scrolling menu marquee of Mediterranean dishes.",
     "image": "/projects/bakedsome/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/bakedsome",
     "link": "https://bakedsome.vercel.app",
     "liveUrl": "https://bakedsome.vercel.app",
     "tags": [
@@ -621,6 +631,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A clean cream layout with a bold headline ('If you need cleaning supplies it's probably here.') beside a bright real photo of a shopper in the aisles.",
     "image": "/projects/bobbys-discount-store/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/bobbys-discount-store",
     "link": "https://bobbys-discount-store.vercel.app",
     "liveUrl": "https://bobbys-discount-store.vercel.app",
     "tags": [
@@ -692,6 +703,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm editorial pub page that frames 'A proper local on Broughton Ave' in serif type beside a hand-drawn pint and a 'good things take time' line.",
     "image": "/projects/clancys-pub/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/clancys-pub",
     "link": "https://clancys-pub.vercel.app",
     "liveUrl": "https://clancys-pub.vercel.app",
     "tags": [
@@ -728,6 +740,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A full-bleed dusk shot of a glass-and-timber modern home anchors a headline that swaps roman for italic mid-sentence: \"the careful one you actually want in your house.\"",
     "image": "/projects/plhomeimprovement/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/plhomeimprovement",
     "link": "https://plhomeimprovement.vercel.app",
     "liveUrl": "https://plhomeimprovement.vercel.app",
     "tags": [
@@ -766,6 +779,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Soft cream editorial for a kids' shop, pairing a 'Dressed for every little today' headline with a playful star-wand portrait.",
     "image": "/projects/todays-kids/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/todays-kids",
     "link": "https://todays-kids.vercel.app",
     "liveUrl": "https://todays-kids.vercel.app",
     "tags": [
@@ -804,6 +818,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A heritage-green serif identity built around a sunlit photo of a child and the quiet line 'Held. Since 1969.'",
     "image": "/projects/babyland-family-services/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/babyland-family-services",
     "link": "https://babyland-family-services.vercel.app",
     "liveUrl": "https://babyland-family-services.vercel.app",
     "tags": [
@@ -865,6 +880,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A shouting yellow-and-white slogan ('IF NASH HAS IT, YOU NEED IT.') stacked over a real photo of the crammed variety-store shelves.",
     "image": "/projects/nash-sales-depot/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/nash-sales-depot",
     "link": "https://nash-sales-depot.vercel.app",
     "liveUrl": "https://nash-sales-depot.vercel.app",
     "tags": [
@@ -903,6 +919,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm taupe editorial layout that frames a hand-stocked beauty counter, pairing a serif-and-italic headline with a tactile product still life.",
     "image": "/projects/dici-beauty-supply/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/dici-beauty-supply",
     "link": "https://dici-beauty-supply.vercel.app",
     "liveUrl": "https://dici-beauty-supply.vercel.app",
     "tags": [
@@ -939,6 +956,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A neon-purple corner-store hero with a glowing OPEN sign and 'THE CORNER THAT NEVER MISSES' over a dark night-shop backdrop.",
     "image": "/projects/quick-stop/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/quick-stop",
     "link": "https://quick-stop.vercel.app",
     "liveUrl": "https://quick-stop.vercel.app",
     "tags": [
@@ -1038,6 +1056,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A clean editorial bottle-shop page where multicolor type ('The corner pours & stacks.') sits beside a single, precise illustrated wine glass.",
     "image": "/projects/berkeley-liquors-deli/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/berkeley-liquors-deli",
     "link": "https://berkeley-liquors-deli.vercel.app",
     "liveUrl": "https://berkeley-liquors-deli.vercel.app",
     "tags": [
@@ -1073,6 +1092,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A striking portrait amid green foliage sits beside \"Hands that keep beauty in motion,\" set in a confident serif with a wine-red italic close.",
     "image": "/projects/sisters-in-motion/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/sisters-in-motion",
     "link": "https://sisters-in-motion.vercel.app",
     "liveUrl": "https://sisters-in-motion.vercel.app",
     "tags": [
@@ -1111,6 +1131,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A tight close-up portrait fills the frame behind a magazine-style masthead, sold as \"The Grooming Issue\" with \"It is not just a haircut, it is a lifestyle.\"",
     "image": "/projects/gq-cutz-barber-boutique/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/gq-cutz-barber-boutique",
     "link": "https://gq-cutz-barber-boutique.vercel.app",
     "liveUrl": "https://gq-cutz-barber-boutique.vercel.app",
     "tags": [
@@ -1148,6 +1169,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Cozy all-brown tavern hero with a centered serif 'The corner that knows your name' and a seventy-four-year heritage note.",
     "image": "/projects/obals-inn/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/obals-inn",
     "link": "https://obals-inn.vercel.app",
     "liveUrl": "https://obals-inn.vercel.app",
     "tags": [
@@ -1184,6 +1206,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm editorial barbershop hero ('Walk in. Walk out handsome.') with a serif-italic flourish over a real grid of shop interior shots.",
     "image": "/projects/keeping-it-handsome/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/keeping-it-handsome",
     "link": "https://keeping-it-handsome.vercel.app",
     "liveUrl": "https://keeping-it-handsome.vercel.app",
     "tags": [
@@ -1221,6 +1244,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Vivid stacks of Guatemalan textiles run down the right while a Spanish-first serif headline reads \"La eterna primavera, a una cuadra.\"",
     "image": "/projects/mercadito-chapin/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/mercadito-chapin",
     "link": "https://mercadito-chapin.vercel.app",
     "liveUrl": "https://mercadito-chapin.vercel.app",
     "tags": [
@@ -1258,6 +1282,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A rich chocolate-brown nail-salon site with an italic 'Done with finesse' headline and an elegant manicure close-up.",
     "image": "/projects/mary-finesse-beauty/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/mary-finesse-beauty",
     "link": "https://mary-finesse-beauty.vercel.app",
     "liveUrl": "https://mary-finesse-beauty.vercel.app",
     "tags": [
@@ -1332,6 +1357,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A soft cream layout with a tilted product card and the line \"A gift, composed by hand\" set in a delicate high-contrast serif.",
     "image": "/projects/a-and-a-perfume-jewelry/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/a-and-a-perfume-jewelry",
     "link": "https://a-and-a-perfume-jewelry.vercel.app",
     "liveUrl": "https://a-and-a-perfume-jewelry.vercel.app",
     "tags": [
@@ -1370,6 +1396,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm navy night hero with a tasteful serif 'Get them home by morning' beside a softly lit photo of a house with the porch light on.",
     "image": "/projects/able-bail-bonds/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/able-bail-bonds",
     "link": "https://able-bail-bonds.vercel.app",
     "liveUrl": "https://able-bail-bonds.vercel.app",
     "tags": [
@@ -1406,6 +1433,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A striking close-up of a spinning washer drum behind a clean white headline ('The cleanest corner on Main St.') punched up with a red accent.",
     "image": "/projects/orange-sudzy-laundromat/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/orange-sudzy-laundromat",
     "link": "https://orange-sudzy-laundromat.vercel.app",
     "liveUrl": "https://orange-sudzy-laundromat.vercel.app",
     "tags": [
@@ -1443,6 +1471,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A gritty garage hero where 'Honest work, handed down.' sits over a real shop interior, with bilingual trust stats along the base.",
     "image": "/projects/ismael-and-son-auto-repair/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/ismael-and-son-auto-repair",
     "link": "https://ismael-and-son-auto-repair.vercel.app",
     "liveUrl": "https://ismael-and-son-auto-repair.vercel.app",
     "tags": [
@@ -1563,6 +1592,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Soft-focus golden bread hero with an elegant serif 'Michele's Family Bakery' lockup and a teal call button for contrast.",
     "image": "/projects/micheles-family-bakery/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/micheles-family-bakery",
     "link": "https://micheles-family-bakery.vercel.app",
     "liveUrl": "https://micheles-family-bakery.vercel.app",
     "tags": [
@@ -1601,6 +1631,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A moody sepia car-wash site with a colossal vintage 'SHAMAR'S' wordmark over a silhouetted car and family-run, open-daily framing.",
     "image": "/projects/shamar-hand-wash/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/shamar-hand-wash",
     "link": "https://shamar-hand-wash.vercel.app",
     "liveUrl": "https://shamar-hand-wash.vercel.app",
     "tags": [
@@ -1637,6 +1668,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Editorial deli site with a live ticking clock and a 'Breakfast at six, Shawarma at two' headline that swaps menus as the day turns.",
     "image": "/projects/nyc-style-deli/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/nyc-style-deli",
     "link": "https://nyc-style-deli.vercel.app",
     "liveUrl": "https://nyc-style-deli.vercel.app",
     "tags": [
@@ -1673,6 +1705,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A clean print-shop site with bold purple type and a slick angled paper-stack hero card reading 'Fresh off the press.'",
     "image": "/projects/instant-printing/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/instant-printing",
     "link": "https://instant-printing.vercel.app",
     "liveUrl": "https://instant-printing.vercel.app",
     "tags": [
@@ -1741,6 +1774,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A smoky, near-black Jamaican grill site with a charred-grill hero and a giant fire-textured 'DEV'S' wordmark glowing over a dotted-ember divider.",
     "image": "/projects/devs-jamaican-cuisine/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/devs-jamaican-cuisine",
     "link": "https://devs-jamaican-cuisine.vercel.app",
     "liveUrl": "https://devs-jamaican-cuisine.vercel.app",
     "tags": [
@@ -1777,6 +1811,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A doll-luxe spa site where a magenta italic headline and faint topographic linework keep a body-sculpting studio feeling soft, airy, and one-of-one.",
     "image": "/projects/dada-doll-beauty-spa/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/dada-doll-beauty-spa",
     "link": "https://dada-doll-beauty-spa.vercel.app",
     "liveUrl": "https://dada-doll-beauty-spa.vercel.app",
     "tags": [
@@ -1852,6 +1887,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Warm circuitry hero with a classic serif 'We open it up and bring it back' line over a moody close-up of stereo internals.",
     "image": "/projects/globe-electronics/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/globe-electronics",
     "link": "https://globe-electronics.vercel.app",
     "liveUrl": "https://globe-electronics.vercel.app",
     "tags": [
@@ -1933,6 +1969,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Cream editorial layout pairing a mixed serif 'Sensational Beauty Supply' lockup with a glamorous pink-backdrop portrait.",
     "image": "/projects/sensational-beauty-supply/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/sensational-beauty-supply",
     "link": "https://sensational-beauty-supply.vercel.app",
     "liveUrl": "https://sensational-beauty-supply.vercel.app",
     "tags": [
@@ -2012,6 +2049,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "Spanish-first salon hero bathed in golden moonlight, with 'Te ves preciosa bajo esta luz' set in flowing serif italics.",
     "image": "/projects/luna-llena-beauty-salon/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/luna-llena-beauty-salon",
     "link": "https://luna-llena-beauty-salon.vercel.app",
     "liveUrl": "https://luna-llena-beauty-salon.vercel.app",
     "tags": [
@@ -2118,6 +2156,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A warm forest-green skilled-nursing site that leads with a genuine resident portrait and a serif headline promising the way back to yourself.",
     "image": "/projects/park-crescent-health-care/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/park-crescent-health-care",
     "link": "https://park-crescent-health-care.vercel.app",
     "liveUrl": "https://park-crescent-health-care.vercel.app",
     "tags": [
@@ -2321,6 +2360,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A bright, blue-accented footwear retail page headlined 'Every size for the whole family, under one roof,' with clean cards and a 'this week on the wall' shelf.",
     "image": "/projects/fabco-shoes/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/fabco-shoes",
     "link": "https://fabco-shoes.vercel.app",
     "liveUrl": "https://fabco-shoes.vercel.app",
     "tags": [
@@ -2356,6 +2396,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A dramatic dark record-shop site built around a spotlit vinyl record and a refined serif line about two sides one basement keeps apart.",
     "image": "/projects/more-more-now-records/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/more-more-now-records",
     "link": "https://more-more-now-records.vercel.app",
     "liveUrl": "https://more-more-now-records.vercel.app",
     "tags": [
@@ -2392,6 +2433,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A moody near-black plumbing and heating site with a glowing smart-thermostat reading 108 degrees and bold 'Water and heat, handled' type.",
     "image": "/projects/aaa-able-plumbing-heating/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/aaa-able-plumbing-heating",
     "link": "https://aaa-able-plumbing-heating.vercel.app",
     "liveUrl": "https://aaa-able-plumbing-heating.vercel.app",
     "tags": [
@@ -2512,6 +2554,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "A near-black editorial tattoo site where an oversized serif 'We build the picture into the skin' frames a real elephant-tattoo close-up.",
     "image": "/projects/soca-tattoo-studio/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/soca-tattoo-studio",
     "link": "https://soca-tattoo-studio.vercel.app",
     "liveUrl": "https://soca-tattoo-studio.vercel.app",
     "tags": [
@@ -2572,6 +2615,7 @@ export const projects: Project[] = [
     "role": "Designer & Engineer",
     "description": "An elegant dark-chocolate jewelry site with gold serif type and the line 'Gold that keeps its warmth.'",
     "image": "/projects/rns-jewelry-electronics/hero.png",
+    "repoUrl": "https://github.com/semajzandrews/rns-jewelry-electronics",
     "link": "https://rns-jewelry-electronics.vercel.app",
     "liveUrl": "https://rns-jewelry-electronics.vercel.app",
     "tags": [
