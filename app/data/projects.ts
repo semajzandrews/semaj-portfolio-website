@@ -36,8 +36,7 @@ export const projects: Project[] = [
     description:
       "A sales conversion platform: a custom website is hand-built for a local business before they've heard of me. The owner enters a 6-digit PIN, sees their finished site, and checks out.",
     image: "/projects/buildwhatyouwant/hero.png",
-    link: "https://github.com/semajzandrews/buildwhatyouwant",
-    repoUrl: "https://github.com/semajzandrews/buildwhatyouwant",
+    link: "https://buildwhatyouwant.com",
     liveUrl: "https://buildwhatyouwant.com",
     tags: ["Next.js 16", "Stripe", "Framer Motion", "Sales Platform"],
     categories: ["Web Development"],
