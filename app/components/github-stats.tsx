@@ -81,8 +81,8 @@ export default function GitHubStats({
         </div>
         <div className="text-left text-sm text-muted-foreground sm:text-right">
           <div>
-            Designed, built &amp; shipped{" "}
-            <span className="font-semibold text-foreground">solo</span>
+            From <span className="font-semibold text-foreground">design</span> to{" "}
+            <span className="font-semibold text-foreground">deployment</span>
           </div>
           <div className="mt-0.5">
             Spanning <span className="text-foreground">Web</span>,{" "}
