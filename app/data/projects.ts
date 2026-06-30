@@ -410,6 +410,61 @@ export const projects: Project[] = [
   },
 
   {
+    id: 200,
+    title: "Mac Mini Scan",
+    year: "2026",
+    role: "Builder & Engineer (Solo)",
+    description:
+      "Real-Time Apple Store Inventory Locator — tracks Mac Mini and Mac Studio availability across every Apple Store in the US the moment stock moves. Built for the supply shortage, used to source and resell just under a dozen units for close to $10,000 in a single month.",
+    image: "/projects/mac-mini-scan/hero.png",
+    // No public link / liveUrl — local tool. The detail page renders a
+    // disabled "Demo on Request" button automatically.
+    // No repoUrl — source is PRIVATE. The detail page renders a greyed,
+    // disabled "Source Private" button automatically (never a link).
+    tags: [
+      "Python",
+      "Web Scraping",
+      "Real-Time Monitoring",
+      "Arbitrage",
+      "Proprietary",
+    ],
+    categories: ["AI Development"],
+    subcategory: "Automation & Data",
+    detailedDescription:
+      "A locator that tracks Mac Mini and Mac Studio availability across every Apple Store in the US in real time, built for the supply shortage driven by surging RAM demand and local-AI adoption. Used it to source and resell just under a dozen units, generating close to $10,000 in a single month. The system polls Apple's per-store fulfillment surface continuously, normalizes the response into a clean per-model / per-store availability map, and surfaces the moment a configuration goes from unavailable to in-stock at any location in the country. Because the squeeze is driven by RAM scarcity and the rush to run models locally, the high-memory Mac Mini and Mac Studio configs sell out in minutes and reappear unpredictably, so the edge is entirely in latency: knowing a unit is buyable before anyone refreshing a webpage does. Built in Python with a polite, rate-aware polling loop, resilient parsing that tolerates Apple's response shape changing, and instant alerting so a restock anywhere becomes an actionable buy signal. Run privately as a personal sourcing tool. Source is private.",
+    features: [
+      "Nationwide coverage — every Apple Store checked, not a single region",
+      "Real-time stock-flip detection (unavailable → in-stock) for Mac Mini + Mac Studio",
+      "Per-model / per-store availability map, normalized from Apple's fulfillment data",
+      "Latency-first design — surfaces a buyable unit before a manual refresh would",
+      "Rate-aware, polite polling loop that holds up over long continuous runs",
+      "Resilient parsing that tolerates upstream response-shape changes",
+      "Instant restock alerting that turns a drop into an actionable buy signal",
+    ],
+    technologies: [
+      "Python",
+      "Continuous web scraping / polling of Apple's per-store fulfillment surface",
+      "Real-time monitoring + change detection",
+      "Response normalization into a per-model / per-store availability model",
+      "Alerting pipeline for instant restock signals",
+    ],
+    challenges: [
+      "High-memory Mac Mini / Mac Studio configs sell out in minutes during the RAM-driven shortage",
+      "Restocks appear unpredictably and at any of hundreds of stores nationwide",
+      "Apple's fulfillment response shape is not a stable public contract and can shift",
+      "The entire edge is latency — a late signal is a useless signal",
+    ],
+    solutions: [
+      "Continuous nationwide polling so a restock anywhere is caught the moment it lands",
+      "Defensive, tolerant parsing so upstream changes degrade gracefully instead of breaking",
+      "Normalized availability model + instant alerts so a drop becomes an immediate buy decision",
+      "Rate-aware loop that sustains real-time coverage without hammering the source",
+    ],
+    outcome:
+      "Sourced and resold just under a dozen units, generating close to $10,000 in a single month off the local-AI RAM shortage. Run privately as a personal sourcing tool. Source private.",
+  },
+
+  {
     "id": 62,
     "title": "Mo's Hot Chicken",
     "year": "2026",
