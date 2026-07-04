@@ -66,12 +66,13 @@ export default function TechStack() {
       {stack.map(({ group, items }) => (
         <div key={group}>
           <div className="flex items-center gap-4 mb-5">
+            <div className="h-px flex-1 bg-border" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground whitespace-nowrap">
               {group}
             </span>
             <div className="h-px flex-1 bg-border" />
           </div>
-          <div className="flex flex-wrap gap-3 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {items.map((tech) => (
               <div
                 key={tech.name}
