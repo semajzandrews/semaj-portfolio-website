@@ -465,6 +465,49 @@ export const projects: Project[] = [
   },
 
   {
+    id: 201,
+    title: "ScanTube QR",
+    year: "2025",
+    role: "Builder & Engineer (Solo)",
+    description:
+      "A Chrome extension that generates a timestamped QR code for any YouTube video so playback can jump straight to that exact second on your phone. Manifest V3, zero data collection, live on the Chrome Web Store.",
+    image: "/projects/scan-tube/hero.png",
+    link: "https://chromewebstore.google.com/detail/scantube-qr/jimopcifbdiekgbnlbakgkgkblgjhjdh",
+    liveUrl: "https://chromewebstore.google.com/detail/scantube-qr/jimopcifbdiekgbnlbakgkgkblgjhjdh",
+    repoUrl: "https://github.com/semajzandrews/scan-tube",
+    tags: ["Chrome Extension", "Manifest V3", "JavaScript", "QR Code"],
+    categories: ["Web Development"],
+    subcategory: "Browser Extension",
+    detailedDescription:
+      "ScanTube solves a small, specific annoyance: you're partway through a YouTube video on desktop and want to keep watching on your phone without scrubbing back to find your place. Click the ScanTube icon on any YouTube video or Short and it reads the current timestamp straight off the page, generates a branded QR code with a play-button mark, and lets you scan it with any phone camera to reopen the video at that exact second. Built as a vanilla JS Manifest V3 extension with a content script that pulls video metadata directly from the page and a popup that renders the QR client-side via a local library, no server round-trip, no account, no tracking. Packaged and published to the Chrome Web Store with its own icon set and store listing assets.",
+    features: [
+      "One-click QR generation from the toolbar popup",
+      "Timestamp read directly off the current YouTube playback position",
+      "Branded QR code with an embedded play-button mark",
+      "Works on both standard videos and Shorts",
+      "Regenerate button to recapture a new timestamp mid-session",
+      "Zero data collection — QR generation happens entirely client-side",
+    ],
+    technologies: [
+      "Manifest V3 Chrome Extension APIs",
+      "Vanilla JavaScript (content script + popup)",
+      "Client-side QR code generation",
+      "Chrome extension messaging API",
+    ],
+    challenges: [
+      "Reading an accurate, current timestamp out of YouTube's page without a fragile scrape",
+      "Keeping the extension to activeTab-only permissions rather than broad host access",
+    ],
+    solutions: [
+      "Content script listens on the YouTube player directly instead of polling the DOM blindly",
+      "Scoped host permissions to just youtube.com and the QR image endpoint, activeTab only",
+    ],
+    screenshots: ["/projects/scan-tube/screenshot-features.jpg"],
+    outcome:
+      "Published and live on the Chrome Web Store as ScanTube QR v1.0.2.",
+  },
+
+  {
     "id": 62,
     "title": "Mo's Hot Chicken",
     "year": "2026",
