@@ -39,6 +39,8 @@ export const projects: Project[] = [
     id: 3,
     title: "BuildWhatYouWant",
     year: "2026",
+    featured: true,
+    signature: "The sales platform behind the whole catalog: PIN in, finished site out",
     role: "Founder, Designer & Engineer",
     description:
       "A sales conversion platform: a custom website is hand-built for a local business before they've heard of me. The owner enters a 6-digit PIN, sees their finished site, and checks out.",
@@ -3028,6 +3030,8 @@ export const projects: Project[] = [
     "title": "Ally Roofing & Leak Repair",
     "year": "2026",
     "date": "Jul 2026",
+    "featured": true,
+    "signature": "Sky-lift storm hero with an interactive leak severity scale",
     "role": "Designer & Engineer",
     "description": "Storm-narrative roofing site: a sky-lift hero and a leak severity scale that helps homeowners self-triage before they call.",
     "image": "/projects/ally-roofing/hero.png",

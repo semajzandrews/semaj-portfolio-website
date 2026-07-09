@@ -163,6 +163,12 @@ export default function Portfolio() {
                 <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl lg:text-2xl">
                 I create software that’s fast to market, easy to scale, and hard to forget. I don’t just build features — I shape experiences.
                 </p>
+                <p className="text-sm md:text-base font-medium text-primary/80 tracking-wide">
+                  {`${Math.floor(projects.length / 10) * 10}+ projects shipped · building since ${projects.reduce((min, p) => {
+                    const y = p.year?.match(/\d{4}/)?.[0]
+                    return y && Number(y) < min ? Number(y) : min
+                  }, new Date().getFullYear())}`}
+                </p>
               </div>
 
               <div className="flex items-center gap-4 mt-4">

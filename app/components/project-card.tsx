@@ -11,9 +11,23 @@ interface ProjectCardProps {
   link?: string
   tags: string[]
   categories: string[]
+  date?: string
+  signature?: string
+  /** Show the signature line instead of the plain description lead (Selected Work view). */
+  showSignature?: boolean
 }
 
-export default function ProjectCard({ id, title, description, image, tags, categories }: ProjectCardProps) {
+export default function ProjectCard({
+  id,
+  title,
+  description,
+  image,
+  tags,
+  categories,
+  date,
+  signature,
+  showSignature,
+}: ProjectCardProps) {
   return (
     <Link href={`/projects/${id}`} className="block group">
       <Card className="overflow-hidden h-full transition-all group-hover:border-primary/50 group-hover:shadow-lg">
@@ -30,13 +44,17 @@ export default function ProjectCard({ id, title, description, image, tags, categ
             <h3 className="font-semibold text-xl group-hover:text-primary transition-colors">{title}</h3>
             <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
           </div>
-          <div className="flex flex-wrap gap-1.5 mb-3">
+          <div className="flex flex-wrap items-center gap-1.5 mb-3">
             {categories.map((c) => (
               <span key={c} className="inline-block text-xs font-medium bg-primary/10 text-primary px-2 py-1 rounded-md">
                 {c}
               </span>
             ))}
+            {date && <span className="text-xs text-muted-foreground ml-auto whitespace-nowrap">{date}</span>}
           </div>
+          {showSignature && signature ? (
+            <p className="text-sm mb-2 italic text-primary/90">{signature}</p>
+          ) : null}
           <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{description}</p>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
@@ -53,4 +71,3 @@ export default function ProjectCard({ id, title, description, image, tags, categ
     </Link>
   )
 }
-
