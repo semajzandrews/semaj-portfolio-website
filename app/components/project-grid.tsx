@@ -27,12 +27,32 @@ const categoryHierarchy: Record<string, string[]> = {
   "Game Development": ["2D Game Development", "3D Game Development"],
 }
 
+const MONTHS: Record<string, number> = {
+  Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+  Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+}
+
+/** Sortable timestamp from a "Jul 2026" date or a bare year. Undated sorts last. */
+function projectTime(p: Project): number {
+  if (p.date) {
+    const [mon, yr] = p.date.split(" ")
+    if (mon in MONTHS && yr) return new Date(Number(yr), MONTHS[mon], 1).getTime()
+  }
+  const yr = p.year?.match(/\d{4}/)?.[0]
+  if (yr) return new Date(Number(yr), 0, 1).getTime()
+  return 0
+}
+
 export default function ProjectGrid({ projects }: ProjectGridProps) {
+  const [showAll, setShowAll] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedSubcategory, setSelectedSubcategory] = useState("All")
+  const [sortMode, setSortMode] = useState<"newest" | "featured">("newest")
 
-  // All categories present in data, surfaced as filter options. Hierarchy order first, then anything else.
+  const featured = projects.filter((p) => p.featured)
+
+  // All categories present in data, surfaced as filter chips. Hierarchy order first, then anything else.
   const allFromData = Array.from(new Set(projects.flatMap((p) => p.categories ?? [])))
   const ordered = [
     ...Object.keys(categoryHierarchy).filter((c) => allFromData.includes(c)),
@@ -43,7 +63,6 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
   const getSubcategories = (category: string) => {
     if (category === "All") return ["All"]
     const subs = categoryHierarchy[category] ?? []
-    // Only include subcategories that have at least one project under this category
     const present = new Set(
       projects
         .filter((p) => (p.categories ?? []).includes(category) && p.subcategory)
@@ -52,61 +71,125 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
     return ["All", ...subs.filter((s) => present.has(s))]
   }
 
-  const filteredProjects = projects.filter((project) => {
-    const cats = project.categories ?? []
-    if (selectedCategory !== "All" && !cats.includes(selectedCategory)) return false
-    if (selectedSubcategory !== "All" && project.subcategory !== selectedSubcategory) return false
-    return true
-  })
+  const filteredProjects = projects
+    .filter((project) => {
+      const cats = project.categories ?? []
+      if (selectedCategory !== "All" && !cats.includes(selectedCategory)) return false
+      if (selectedSubcategory !== "All" && project.subcategory !== selectedSubcategory) return false
+      return true
+    })
+    .sort((a, b) => {
+      if (sortMode === "featured") {
+        const f = Number(!!b.featured) - Number(!!a.featured)
+        if (f !== 0) return f
+      }
+      return projectTime(b) - projectTime(a)
+    })
 
   const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE)
   const currentProjects = filteredProjects.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
 
+  // ---- Selected Work (default) ----
+  if (!showAll) {
+    return (
+      <div className="w-full">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+          <div>
+            <h3 className="text-2xl font-semibold tracking-tight">Selected Work</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              One per craft: booking, ordering, trackers, and the platform that sells them.
+            </p>
+          </div>
+          <Button variant="outline" onClick={() => setShowAll(true)}>
+            All {projects.length} Projects
+          </Button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          {featured.map((project) => (
+            <ProjectCard key={project.id} {...project} showSignature />
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Button variant="ghost" onClick={() => setShowAll(true)} className="text-muted-foreground">
+            Browse the full catalog of {projects.length} projects
+          </Button>
+        </div>
+      </div>
+    )
+  }
+
+  // ---- All Projects ----
   return (
     <div className="w-full">
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Select
-            value={selectedCategory}
-            onValueChange={(value) => {
-              setSelectedCategory(value)
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+        <div>
+          <h3 className="text-2xl font-semibold tracking-tight">All Projects</h3>
+          <p className="text-sm text-muted-foreground mt-1">{projects.length} shipped projects</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="inline-flex rounded-md border overflow-hidden">
+            <button
+              className={`px-3 py-1.5 text-xs font-medium transition-colors ${sortMode === "newest" ? "bg-primary text-primary-foreground" : "bg-background text-muted-foreground hover:text-foreground"}`}
+              onClick={() => { setSortMode("newest"); setCurrentPage(1) }}
+            >
+              Newest
+            </button>
+            <button
+              className={`px-3 py-1.5 text-xs font-medium transition-colors ${sortMode === "featured" ? "bg-primary text-primary-foreground" : "bg-background text-muted-foreground hover:text-foreground"}`}
+              onClick={() => { setSortMode("featured"); setCurrentPage(1) }}
+            >
+              Featured
+            </button>
+          </div>
+          <Button variant="outline" size="sm" onClick={() => setShowAll(false)}>
+            Selected Work
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-6">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => {
+              setSelectedCategory(category)
               setSelectedSubcategory("All")
+              setCurrentPage(1)
+            }}
+            className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-colors ${
+              selectedCategory === category
+                ? "bg-primary text-primary-foreground border-primary"
+                : "bg-background text-muted-foreground border-input hover:text-foreground hover:border-primary/50"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
+        {selectedCategory !== "All" && getSubcategories(selectedCategory).length > 1 ? (
+          <Select
+            value={selectedSubcategory}
+            onValueChange={(value) => {
+              setSelectedSubcategory(value)
               setCurrentPage(1)
             }}
           >
             <SelectTrigger className="w-full sm:w-[250px]">
-              <SelectValue placeholder="Select category" />
+              <SelectValue placeholder="Select subcategory" />
             </SelectTrigger>
             <SelectContent>
-              {categories.map((category) => (
-                <SelectItem key={category} value={category}>
-                  {category}
+              {getSubcategories(selectedCategory).map((subcategory) => (
+                <SelectItem key={subcategory} value={subcategory}>
+                  {subcategory}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
-
-          {selectedCategory !== "All" && getSubcategories(selectedCategory).length > 1 && (
-            <Select
-              value={selectedSubcategory}
-              onValueChange={(value) => {
-                setSelectedSubcategory(value)
-                setCurrentPage(1)
-              }}
-            >
-              <SelectTrigger className="w-full sm:w-[250px]">
-                <SelectValue placeholder="Select subcategory" />
-              </SelectTrigger>
-              <SelectContent>
-                {getSubcategories(selectedCategory).map((subcategory) => (
-                  <SelectItem key={subcategory} value={subcategory}>
-                    {subcategory}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          )}
-        </div>
+        ) : (
+          <div />
+        )}
 
         <div className="flex justify-center sm:justify-end space-x-2">
           <Button
@@ -139,7 +222,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             {selectedSubcategory !== "All" && (
               <span>
                 {" "}
-                — <span className="font-medium">{selectedSubcategory}</span>
+                / <span className="font-medium">{selectedSubcategory}</span>
               </span>
             )}
           </p>
@@ -148,7 +231,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
       {filteredProjects.length === 0 ? (
         <div className="py-12 text-center text-sm text-muted-foreground border border-dashed rounded-lg">
-          No projects yet in this category — more on the way.
+          No projects yet in this category, more on the way.
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
