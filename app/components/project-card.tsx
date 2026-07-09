@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
@@ -13,8 +16,53 @@ interface ProjectCardProps {
   categories: string[]
   date?: string
   signature?: string
+  /** Scroll-through preview clip layered over the hero while in view. */
+  previewVideo?: string
   /** Show the signature line instead of the plain description lead (Selected Work view). */
   showSignature?: boolean
+}
+
+/**
+ * Muted looping preview that only plays while the card is on screen
+ * (IntersectionObserver) and never autoplays under prefers-reduced-motion.
+ * preload="none" keeps offscreen cards from fetching video at all.
+ */
+function CardPreviewVideo({ src, poster, title }: { src: string; poster: string; title: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    if (reducedMotion.matches) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {})
+        } else {
+          video.pause()
+        }
+      },
+      { threshold: 0.25 },
+    )
+    observer.observe(video)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <video
+      ref={videoRef}
+      className="absolute inset-0 h-full w-full object-cover"
+      src={src}
+      poster={poster}
+      muted
+      loop
+      playsInline
+      preload="none"
+      aria-label={`Scrolling preview of ${title}`}
+    />
+  )
 }
 
 export default function ProjectCard({
@@ -26,6 +74,7 @@ export default function ProjectCard({
   categories,
   date,
   signature,
+  previewVideo,
   showSignature,
 }: ProjectCardProps) {
   return (
@@ -38,6 +87,7 @@ export default function ProjectCard({
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
+          {previewVideo && <CardPreviewVideo src={previewVideo} poster={image} title={title} />}
         </div>
         <CardContent className="p-4">
           <div className="flex items-start justify-between gap-2 mb-2">
