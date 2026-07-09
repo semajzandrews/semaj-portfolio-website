@@ -21,6 +21,9 @@ export type Project = {
   date?: string
   /** Included in the default Selected Work view. */
   featured?: boolean
+  /** Explicit order among featured projects — rank 1 shows first.
+   *  Featured entries without a rank follow the ranked set (by date). */
+  featuredRank?: number
   /** One-line signature move shown on featured cards. */
   signature?: string
   role?: string
@@ -37,6 +40,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 3,
+    featuredRank: 6,
     title: "BuildWhatYouWant",
     year: "2026",
     featured: true,
@@ -2914,6 +2918,7 @@ export const projects: Project[] = [
 
   {
     "id": 203,
+    "featuredRank": 11,
     "title": "Vega Jewelry",
     "year": "2026",
     "date": "Jul 2026",
@@ -3175,6 +3180,7 @@ export const projects: Project[] = [
 
   {
     "id": 210,
+    "featuredRank": 2,
     "title": "D&A Autoglass",
     "year": "2026",
     "date": "Jul 2026",
@@ -3214,6 +3220,7 @@ export const projects: Project[] = [
 
   {
     "id": 211,
+    "featuredRank": 3,
     "title": "Mamie African Hair Braiding",
     "year": "2026",
     "date": "Jul 2026",
@@ -3252,6 +3259,9 @@ export const projects: Project[] = [
 
   {
     "id": 212,
+    "featuredRank": 10,
+    "featured": true,
+    "signature": "One continuous unwind line threads the page into a working booking-with-intake demo",
     "title": "L&L Massage Spa",
     "year": "2026",
     "date": "Jul 2026",
@@ -3288,6 +3298,7 @@ export const projects: Project[] = [
 
   {
     "id": 213,
+    "featuredRank": 9,
     "title": "D'sanchez Barbershop",
     "year": "2026",
     "date": "Jul 2026",
@@ -3326,6 +3337,7 @@ export const projects: Project[] = [
 
   {
     "id": 214,
+    "featuredRank": 5,
     "title": "Raymond's New and Used Tires",
     "year": "2026",
     "date": "Jul 2026",
@@ -3365,6 +3377,7 @@ export const projects: Project[] = [
 
   {
     "id": 215,
+    "featuredRank": 1,
     "title": "Ramen Gami",
     "year": "2026",
     "date": "Jul 2026",
@@ -3404,6 +3417,7 @@ export const projects: Project[] = [
 
   {
     "id": 216,
+    "featuredRank": 8,
     "title": "Ironbound Pet Shop",
     "year": "2026",
     "date": "Jul 2026",
@@ -3443,6 +3457,7 @@ export const projects: Project[] = [
 
   {
     "id": 217,
+    "featuredRank": 4,
     "title": "Pour Abbey's Bar & Grill",
     "year": "2026",
     "date": "Jul 2026",
@@ -3482,6 +3497,7 @@ export const projects: Project[] = [
 
   {
     "id": 218,
+    "featuredRank": 7,
     "title": "East Orange Animal Hospital",
     "year": "2026",
     "date": "Jul 2026",

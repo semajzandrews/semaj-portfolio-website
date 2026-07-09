@@ -83,6 +83,12 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
       if (sortMode === "featured") {
         const f = Number(!!b.featured) - Number(!!a.featured)
         if (f !== 0) return f
+        if (a.featured && b.featured) {
+          // Explicit hire-first ordering: rank 1 first, unranked featured after.
+          const ra = a.featuredRank ?? Number.POSITIVE_INFINITY
+          const rb = b.featuredRank ?? Number.POSITIVE_INFINITY
+          if (ra !== rb) return ra - rb
+        }
       }
       return projectTime(b) - projectTime(a)
     })
@@ -204,7 +210,13 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {currentProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} showSignature={!!project.featured} />
+            <ProjectCard
+              key={project.id}
+              {...project}
+              showSignature={!!project.featured}
+              // Card previews are a featured-only treatment; non-featured cards stay static.
+              previewVideo={project.featured ? project.previewVideo : undefined}
+            />
           ))}
         </div>
       )}
