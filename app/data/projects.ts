@@ -3097,7 +3097,7 @@ export const projects: Project[] = [
       "Lenis"
     ],
     "outcome": "Live demo site ready for owner preview.",
-    "featured": true,
+    "featured": false,
     "signature": "Reads like an engagement letter: zero images, typography does all the work"
   },
 

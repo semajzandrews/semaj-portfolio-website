@@ -10,7 +10,9 @@ interface ProjectGridProps {
   projects: Project[]
 }
 
-const ITEMS_PER_PAGE = 6
+// One page comfortably holds the whole featured set, so the default
+// (Featured sort) opens with every curated pick visible at once.
+const ITEMS_PER_PAGE = 12
 
 const categoryHierarchy: Record<string, string[]> = {
   "AI Development": ["AI Agents", "AI Pipelines & Orchestration"],
@@ -44,13 +46,12 @@ function projectTime(p: Project): number {
 }
 
 export default function ProjectGrid({ projects }: ProjectGridProps) {
-  const [showAll, setShowAll] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedSubcategory, setSelectedSubcategory] = useState("All")
-  const [sortMode, setSortMode] = useState<"newest" | "featured">("newest")
-
-  const featured = projects.filter((p) => p.featured)
+  // ONE concept: "Featured" — hand-picked work, shown first by default.
+  // "Newest" reorders the same grid chronologically. No separate curated view.
+  const [sortMode, setSortMode] = useState<"newest" | "featured">("featured")
 
   // All categories present in data, surfaced as filter chips. Hierarchy order first, then anything else.
   const allFromData = Array.from(new Set(projects.flatMap((p) => p.categories ?? [])))
@@ -89,61 +90,28 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
   const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE)
   const currentProjects = filteredProjects.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE)
 
-  // ---- Selected Work (default) ----
-  if (!showAll) {
-    return (
-      <div className="w-full">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          <div>
-            <h3 className="text-2xl font-semibold tracking-tight">Selected Work</h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              One per craft: booking, ordering, trackers, and the platform that sells them.
-            </p>
-          </div>
-          <Button variant="outline" onClick={() => setShowAll(true)}>
-            All {projects.length} Projects
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
-          {featured.map((project) => (
-            <ProjectCard key={project.id} {...project} showSignature />
-          ))}
-        </div>
-        <div className="mt-8 text-center">
-          <Button variant="ghost" onClick={() => setShowAll(true)} className="text-muted-foreground">
-            Browse the full catalog of {projects.length} projects
-          </Button>
-        </div>
-      </div>
-    )
-  }
-
-  // ---- All Projects ----
   return (
     <div className="w-full">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
-          <h3 className="text-2xl font-semibold tracking-tight">All Projects</h3>
-          <p className="text-sm text-muted-foreground mt-1">{projects.length} shipped projects</p>
+          <h3 className="text-2xl font-semibold tracking-tight">Projects</h3>
+          <p className="text-sm text-muted-foreground mt-1">
+            {projects.length} shipped projects{sortMode === "featured" ? " · featured picks first" : " · newest first"}
+          </p>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="inline-flex rounded-md border overflow-hidden">
-            <button
-              className={`px-3 py-1.5 text-xs font-medium transition-colors ${sortMode === "newest" ? "bg-primary text-primary-foreground" : "bg-background text-muted-foreground hover:text-foreground"}`}
-              onClick={() => { setSortMode("newest"); setCurrentPage(1) }}
-            >
-              Newest
-            </button>
-            <button
-              className={`px-3 py-1.5 text-xs font-medium transition-colors ${sortMode === "featured" ? "bg-primary text-primary-foreground" : "bg-background text-muted-foreground hover:text-foreground"}`}
-              onClick={() => { setSortMode("featured"); setCurrentPage(1) }}
-            >
-              Featured
-            </button>
-          </div>
-          <Button variant="outline" size="sm" onClick={() => setShowAll(false)}>
-            Selected Work
-          </Button>
+        <div className="inline-flex rounded-md border overflow-hidden self-start sm:self-auto">
+          <button
+            className={`px-3 py-1.5 text-xs font-medium transition-colors ${sortMode === "featured" ? "bg-primary text-primary-foreground" : "bg-background text-muted-foreground hover:text-foreground"}`}
+            onClick={() => { setSortMode("featured"); setCurrentPage(1) }}
+          >
+            Featured
+          </button>
+          <button
+            className={`px-3 py-1.5 text-xs font-medium transition-colors ${sortMode === "newest" ? "bg-primary text-primary-foreground" : "bg-background text-muted-foreground hover:text-foreground"}`}
+            onClick={() => { setSortMode("newest"); setCurrentPage(1) }}
+          >
+            Newest
+          </button>
         </div>
       </div>
 
@@ -236,7 +204,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {currentProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+            <ProjectCard key={project.id} {...project} showSignature={!!project.featured} />
           ))}
         </div>
       )}
