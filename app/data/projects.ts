@@ -2872,4 +2872,646 @@ export const projects: Project[] = [
     solutions: ["Drew from Haitian street-market signage rather than postcards","Snap-scroll with momentum + visible scrollbar so the affordance reads"],
     outcome: "Live and Sunday-lunch ready.",
   },
+
+  {
+    "id": 202,
+    "title": "Six Points Creative Spaces",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Creative studio and event space site for Bloomfield, built around flexible room layouts and a clean booking inquiry path.",
+    "image": "/projects/six-points-creative-spaces/hero.png",
+    "link": "https://six-points-creative-spaces.vercel.app",
+    "liveUrl": "https://six-points-creative-spaces.vercel.app",
+    "tags": [
+      "Creative Spaces",
+      "Events",
+      "Editorial"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A calm editorial layout presents the venue's rooms and use cases (rehearsals, pop-ups, workshops) with a clear inquiry flow. Part of the Bloomfield canvass batch, built end to end from public business data.",
+    "features": [
+      "Room and use-case showcase",
+      "Inquiry-first conversion path",
+      "Editorial type system",
+      "Smooth scroll choreography"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview."
+  },
+
+  {
+    "id": 203,
+    "title": "Vega Jewelry",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "A monochrome vitrine for a Bloomfield jeweler: black-and-white gallery restraint that lets the pieces carry the color.",
+    "image": "/projects/vega-jewelry/hero.png",
+    "link": "https://vega-jewelry.vercel.app",
+    "liveUrl": "https://vega-jewelry.vercel.app",
+    "tags": [
+      "Jewelry",
+      "Monochrome",
+      "Luxury"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The site treats the storefront like a museum vitrine: monochrome surfaces, generous negative space, and an Erode/Switzer type pairing that reads quiet-luxury. Jewelry photography is the only color on the page.",
+    "features": [
+      "Monochrome vitrine layout",
+      "Erode + Switzer type pairing",
+      "Product-first photography treatment",
+      "Tap-to-call conversion"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview.",
+    "featured": true,
+    "signature": "Monochrome vitrine, the jewelry is the only color on the page"
+  },
+
+  {
+    "id": 204,
+    "title": "Top Health Spa",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Wellness spa site with a tap-to-call primary action and verified Instagram integration, tuned for phone-first local customers.",
+    "image": "/projects/top-health-spa/hero.png",
+    "link": "https://top-health-spa.vercel.app",
+    "liveUrl": "https://top-health-spa.vercel.app",
+    "tags": [
+      "Spa",
+      "Wellness",
+      "Local"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Built for a phone-first clientele: the primary action everywhere is tap-to-call, with services and hours laid out for fast scanning. Social proof comes from the shop's verified Instagram presence.",
+    "features": [
+      "Tap-to-call primary CTA",
+      "Service menu with fast-scan hierarchy",
+      "Verified Instagram integration",
+      "Mobile-first layout"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview."
+  },
+
+  {
+    "id": 205,
+    "title": "FRESHI HEALTHY FUSION",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Color-block healthy-fusion restaurant site whose background morphs as you scroll through the menu sections.",
+    "image": "/projects/freshi-healthy-fusion/hero.png",
+    "link": "https://freshi-healthy-fusion.vercel.app",
+    "liveUrl": "https://freshi-healthy-fusion.vercel.app",
+    "tags": [
+      "Restaurant",
+      "Color-Block",
+      "Scroll Morph"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Bold color-block sections with a background that morphs hue as the visitor scrolls, set in a punchy Khand/Alpino pairing. Tap-to-call primary and verified Instagram round out the conversion path.",
+    "features": [
+      "Scroll-driven background color morph",
+      "Color-block section system",
+      "Khand + Alpino display pairing",
+      "Tap-to-call primary CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Motion",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview."
+  },
+
+  {
+    "id": 206,
+    "title": "Ally Roofing & Leak Repair",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Storm-narrative roofing site: a sky-lift hero and a leak severity scale that helps homeowners self-triage before they call.",
+    "image": "/projects/ally-roofing/hero.png",
+    "link": "https://ally-roofing.vercel.app",
+    "liveUrl": "https://ally-roofing.vercel.app",
+    "tags": [
+      "Roofing",
+      "Storm Narrative",
+      "Severity Scale"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A v2 rebuild framed as a storm narrative: the hero lifts through sky layers, and an interactive leak severity scale walks homeowners from drip to emergency, ending at the call button. Panchang/Supreme type system.",
+    "features": [
+      "Sky-lift storm-narrative hero",
+      "Interactive leak severity scale",
+      "Panchang + Supreme type pairing",
+      "Emergency-call conversion path"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview."
+  },
+
+  {
+    "id": 207,
+    "title": "Law Office of Stephen S. Berowitz",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "A zero-image law office site designed like an engagement letter: pure typography, Bespoke Serif and Amulya, nothing to distract.",
+    "image": "/projects/berowitz-law/hero.png",
+    "link": "https://berowitz-law.vercel.app",
+    "liveUrl": "https://berowitz-law.vercel.app",
+    "tags": [
+      "Law",
+      "Typography Only",
+      "Engagement Letter"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The whole site is built on the conceit of an engagement letter: zero photography, Bespoke Serif/Amulya typography doing all the work, and content structured the way a client letter would read. Restraint as credibility.",
+    "features": [
+      "Engagement-letter concept, zero images",
+      "Bespoke Serif + Amulya typography",
+      "Letter-structured content flow",
+      "Consultation-first CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview.",
+    "featured": true,
+    "signature": "Reads like an engagement letter: zero images, typography does all the work"
+  },
+
+  {
+    "id": 208,
+    "title": "A1.NJIT Food Truck",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Campus food truck site with a sauce-meter signature: every menu item rated on an interactive heat-and-sauce scale.",
+    "image": "/projects/a1njit-food-truck/hero.png",
+    "link": "https://a1njit-food-truck.vercel.app",
+    "liveUrl": "https://a1njit-food-truck.vercel.app",
+    "tags": [
+      "Food Truck",
+      "Sauce Meter",
+      "Campus"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Built for the food truck parked at NJIT: a playful sauce-meter rates every item on heat and sauce, giving the menu personality and the site its signature interaction. Ranked number one in its outreach queue.",
+    "features": [
+      "Interactive sauce-meter on menu items",
+      "Campus-oriented location and hours",
+      "Playful high-energy type system",
+      "Mobile-first ordering info"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Live demo site ready for owner preview."
+  },
+
+  {
+    "id": 209,
+    "title": "Victoria and Sons Auto Repair",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Night-shift work-order aesthetic for a family auto shop, with a working repair-status tracker demo built in.",
+    "image": "/projects/victoria-and-sons-auto/hero.png",
+    "link": "https://victoria-and-sons-auto.vercel.app",
+    "liveUrl": "https://victoria-and-sons-auto.vercel.app",
+    "tags": [
+      "Auto Repair",
+      "Repair Tracker",
+      "Work Order"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The design borrows the language of a night-shift work order: stamped headers, ticket numbers, Telma/Hoover type. Its signature is a working repair-tracker demo where a customer can follow a job through the bays.",
+    "features": [
+      "Night-shift work-order visual language",
+      "Working repair-status tracker demo",
+      "Telma + Hoover type pairing",
+      "Phone-first contact flow"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Live demo with a working repair tracker, ready for owner preview."
+  },
+
+  {
+    "id": 210,
+    "title": "D&A Autoglass",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Auto glass shop site with a squeegee crack-to-clear hero and a working Glass Ticket repair tracker demo.",
+    "image": "/projects/da-autoglass/hero.png",
+    "link": "https://da-autoglass.vercel.app",
+    "liveUrl": "https://da-autoglass.vercel.app",
+    "tags": [
+      "Auto Glass",
+      "Crack-to-Clear Hero",
+      "Tracker Demo"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero opens on a cracked windshield that a squeegee wipes to clear as you scroll. Beyond the show, it ships a working add-on: the Glass Ticket tracker, where a customer enters a ticket number and follows their repair. Tanker/General Sans type.",
+    "features": [
+      "Squeegee crack-to-clear scroll hero",
+      "Working Glass Ticket repair tracker demo",
+      "Tanker + General Sans pairing",
+      "Tap-to-call primary CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: working repair tracker included.",
+    "repoUrl": "https://github.com/semajzandrews/da-autoglass",
+    "featured": true,
+    "signature": "Squeegee wipes the cracked windshield clear as you scroll, plus a live repair tracker"
+  },
+
+  {
+    "id": 211,
+    "title": "Mamie African Hair Braiding",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Braiding salon site with a braid-weave scroll animation and a working booking demo with book-this-style gallery deep links.",
+    "image": "/projects/mamie-african-hair-braiding/hero.png",
+    "link": "https://mamie-african-hair-braiding.vercel.app",
+    "liveUrl": "https://mamie-african-hair-braiding.vercel.app",
+    "tags": [
+      "Hair Braiding",
+      "Booking Demo",
+      "Scroll Draw"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A braid pattern literally weaves itself as you scroll. The differentiator is functional: a working booking demo built to replace third-party booking apps, with every gallery style deep-linking straight into the booking flow. Clash Display/Satoshi type.",
+    "features": [
+      "Braid-weave scroll-draw signature",
+      "Working booking demo",
+      "Book-this-style gallery deep links",
+      "Clash Display + Satoshi pairing"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript"
+    ],
+    "outcome": "Feature-rich live demo: working booking flow included.",
+    "repoUrl": "https://github.com/semajzandrews/mamie-african-hair-braiding",
+    "featured": true,
+    "signature": "A braid weaves itself on scroll; every gallery style deep links into a working booking demo"
+  },
+
+  {
+    "id": 212,
+    "title": "L&L Massage Spa",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Massage spa site with an unwind-line motif and a working booking demo that includes a client intake form.",
+    "image": "/projects/ll-massage-spa/hero.png",
+    "link": "https://ll-massage-spa.vercel.app",
+    "liveUrl": "https://ll-massage-spa.vercel.app",
+    "tags": [
+      "Massage Spa",
+      "Booking + Intake",
+      "Calm"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A single continuous unwind line threads the whole page, easing tension as it goes. The headline add-on is real: a working booking demo with a client intake step, so the owner can see exactly what replacing their booking app looks like. Boska/Author type.",
+    "features": [
+      "Unwind-line motif threading the page",
+      "Working booking demo with intake form",
+      "Boska + Author type pairing",
+      "Phone-first conversion path"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: booking with intake included."
+  },
+
+  {
+    "id": 213,
+    "title": "D'sanchez Barbershop",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Dominican barbershop site with a clipper guard-dial signature, a working booking demo, and a vetted English/Spanish toggle.",
+    "image": "/projects/dsanchez-barbershop/hero.png",
+    "link": "https://dsanchez-barbershop.vercel.app",
+    "liveUrl": "https://dsanchez-barbershop.vercel.app",
+    "tags": [
+      "Barbershop",
+      "Booking Demo",
+      "Bilingual"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The signature is a clipper guard dial that clicks through cut lengths. Underneath, a working booking demo targets the shop's third-party booking fees, and a human-vetted EN/ES toggle serves its Dominican clientele properly. Cabinet Grotesk/Sentient type.",
+    "features": [
+      "Clipper guard-dial interaction",
+      "Working booking demo",
+      "Vetted English/Spanish language toggle",
+      "Cabinet Grotesk + Sentient pairing"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript"
+    ],
+    "outcome": "Feature-rich live demo: booking flow and bilingual toggle included.",
+    "repoUrl": "https://github.com/semajzandrews/dsanchez-barbershop",
+    "featured": true,
+    "signature": "Clipper guard dial clicks through cut lengths; working bilingual booking demo"
+  },
+
+  {
+    "id": 214,
+    "title": "Raymond's New and Used Tires",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Newark tire shop site with a sidewall-dial tire size picker and a working bay-booking demo.",
+    "image": "/projects/raymonds-tires/hero.png",
+    "link": "https://raymonds-tires.vercel.app",
+    "liveUrl": "https://raymonds-tires.vercel.app",
+    "tags": [
+      "Tires",
+      "Size Picker",
+      "Bay Booking"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The signature control is a rotating tire sidewall that dials in your size the way you would read it off the rubber. The headline add-on is a working bay-booking demo for scheduling mounting and repairs. Bespoke Stencil/Excon type.",
+    "features": [
+      "Sidewall-dial tire size picker",
+      "Working bay-booking demo",
+      "Bespoke Stencil + Excon pairing",
+      "Tap-to-call primary CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: size picker and bay booking included.",
+    "repoUrl": "https://github.com/semajzandrews/raymonds-tires",
+    "featured": true,
+    "signature": "Read your tire size off a rotating sidewall dial, then book a bay"
+  },
+
+  {
+    "id": 215,
+    "title": "Ramen Gami",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Newark ramen shop site with rising broth-steam animation and a working direct-ordering demo at /order.",
+    "image": "/projects/ramen-gami/hero.png",
+    "link": "https://ramen-gami.vercel.app",
+    "liveUrl": "https://ramen-gami.vercel.app",
+    "tags": [
+      "Ramen",
+      "Ordering Demo",
+      "Broth Steam"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Steam rises off the broth as the page loads and keeps drifting through the scroll. The business case sits at /order: a complete direct-ordering demo with a demo-labeled checkout, built to show the shop what escaping delivery-app commissions looks like. Nippo/Sentient type.",
+    "features": [
+      "Rising broth-steam animation",
+      "Working direct-ordering demo at /order",
+      "Demo-labeled checkout flow",
+      "Nippo + Sentient pairing"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: full direct-ordering flow included.",
+    "repoUrl": "https://github.com/semajzandrews/ramen-gami",
+    "featured": true,
+    "signature": "Steam rises off the broth; a full direct-ordering demo lives at /order"
+  },
+
+  {
+    "id": 216,
+    "title": "Ironbound Pet Shop",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Newark pet shop site with a paw-trail scroll signature and The Shelf, a working stock-check demo.",
+    "image": "/projects/ironbound-pet-shop/hero.png",
+    "link": "https://ironbound-pet-shop.vercel.app",
+    "liveUrl": "https://ironbound-pet-shop.vercel.app",
+    "tags": [
+      "Pet Shop",
+      "Stock Check",
+      "Paw Trail"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "Paw prints stamp a trail down the page as you scroll. The first-of-its-kind add-on here is The Shelf: a working stock-check demo covering eight real items, so customers can see what is in stock before walking over. Pally/Plein type.",
+    "features": [
+      "Paw-trail scroll-stamp signature",
+      "The Shelf: working stock-check demo",
+      "Pally + Plein type pairing",
+      "Tap-to-call primary CTA"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: working stock checker included.",
+    "repoUrl": "https://github.com/semajzandrews/ironbound-pet-shop",
+    "featured": true,
+    "signature": "Paw prints stamp the scroll; The Shelf checks live stock on eight items"
+  },
+
+  {
+    "id": 217,
+    "title": "Pour Abbey's Bar & Grill",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Ironbound bar and grill site where a pint pours as you scroll, plus a lean order-ahead grill-to-go demo.",
+    "image": "/projects/pour-abbeys/hero.png",
+    "link": "https://pour-abbeys.vercel.app",
+    "liveUrl": "https://pour-abbeys.vercel.app",
+    "tags": [
+      "Bar & Grill",
+      "Scroll Pour",
+      "Order Ahead"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "The hero pint fills as you scroll, pour matched to page depth. Behind the theater is a lean order-ahead demo for grill-to-go orders with a demo-labeled checkout, pitched against the commissions the bar already pays on delivery apps. Zodiak/Roundo type.",
+    "features": [
+      "Scroll-pour pint hero",
+      "Working order-ahead grill-to-go demo",
+      "Demo-labeled checkout",
+      "Zodiak + Roundo pairing"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: order-ahead flow included.",
+    "repoUrl": "https://github.com/semajzandrews/pour-abbeys",
+    "featured": true,
+    "signature": "The pint pours as you scroll; grill-to-go order-ahead demo behind it"
+  },
+
+  {
+    "id": 218,
+    "title": "East Orange Animal Hospital",
+    "year": "2026",
+    "date": "Jul 2026",
+    "role": "Designer & Engineer",
+    "description": "Animal hospital site with a resting-heartbeat EKG motif, plus working appointment-request and new-patient intake demos on real hours.",
+    "image": "/projects/east-orange-animal-hospital/hero.png",
+    "link": "https://east-orange-animal-hospital.vercel.app",
+    "liveUrl": "https://east-orange-animal-hospital.vercel.app",
+    "tags": [
+      "Veterinary",
+      "Appointment Demo",
+      "EKG Motif"
+    ],
+    "categories": [
+      "Web Development"
+    ],
+    "subcategory": "Front-End Development",
+    "detailedDescription": "A calm EKG blip beats through the page like a resting heartbeat. The practical layer is deep: working appointment-request and new-patient intake demos wired to the hospital's real hours, an emergency strip, and tap-to-call, all rebuilt after a full recon of their legacy template site. Recia/Bespoke Sans type.",
+    "features": [
+      "Resting-heartbeat EKG-blip motif",
+      "Working appointment-request demo on real hours",
+      "New-patient intake demo",
+      "Emergency strip + tap-to-call"
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS v4",
+      "TypeScript",
+      "Lenis"
+    ],
+    "outcome": "Feature-rich live demo: appointment and intake flows included.",
+    "repoUrl": "https://github.com/semajzandrews/east-orange-animal-hospital",
+    "featured": true,
+    "signature": "A resting-heartbeat EKG beats through the page; real-hours appointment and intake demos"
+  },
 ]
