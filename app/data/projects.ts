@@ -40,6 +40,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 3,
+    previewVideo: "/projects/buildwhatyouwant/preview.mp4",
     featuredRank: 6,
     title: "BuildWhatYouWant",
     year: "2026",
@@ -2918,6 +2919,7 @@ export const projects: Project[] = [
 
   {
     "id": 203,
+    "previewVideo": "/projects/vega-jewelry/preview.mp4",
     "featuredRank": 11,
     "title": "Vega Jewelry",
     "year": "2026",
@@ -3032,6 +3034,7 @@ export const projects: Project[] = [
 
   {
     "id": 206,
+    "previewVideo": "/projects/ally-roofing/preview.mp4",
     "title": "Ally Roofing & Leak Repair",
     "year": "2026",
     "date": "Jul 2026",
@@ -3180,6 +3183,7 @@ export const projects: Project[] = [
 
   {
     "id": 210,
+    "previewVideo": "/projects/da-autoglass/preview.mp4",
     "featuredRank": 2,
     "title": "D&A Autoglass",
     "year": "2026",
@@ -3220,6 +3224,7 @@ export const projects: Project[] = [
 
   {
     "id": 211,
+    "previewVideo": "/projects/mamie-african-hair-braiding/preview.mp4",
     "featuredRank": 3,
     "title": "Mamie African Hair Braiding",
     "year": "2026",
@@ -3259,6 +3264,7 @@ export const projects: Project[] = [
 
   {
     "id": 212,
+    "previewVideo": "/projects/ll-massage-spa/preview.mp4",
     "featuredRank": 10,
     "featured": true,
     "signature": "One continuous unwind line threads the page into a working booking-with-intake demo",
@@ -3298,6 +3304,7 @@ export const projects: Project[] = [
 
   {
     "id": 213,
+    "previewVideo": "/projects/dsanchez-barbershop/preview.mp4",
     "featuredRank": 9,
     "title": "D'sanchez Barbershop",
     "year": "2026",
@@ -3337,6 +3344,7 @@ export const projects: Project[] = [
 
   {
     "id": 214,
+    "previewVideo": "/projects/raymonds-tires/preview.mp4",
     "featuredRank": 5,
     "title": "Raymond's New and Used Tires",
     "year": "2026",
@@ -3377,6 +3385,7 @@ export const projects: Project[] = [
 
   {
     "id": 215,
+    "previewVideo": "/projects/ramen-gami/preview.mp4",
     "featuredRank": 1,
     "title": "Ramen Gami",
     "year": "2026",
@@ -3417,6 +3426,7 @@ export const projects: Project[] = [
 
   {
     "id": 216,
+    "previewVideo": "/projects/ironbound-pet-shop/preview.mp4",
     "featuredRank": 8,
     "title": "Ironbound Pet Shop",
     "year": "2026",
@@ -3457,6 +3467,7 @@ export const projects: Project[] = [
 
   {
     "id": 217,
+    "previewVideo": "/projects/pour-abbeys/preview.mp4",
     "featuredRank": 4,
     "title": "Pour Abbey's Bar & Grill",
     "year": "2026",
@@ -3497,6 +3508,7 @@ export const projects: Project[] = [
 
   {
     "id": 218,
+    "previewVideo": "/projects/east-orange-animal-hospital/preview.mp4",
     "featuredRank": 7,
     "title": "East Orange Animal Hospital",
     "year": "2026",
