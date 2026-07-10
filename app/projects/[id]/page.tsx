@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import ThemeToggle from "@/app/components/theme-toggle"
+import DetailPreviewVideo from "@/app/components/detail-preview-video"
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -55,15 +56,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <div className="space-y-3">
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-muted">
                 {project.previewVideo ? (
-                  <video
+                  <DetailPreviewVideo
                     src={project.previewVideo}
                     poster={project.previewPoster || project.image}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    className="absolute inset-0 h-full w-full object-cover"
+                    title={project.title}
                   />
                 ) : (
                   <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
