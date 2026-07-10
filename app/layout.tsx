@@ -59,7 +59,10 @@ const personJsonLd = {
   jobTitle: "Software Engineer",
   description:
     "Software engineer building AI-orchestrated websites, iOS apps, and platforms.",
-  sameAs: ["https://github.com/semajzandrews"],
+  sameAs: [
+    "https://github.com/semajzandrews",
+    "https://www.linkedin.com/in/semajzandrews2",
+  ],
 }
 
 export default function RootLayout({
