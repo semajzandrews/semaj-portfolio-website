@@ -41,7 +41,7 @@ export const projects: Project[] = [
   {
     id: 3,
     previewVideo: "/projects/buildwhatyouwant/preview.mp4",
-    featuredRank: 6,
+    featuredRank: 5,
     title: "BuildWhatYouWant",
     year: "2026",
     featured: true,
@@ -90,6 +90,8 @@ export const projects: Project[] = [
 
   {
     "id": 87,
+    "featuredRank": 3,
+    "featured": true,
     "title": "Alpha Daycare Center",
     "year": "2026",
     date: "Jun 2026",
@@ -128,6 +130,8 @@ export const projects: Project[] = [
 
   {
     "id": 54,
+    "featuredRank": 10,
+    "featured": true,
     "title": "Kador Beauty Salon",
     "year": "2026",
     date: "Jun 2026",
@@ -686,6 +690,8 @@ export const projects: Project[] = [
 
   {
     id: 38,
+    featuredRank: 6,
+    featured: true,
     title: "My Amor Coffee Shop",
     year: "2026",
     date: "Jun 2026",
@@ -1262,6 +1268,8 @@ export const projects: Project[] = [
 
   {
     "id": 57,
+    "featuredRank": 11,
+    "featured": true,
     "title": "GQ Cutz Barber Boutique",
     "year": "2026",
     date: "Jun 2026",
@@ -2555,6 +2563,8 @@ export const projects: Project[] = [
 
   {
     "id": 70,
+    "featuredRank": 12,
+    "featured": true,
     "title": "More More Now Records",
     "year": "2026",
     date: "Jun 2026",
@@ -2882,6 +2892,8 @@ export const projects: Project[] = [
 
   {
     "id": 202,
+    "featuredRank": 9,
+    "featured": true,
     "title": "Six Points Creative Spaces",
     "year": "2026",
     "date": "Jul 2026",
@@ -2920,7 +2932,7 @@ export const projects: Project[] = [
   {
     "id": 203,
     "previewVideo": "/projects/vega-jewelry/preview.mp4",
-    "featuredRank": 11,
+    "featuredRank": 4,
     "title": "Vega Jewelry",
     "year": "2026",
     "date": "Jul 2026",
@@ -3184,7 +3196,6 @@ export const projects: Project[] = [
   {
     "id": 210,
     "previewVideo": "/projects/da-autoglass/preview.mp4",
-    "featuredRank": 2,
     "title": "D&A Autoglass",
     "year": "2026",
     "date": "Jul 2026",
@@ -3225,7 +3236,6 @@ export const projects: Project[] = [
   {
     "id": 211,
     "previewVideo": "/projects/mamie-african-hair-braiding/preview.mp4",
-    "featuredRank": 3,
     "title": "Mamie African Hair Braiding",
     "year": "2026",
     "date": "Jul 2026",
@@ -3265,7 +3275,7 @@ export const projects: Project[] = [
   {
     "id": 212,
     "previewVideo": "/projects/ll-massage-spa/preview.mp4",
-    "featuredRank": 10,
+    "featuredRank": 7,
     "featured": true,
     "signature": "One continuous unwind line threads the page into a working booking-with-intake demo",
     "title": "L&L Massage Spa",
@@ -3305,7 +3315,6 @@ export const projects: Project[] = [
   {
     "id": 213,
     "previewVideo": "/projects/dsanchez-barbershop/preview.mp4",
-    "featuredRank": 9,
     "title": "D'sanchez Barbershop",
     "year": "2026",
     "date": "Jul 2026",
@@ -3345,7 +3354,6 @@ export const projects: Project[] = [
   {
     "id": 214,
     "previewVideo": "/projects/raymonds-tires/preview.mp4",
-    "featuredRank": 5,
     "title": "Raymond's New and Used Tires",
     "year": "2026",
     "date": "Jul 2026",
@@ -3427,7 +3435,6 @@ export const projects: Project[] = [
   {
     "id": 216,
     "previewVideo": "/projects/ironbound-pet-shop/preview.mp4",
-    "featuredRank": 8,
     "title": "Ironbound Pet Shop",
     "year": "2026",
     "date": "Jul 2026",
@@ -3468,7 +3475,8 @@ export const projects: Project[] = [
   {
     "id": 217,
     "previewVideo": "/projects/pour-abbeys/preview.mp4",
-    "featuredRank": 4,
+    "featuredRank": 8,
+    "featured": true,
     "title": "Pour Abbey's Bar & Grill",
     "year": "2026",
     "date": "Jul 2026",
@@ -3509,7 +3517,7 @@ export const projects: Project[] = [
   {
     "id": 218,
     "previewVideo": "/projects/east-orange-animal-hospital/preview.mp4",
-    "featuredRank": 7,
+    "featuredRank": 2,
     "title": "East Orange Animal Hospital",
     "year": "2026",
     "date": "Jul 2026",
