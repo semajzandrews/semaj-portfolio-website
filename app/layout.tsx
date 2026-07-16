@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     title: "Semaj Andrews — Software Engineer",
     description:
       "Portfolio of Semaj Andrews — AI-orchestrated websites, iOS apps, and platforms.",
-    images: [{ url: "/ascii-face-static.png" }],
+    images: [{ url: "/og-linkedin.png", width: 1678, height: 876 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Semaj Andrews — Software Engineer",
     description:
       "Portfolio of Semaj Andrews — AI-orchestrated websites, iOS apps, and platforms.",
-    images: ["/ascii-face-static.png"],
+    images: ["/og-linkedin.png"],
   },
   robots: {
     index: true,
@@ -61,7 +61,7 @@ const personJsonLd = {
     "Software engineer building AI-orchestrated websites, iOS apps, and platforms.",
   sameAs: [
     "https://github.com/semajzandrews",
-    "https://www.linkedin.com/in/semajzandrews2",
+    "https://www.linkedin.com/in/semajzandrews",
   ],
 }
 

@@ -164,10 +164,7 @@ export default function Portfolio() {
                 I create software that’s fast to market, easy to scale, and hard to forget. I don’t just build features — I shape experiences.
                 </p>
                 <p className="text-sm md:text-base font-medium text-primary/80 tracking-wide">
-                  {`${Math.floor(projects.length / 10) * 10}+ projects shipped · building since ${projects.reduce((min, p) => {
-                    const y = p.year?.match(/\d{4}/)?.[0]
-                    return y && Number(y) < min ? Number(y) : min
-                  }, new Date().getFullYear())}`}
+                  {`${Math.floor(projects.length / 10) * 10}+ projects shipped · building professionally since 2019`}
                 </p>
               </div>
 
@@ -178,7 +175,7 @@ export default function Portfolio() {
                     <span className="sr-only">GitHub</span>
                   </Button>
                 </Link>
-                <Link href="https://www.linkedin.com/in/semajzandrews2" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" className="h-12 w-12">
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
@@ -266,7 +263,7 @@ export default function Portfolio() {
             <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
               GitHub
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://www.linkedin.com/in/semajzandrews2" target="_blank" rel="noopener noreferrer">
+            <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </Link>
             <Link className="text-xs hover:underline underline-offset-4 text-muted-foreground hover:text-foreground transition-colors" href="mailto:semajzandrews@gmail.com">

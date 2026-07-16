@@ -219,7 +219,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <Link className="text-xs hover:underline underline-offset-4" href="https://github.com/semajzandrews" target="_blank" rel="noopener noreferrer">
               GitHub
             </Link>
-            <Link className="text-xs hover:underline underline-offset-4" href="https://www.linkedin.com/in/semajzandrews2" target="_blank" rel="noopener noreferrer">
+            <Link className="text-xs hover:underline underline-offset-4" href="https://www.linkedin.com/in/semajzandrews" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </Link>
             <Link className="text-xs hover:underline underline-offset-4" href="mailto:semajzandrews@gmail.com">
