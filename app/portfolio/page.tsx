@@ -157,11 +157,11 @@ export default function Portfolio() {
               </div>
 
               <div className="space-y-4 -mt-4">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl [text-wrap:balance]">
                   Forward Deployed Engineer
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl lg:text-2xl">
-                I create software that’s fast to market, easy to scale, and hard to forget. I don’t just build features — I shape experiences.
+                I create software that’s fast to market, easy to scale, and hard to forget. I don’t just build features. I shape experiences.
                 </p>
                 <p className="text-sm md:text-base font-medium text-primary/80 tracking-wide">
                   {`${Math.floor(projects.length / 10) * 10}+ projects shipped · building professionally since 2019`}
