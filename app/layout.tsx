@@ -18,7 +18,7 @@ const siteUrl = "https://www.bysemaj.com"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Semaj Andrews — Software Engineer",
+    default: "Semaj Andrews — Forward Deployed Engineer",
     template: "%s — Semaj Andrews",
   },
   description:
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Semaj Andrews",
-    title: "Semaj Andrews — Software Engineer",
+    title: "Semaj Andrews — Forward Deployed Engineer",
     description:
       "Portfolio of Semaj Andrews — AI-orchestrated websites, iOS apps, and platforms.",
     images: [{ url: "/og-linkedin.png", width: 1678, height: 876 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Semaj Andrews — Software Engineer",
+    title: "Semaj Andrews — Forward Deployed Engineer",
     description:
       "Portfolio of Semaj Andrews — AI-orchestrated websites, iOS apps, and platforms.",
     images: ["/og-linkedin.png"],
@@ -56,7 +56,7 @@ const personJsonLd = {
   "@type": "Person",
   name: "Semaj Andrews",
   url: siteUrl,
-  jobTitle: "Software Engineer",
+  jobTitle: "Forward Deployed Engineer",
   description:
     "Software engineer building AI-orchestrated websites, iOS apps, and platforms.",
   sameAs: [
