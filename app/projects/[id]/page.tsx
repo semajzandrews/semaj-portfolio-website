@@ -8,10 +8,34 @@ import { notFound } from "next/navigation"
 import ThemeToggle from "@/app/components/theme-toggle"
 import DetailPreviewVideo from "@/app/components/detail-preview-video"
 
+/** Resolves either a readable slug (/projects/igris) or the original numeric
+ *  id (/projects/1). Numeric links printed on past material keep working. */
+function findProject(param: string) {
+  const bySlug = projects.find((p) => p.slug === param)
+  if (bySlug) return bySlug
+  const numeric = Number.parseInt(param)
+  return Number.isNaN(numeric) ? undefined : projects.find((p) => p.id === numeric)
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const project = findProject(id)
+  if (!project) return {}
+  return {
+    // Bare title — the root layout's template appends "— Semaj Andrews".
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: `${project.title} — Semaj Andrews`,
+      description: project.description,
+      images: [project.image],
+    },
+  }
+}
+
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const projectId = Number.parseInt(id)
-  const project = projects.find((p) => p.id === projectId)
+  const project = findProject(id)
 
   if (!project) {
     notFound()

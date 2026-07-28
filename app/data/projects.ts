@@ -1,5 +1,10 @@
 export type Project = {
   id: number
+  /** Optional readable URL segment. When set, /projects/<slug> resolves to
+   *  this project in addition to /projects/<id>, which keeps every existing
+   *  numeric link working. Used on printed material where a numeric id
+   *  reads poorly. */
+  slug?: string
   title: string
   description: string
   image: string
@@ -40,6 +45,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 3,
+    slug: "buildwhatyouwant",
     previewVideo: "/projects/buildwhatyouwant/preview.mp4",
     featuredRank: 5,
     title: "BuildWhatYouWant",
@@ -328,6 +334,7 @@ export const projects: Project[] = [
 
   {
     id: 1,
+    slug: "igris",
     title: "IGRIS · Production Website Agent + Quality Bar",
     year: "2025 – present",
     role: "Architect & Engineer (Solo)",
@@ -378,6 +385,7 @@ export const projects: Project[] = [
 
   {
     id: 2,
+    slug: "ai-software-factory",
     title: "AI Software Factory · One-Person Agency OS",
     year: "2025 – present",
     role: "Architect & Engineer (Solo)",
@@ -435,6 +443,7 @@ export const projects: Project[] = [
 
   {
     id: 200,
+    slug: "mac-mini-scan",
     title: "Mac Mini Scan",
     year: "2026",
     role: "Builder & Engineer (Solo)",
@@ -490,6 +499,7 @@ export const projects: Project[] = [
 
   {
     id: 201,
+    slug: "scan-tube",
     title: "ScanTube QR",
     year: "2025",
     role: "Builder & Engineer (Solo)",
@@ -3510,7 +3520,6 @@ export const projects: Project[] = [
     ],
     "outcome": "Feature-rich live demo: order-ahead flow included.",
     "repoUrl": "https://github.com/semajzandrews/pour-abbeys",
-    "featured": true,
     "signature": "The pint pours as you scroll; grill-to-go order-ahead demo behind it"
   },
 
