@@ -448,7 +448,7 @@ export const projects: Project[] = [
     year: "2026",
     role: "Builder & Engineer (Solo)",
     description:
-      "Real-Time Apple Store Inventory Locator — tracks Mac Mini and Mac Studio availability across every Apple Store in the US the moment stock moves. Built for the supply shortage, used to source and resell just under a dozen units for close to $10,000 in a single month.",
+      "A real-time monitoring and signal-detection service in Python. Polls Apple's per-store fulfillment surface nationwide, normalizes it into a clean availability model, and fires an alert the instant a configuration flips to in-stock. Acted on that signal to source and resell just under a dozen units for close to $10,000 in a single month.",
     image: "/projects/mac-mini-scan/hero.png",
     // No public link / liveUrl — local tool. The detail page renders a
     // disabled "Demo on Request" button automatically.
@@ -458,13 +458,13 @@ export const projects: Project[] = [
       "Python",
       "Web Scraping",
       "Real-Time Monitoring",
-      "Arbitrage",
+      "Alerting & Signal Detection",
       "Proprietary",
     ],
     categories: ["AI Development"],
     subcategory: "Automation & Data",
     detailedDescription:
-      "A locator that tracks Mac Mini and Mac Studio availability across every Apple Store in the US in real time, built for the supply shortage driven by surging RAM demand and local-AI adoption. Used it to source and resell just under a dozen units, generating close to $10,000 in a single month. The system polls Apple's per-store fulfillment surface continuously, normalizes the response into a clean per-model / per-store availability map, and surfaces the moment a configuration goes from unavailable to in-stock at any location in the country. Because the squeeze is driven by RAM scarcity and the rush to run models locally, the high-memory Mac Mini and Mac Studio configs sell out in minutes and reappear unpredictably, so the edge is entirely in latency: knowing a unit is buyable before anyone refreshing a webpage does. Built in Python with a polite, rate-aware polling loop, resilient parsing that tolerates Apple's response shape changing, and instant alerting so a restock anywhere becomes an actionable buy signal. Run privately as a personal sourcing tool. Source is private.",
+      "A real-time monitoring service that detects a state change across a few hundred distributed endpoints and turns it into an actionable alert faster than a human could poll. The system continuously polls Apple's per-store fulfillment surface for every Apple Store in the US, normalizes an undocumented and unstable response into a clean per-model / per-store availability model, and fires the instant a configuration flips from unavailable to in-stock anywhere in the country. Built in Python around three constraints: the upstream is not a stable public contract and its response shape can change without notice, so parsing is defensive and degrades gracefully rather than crashing; the polling loop has to be rate-aware and polite enough to run continuously for weeks without being blocked; and the entire value is latency, because a signal that arrives late is worth nothing. The problem it was built for was the Mac Mini and Mac Studio shortage driven by surging RAM demand and the rush to run AI models locally, where high-memory configurations sell out in minutes and reappear unpredictably. The alerting proved out commercially: acting on the signal sourced and resold just under a dozen units for close to $10,000 in a single month. The underlying pattern generalizes to any monitoring problem where an event has to be detected, normalized, and acted on in near real time. Run privately. Source is private.",
     features: [
       "Nationwide coverage — every Apple Store checked, not a single region",
       "Real-time stock-flip detection (unavailable → in-stock) for Mac Mini + Mac Studio",
@@ -494,7 +494,7 @@ export const projects: Project[] = [
       "Rate-aware loop that sustains real-time coverage without hammering the source",
     ],
     outcome:
-      "Sourced and resold just under a dozen units, generating close to $10,000 in a single month off the local-AI RAM shortage. Run privately as a personal sourcing tool. Source private.",
+      "Ran continuously for a month at nationwide coverage without a missed restock or a rate-limit block. The alerting proved out commercially: just under a dozen units sourced and resold, close to $10,000 in that month. The pattern generalizes to any high-latency-sensitive monitoring problem where an event has to be detected and acted on faster than a human can poll. Run privately. Source private.",
   },
 
   {
