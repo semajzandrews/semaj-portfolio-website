@@ -4,12 +4,15 @@
   Source for public/projects/ai-software-factory/hero.png (1600x900).
   Regenerate:  node scripts/heroes/render.mjs ai-software-factory
 
-  Depicts the Factory's 4-phase gated pipeline with the 6-agent specialist
-  swarm as parallel lanes, work in flight, and one gate visibly holding.
+  Depicts the Factory's 4-phase gated pipeline as an ordered march: a progress
+  spine running 01 -> 02 -> 03 -> 04, completed stages behind, the current
+  stage working, gate 03 holding as a wall, and phase 04 empty ahead.
   All geometry is computed in-file. No network or package dependency.
+
   Phase names, agent names, platform targets and the laws come from
-  app/data/projects.ts. Task filenames, timestamps and the specific held
-  gate are ILLUSTRATIVE examples of the system's shape, not captured logs.
+  app/data/projects.ts. ILLUSTRATIVE (not captured): the per-stage agent
+  assignment, task counts, which gate is holding, the ledger rows and their
+  timestamps and filenames. They show the system's shape, not a real run.
 -->
 <style>
   :root{
@@ -59,7 +62,7 @@
   .laws{position:absolute;left:76px;top:592px;font-size:11px;letter-spacing:.09em;color:var(--dimmer);line-height:1.9}
   .laws .h{color:#6f7a86;letter-spacing:.2em;text-transform:uppercase;font-size:9.5px;margin-bottom:8px}
 
-  #pipe{position:absolute;left:556px;top:126px;width:968px;height:474px}
+  #pipe{position:absolute;left:556px;top:130px;width:968px;height:430px}
   #pipe svg{width:100%;height:100%;overflow:visible}
 
   .callout{position:absolute;font-size:12px;letter-spacing:.02em;color:var(--ink)}
@@ -89,14 +92,14 @@
   <div id="glow"></div>
 
   <div class="topbar mono">
-    <div class="l"><span class="pulse"></span><span>Deterministic build pipeline</span><span class="sep">/</span><span>swarm running</span></div>
+    <div class="l"><span class="pulse"></span><span>Deterministic build pipeline</span><span class="sep">/</span><span>phase 03 of 04</span><span class="sep">/</span><span>holding</span></div>
     <div>Web<span class="sep">·</span>iOS<span class="sep">·</span>Android<span class="sep">·</span>PWA<span class="sep">·</span>Chrome Extension</div>
   </div>
 
   <div class="lede">
     <div class="eyebrow mono">Multi-agent specialist swarm</div>
     <h1>AI Software<br><span class="thin">Factory</span></h1>
-    <div class="sub">Six specialist agents working four gated phases. No phase advances until its gate passes.</div>
+    <div class="sub">Work moves through four gated phases in order. No phase advances until its gate passes.</div>
   </div>
 
   <div class="stats">
@@ -153,119 +156,133 @@
 </div>
 
 <script>
-const W=968;
+const W=968,H=430;
 const svg=document.getElementById('svg');
 const ns="http://www.w3.org/2000/svg";
 function el(t,a){const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
 function add(e){svg.appendChild(e);return e;}
 const MONO='ui-monospace,Menlo,monospace';
+const SANS='-apple-system,Helvetica,Arial,sans-serif';
 function txt(x,y,s,o){const t=add(el('text',Object.assign({x:x,y:y,'font-family':MONO},o)));t.textContent=s;return t;}
 
 const defs=el('defs');
 defs.innerHTML=`
-<radialGradient id="hg"><stop offset="0" stop-color="#ffb020" stop-opacity=".34"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></radialGradient>
+<radialGradient id="hg"><stop offset="0" stop-color="#ffb020" stop-opacity=".26"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></radialGradient>
 <linearGradient id="gateg" x1="0" y1="0" x2="0" y2="1">
-  <stop offset="0" stop-color="#ffb020" stop-opacity="0"/><stop offset=".5" stop-color="#ffb020" stop-opacity=".95"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></linearGradient>`;
+  <stop offset="0" stop-color="#ffb020" stop-opacity=".15"/><stop offset=".5" stop-color="#ffb020" stop-opacity="1"/>
+  <stop offset="1" stop-color="#ffb020" stop-opacity=".15"/></linearGradient>
+<linearGradient id="cur" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#5b8cff" stop-opacity=".10"/><stop offset="1" stop-color="#5b8cff" stop-opacity=".02"/></linearGradient>`;
 add(defs);
 
-/* ---- geometry ---------------------------------------------------------- */
-const LBL=152;                       // agent-label gutter
-const TRK0=LBL+14, TRKW=W-TRK0;
-const WGT=[1,1,1,.62];               // phase 04 narrow: nothing has been admitted
-const SUM=WGT.reduce((a,b)=>a+b,0);
-const CW=WGT.map(w=>TRKW*w/SUM);
-const EDGE=[TRK0];CW.forEach(w=>EDGE.push(EDGE[EDGE.length-1]+w));
-const colX=i=>EDGE[i], colW=i=>CW[i];
+/* ---- stage geometry: an ordered left-to-right march --------------------- */
+const CW=215, G=[28,28,52];                 // card width, then the three gaps
+const X=[0]; X.push(X[0]+CW+G[0]); X.push(X[1]+CW+G[1]); X.push(X[2]+CW+G[2]);
+const CY=60, CH=316, CB=CY+CH;
+const gapC=i=>X[i]+CW+G[i]/2;               // centre of gap i
+const GX=gapC(2);                           // the held gate
 
-const HEAD=40, RULE=HEAD+38;
-const LY0=RULE+52, LSTEP=54;
-const laneY=i=>LY0+i*LSTEP;
-const AGENTS=["Spec Agent","Design Agent","Frontend Agent","Backend Agent","QA Agent","Task Planner"];
-const LANE_BOT=laneY(5)+30;
-const PHASES=[
-  ["01","Brain","GATE PASSED","ok"],
-  ["02","Design","GATE PASSED","ok"],
-  ["03","Atomization","GATE HELD","hold"],
-  ["04","Execution","AWAITING GATE 03","off"]
+/* state: 2 = done and handed off, 1 = working now, 0 = not started */
+const STAGES=[
+  {n:'01',name:'Brain',      sub:'spec',              st:2, status:'HANDED OFF',
+   agents:['Spec Agent','Task Planner'],   work:18},
+  {n:'02',name:'Design',     sub:'stitch loop',       st:2, status:'HANDED OFF',
+   agents:['Design Agent'],                work:14},
+  {n:'03',name:'Atomization',sub:'1 task = 1 commit', st:1, status:'WORKING NOW',
+   agents:['Task Planner','QA Agent'],     work:16},
+  {n:'04',name:'Execution',  sub:'surgical rebuild',  st:0, status:'NOT ADMITTED',
+   agents:['Frontend Agent','Backend Agent','QA Agent'], work:0}
 ];
-const HELD=3, GX=colX(HELD);
-const C={ok:'#5b8cff',hold:'#ffb020',off:'#4a525d'};
 
-/* ---- phase headers ----------------------------------------------------- */
-PHASES.forEach((p,i)=>{
-  const x=colX(i)+16;
-  txt(x,HEAD-20,p[0],{fill:'#4a525d','font-size':10,'letter-spacing':2.2});
-  const n=add(el('text',{x:x,y:HEAD+2,fill:'#c8d0d8','font-size':16.5,'letter-spacing':-.2,
-    'font-family':'-apple-system,Helvetica,Arial,sans-serif','font-weight':600}));
-  n.textContent=p[1];
-  add(el('rect',{x:x,y:HEAD+13,width:5,height:5,rx:1,fill:C[p[3]],
-    'fill-opacity':p[3]==='off'?.7:1}));
-  txt(x+13,HEAD+18,p[2],{fill:p[3]==='hold'?'#ffb020':(p[3]==='ok'?'#5b7290':'#4a525d'),
-    'font-size':9.5,'letter-spacing':1.8});
-});
-add(el('line',{x1:TRK0,y1:RULE,x2:W,y2:RULE,stroke:'rgba(255,255,255,.10)','stroke-width':1}));
-for(let i=1;i<4;i++)
-  add(el('line',{x1:colX(i),y1:RULE,x2:colX(i),y2:LANE_BOT,stroke:'rgba(255,255,255,.07)','stroke-width':1}));
+/* ---- progress spine: the direction of travel, stated once and clearly --- */
+const SY=20;
+add(el('line',{x1:0,y1:SY,x2:W,y2:SY,stroke:'#2b323b','stroke-width':2}));
+add(el('line',{x1:0,y1:SY,x2:GX,y2:SY,stroke:'#5b8cff','stroke-width':2,'stroke-opacity':.75}));
+for(let x=52;x<GX-24;x+=76)
+  add(el('path',{d:`M${x-4} ${SY-4} L${x+4} ${SY} L${x-4} ${SY+4}`,fill:'none',
+    stroke:'#8fb0ff','stroke-width':1.5,'stroke-opacity':.75}));
+add(el('line',{x1:GX,y1:SY,x2:W,y2:SY,stroke:'#3a424c','stroke-width':2,'stroke-dasharray':'4 8'}));
 
-/* ---- lanes ------------------------------------------------------------- */
-AGENTS.forEach((a,i)=>{
-  const y=laneY(i);
-  txt(0,y+4,a,{fill:'#7d8894','font-size':13});
-  add(el('line',{x1:TRK0,y1:y,x2:W,y2:y,stroke:'rgba(255,255,255,.05)','stroke-width':1}));
-});
+/* ---- stage cards -------------------------------------------------------- */
+STAGES.forEach((s,i)=>{
+  const x=X[i], done=s.st===2, now=s.st===1, off=s.st===0;
+  add(el('rect',{x:x,y:CY,width:CW,height:CH,rx:6,
+    fill:now?'url(#cur)':(off?'rgba(255,255,255,.010)':'rgba(91,140,255,.030)'),
+    stroke:now?'rgba(91,140,255,.45)':(off?'rgba(255,255,255,.10)':'rgba(255,255,255,.075)'),
+    'stroke-width':1,'stroke-dasharray':off?'4 5':'none'}));
 
-/* ---- work in flight ----------------------------------------------------
-   Lane contents are ILLUSTRATIVE: they show the shape of a run in progress,
-   not a captured log. state 2 = committed, 1 = in flight.                 */
-const CHIPS=[
-  [0,0,.28,2],[0,0,.68,2],[0,1,.34,2],[0,2,.26,2],[0,2,.60,1],
-  [1,0,.50,2],[1,1,.26,2],[1,1,.62,2],[1,2,.34,2],[1,2,.66,1],
-  [2,0,.38,2],[2,1,.46,2],[2,2,.24,2],[2,2,.52,1],
-  [3,0,.60,2],[3,1,.38,2],[3,2,.30,2],[3,2,.64,1],
-  [4,0,.44,2],[4,1,.56,2],[4,2,.40,2],[4,2,.70,1],
-  [5,0,.22,2],[5,0,.56,2],[5,1,.34,2],[5,2,.48,2],[5,2,.72,1]
-];
-CHIPS.forEach(([a,p,f,st])=>{
-  const y=laneY(a), x=colX(p)+colW(p)*f, w=st===2?26:34, h=8;
-  if(st===1){
-    add(el('line',{x1:x-48,y1:y,x2:x,y2:y,stroke:'#5b8cff','stroke-width':1.4,'stroke-opacity':.28}));
-    add(el('rect',{x:x-w/2,y:y-h/2,width:w,height:h,rx:4,fill:'#5b8cff','fill-opacity':.22,
-      stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.95}));
-    add(el('rect',{x:x-w/2-5,y:y-h/2-5,width:w+10,height:h+10,rx:8,fill:'none',
-      stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.15}));
-  }else{
-    add(el('rect',{x:x-w/2,y:y-h/2,width:w,height:h,rx:4,fill:'#5b8cff','fill-opacity':.30}));
+  const px=x+18;
+  // node number sitting on the spine, tying each card to its place in the order
+  const nx=x+CW/2;
+  add(el('circle',{cx:nx,cy:SY,r:13,fill:'#060709',
+    stroke:off?'#3a424c':(now?'#ffb020':'#5b8cff'),'stroke-width':1.4}));
+  const nn=add(el('text',{x:nx,y:SY+3.6,'text-anchor':'middle','font-family':MONO,'font-size':10.5,
+    'letter-spacing':.6,fill:off?'#68727e':(now?'#ffc655':'#9dbaff')}));
+  nn.textContent=s.n;
+  add(el('line',{x1:nx,y1:SY+13,x2:nx,y2:CY,stroke:off?'#2b323b':'rgba(91,140,255,.30)','stroke-width':1}));
+
+  // title
+  const t=add(el('text',{x:px,y:CY+40,fill:off?'#6b747f':'#e6ebf0','font-size':21,
+    'font-family':SANS,'font-weight':600,'letter-spacing':-.4}));
+  t.textContent=s.name;
+  txt(px,CY+60,s.sub,{fill:'#5c6672','font-size':11});
+
+  // status
+  const sc=now?'#ffb020':(off?'#4a525d':'#5b7290');
+  add(el('rect',{x:px,y:CY+76,width:6,height:6,rx:1,fill:sc}));
+  txt(px+14,CY+82,s.status,{fill:sc,'font-size':10,'letter-spacing':1.7});
+
+  add(el('line',{x1:px,y1:CY+100,x2:x+CW-18,y2:CY+100,stroke:'rgba(255,255,255,.07)','stroke-width':1}));
+
+  // who is on this stage
+  txt(px,CY+122,'AGENTS ON STAGE',{fill:'#4a525d','font-size':9,'letter-spacing':1.9});
+  s.agents.forEach((a,k)=>txt(px,CY+146+k*20,a,{fill:off?'#5f6874':'#95a0ab','font-size':12.5}));
+
+  // the work itself
+  const wy=CY+228;
+  txt(px,wy,off?'NOTHING ADMITTED':'ATOMIZED TASKS',{fill:'#4a525d','font-size':9,'letter-spacing':1.9});
+  const CWD=22,CHT=7,GAPX=7,GAPY=8,PER=6;
+  for(let k=0;k<(off?12:s.work);k++){
+    const cx=px+(k%PER)*(CWD+GAPX), cy=wy+18+Math.floor(k/PER)*(CHT+GAPY);
+    if(off) add(el('rect',{x:cx,y:cy,width:CWD,height:CHT,rx:3.5,fill:'none',
+      stroke:'#333b45','stroke-width':1}));
+    else if(now) add(el('rect',{x:cx,y:cy,width:CWD,height:CHT,rx:3.5,fill:'#5b8cff','fill-opacity':.30,
+      stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.75}));
+    else add(el('rect',{x:cx,y:cy,width:CWD,height:CHT,rx:3.5,fill:'#5b8cff','fill-opacity':.16}));
   }
 });
 
-/* ---- phase 04 stays empty while the gate holds -------------------------- */
-AGENTS.forEach((a,i)=>{
-  const y=laneY(i);
-  add(el('line',{x1:GX+18,y1:y,x2:W-16,y2:y,stroke:'#2e353e','stroke-width':1,'stroke-dasharray':'3 7'}));
-  [.32,.68].forEach(f=>{
-    const x=colX(3)+colW(3)*f;
-    add(el('rect',{x:x-13,y:y-4,width:26,height:8,rx:4,fill:'none',stroke:'#39414b','stroke-width':1}));
-  });
+/* ---- handoffs between stages ------------------------------------------- */
+[0,1].forEach(i=>{
+  const cx=gapC(i), my=CY+CH/2;
+  add(el('line',{x1:X[i]+CW,y1:my,x2:X[i+1],y2:my,stroke:'#5b8cff','stroke-width':1.4,'stroke-opacity':.45}));
+  add(el('path',{d:`M${cx-5} ${my-9} L${cx+6} ${my} L${cx-5} ${my+9}`,fill:'none',
+    stroke:'#8fb0ff','stroke-width':2.2,'stroke-opacity':.95,'stroke-linecap':'round','stroke-linejoin':'round'}));
+  const l=add(el('text',{x:cx,y:44,'text-anchor':'middle','font-family':MONO,'font-size':9.5,
+    'letter-spacing':1.7,fill:'#5b7290'}));
+  l.textContent='GATE 0'+(i+1)+' PASSED';
 });
 
-/* ---- passed gates ------------------------------------------------------- */
-[1,2].forEach(i=>add(el('line',{x1:colX(i),y1:RULE,x2:colX(i),y2:LANE_BOT,
-  stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.30})));
+/* ---- gate 03: the wall the march has stacked against -------------------- */
+add(el('rect',{x:GX-28,y:CY-12,width:56,height:CH+24,fill:'url(#hg)'}));
+add(el('rect',{x:GX-2.5,y:SY-11,width:5,height:22,rx:2,fill:'#ffb020'}));
+add(el('rect',{x:GX-2,y:CY-6,width:4,height:CH+12,rx:2,fill:'url(#gateg)'}));
+const hl=add(el('text',{x:GX,y:44,'text-anchor':'middle','font-family':MONO,'font-size':9.5,
+  'letter-spacing':1.7,fill:'#ffb020'}));
+hl.textContent='GATE 03 HELD';
+// work pressed up against it, on the near side only
+const QR=X[2]+CW-10;                       // stage 03's right edge
+[26,20,26,17,26].forEach((w,k)=>
+  add(el('rect',{x:QR-w,y:CY+82+k*34,width:w,height:9,rx:3,fill:'#ffb020','fill-opacity':.92})));
 
-/* ---- the held gate, with the swarm's work stacked against it ------------ */
-add(el('rect',{x:GX-34,y:RULE+2,width:68,height:LANE_BOT-RULE-4,fill:'url(#hg)'}));
-add(el('rect',{x:GX-1.6,y:RULE+2,width:3.2,height:LANE_BOT-RULE-4,fill:'url(#gateg)'}));
-AGENTS.forEach((a,i)=>add(el('rect',{x:GX-26,y:laneY(i)-5,width:18,height:10,rx:4,
-  fill:'#ffb020','fill-opacity':.9})));
-
-/* ---- band below the lanes ---------------------------------------------- */
-const B1=LANE_BOT+46, B2=B1+26;
-add(el('rect',{x:TRK0,y:B1-9,width:9,height:9,rx:2,fill:'#ffb020'}));
-txt(TRK0+20,B1,'GATE 03 HELD',{fill:'#ffb020','font-size':11.5,'letter-spacing':1.8});
-txt(TRK0+142,B1,'Build halted before phase 04. No agent advances until it passes.',
+/* ---- band below --------------------------------------------------------- */
+const B1=CB+52, B2=B1+26;
+add(el('rect',{x:0,y:B1-9,width:9,height:9,rx:2,fill:'#ffb020'}));
+txt(20,B1,'GATE 03 HELD',{fill:'#ffb020','font-size':11.5,'letter-spacing':1.8});
+txt(142,B1,'The march stops here. No stage advances until this gate passes.',
   {fill:'#9aa5b0','font-size':12.5});
-txt(TRK0+20,B2,'ZERO-TRUST',{fill:'#5b7290','font-size':11.5,'letter-spacing':1.8});
-txt(TRK0+142,B2,'Mock data in the cloud layer. Real keys injected only at phase 04, locally.',
+txt(20,B2,'ZERO-TRUST',{fill:'#5b7290','font-size':11.5,'letter-spacing':1.8});
+txt(142,B2,'Mock data in the cloud layer. Real keys injected only at phase 04, locally.',
   {fill:'#5c6672','font-size':12.5});
 
 document.body.setAttribute('data-ready','1');
