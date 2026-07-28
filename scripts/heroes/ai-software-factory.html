@@ -1,0 +1,272 @@
+<meta charset="utf-8">
+<title>AI Software Factory hero</title>
+<!--
+  Source for public/projects/ai-software-factory/hero.png (1600x900).
+  Regenerate:  node scripts/heroes/render.mjs ai-software-factory
+
+  Depicts the Factory's 4-phase gated pipeline with the 6-agent specialist
+  swarm as parallel lanes, work in flight, and one gate visibly holding.
+  All geometry is computed in-file. No network or package dependency.
+  Phase names, agent names, platform targets and the laws come from
+  app/data/projects.ts. Task filenames, timestamps and the specific held
+  gate are ILLUSTRATIVE examples of the system's shape, not captured logs.
+-->
+<style>
+  :root{
+    --bg:#060709;
+    --line:rgba(255,255,255,.055);
+    --ink:#f0f3f6;
+    --dim:#818c99;
+    --dimmer:#4a525d;
+    --flow:#5b8cff;
+    --hold:#ffb020;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1600px;height:900px;background:var(--bg);overflow:hidden}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:var(--ink);-webkit-font-smoothing:antialiased}
+  .mono{font-family:ui-monospace,"SF Mono",Menlo,Monaco,"Courier New",monospace}
+  #stage{position:relative;width:1600px;height:900px;overflow:hidden}
+
+  #grid{position:absolute;inset:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;
+    -webkit-mask-image:radial-gradient(115% 95% at 64% 42%,#000 20%,transparent 75%)}
+  #glow{position:absolute;left:62%;top:40%;width:1200px;height:980px;transform:translate(-50%,-50%);
+    background:radial-gradient(closest-side,rgba(91,140,255,.09),rgba(91,140,255,0) 70%)}
+  #vig{position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(125% 105% at 58% 40%,transparent 42%,rgba(0,0,0,.9))}
+
+  .topbar{position:absolute;top:52px;left:76px;right:76px;display:flex;justify-content:space-between;
+    align-items:center;font-size:12px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+  .topbar .l{display:flex;align-items:center;gap:12px}
+  .pulse{width:6px;height:6px;border-radius:50%;background:var(--flow);
+    box-shadow:0 0 0 4px rgba(91,140,255,.13),0 0 12px rgba(91,140,255,.85)}
+  .sep{color:var(--dimmer);margin:0 9px}
+
+  .lede{position:absolute;left:76px;top:152px;width:404px}
+  .eyebrow{font-size:11px;letter-spacing:.26em;color:var(--flow);text-transform:uppercase;margin-bottom:22px}
+  h1{font-size:68px;line-height:.96;letter-spacing:-.04em;font-weight:700}
+  h1 .thin{color:#7a838f;font-weight:300}
+  .sub{margin-top:26px;font-size:17.5px;line-height:1.56;color:#aab4be;max-width:392px}
+
+  .stats{position:absolute;left:76px;top:470px;width:430px;display:flex;gap:44px}
+  .stat .n{font-size:34px;font-weight:600;letter-spacing:-.025em;line-height:1}
+  .stat .n .u{color:#7a838f;font-size:19px;font-weight:400}
+  .stat .k{margin-top:11px;font-size:10px;letter-spacing:.18em;color:var(--dimmer);
+    text-transform:uppercase;line-height:1.55}
+
+  .laws{position:absolute;left:76px;top:592px;font-size:11px;letter-spacing:.09em;color:var(--dimmer);line-height:1.9}
+  .laws .h{color:#6f7a86;letter-spacing:.2em;text-transform:uppercase;font-size:9.5px;margin-bottom:8px}
+
+  #pipe{position:absolute;left:556px;top:126px;width:968px;height:474px}
+  #pipe svg{width:100%;height:100%;overflow:visible}
+
+  .callout{position:absolute;font-size:12px;letter-spacing:.02em;color:var(--ink)}
+  .callout .t{color:var(--hold);letter-spacing:.2em;font-size:9.5px;text-transform:uppercase;margin-bottom:7px}
+  .callout .b{color:var(--dim);margin-top:4px;font-size:11.5px}
+
+  #feed{position:absolute;left:76px;right:76px;bottom:62px;border-top:1px solid rgba(255,255,255,.09);padding-top:20px}
+  .fhead{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.22em;
+    color:var(--dimmer);text-transform:uppercase;margin-bottom:13px}
+  .row{display:grid;grid-template-columns:96px 200px 356px 1fr 132px;align-items:center;
+    font-size:13px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);color:#98a3ae}
+  .row:last-child{border-bottom:0}
+  .row .ts{color:var(--dimmer);font-size:12px}
+  .row .task{color:#dde3e9}
+  .row .who{color:#8b96a2}
+  .row .st{justify-self:end;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase}
+  .row.hot .ts{color:#cdd2d7}
+  .row.hot .task{color:#fff;font-weight:600}
+  .row.hot .who{color:#c2ccd5}
+  .st.ok{color:var(--flow)}
+  .st.wait{color:var(--dimmer)}
+  .st.held{color:var(--hold)}
+</style>
+
+<div id="stage">
+  <div id="grid"></div>
+  <div id="glow"></div>
+
+  <div class="topbar mono">
+    <div class="l"><span class="pulse"></span><span>Deterministic build pipeline</span><span class="sep">/</span><span>swarm running</span></div>
+    <div>Web<span class="sep">·</span>iOS<span class="sep">·</span>Android<span class="sep">·</span>PWA<span class="sep">·</span>Chrome Extension</div>
+  </div>
+
+  <div class="lede">
+    <div class="eyebrow mono">Multi-agent specialist swarm</div>
+    <h1>AI Software<br><span class="thin">Factory</span></h1>
+    <div class="sub">Six specialist agents working four gated phases. No phase advances until its gate passes.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="n">4</div>
+      <div class="k mono">Gated phases,<br>binding checklist</div>
+    </div>
+    <div class="stat">
+      <div class="n">6</div>
+      <div class="k mono">Specialist agents,<br>own prompt each</div>
+    </div>
+    <div class="stat">
+      <div class="n">5</div>
+      <div class="k mono">Platform targets<br>from one spec</div>
+    </div>
+  </div>
+
+  <div class="laws mono">
+    <div class="h">Three unbreakable laws</div>
+    <div>Zero-Context Assumption<span class="sep">·</span>True Atomization<span class="sep">·</span>S-Rank or Nothing</div>
+  </div>
+
+  <div id="pipe"><svg id="svg" viewBox="0 0 968 474"></svg></div>
+
+  <div id="feed">
+    <div class="fhead mono">
+      <span>Atomized task ledger</span>
+      <span>1 task<span class="sep">=</span>1 component / endpoint / test / migration<span class="sep">=</span>1 commit</span>
+    </div>
+    <div class="row mono hot">
+      <span class="ts">09:41:07</span>
+      <span class="who">QA Agent</span>
+      <span class="task">gate-03 · atomization checklist</span>
+      <span class="who">unresolved spec reference, phase 4 blocked</span>
+      <span class="st held">Gate held</span>
+    </div>
+    <div class="row mono">
+      <span class="ts">09:40:22</span>
+      <span class="who">Frontend Agent</span>
+      <span class="task">components/BookingPanel.tsx</span>
+      <span class="who">built from spec, zero prior context</span>
+      <span class="st ok">Committed</span>
+    </div>
+    <div class="row mono">
+      <span class="ts">09:39:48</span>
+      <span class="who">Backend Agent</span>
+      <span class="task">api/reservations · POST handler</span>
+      <span class="who">mock data only, keys injected at phase 4</span>
+      <span class="st ok">Committed</span>
+    </div>
+  </div>
+
+  <div id="vig"></div>
+</div>
+
+<script>
+const W=968;
+const svg=document.getElementById('svg');
+const ns="http://www.w3.org/2000/svg";
+function el(t,a){const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function add(e){svg.appendChild(e);return e;}
+const MONO='ui-monospace,Menlo,monospace';
+function txt(x,y,s,o){const t=add(el('text',Object.assign({x:x,y:y,'font-family':MONO},o)));t.textContent=s;return t;}
+
+const defs=el('defs');
+defs.innerHTML=`
+<radialGradient id="hg"><stop offset="0" stop-color="#ffb020" stop-opacity=".34"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></radialGradient>
+<linearGradient id="gateg" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffb020" stop-opacity="0"/><stop offset=".5" stop-color="#ffb020" stop-opacity=".95"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></linearGradient>`;
+add(defs);
+
+/* ---- geometry ---------------------------------------------------------- */
+const LBL=152;                       // agent-label gutter
+const TRK0=LBL+14, TRKW=W-TRK0;
+const WGT=[1,1,1,.62];               // phase 04 narrow: nothing has been admitted
+const SUM=WGT.reduce((a,b)=>a+b,0);
+const CW=WGT.map(w=>TRKW*w/SUM);
+const EDGE=[TRK0];CW.forEach(w=>EDGE.push(EDGE[EDGE.length-1]+w));
+const colX=i=>EDGE[i], colW=i=>CW[i];
+
+const HEAD=40, RULE=HEAD+38;
+const LY0=RULE+52, LSTEP=54;
+const laneY=i=>LY0+i*LSTEP;
+const AGENTS=["Spec Agent","Design Agent","Frontend Agent","Backend Agent","QA Agent","Task Planner"];
+const LANE_BOT=laneY(5)+30;
+const PHASES=[
+  ["01","Brain","GATE PASSED","ok"],
+  ["02","Design","GATE PASSED","ok"],
+  ["03","Atomization","GATE HELD","hold"],
+  ["04","Execution","AWAITING GATE 03","off"]
+];
+const HELD=3, GX=colX(HELD);
+const C={ok:'#5b8cff',hold:'#ffb020',off:'#4a525d'};
+
+/* ---- phase headers ----------------------------------------------------- */
+PHASES.forEach((p,i)=>{
+  const x=colX(i)+16;
+  txt(x,HEAD-20,p[0],{fill:'#4a525d','font-size':10,'letter-spacing':2.2});
+  const n=add(el('text',{x:x,y:HEAD+2,fill:'#c8d0d8','font-size':16.5,'letter-spacing':-.2,
+    'font-family':'-apple-system,Helvetica,Arial,sans-serif','font-weight':600}));
+  n.textContent=p[1];
+  add(el('rect',{x:x,y:HEAD+13,width:5,height:5,rx:1,fill:C[p[3]],
+    'fill-opacity':p[3]==='off'?.7:1}));
+  txt(x+13,HEAD+18,p[2],{fill:p[3]==='hold'?'#ffb020':(p[3]==='ok'?'#5b7290':'#4a525d'),
+    'font-size':9.5,'letter-spacing':1.8});
+});
+add(el('line',{x1:TRK0,y1:RULE,x2:W,y2:RULE,stroke:'rgba(255,255,255,.10)','stroke-width':1}));
+for(let i=1;i<4;i++)
+  add(el('line',{x1:colX(i),y1:RULE,x2:colX(i),y2:LANE_BOT,stroke:'rgba(255,255,255,.07)','stroke-width':1}));
+
+/* ---- lanes ------------------------------------------------------------- */
+AGENTS.forEach((a,i)=>{
+  const y=laneY(i);
+  txt(0,y+4,a,{fill:'#7d8894','font-size':13});
+  add(el('line',{x1:TRK0,y1:y,x2:W,y2:y,stroke:'rgba(255,255,255,.05)','stroke-width':1}));
+});
+
+/* ---- work in flight ----------------------------------------------------
+   Lane contents are ILLUSTRATIVE: they show the shape of a run in progress,
+   not a captured log. state 2 = committed, 1 = in flight.                 */
+const CHIPS=[
+  [0,0,.28,2],[0,0,.68,2],[0,1,.34,2],[0,2,.26,2],[0,2,.60,1],
+  [1,0,.50,2],[1,1,.26,2],[1,1,.62,2],[1,2,.34,2],[1,2,.66,1],
+  [2,0,.38,2],[2,1,.46,2],[2,2,.24,2],[2,2,.52,1],
+  [3,0,.60,2],[3,1,.38,2],[3,2,.30,2],[3,2,.64,1],
+  [4,0,.44,2],[4,1,.56,2],[4,2,.40,2],[4,2,.70,1],
+  [5,0,.22,2],[5,0,.56,2],[5,1,.34,2],[5,2,.48,2],[5,2,.72,1]
+];
+CHIPS.forEach(([a,p,f,st])=>{
+  const y=laneY(a), x=colX(p)+colW(p)*f, w=st===2?26:34, h=8;
+  if(st===1){
+    add(el('line',{x1:x-48,y1:y,x2:x,y2:y,stroke:'#5b8cff','stroke-width':1.4,'stroke-opacity':.28}));
+    add(el('rect',{x:x-w/2,y:y-h/2,width:w,height:h,rx:4,fill:'#5b8cff','fill-opacity':.22,
+      stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.95}));
+    add(el('rect',{x:x-w/2-5,y:y-h/2-5,width:w+10,height:h+10,rx:8,fill:'none',
+      stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.15}));
+  }else{
+    add(el('rect',{x:x-w/2,y:y-h/2,width:w,height:h,rx:4,fill:'#5b8cff','fill-opacity':.30}));
+  }
+});
+
+/* ---- phase 04 stays empty while the gate holds -------------------------- */
+AGENTS.forEach((a,i)=>{
+  const y=laneY(i);
+  add(el('line',{x1:GX+18,y1:y,x2:W-16,y2:y,stroke:'#2e353e','stroke-width':1,'stroke-dasharray':'3 7'}));
+  [.32,.68].forEach(f=>{
+    const x=colX(3)+colW(3)*f;
+    add(el('rect',{x:x-13,y:y-4,width:26,height:8,rx:4,fill:'none',stroke:'#39414b','stroke-width':1}));
+  });
+});
+
+/* ---- passed gates ------------------------------------------------------- */
+[1,2].forEach(i=>add(el('line',{x1:colX(i),y1:RULE,x2:colX(i),y2:LANE_BOT,
+  stroke:'#5b8cff','stroke-width':1,'stroke-opacity':.30})));
+
+/* ---- the held gate, with the swarm's work stacked against it ------------ */
+add(el('rect',{x:GX-34,y:RULE+2,width:68,height:LANE_BOT-RULE-4,fill:'url(#hg)'}));
+add(el('rect',{x:GX-1.6,y:RULE+2,width:3.2,height:LANE_BOT-RULE-4,fill:'url(#gateg)'}));
+AGENTS.forEach((a,i)=>add(el('rect',{x:GX-26,y:laneY(i)-5,width:18,height:10,rx:4,
+  fill:'#ffb020','fill-opacity':.9})));
+
+/* ---- band below the lanes ---------------------------------------------- */
+const B1=LANE_BOT+46, B2=B1+26;
+add(el('rect',{x:TRK0,y:B1-9,width:9,height:9,rx:2,fill:'#ffb020'}));
+txt(TRK0+20,B1,'GATE 03 HELD',{fill:'#ffb020','font-size':11.5,'letter-spacing':1.8});
+txt(TRK0+142,B1,'Build halted before phase 04. No agent advances until it passes.',
+  {fill:'#9aa5b0','font-size':12.5});
+txt(TRK0+20,B2,'ZERO-TRUST',{fill:'#5b7290','font-size':11.5,'letter-spacing':1.8});
+txt(TRK0+142,B2,'Mock data in the cloud layer. Real keys injected only at phase 04, locally.',
+  {fill:'#5c6672','font-size':12.5});
+
+document.body.setAttribute('data-ready','1');
+</script>
