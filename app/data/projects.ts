@@ -390,7 +390,7 @@ export const projects: Project[] = [
     year: "2025 – present",
     role: "Architect & Engineer (Solo)",
     description:
-      "A one-person agency in a box. 4-phase deterministic workflow, 5-agent specialist swarm, multi-platform reach (Web + iOS + Android + PWA + Chrome Ext), Zero-Trust security, tiered business engine from $0 to $250K. The system around the craft.",
+      "The system I build inside. Work moves through four phases and each one has a gate that has to pass before anything advances, so a build halts rather than drifting. Six specialist agents own their own slice, each with its own prompt and mandate, and every task is cut small enough to land as a single commit. One spec produces web, iOS, Android, PWA, and Chrome extension targets, and real keys never touch the cloud layer.",
     image: "/projects/ai-software-factory/hero.png",
     tags: [
       "Anthropic API + MCP",
