@@ -103,7 +103,7 @@ export default function Portfolio() {
                 🎮 Play Game
               </Button>
             </Link>
-            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/resume" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm">Resume</Button>
             </Link>
             <ThemeToggle />

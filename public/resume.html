@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Semaj Andrews — Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Resume of Semaj Andrews, Forward Deployed Engineer working across AI, web, and iOS.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Premium Resume Styles — Editorial Modern */
+
+
+
+@page {
+  size: letter;
+  margin: 0.25in 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-ink: #0d1421;
+  --color-text: #2a3142;
+  --color-muted: #5a6478;
+  --color-accent: #b8924a;
+  --color-accent-soft: #d4b876;
+  --color-line: #e2e6ed;
+  --color-bg: #ffffff;
+  --color-sidebar: #f7f5f0;
+}
+
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 9.5pt;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Paint the cream sidebar as a full-sheet background so it bleeds into the @page
+   margins and stays connected across pages, while content keeps its breathing room.
+   The 2.85in split matches the sidebar grid column width. */
+html {
+  background: linear-gradient(to right,
+    var(--color-sidebar) 0, var(--color-sidebar) 2.85in,
+    var(--color-bg) 2.85in, var(--color-bg) 100%);
+}
+
+.resume {
+  width: 8.5in;
+  min-height: 10.5in;
+  display: grid;
+  grid-template-columns: 2.85in 1fr;
+  background: var(--color-bg);
+}
+
+/* ─────────────── SIDEBAR ─────────────── */
+
+.sidebar {
+  background: var(--color-sidebar);
+  padding: 0.25in 0.4in 0.3in 0.5in;
+  color: var(--color-text);
+}
+
+.name-block {
+  margin-bottom: 0.45in;
+  padding-bottom: 0.25in;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 32pt;
+  line-height: 1.05;
+  color: var(--color-ink);
+  letter-spacing: -0.5pt;
+  margin-bottom: 0.08in;
+}
+
+.name .firstname {
+  display: block;
+}
+
+.name .lastname {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 4pt;
+  font-size: 14pt;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-top: 0.06in;
+  font-family: 'Inter', sans-serif;
+}
+
+.tagline {
+  font-size: 8.5pt;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-muted);
+  line-height: 1.4;
+  margin-top: 0.1in;
+}
+
+.sidebar-section {
+  margin-bottom: 0.32in;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 2.5pt;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.13in;
+  padding-bottom: 0.06in;
+  border-bottom: 0.5px solid var(--color-line);
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 8.5pt;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6pt;
+  word-break: break-word;
+}
+
+.contact-list .label {
+  color: var(--color-muted);
+  font-weight: 500;
+  min-width: 0;
+  font-size: 7.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+}
+
+.contact-list .value {
+  color: var(--color-ink);
+  font-weight: 500;
+  flex: 1;
+}
+
+.contact-list .value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.skills-group {
+  margin-bottom: 0.16in;
+}
+
+.skills-group:last-child {
+  margin-bottom: 0;
+}
+
+.skills-group h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  color: var(--color-ink);
+  margin-bottom: 0.05in;
+}
+
+.skills-group .items {
+  font-size: 8pt;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.education-block .school {
+  font-weight: 600;
+  font-size: 8.5pt;
+  color: var(--color-ink);
+  margin-bottom: 0.02in;
+}
+
+.education-block .degree {
+  font-size: 8pt;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 0.02in;
+}
+
+.education-block .meta {
+  font-size: 7.5pt;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.cert-list, .lang-list {
+  list-style: none;
+  font-size: 8pt;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.cert-list li {
+  margin-bottom: 0.04in;
+}
+
+.cert-list .cert-name {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.cert-list .cert-year {
+  color: var(--color-muted);
+  font-size: 7.5pt;
+}
+
+.lang-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.03in;
+}
+
+.lang-list .lang-level {
+  color: var(--color-muted);
+  font-style: italic;
+  font-size: 7.5pt;
+}
+
+/* ─────────────── MAIN CONTENT ─────────────── */
+
+.main {
+  padding: 0.25in 0.5in 0.3in 0.45in;
+}
+
+.main-section {
+  margin-bottom: 0.28in;
+}
+
+.main-section:last-child {
+  margin-bottom: 0;
+}
+
+.main-section > h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 3pt;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin-bottom: 0.13in;
+  padding-bottom: 0.08in;
+  border-bottom: 1.5px solid var(--color-ink);
+  position: relative;
+}
+
+.main-section > h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 32pt;
+  height: 1.5px;
+  background: var(--color-accent);
+}
+
+.summary {
+  font-size: 9.5pt;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.summary .lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 11pt;
+  color: var(--color-ink);
+  display: block;
+  margin-bottom: 0.06in;
+  line-height: 1.4;
+}
+
+/* Projects */
+
+.project {
+  margin-bottom: 0.16in;
+  padding-bottom: 0.13in;
+  border-bottom: 0.5px solid var(--color-line);
+}
+
+.project:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+  margin-bottom: 0.04in;
+}
+
+.project-name {
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--color-ink);
+  font-family: 'Inter', sans-serif;
+}
+
+.project-name .em {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Project titles that link out to their case study on bysemaj.com.
+   Same gold-name-plus-arrow treatment as the live-site rows below, so one
+   glance tells you which titles you can click. */
+.project-name a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-name a::after {
+  /* Non-breaking space keeps the arrow glued to the last word instead of
+     orphaning onto its own line when the title wraps. */
+  content: '\00a0\2197';
+  color: var(--color-accent);
+  font-style: normal;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 500;
+}
+
+.project-stack {
+  font-size: 7.5pt;
+  color: var(--color-muted);
+  font-style: italic;
+  text-align: right;
+  flex: 0 0 auto;
+  max-width: 50%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9pt;
+}
+
+.project-desc {
+  font-size: 8.5pt;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.projects-note {
+  margin-top: 0.1in;
+  font-size: 8pt;
+  font-style: italic;
+  color: var(--color-muted);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9pt;
+  text-align: center;
+}
+
+/* Portfolio of live sites */
+
+.portfolio-lead {
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 0.13in;
+}
+
+.portfolio-lead .em {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.05in 0.28in;
+}
+
+.portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6pt;
+  padding: 0.045in 0 0.05in;
+  border-bottom: 0.5px solid var(--color-line);
+  text-decoration: none;
+}
+
+.portfolio-item .pf-name {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: var(--color-accent);
+  position: relative;
+  padding-left: 0.13in;
+}
+
+.portfolio-item .pf-name::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.07in;
+  width: 5pt;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.portfolio-item .pf-cat {
+  font-size: 7.5pt;
+  color: var(--color-muted);
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8.5pt;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Arrow sits right on the (gold) site name so the whole row reads as a clickable link to the live site */
+.portfolio-item .pf-name::after {
+  content: '\00a0\2197';
+  color: var(--color-accent);
+  font-style: normal;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 500;
+}
+
+/* Print grouping — keep these blocks from splitting across a page break */
+.keep-together,
+.role,
+.project,
+.education-block,
+.skills-group {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Keep a heading with the content that follows it */
+h2 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* Experience */
+
+.role {
+  margin-bottom: 0.16in;
+  padding-bottom: 0.12in;
+  border-bottom: 0.5px solid var(--color-line);
+}
+
+.role:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.05in;
+  gap: 8pt;
+}
+
+.role-title {
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.role-title .at {
+  color: var(--color-accent);
+  font-weight: 500;
+  margin: 0 3pt;
+}
+
+.role-title .company {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.role-meta {
+  font-size: 8pt;
+  color: var(--color-muted);
+  font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9pt;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.role-bullets {
+  list-style: none;
+  margin-top: 0.04in;
+}
+
+.role-bullets li {
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: var(--color-text);
+  padding-left: 0.14in;
+  position: relative;
+  margin-bottom: 0.03in;
+}
+
+.role-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.075in;
+  width: 4pt;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+/* Earlier experience compressed */
+
+.earlier-list {
+  list-style: none;
+  font-size: 8.5pt;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.earlier-list li {
+  margin-bottom: 0.04in;
+  padding-left: 0.14in;
+  position: relative;
+}
+
+.earlier-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.075in;
+  width: 4pt;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.earlier-list .em {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.earlier-list .meta {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Clickable links use the resume's gold accent so they read as intentional and invite a click */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+/* ───────── Screen-only layer ─────────
+   The sheet above is sized for letter paper. On screen we centre it, give it a
+   page-like surround, and collapse to one column on narrow viewports. Print
+   output is untouched. */
+@media screen {
+  html { background: #e8e6e1; }
+  body { display: flex; justify-content: center; padding: 2rem 1rem; }
+  .resume {
+    box-shadow: 0 2px 8px rgba(13,20,33,.08), 0 12px 40px rgba(13,20,33,.12);
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 9in) {
+  body { padding: 0; }
+  .resume { width: 100%; max-width: 8.5in; grid-template-columns: 1fr; box-shadow: none; }
+  .sidebar, .main { padding: 1.6rem 1.4rem; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 34em) {
+  html, body { font-size: 11pt; }
+  .project-header, .role-header { flex-direction: column; align-items: flex-start; gap: 2pt; }
+  .project-stack, .role-meta { text-align: left; max-width: 100%; }
+}
+
+</style>
+</head>
+<body>
+<div class="resume">
+
+  <aside class="sidebar">
+
+    <div class="name-block">
+      <h1 class="name">
+        <span class="firstname">Semaj</span>
+        <span class="lastname">Andrews</span>
+      </h1>
+      <p class="tagline">Forward Deployed Engineer · Web, iOS &amp; AI</p>
+    </div>
+
+    <section class="sidebar-section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><span class="value"><a href="tel:+18622873880">(862) 287-3880</a></span></li>
+        <li><span class="value"><a href="mailto:semajzandrews@gmail.com">semajzandrews@gmail.com</a></span></li>
+        <li><span class="value">Orange, NJ</span></li>
+        <li><span class="value"><a href="https://linkedin.com/in/semajzandrews">linkedin.com/in/semajzandrews</a></span></li>
+      </ul>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Core Skills</h2>
+
+      <div class="skills-group">
+        <h3>Languages</h3>
+        <div class="items">Swift, Python, TypeScript, JavaScript, Java, C++, SQL, HTML, CSS</div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Frontend</h3>
+        <div class="items">React, Next.js 16, Vite, Tailwind CSS v4, GSAP, Framer Motion, Three.js, shadcn/ui</div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Mobile</h3>
+        <div class="items">SwiftUI, UIKit, Xcode, Core Data, MapKit, React Native, Expo</div>
+      </div>
+
+      <div class="skills-group">
+        <h3>AI &amp; Automation</h3>
+        <div class="items">Claude API, OpenAI API, MCP protocol, AI agent orchestration, prompt engineering, autonomous multi-agent systems</div>
+      </div>
+
+      <div class="skills-group">
+        <h3>Backend</h3>
+        <div class="items">Node.js, tRPC, REST APIs, GraphQL, Supabase, Firebase, MySQL, PostgreSQL</div>
+      </div>
+
+      <div class="skills-group">
+        <h3>DevOps &amp; Tools</h3>
+        <div class="items">Git, GitHub, Vercel, Cloudflare, CI/CD, Stripe, eBay API, OAuth 2.0, WCAG/VPAT</div>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Education</h2>
+      <div class="education-block">
+        <div class="school">New Jersey Institute of Technology</div>
+        <div class="degree">B.S. Information Technology<br>Minors: Computer Science &amp; Web Information Systems</div>
+        <div class="meta">Newark, NJ &middot; 2013 – 2019</div>
+      </div>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li><div class="cert-name">Business Technology</div><div class="cert-year">Certified 2010</div></li>
+        <li><div class="cert-name">Business Administration</div><div class="cert-year">Certified 2010</div></li>
+      </ul>
+    </section>
+
+    <section class="sidebar-section">
+      <h2>Languages</h2>
+      <ul class="lang-list">
+        <li><span>English</span><span class="lang-level">Fluent</span></li>
+        <li><span>Spanish</span><span class="lang-level">Beginner</span></li>
+        <li><span>Portuguese</span><span class="lang-level">Beginner</span></li>
+      </ul>
+    </section>
+
+  </aside>
+
+  <main class="main">
+
+    <section class="main-section">
+      <h2>Profile</h2>
+      <p class="summary">
+        <span class="lede">I build across AI, web, and mobile, and ship it.</span>
+        Forward Deployed Engineer with 6+ years building and shipping production software end to end, close to the customer. I architect and run a multi-agent AI build pipeline, have designed and deployed 80+ live web applications, and built native iOS apps for Fortune 500 clients. I move fluently across AI systems (Claude API, MCP, multi-agent orchestration), full-stack web (React, Next.js, TypeScript), and native iOS (Swift, SwiftUI), and I own the full lifecycle from design through deployment and the customer relationship.
+      </p>
+    </section>
+
+    <section class="main-section">
+      <h2>Selected Projects</h2>
+
+      <div class="project">
+        <div class="project-header">
+          <div class="project-name"><a href="https://bysemaj.com/projects/igris"><span class="em">IGRIS</span></a> — Autonomous AI Build System</div>
+          <div class="project-stack">React · Next.js · Claude API · MCP</div>
+        </div>
+        <div class="project-desc">Architected an AI-powered system that autonomously generates award-winning websites through a four-phase pipeline (Brief → Design → Atomization → Execution) with multi-agent orchestration. Produces agency-quality output in hours that traditionally costs $5K–$50K+.</div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <div class="project-name"><a href="https://bysemaj.com/projects/mac-mini-scan"><span class="em">Mac Mini Scan</span></a> — Real-Time Apple Store Inventory Locator</div>
+          <div class="project-stack">Python · Web Scraping · Real-Time Monitoring</div>
+        </div>
+        <div class="project-desc">Built a locator that tracks Mac Mini and Mac Studio availability across every Apple Store in the US in real time, built for the supply shortage driven by surging RAM demand and local-AI adoption. Used it to source and resell $93,000 of inventory in a single month at roughly $10,000 net profit.</div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <div class="project-name"><a href="https://bysemaj.com/projects/buildwhatyouwant"><span class="em">BuildWhatYouWant</span></a> — AI Sales Conversion Platform</div>
+          <div class="project-stack">Next.js · Tailwind · Stripe · Supabase</div>
+        </div>
+        <div class="project-desc">Developed a platform that sources leads via Google Business API, generates AI landing pages, delivers previews via QR-code with PIN access, and processes orders through Stripe with industry-specific add-ons.</div>
+      </div>
+
+    </section>
+
+    <section class="main-section keep-together">
+      <h2>Selected Live Websites</h2>
+      <p class="portfolio-lead"><span class="em">80+ bespoke business websites designed and deployed to production</span> — each individually built (no templates), responsive, and live in the browser. A curated selection, best-first:</p>
+      <div class="portfolio-grid">
+        <a class="portfolio-item" href="https://ramen-gami.vercel.app"><span class="pf-name">Ramen Gami</span><span class="pf-cat">Restaurant</span></a>
+        <a class="portfolio-item" href="https://six-points-creative-spaces.vercel.app"><span class="pf-name">Six Points Creative</span><span class="pf-cat">Creative Studio</span></a>
+        <a class="portfolio-item" href="https://alpha-daycare-center.vercel.app"><span class="pf-name">Alpha Daycare Center</span><span class="pf-cat">Childcare</span></a>
+        <a class="portfolio-item" href="https://cantina-443.vercel.app"><span class="pf-name">Cantina 443</span><span class="pf-cat">Restaurant</span></a>
+        <a class="portfolio-item" href="https://east-orange-animal-hospital.vercel.app"><span class="pf-name">East Orange Animal Hospital</span><span class="pf-cat">Veterinary</span></a>
+        <a class="portfolio-item" href="https://more-more-now-records.vercel.app"><span class="pf-name">More More Now Records</span><span class="pf-cat">Record Shop</span></a>
+        <a class="portfolio-item" href="https://my-amor-coffee.vercel.app"><span class="pf-name">My Amor Coffee</span><span class="pf-cat">Cafe</span></a>
+        <a class="portfolio-item" href="https://kador-beauty-salon.vercel.app"><span class="pf-name">Kador Beauty Salon</span><span class="pf-cat">Beauty Salon</span></a>
+        <a class="portfolio-item" href="https://vega-jewelry.vercel.app"><span class="pf-name">Vega Jewelry</span><span class="pf-cat">Jewelry</span></a>
+        <a class="portfolio-item" href="https://gq-cutz-barber-boutique.vercel.app"><span class="pf-name">GQ Cutz</span><span class="pf-cat">Barbershop</span></a>
+      </div>
+      <div class="projects-note">Full portfolio of all 80+ live websites at <a href="https://bysemaj.com">bysemaj.com</a></div>
+    </section>
+
+    <section class="main-section">
+      <h2>Experience</h2>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founder &amp; Forward Deployed Engineer <span class="at">·</span> <span class="company">BuildWhatYouWant</span></div>
+          <div class="role-meta">June 2024 – Present &middot; Newark, NJ (Remote)</div>
+        </div>
+        <ul class="role-bullets">
+          <li>Founded an AI orchestration company. Built IGRIS, an extensible multi-agent engine on the Claude API and MCP that composes a growing toolkit of third-party APIs and MCP servers to autonomously generate production websites.</li>
+          <li>80+ live business websites built through the orchestration and hosted on the platform, scaling toward hundreds; productized with Stripe payments and webhooks, JWT auth, per-business QR access, and a field-operations tool.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Founder &amp; Engineering Lead <span class="at">·</span> <span class="company">ThinkQueue</span></div>
+          <div class="role-meta">March 2021 – June 2024 &middot; Newark, NJ (Remote)</div>
+        </div>
+        <ul class="role-bullets">
+          <li>Founded and led a global product development agency building native mobile apps, websites, and PWAs for clients, with a distributed team across 8 countries.</li>
+          <li>Delivered bespoke products end to end through a structured, multi-stage build process; originated the idea to automate it with AI agents, which became IGRIS and BuildWhatYouWant.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">IT Consultant <span class="at">·</span> <span class="company">StationMD</span></div>
+          <div class="role-meta">May 2020 – Present &middot; Maplewood, NJ</div>
+        </div>
+        <ul class="role-bullets">
+          <li>Built custom QR code generation system in Python, eliminating third-party API dependency</li>
+          <li>Developed native mobile applications for both Android and iOS platforms</li>
+          <li>Shipped a Progressive Web App, expanding platform reach to all device types</li>
+          <li>Administered MySQL database operations and executed WCAG/VPAT accessibility compliance to AA standards</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">iOS Developer <span class="at">·</span> <span class="company">Apolis</span></div>
+          <div class="role-meta">Nov 2022 – Jan 2023 &middot; Jersey City, NJ</div>
+        </div>
+        <ul class="role-bullets">
+          <li>Built iOS applications in Swift and SwiftUI on production architecture (MVVM, Clean Architecture)</li>
+          <li>Integrated Core Data, MapKit, and push notifications, and shipped through CI/CD pipelines</li>
+          <li>Translated UX/UI designs into functional, accessible iOS applications</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">iOS Developer <span class="at">·</span> <span class="company">Mobile Consulting Solutions</span></div>
+          <div class="role-meta">Sep 2019 – Feb 2020 &middot; Atlanta, GA</div>
+        </div>
+        <ul class="role-bullets">
+          <li>Developed iOS applications for Fortune 500 client engagements using Swift and UIKit</li>
+          <li>Integrated Firebase, Core Data, and third-party SDKs into production mobile applications</li>
+          <li>Participated in full development lifecycle from design collaboration through deployment</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-header">
+          <div class="role-title">Earlier Experience</div>
+        </div>
+        <ul class="earlier-list">
+          <li><span class="em">Legal Transcriptionist</span>, eScribers, LLC <span class="meta">— 2022</span></li>
+          <li><span class="em">Robotics &amp; Engineering Instructor</span>, NJIT <span class="meta">— 2014–2018</span></li>
+          <li><span class="em">Software License Compliance Specialist</span>, Wayside Technology Group <span class="meta">— 2012</span></li>
+          <li><span class="em">Junior Accountant Intern</span>, Bank of America Merrill Lynch <span class="meta">— 2011</span></li>
+          <li><span class="em">Junior Finance Support Specialist</span>, Novartis <span class="meta">— 2011</span></li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
