@@ -1,10 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import { Search, X } from "lucide-react"
 import ProjectCard from "./project-card"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import type { Project } from "../data/projects"
+import { verticalSearchText } from "../data/verticals"
 
 interface ProjectGridProps {
   projects: Project[]
@@ -45,8 +48,71 @@ function projectTime(p: Project): number {
   return 0
 }
 
+/** Searchable fields, weighted by how much a hit there says about relevance.
+ *  A title hit is a strong signal; "React" appears in 81 of 93 technologies
+ *  lists, so a hit there barely narrows anything and is scored accordingly.
+ *  Weights are read off fields projects already carry — adding a project
+ *  needs no search-specific metadata. */
+const SEARCH_FIELDS: { weight: number; get: (p: Project) => (string | undefined)[] }[] = [
+  { weight: 10, get: (p) => [p.title] },
+  { weight: 6, get: (p) => [p.signature] },
+  { weight: 5, get: (p) => p.tags ?? [] },
+  { weight: 4, get: (p) => [p.subcategory, ...(p.categories ?? [])] },
+  // What the business IS. Lets "food" find a ramen shop and "haircut" find a
+  // barber without those words appearing anywhere in the visible copy.
+  { weight: 4, get: (p) => [verticalSearchText(p.vertical)] },
+  { weight: 3, get: (p) => [p.description] },
+  { weight: 2, get: (p) => [p.role] },
+  { weight: 2, get: (p) => p.technologies ?? [] },
+  { weight: 1, get: (p) => [p.year, p.date] },
+]
+
+/** True when `term` starts a word in `text`, e.g. "react" in "React Native"
+ *  but not in "reactive". Word-start hits score full weight. */
+function hasWordStart(text: string, term: string): boolean {
+  let i = text.indexOf(term)
+  while (i !== -1) {
+    if (i === 0 || !/[a-z0-9]/.test(text[i - 1])) return true
+    i = text.indexOf(term, i + 1)
+  }
+  return false
+}
+
+/** Relevance score for one project against one query.
+ *  0 means no match. Every term must appear somewhere (AND), so
+ *  "roofing dallas" narrows; the score then ranks what survived. */
+function scoreProject(p: Project, terms: string[]): number {
+  if (terms.length === 0) return 1
+
+  const fields = SEARCH_FIELDS.map((f) => ({
+    weight: f.weight,
+    text: f.get(p).filter(Boolean).join(" ").toLowerCase(),
+  }))
+
+  let total = 0
+  for (const term of terms) {
+    // One or two letters match inside too many words ("ai" in "repair",
+    // "hair"), so short terms only count when they start a word.
+    const wordStartOnly = term.length <= 2
+    let best = 0
+    for (const { weight, text } of fields) {
+      if (!text.includes(term)) continue
+      const wordStart = hasWordStart(text, term)
+      if (!wordStart && wordStartOnly) continue
+      // Mid-word hits ("reactive" for "react") count half.
+      const value = wordStart ? weight : weight / 2
+      if (value > best) best = value
+    }
+    // One unmatched term disqualifies the project entirely.
+    if (best === 0) return 0
+    total += best
+  }
+  return total
+}
+
 export default function ProjectGrid({ projects }: ProjectGridProps) {
   const [currentPage, setCurrentPage] = useState(1)
+  const [query, setQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
   const [selectedSubcategory, setSelectedSubcategory] = useState("All")
   // ONE concept: "Featured" — hand-picked work, shown first by default.
@@ -72,14 +138,26 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
     return ["All", ...subs.filter((s) => present.has(s))]
   }
 
+  const terms = query.toLowerCase().split(/\s+/).filter(Boolean)
+  const isSearching = terms.length > 0
+  const scores = new Map<number, number>()
+
   const filteredProjects = projects
     .filter((project) => {
       const cats = project.categories ?? []
       if (selectedCategory !== "All" && !cats.includes(selectedCategory)) return false
       if (selectedSubcategory !== "All" && project.subcategory !== selectedSubcategory) return false
+      const score = scoreProject(project, terms)
+      if (score === 0) return false
+      scores.set(project.id, score)
       return true
     })
     .sort((a, b) => {
+      // While searching, relevance leads; featured/date only break ties.
+      if (isSearching) {
+        const s = (scores.get(b.id) ?? 0) - (scores.get(a.id) ?? 0)
+        if (s !== 0) return s
+      }
       if (sortMode === "featured") {
         const f = Number(!!b.featured) - Number(!!a.featured)
         if (f !== 0) return f
@@ -119,6 +197,37 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             Newest
           </button>
         </div>
+      </div>
+
+      <div className="relative mb-6">
+        <Search
+          className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+          aria-hidden="true"
+        />
+        <Input
+          type="search"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value)
+            setCurrentPage(1)
+          }}
+          placeholder="Search projects by name, tech, or category"
+          aria-label="Search projects"
+          className="pl-9 pr-9 [&::-webkit-search-cancel-button]:appearance-none"
+        />
+        {query && (
+          <button
+            type="button"
+            onClick={() => {
+              setQuery("")
+              setCurrentPage(1)
+            }}
+            aria-label="Clear search"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
@@ -183,10 +292,16 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
         </div>
       </div>
 
-      {(selectedCategory !== "All" || selectedSubcategory !== "All") && (
+      {(selectedCategory !== "All" || selectedSubcategory !== "All" || query.trim() !== "") && (
         <div className="mb-6 p-3 bg-muted/50 rounded-lg">
           <p className="text-sm text-muted-foreground">
             Showing {filteredProjects.length} project{filteredProjects.length !== 1 ? "s" : ""}
+            {query.trim() !== "" && (
+              <span>
+                {" "}
+                matching <span className="font-medium">&ldquo;{query.trim()}&rdquo;</span>
+              </span>
+            )}
             {selectedCategory !== "All" && (
               <span>
                 {" "}
@@ -205,7 +320,26 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
 
       {filteredProjects.length === 0 ? (
         <div className="py-12 text-center text-sm text-muted-foreground border border-dashed rounded-lg">
-          No projects yet in this category, more on the way.
+          {query.trim() !== "" ? (
+            <>
+              No projects match that search. Try a different term or{" "}
+              <button
+                type="button"
+                onClick={() => {
+                  setQuery("")
+                  setSelectedCategory("All")
+                  setSelectedSubcategory("All")
+                  setCurrentPage(1)
+                }}
+                className="font-medium text-foreground underline underline-offset-4"
+              >
+                clear the filters
+              </button>
+              .
+            </>
+          ) : (
+            "No projects yet in this category, more on the way."
+          )}
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
