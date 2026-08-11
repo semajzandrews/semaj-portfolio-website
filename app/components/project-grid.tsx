@@ -213,7 +213,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
           }}
           placeholder="Search projects by name, tech, or category"
           aria-label="Search projects"
-          className="pl-9 pr-9 [&::-webkit-search-cancel-button]:appearance-none"
+          className="pl-9 pr-11 [&::-webkit-search-cancel-button]:appearance-none"
         />
         {query && (
           <button
@@ -223,7 +223,9 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
               setCurrentPage(1)
             }}
             aria-label="Clear search"
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground transition-colors hover:text-foreground"
+            // The icon stays 16px; the button carries a full 44px hit area so
+            // it clears the minimum touch target on a phone.
+            className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
           >
             <X className="h-4 w-4" />
           </button>
