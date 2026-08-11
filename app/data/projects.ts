@@ -1,5 +1,12 @@
+import type { Vertical } from "./verticals"
+
 export type Project = {
   id: number
+  /** The one kind of business this project IS. Never rendered — it exists so
+   *  search can answer "food" with a ramen shop without that word living in
+   *  the copy. Typed against VERTICAL_ALIASES, so a vertical with no alias
+   *  row fails the build rather than silently matching nothing. */
+  vertical?: Vertical
   /** Optional readable URL segment. When set, /projects/<slug> resolves to
    *  this project in addition to /projects/<id>, which keeps every existing
    *  numeric link working. Used on printed material where a numeric id
@@ -45,6 +52,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: 3,
+    vertical: "saas-platform",
     slug: "buildwhatyouwant",
     previewVideo: "/projects/buildwhatyouwant/preview.mp4",
     featuredRank: 5,
@@ -96,6 +104,7 @@ export const projects: Project[] = [
 
   {
     "id": 87,
+    "vertical": "daycare",
     "featuredRank": 3,
     "featured": true,
     "title": "Alpha Daycare Center",
@@ -136,6 +145,7 @@ export const projects: Project[] = [
 
   {
     "id": 54,
+    "vertical": "salon",
     "featuredRank": 10,
     "featured": true,
     "title": "Kador Beauty Salon",
@@ -176,6 +186,7 @@ export const projects: Project[] = [
 
   {
     "id": 67,
+    "vertical": "liquor-store",
     "title": "Brandy's Lounge & Liquors",
     "year": "2026",
     date: "Jun 2026",
@@ -216,6 +227,7 @@ export const projects: Project[] = [
 
   {
     "id": 85,
+    "vertical": "restaurant",
     "title": "Saucy Bitez",
     "year": "2026",
     date: "Jun 2026",
@@ -254,6 +266,7 @@ export const projects: Project[] = [
 
   {
     "id": 95,
+    "vertical": "restaurant",
     "title": "Mama Lola",
     "year": "2026",
     date: "Jun 2026",
@@ -294,6 +307,7 @@ export const projects: Project[] = [
 
   {
     "id": 77,
+    "vertical": "wellness",
     "title": "Hundred Wellness",
     "year": "2026",
     date: "Jun 2026",
@@ -334,6 +348,7 @@ export const projects: Project[] = [
 
   {
     id: 1,
+    vertical: "ai-platform",
     slug: "igris",
     title: "IGRIS · Production Website Agent + Quality Bar",
     year: "2025 – present",
@@ -385,6 +400,7 @@ export const projects: Project[] = [
 
   {
     id: 2,
+    vertical: "ai-platform",
     slug: "ai-software-factory",
     title: "AI Software Factory · One-Person Agency OS",
     year: "2025 – present",
@@ -443,6 +459,7 @@ export const projects: Project[] = [
 
   {
     id: 200,
+    vertical: "developer-tool",
     slug: "mac-mini-scan",
     title: "Mac Mini Scan",
     year: "2026",
@@ -499,6 +516,7 @@ export const projects: Project[] = [
 
   {
     id: 201,
+    vertical: "developer-tool",
     slug: "scan-tube",
     title: "ScanTube QR",
     year: "2025",
@@ -543,6 +561,7 @@ export const projects: Project[] = [
 
   {
     "id": 62,
+    "vertical": "restaurant",
     "title": "Mo's Hot Chicken",
     "year": "2026",
     date: "Jun 2026",
@@ -583,6 +602,7 @@ export const projects: Project[] = [
 
   {
     "id": 108,
+    "vertical": "restaurant",
     "title": "Eterna Primavera",
     "year": "2026",
     date: "Jun 2026",
@@ -623,6 +643,7 @@ export const projects: Project[] = [
 
   {
     "id": 63,
+    "vertical": "grocery",
     "title": "Red Crab Fish Market",
     "year": "2026",
     date: "Jun 2026",
@@ -662,6 +683,7 @@ export const projects: Project[] = [
 
   {
     "id": 80,
+    "vertical": "bar",
     "title": "South Valley",
     "year": "2026",
     date: "Jun 2026",
@@ -700,6 +722,7 @@ export const projects: Project[] = [
 
   {
     id: 38,
+    vertical: "cafe",
     featuredRank: 6,
     featured: true,
     title: "My Amor Coffee Shop",
@@ -726,6 +749,7 @@ export const projects: Project[] = [
 
   {
     "id": 60,
+    "vertical": "bakery",
     "title": "BakedSome",
     "year": "2026",
     date: "Jun 2026",
@@ -766,6 +790,7 @@ export const projects: Project[] = [
 
   {
     "id": 103,
+    "vertical": "retail",
     "title": "Bobby's Discount Store",
     "year": "2026",
     date: "Jun 2026",
@@ -806,6 +831,7 @@ export const projects: Project[] = [
 
   {
     id: 26,
+    vertical: "bar",
     title: "Cantina 443",
     year: "2026",
     role: "Designer & Engineer — built via IGRIS",
@@ -839,6 +865,7 @@ export const projects: Project[] = [
 
   {
     "id": 107,
+    "vertical": "bar",
     "title": "Clancy's Pub",
     "year": "2026",
     date: "Jun 2026",
@@ -877,6 +904,7 @@ export const projects: Project[] = [
 
   {
     "id": 55,
+    "vertical": "home-improvement",
     "title": "PL Home Improvement",
     "year": "2026",
     date: "Jun 2026",
@@ -917,6 +945,7 @@ export const projects: Project[] = [
 
   {
     "id": 93,
+    "vertical": "retail",
     "title": "Today's Kids",
     "year": "2026",
     date: "Jun 2026",
@@ -957,6 +986,7 @@ export const projects: Project[] = [
 
   {
     "id": 75,
+    "vertical": "family-services",
     "title": "Babyland Family Services",
     "year": "2026",
     date: "Jun 2026",
@@ -997,6 +1027,7 @@ export const projects: Project[] = [
 
   {
     id: 29,
+    vertical: "professional-services",
     title: "Dell'italia & Santola",
     year: "2026",
     date: "Jun 2026",
@@ -1021,6 +1052,7 @@ export const projects: Project[] = [
 
   {
     "id": 96,
+    "vertical": "retail",
     "title": "Nash Sales Depot",
     "year": "2026",
     date: "Jun 2026",
@@ -1061,6 +1093,7 @@ export const projects: Project[] = [
 
   {
     "id": 94,
+    "vertical": "beauty-supply",
     "title": "Dici Beauty Supply",
     "year": "2026",
     date: "Jun 2026",
@@ -1099,6 +1132,7 @@ export const projects: Project[] = [
 
   {
     "id": 79,
+    "vertical": "convenience-store",
     "title": "Quick Stop",
     "year": "2026",
     date: "Jun 2026",
@@ -1139,6 +1173,7 @@ export const projects: Project[] = [
 
   {
     id: 30,
+    vertical: "dental",
     title: "Empire Dental",
     year: "2026",
     date: "Jun 2026",
@@ -1163,6 +1198,7 @@ export const projects: Project[] = [
 
   {
     id: 17,
+    vertical: "email-campaign",
     title: "Janie & Jack — Welcome",
     year: "2023",
     role: "Email Developer (Solo)",
@@ -1201,6 +1237,7 @@ export const projects: Project[] = [
 
   {
     "id": 97,
+    "vertical": "liquor-store",
     "title": "Berkeley Liquors & Deli",
     "year": "2026",
     date: "Jun 2026",
@@ -1238,6 +1275,7 @@ export const projects: Project[] = [
 
   {
     "id": 59,
+    "vertical": "salon",
     "title": "Sisters In Motion",
     "year": "2026",
     date: "Jun 2026",
@@ -1278,6 +1316,7 @@ export const projects: Project[] = [
 
   {
     "id": 57,
+    "vertical": "barbershop",
     "featuredRank": 11,
     "featured": true,
     "title": "GQ Cutz Barber Boutique",
@@ -1319,6 +1358,7 @@ export const projects: Project[] = [
 
   {
     "id": 91,
+    "vertical": "bar",
     "title": "Obal's Inn",
     "year": "2026",
     date: "Jun 2026",
@@ -1357,6 +1397,7 @@ export const projects: Project[] = [
 
   {
     "id": 100,
+    "vertical": "barbershop",
     "title": "Keeping It Handsome",
     "year": "2026",
     date: "Jun 2026",
@@ -1396,6 +1437,7 @@ export const projects: Project[] = [
 
   {
     "id": 61,
+    "vertical": "grocery",
     "title": "Mercadito Chapin",
     "year": "2026",
     date: "Jun 2026",
@@ -1435,6 +1477,7 @@ export const projects: Project[] = [
 
   {
     "id": 69,
+    "vertical": "nail-salon",
     "title": "Mary Finesse Beauty",
     "year": "2026",
     date: "Jun 2026",
@@ -1473,6 +1516,7 @@ export const projects: Project[] = [
 
   {
     id: 13,
+    vertical: "email-campaign",
     title: "Michael Kors — Account Confirmation",
     year: "2024",
     role: "Email Developer (Solo)",
@@ -1511,6 +1555,7 @@ export const projects: Project[] = [
 
   {
     "id": 56,
+    "vertical": "jewelry",
     "title": "A&A Perfume & Jewelry",
     "year": "2026",
     date: "Jun 2026",
@@ -1551,6 +1596,7 @@ export const projects: Project[] = [
 
   {
     "id": 81,
+    "vertical": "bail-bonds",
     "title": "Able Bail Bonds",
     "year": "2026",
     date: "Jun 2026",
@@ -1589,6 +1635,7 @@ export const projects: Project[] = [
 
   {
     "id": 102,
+    "vertical": "laundromat",
     "title": "Sudzy Laundromat",
     "year": "2026",
     date: "Jun 2026",
@@ -1628,6 +1675,7 @@ export const projects: Project[] = [
 
   {
     "id": 83,
+    "vertical": "auto-repair",
     "title": "Ismael & Son Auto Repair",
     "year": "2026",
     date: "Jun 2026",
@@ -1666,6 +1714,7 @@ export const projects: Project[] = [
 
   {
     id: 35,
+    vertical: "restaurant",
     title: "Castaway Restaurant & Bar",
     year: "2026",
     date: "Jun 2026",
@@ -1690,6 +1739,7 @@ export const projects: Project[] = [
 
   {
     id: 32,
+    vertical: "restaurant",
     title: "Chubbies Deli",
     year: "2026",
     date: "Jun 2026",
@@ -1714,6 +1764,7 @@ export const projects: Project[] = [
 
   {
     id: 12,
+    vertical: "email-campaign",
     title: "Spirit Airlines — Itinerary",
     year: "2024",
     role: "Email Developer (Solo)",
@@ -1752,6 +1803,7 @@ export const projects: Project[] = [
 
   {
     "id": 90,
+    "vertical": "bakery",
     "title": "Michele's Family Bakery",
     "year": "2026",
     date: "Jun 2026",
@@ -1792,6 +1844,7 @@ export const projects: Project[] = [
 
   {
     "id": 73,
+    "vertical": "car-wash",
     "title": "Shamar Hand Wash",
     "year": "2026",
     date: "Jun 2026",
@@ -1830,6 +1883,7 @@ export const projects: Project[] = [
 
   {
     "id": 84,
+    "vertical": "restaurant",
     "title": "NYC Style Deli",
     "year": "2026",
     date: "Jun 2026",
@@ -1868,6 +1922,7 @@ export const projects: Project[] = [
 
   {
     "id": 68,
+    "vertical": "printing",
     "title": "Instant Printing",
     "year": "2026",
     date: "Jun 2026",
@@ -1907,6 +1962,7 @@ export const projects: Project[] = [
 
   {
     id: 24,
+    vertical: "painting",
     title: "Black River Painting LLC",
     year: "2026",
     date: "Jun 2026",
@@ -1939,6 +1995,7 @@ export const projects: Project[] = [
 
   {
     "id": 109,
+    "vertical": "restaurant",
     "title": "Dev's Jamaican Cuisine",
     "year": "2026",
     date: "Jun 2026",
@@ -1977,6 +2034,7 @@ export const projects: Project[] = [
 
   {
     "id": 104,
+    "vertical": "spa",
     "title": "Dada Doll Beauty Spa",
     "year": "2026",
     date: "Jun 2026",
@@ -2016,6 +2074,7 @@ export const projects: Project[] = [
 
   {
     id: 15,
+    vertical: "email-campaign",
     title: "PrettyLittleThing — Welcome",
     year: "2023",
     role: "Email Developer (Solo)",
@@ -2054,6 +2113,7 @@ export const projects: Project[] = [
 
   {
     "id": 88,
+    "vertical": "electronics",
     "title": "Globe Electronics",
     "year": "2026",
     date: "Jun 2026",
@@ -2094,6 +2154,7 @@ export const projects: Project[] = [
 
   {
     id: 5,
+    vertical: "wellness",
     title: "Systemomtics",
     year: "2026",
     role: "Designer & Engineer — built via IGRIS",
@@ -2137,6 +2198,7 @@ export const projects: Project[] = [
 
   {
     "id": 86,
+    "vertical": "beauty-supply",
     "title": "Sensational Beauty Supply",
     "year": "2026",
     date: "Jun 2026",
@@ -2177,6 +2239,7 @@ export const projects: Project[] = [
 
   {
     id: 6,
+    vertical: "nail-salon",
     title: "Nails Fever Spa",
     year: "2026",
     role: "Designer & Engineer — built via IGRIS",
@@ -2218,6 +2281,7 @@ export const projects: Project[] = [
 
   {
     "id": 89,
+    "vertical": "salon",
     "title": "Luna Llena Beauty Salon",
     "year": "2026",
     date: "Jun 2026",
@@ -2257,6 +2321,7 @@ export const projects: Project[] = [
 
   {
     id: 22,
+    vertical: "daycare",
     title: "Blessed Hope Daycare Center",
     year: "2026",
     date: "Jun 2026",
@@ -2304,6 +2369,7 @@ export const projects: Project[] = [
 
   {
     id: 27,
+    vertical: "jewelry",
     title: "Edgar Jewelry",
     year: "2026",
     date: "Jun 2026",
@@ -2328,6 +2394,7 @@ export const projects: Project[] = [
 
   {
     "id": 64,
+    "vertical": "healthcare",
     "title": "Park Crescent Health Care",
     "year": "2026",
     date: "Jun 2026",
@@ -2365,6 +2432,7 @@ export const projects: Project[] = [
 
   {
     id: 31,
+    vertical: "barbershop",
     title: "CLEAN CUT'S Barbershop",
     year: "2026",
     date: "Jun 2026",
@@ -2389,6 +2457,7 @@ export const projects: Project[] = [
 
   {
     id: 39,
+    vertical: "nail-salon",
     title: "Mikauri Nail Salon & Spa",
     year: "2026",
     date: "Jun 2026",
@@ -2413,6 +2482,7 @@ export const projects: Project[] = [
 
   {
     id: 14,
+    vertical: "email-campaign",
     title: "Pizza Hut — Hut Rewards Onboarding",
     year: "2023",
     role: "Email Developer (Solo)",
@@ -2451,6 +2521,7 @@ export const projects: Project[] = [
 
   {
     id: 7,
+    vertical: "restaurant",
     title: "Southern Komfort Bar & Grill",
     year: "2026",
     date: "Jun 2026",
@@ -2491,6 +2562,7 @@ export const projects: Project[] = [
 
   {
     id: 19,
+    vertical: "logistics",
     title: "Pulse Point Logistics LLC",
     year: "2026",
     role: "Designer & Engineer — built via IGRIS",
@@ -2536,6 +2608,7 @@ export const projects: Project[] = [
 
   {
     "id": 110,
+    "vertical": "shoe-store",
     "title": "Fabco Shoes",
     "year": "2026",
     date: "Jun 2026",
@@ -2573,6 +2646,7 @@ export const projects: Project[] = [
 
   {
     "id": 70,
+    "vertical": "record-store",
     "featuredRank": 12,
     "featured": true,
     "title": "More More Now Records",
@@ -2613,6 +2687,7 @@ export const projects: Project[] = [
 
   {
     "id": 66,
+    "vertical": "plumbing",
     "title": "AAA Able Plumbing & Heating",
     "year": "2026",
     date: "Jun 2026",
@@ -2652,6 +2727,7 @@ export const projects: Project[] = [
 
   {
     id: 33,
+    vertical: "healthcare",
     title: "Linden Pain Relief",
     year: "2026",
     date: "Jun 2026",
@@ -2676,6 +2752,7 @@ export const projects: Project[] = [
 
   {
     id: 40,
+    vertical: "bar",
     title: "The Lounge",
     year: "2026",
     date: "Jun 2026",
@@ -2700,6 +2777,7 @@ export const projects: Project[] = [
 
   {
     id: 8,
+    vertical: "restaurant",
     title: "Hong Am",
     year: "2026",
     role: "Designer & Engineer — built via IGRIS",
@@ -2737,6 +2815,7 @@ export const projects: Project[] = [
 
   {
     "id": 65,
+    "vertical": "tattoo",
     "title": "Soca Tattoo Studio",
     "year": "2026",
     date: "Jun 2026",
@@ -2776,6 +2855,7 @@ export const projects: Project[] = [
 
   {
     id: 34,
+    vertical: "furniture-store",
     title: "FURNITURE R US",
     year: "2026",
     date: "Jun 2026",
@@ -2800,6 +2880,7 @@ export const projects: Project[] = [
 
   {
     "id": 71,
+    "vertical": "jewelry",
     "title": "R&S Jewelry & Electronics",
     "year": "2026",
     date: "Jun 2026",
@@ -2840,6 +2921,7 @@ export const projects: Project[] = [
 
   {
     id: 16,
+    vertical: "email-campaign",
     title: "New Era — Welcome",
     year: "2023",
     role: "Email Developer (Solo)",
@@ -2878,6 +2960,7 @@ export const projects: Project[] = [
 
   {
     id: 28,
+    vertical: "restaurant",
     title: "L'Hirondelle Restaurant",
     year: "2026",
     date: "Jun 2026",
@@ -2902,6 +2985,7 @@ export const projects: Project[] = [
 
   {
     "id": 202,
+    "vertical": "event-space",
     "featuredRank": 9,
     "featured": true,
     "title": "Six Points Creative Spaces",
@@ -2941,6 +3025,7 @@ export const projects: Project[] = [
 
   {
     "id": 203,
+    "vertical": "jewelry",
     "previewVideo": "/projects/vega-jewelry/preview.mp4",
     "featuredRank": 4,
     "title": "Vega Jewelry",
@@ -2982,6 +3067,7 @@ export const projects: Project[] = [
 
   {
     "id": 204,
+    "vertical": "spa",
     "title": "Top Health Spa",
     "year": "2026",
     "date": "Jul 2026",
@@ -3019,6 +3105,7 @@ export const projects: Project[] = [
 
   {
     "id": 205,
+    "vertical": "restaurant",
     "title": "FRESHI HEALTHY FUSION",
     "year": "2026",
     "date": "Jul 2026",
@@ -3056,6 +3143,7 @@ export const projects: Project[] = [
 
   {
     "id": 206,
+    "vertical": "roofing",
     "previewVideo": "/projects/ally-roofing/preview.mp4",
     "title": "Ally Roofing & Leak Repair",
     "year": "2026",
@@ -3095,6 +3183,7 @@ export const projects: Project[] = [
 
   {
     "id": 207,
+    "vertical": "legal",
     "title": "Law Office of Stephen S. Berowitz",
     "year": "2026",
     "date": "Jul 2026",
@@ -3133,6 +3222,7 @@ export const projects: Project[] = [
 
   {
     "id": 208,
+    "vertical": "food-truck",
     "title": "A1.NJIT Food Truck",
     "year": "2026",
     "date": "Jul 2026",
@@ -3169,6 +3259,7 @@ export const projects: Project[] = [
 
   {
     "id": 209,
+    "vertical": "auto-repair",
     "title": "Victoria and Sons Auto Repair",
     "year": "2026",
     "date": "Jul 2026",
@@ -3205,6 +3296,7 @@ export const projects: Project[] = [
 
   {
     "id": 210,
+    "vertical": "auto-glass",
     "previewVideo": "/projects/da-autoglass/preview.mp4",
     "title": "D&A Autoglass",
     "year": "2026",
@@ -3245,6 +3337,7 @@ export const projects: Project[] = [
 
   {
     "id": 211,
+    "vertical": "salon",
     "previewVideo": "/projects/mamie-african-hair-braiding/preview.mp4",
     "title": "Mamie African Hair Braiding",
     "year": "2026",
@@ -3284,6 +3377,7 @@ export const projects: Project[] = [
 
   {
     "id": 212,
+    "vertical": "spa",
     "previewVideo": "/projects/ll-massage-spa/preview.mp4",
     "featuredRank": 7,
     "featured": true,
@@ -3324,6 +3418,7 @@ export const projects: Project[] = [
 
   {
     "id": 213,
+    "vertical": "barbershop",
     "previewVideo": "/projects/dsanchez-barbershop/preview.mp4",
     "title": "D'sanchez Barbershop",
     "year": "2026",
@@ -3363,6 +3458,7 @@ export const projects: Project[] = [
 
   {
     "id": 214,
+    "vertical": "tire-shop",
     "previewVideo": "/projects/raymonds-tires/preview.mp4",
     "title": "Raymond's New and Used Tires",
     "year": "2026",
@@ -3403,6 +3499,7 @@ export const projects: Project[] = [
 
   {
     "id": 215,
+    "vertical": "restaurant",
     "previewVideo": "/projects/ramen-gami/preview.mp4",
     "featuredRank": 1,
     "title": "Ramen Gami",
@@ -3444,6 +3541,7 @@ export const projects: Project[] = [
 
   {
     "id": 216,
+    "vertical": "pet-store",
     "previewVideo": "/projects/ironbound-pet-shop/preview.mp4",
     "title": "Ironbound Pet Shop",
     "year": "2026",
@@ -3484,6 +3582,7 @@ export const projects: Project[] = [
 
   {
     "id": 217,
+    "vertical": "restaurant",
     "previewVideo": "/projects/pour-abbeys/preview.mp4",
     "featuredRank": 8,
     "featured": true,
@@ -3525,6 +3624,7 @@ export const projects: Project[] = [
 
   {
     "id": 218,
+    "vertical": "veterinary",
     "previewVideo": "/projects/east-orange-animal-hospital/preview.mp4",
     "featuredRank": 2,
     "title": "East Orange Animal Hospital",
