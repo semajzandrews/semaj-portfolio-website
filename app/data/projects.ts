@@ -526,7 +526,6 @@ export const projects: Project[] = [
     image: "/projects/scan-tube/hero.png",
     link: "https://chromewebstore.google.com/detail/scantube-qr/jimopcifbdiekgbnlbakgkgkblgjhjdh",
     liveUrl: "https://chromewebstore.google.com/detail/scantube-qr/jimopcifbdiekgbnlbakgkgkblgjhjdh",
-    repoUrl: "https://github.com/semajzandrews/scan-tube",
     tags: ["Chrome Extension", "Manifest V3", "JavaScript", "QR Code"],
     categories: ["Web Development"],
     subcategory: "Browser Extension",
@@ -2996,6 +2995,7 @@ export const projects: Project[] = [
     "image": "/projects/six-points-creative-spaces/hero.png",
     "link": "https://six-points-creative-spaces.vercel.app",
     "liveUrl": "https://six-points-creative-spaces.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/six-points-creative-spaces",
     "tags": [
       "Creative Spaces",
       "Events",
@@ -3036,6 +3036,7 @@ export const projects: Project[] = [
     "image": "/projects/vega-jewelry/hero.png",
     "link": "https://vega-jewelry.vercel.app",
     "liveUrl": "https://vega-jewelry.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/vega-jewelry",
     "tags": [
       "Jewelry",
       "Monochrome",
@@ -3076,6 +3077,7 @@ export const projects: Project[] = [
     "image": "/projects/top-health-spa/hero.png",
     "link": "https://top-health-spa.vercel.app",
     "liveUrl": "https://top-health-spa.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/top-health-spa",
     "tags": [
       "Spa",
       "Wellness",
@@ -3114,6 +3116,7 @@ export const projects: Project[] = [
     "image": "/projects/freshi-healthy-fusion/hero.png",
     "link": "https://freshi-healthy-fusion.vercel.app",
     "liveUrl": "https://freshi-healthy-fusion.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/freshi-healthy-fusion",
     "tags": [
       "Restaurant",
       "Color-Block",
@@ -3155,6 +3158,7 @@ export const projects: Project[] = [
     "image": "/projects/ally-roofing/hero.png",
     "link": "https://ally-roofing.vercel.app",
     "liveUrl": "https://ally-roofing.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/ally-roofing",
     "tags": [
       "Roofing",
       "Storm Narrative",
@@ -3192,6 +3196,7 @@ export const projects: Project[] = [
     "image": "/projects/berowitz-law/hero.png",
     "link": "https://berowitz-law.vercel.app",
     "liveUrl": "https://berowitz-law.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/berowitz-law",
     "tags": [
       "Law",
       "Typography Only",
@@ -3268,6 +3273,7 @@ export const projects: Project[] = [
     "image": "/projects/victoria-and-sons-auto/hero.png",
     "link": "https://victoria-and-sons-auto.vercel.app",
     "liveUrl": "https://victoria-and-sons-auto.vercel.app",
+    "repoUrl": "https://github.com/semajzandrews/victoria-and-sons-auto",
     "tags": [
       "Auto Repair",
       "Repair Tracker",
